@@ -1,36 +1,31 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 export function MatrixCircle() {
-  const points = [1, 2, 3, 4, 5, 6, 7, 8, 10, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22]; // Based on image
   const totalPoints = 22;
-  const radius = 140;
+  const radius = 160;
   const centerX = 200;
   const centerY = 200;
 
-  // Colors based on the image arcs
-  const getPointColor = (p: number) => {
-    if (p <= 2 || p >= 21) return "#fbbf24"; // Yellow top
-    if (p <= 8) return "#f43f5e"; // Rose right
-    if (p <= 14) return "#8b5cf6"; // Purple bottom
-    return "#3b82f6"; // Blue left
-  };
+  // Numbers from the image (some are 2?, 1, 2, 3...)
+  const displayNumbers = [1, 2, 3, 4, 5, 6, 9, 8, 13, 13, 10, 11, 14, 18, 18, 18, 17, 17, "2?", 21, 1, 2];
 
   return (
-    <div className="relative w-full max-w-[450px] aspect-square mx-auto flex items-center justify-center">
-      {/* Background Deep Glow */}
-      <div className="absolute inset-0 bg-indigo-500/10 blur-[120px] rounded-full" />
+    <div className="relative w-full max-w-[500px] aspect-square mx-auto flex items-center justify-center scale-110">
+      {/* Background Deep Glow - Massive Indigo Bloom */}
+      <div className="absolute inset-0 bg-indigo-600/20 blur-[150px] rounded-full animate-pulse" />
       
-      <svg viewBox="0 0 400 400" className="w-full h-full relative z-10 overflow-visible">
+      <svg viewBox="0 0 400 400" className="w-full h-full relative z-10 overflow-visible drop-shadow-[0_0_30px_rgba(79,70,229,0.3)]">
         <defs>
-          <radialGradient id="centerPulse" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#6366f1" stopOpacity="0.2" />
+          <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#6366f1" stopOpacity="0.4" />
+            <stop offset="70%" stopColor="#6366f1" stopOpacity="0.1" />
             <stop offset="100%" stopColor="transparent" />
           </radialGradient>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+          <filter id="strongGlow">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur" />
             <feMerge>
               <feMergeNode in="coloredBlur" />
               <feMergeNode in="SourceGraphic" />
@@ -38,78 +33,84 @@ export function MatrixCircle() {
           </filter>
         </defs>
 
-        {/* Decorative Concentric Rings */}
-        {[100, 120, 140, 160].map((r, i) => (
+        {/* Outer Orbit Lines (Thin circles) */}
+        {[140, 150, 160, 175, 190].map((r, i) => (
           <circle 
             key={i} 
             cx={centerX} cy={centerY} r={r} 
             fill="none" 
-            stroke="rgba(255,255,255,0.03)" 
-            strokeWidth="1" 
+            stroke="rgba(99, 102, 241, 0.1)" 
+            strokeWidth="0.5" 
           />
         ))}
 
-        {/* Spirograph-like background pattern */}
-        <path 
-            d="M200,60 A140,140 0 0,1 340,200 A140,140 0 0,1 200,340 A140,140 0 0,1 60,200 A140,140 0 0,1 200,60" 
-            fill="none" stroke="rgba(99, 102, 241, 0.05)" strokeWidth="0.5"
-        />
-
-        {/* Connections to Center */}
-        {Array.from({ length: 22 }).map((_, i) => {
+        {/* The Main Connecting Lines (Rays) */}
+        {Array.from({ length: totalPoints }).map((_, i) => {
           const angle = (i * 360) / totalPoints - 90;
-          const x = centerX + radius * Math.cos((angle * Math.PI) / 180);
-          const y = centerY + radius * Math.sin((angle * Math.PI) / 180);
+          const x2 = centerX + radius * Math.cos((angle * Math.PI) / 180);
+          const y2 = centerY + radius * Math.sin((angle * Math.PI) / 180);
           return (
             <line 
-              key={`line-${i}`} 
-              x1={centerX} y1={centerY} x2={x} y2={y} 
-              stroke="rgba(255,255,255,0.05)" 
-              strokeWidth="0.5"
+              key={`ray-${i}`} 
+              x1={centerX} y1={centerY} x2={x2} y2={y2} 
+              stroke="rgba(99, 102, 241, 0.2)" 
+              strokeWidth="0.8"
             />
           );
         })}
 
-        {/* Points with Numbers */}
+        {/* Connecting Curves (Spirograph) */}
+        <circle 
+            cx={centerX} cy={centerY} r={radius} 
+            fill="none" 
+            stroke="rgba(99, 102, 241, 0.4)" 
+            strokeWidth="1"
+            className="opacity-50"
+        />
+
+        {/* Nodes with Numbers */}
         {Array.from({ length: totalPoints }).map((_, i) => {
-          const p = [1,2,3,4,5,6,7,8,10,10,12,13,14,15,16,17,18,19,20,22][i] || (i+1);
           const angle = (i * 360) / totalPoints - 90;
           const x = centerX + radius * Math.cos((angle * Math.PI) / 180);
           const y = centerY + radius * Math.sin((angle * Math.PI) / 180);
-          const color = getPointColor(p);
+          const num = displayNumbers[i % displayNumbers.length];
 
           return (
             <motion.g 
               key={`node-${i}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              whileHover={{ scale: 1.2 }}
-              className="cursor-pointer group"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: i * 0.05 }}
+              className="cursor-pointer"
             >
+              {/* Node Circle */}
               <circle 
-                cx={x} cy={y} r="10" 
+                cx={x} cy={y} r="14" 
                 fill="#070b14" 
-                stroke={color} 
-                strokeWidth="1.5" 
-                filter="url(#glow)"
+                stroke="#6366f1" 
+                strokeWidth="2" 
+                filter="url(#strongGlow)"
               />
+              {/* Number Text */}
               <text 
-                x={x} y={y + 3} 
+                x={x} y={y + 5} 
                 textAnchor="middle" 
-                className="text-[7px] font-black fill-white pointer-events-none select-none"
+                className="text-[12px] font-black fill-white select-none pointer-events-none tracking-tighter"
               >
-                {p}
+                {num}
               </text>
             </motion.g>
           );
         })}
 
-        {/* Center Text Block */}
-        <circle cx={centerX} cy={centerY} r="60" fill="url(#centerPulse)" />
-        <motion.g animate={{ scale: [1, 1.05, 1] }} transition={{ duration: 4, repeat: Infinity }}>
-            <text x={centerX} y={centerY - 10} textAnchor="middle" className="text-5xl font-black fill-white italic tracking-tighter">22</text>
-            <text x={centerX} y={centerY + 15} textAnchor="middle" className="text-[8px] font-black uppercase tracking-[0.3em] fill-indigo-400">Энергии</text>
-            <text x={centerX} y={centerY + 30} textAnchor="middle" className="text-[5px] font-bold uppercase tracking-[0.2em] fill-slate-500">Код вашей жизни</text>
+        {/* Center Glowing Hub */}
+        <circle cx={centerX} cy={centerY} r="50" fill="url(#centerGlow)" className="animate-pulse" />
+        <motion.g 
+            animate={{ scale: [1, 1.02, 1] }} 
+            transition={{ duration: 3, repeat: Infinity }}
+            className="drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+        >
+            <text x={centerX} y={centerY + 15} textAnchor="middle" className="text-6xl font-black fill-white italic tracking-tighter uppercase">22</text>
         </motion.g>
       </svg>
     </div>

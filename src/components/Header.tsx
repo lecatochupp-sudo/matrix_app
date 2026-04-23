@@ -1,55 +1,39 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { User, Zap } from "lucide-react";
 
 export function Header() {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-
-  const scrollToCalc = () => {
-    if (isHome) {
-      document.getElementById("calc")?.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#070b14]/40 backdrop-blur-xl border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#070b14]/80 backdrop-blur-md border-b border-white/5">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 bg-indigo-600 rounded-lg rotate-45 group-hover:rotate-90 transition-transform duration-500 flex items-center justify-center">
-            <div className="w-3 h-3 bg-white rounded-sm -rotate-45" />
+          <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform shadow-[0_0_15px_rgba(79,70,229,0.5)]">
+            <Zap size={18} className="text-white fill-white" />
           </div>
-          <span className="text-sm font-black uppercase tracking-[0.3em] text-white italic">Matrix Destiny</span>
+          <span className="text-lg font-black tracking-tighter text-white uppercase italic">
+            Matrix <span className="text-indigo-500">Destiny</span>
+          </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-12">
-            <button 
-                onClick={scrollToCalc}
-                className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-white transition-colors"
-            >
-                Как это работает
-            </button>
-            <button 
-                onClick={scrollToCalc}
-                className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-white transition-colors"
-            >
-                Что вы узнаете
-            </button>
+        <nav className="hidden md:flex items-center gap-10">
+          {['КАК ЭТО РАБОТАЕТ', 'ЧТО ВЫ УЗНАЕТЕ', 'ОТЗЫВЫ', 'ЛИЧНЫЙ КАБИНЕТ'].map((item) => (
             <Link 
-                href={isHome ? "#calc" : "/"}
-                onClick={(e) => {
-                    if (isHome) {
-                        e.preventDefault();
-                        scrollToCalc();
-                    }
-                }}
-                className="py-3 px-6 bg-white/5 border border-white/10 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] text-white hover:bg-white/10 transition-all"
+              key={item} 
+              href={item === 'ЛИЧНЫЙ КАБИНЕТ' ? '/account' : '#'} 
+              className="text-[10px] font-black tracking-[0.2em] text-slate-400 hover:text-white transition-colors"
             >
-                Начать расчет
+              {item}
             </Link>
+          ))}
         </nav>
+
+        <Link 
+          href="/#calc" 
+          className="px-8 py-3 bg-indigo-600/10 border border-indigo-500/30 rounded-xl text-[10px] font-black tracking-[0.2em] text-white hover:bg-indigo-600 transition-all uppercase shadow-[0_0_20px_rgba(79,70,229,0.2)]"
+        >
+          Начать расчет
+        </Link>
       </div>
     </header>
   );

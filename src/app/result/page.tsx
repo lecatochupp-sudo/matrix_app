@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useSearchParams, useRouter, redirect } from "next/navigation";
 import { Suspense, useMemo } from "react";
 import { calculateFullMatrix } from "@/domain/calculations/fullMatrixProvider";
@@ -13,8 +14,9 @@ import { SectionBlock } from "@/features/matrix/SectionBlock";
 import { buildAllSections } from "@/lib/content/contentSectionBuilder";
 import { ReportNavigation } from "@/components/result/ReportNavigation";
 import { ForecastTimeline } from "@/components/result/ForecastTimeline";
+import { CalculationStorage } from "@/lib/storage";
 import { motion } from "framer-motion";
-import { ArrowRight, Star, Loader2, CheckCircle2, Download, Lock } from "lucide-react";
+import { ArrowRight, Star, Loader2, CheckCircle2, Download } from "lucide-react";
 
 const getEmptyData = () => ({
   diagonal: { left: 0, top: 0, right: 0, bottom: 0, center: 0 },
@@ -49,6 +51,13 @@ function ResultContent() {
     }
   }, [date, paid]);
 
+  // Автоматическое сохранение в историю при просмотре
+  useEffect(() => {
+    if (!calculationError && date) {
+        CalculationStorage.save({ name, date, gender });
+    }
+  }, [name, date, gender, calculationError]);
+
   const baseParams = searchParams.toString();
   const metrics = [
     { label: "Энергия", value: data.diagonal.center, colorClass: "text-indigo-400" },
@@ -58,11 +67,12 @@ function ResultContent() {
 
   const handleUnlock = () => router.push(`/paywall?${baseParams}`);
 
-  const handlePdfAction = () => {
+  const handlePdfDownload = () => {
     if (!paid) {
         handleUnlock();
     } else {
-        alert("Генерация PDF будет доступна в ближайшее время. Мы сообщим вам на email.");
+        const url = `/api/generate-pdf?name=${encodeURIComponent(name)}&date=${date}&gender=${gender}`;
+        window.open(url, "_blank");
     }
   };
 
@@ -77,7 +87,6 @@ function ResultContent() {
         <ResultHero name={name} date={date} age={0} gender={gender} data={data} />
 
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-12 xl:gap-20 mb-32">
-          {/* Sidebar / Diagram */}
           <div className="xl:col-span-6">
             <div className="xl:sticky xl:top-32 space-y-12">
                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}>
@@ -85,13 +94,15 @@ function ResultContent() {
                 </motion.div>
                 <KeyMetrics metrics={metrics} />
                 
-                {/* PDF Button */}
+                {/* PDF Button - Active & Conditional */}
                 <button 
-                    onClick={handlePdfAction}
-                    className="w-full py-6 bg-white/[0.03] border border-white/10 rounded-[32px] flex items-center justify-center gap-4 hover:bg-white/[0.05] transition-all group"
+                    onClick={handlePdfDownload}
+                    className="w-full py-6 bg-white/[0.03] border border-white/10 rounded-[32px] flex items-center justify-center gap-4 hover:bg-indigo-600 transition-all group shadow-xl"
                 >
-                    <Download size={20} className="text-indigo-400 group-hover:scale-110 transition-transform" />
-                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Скачать PDF отчет (52 стр)</span>
+                    <Download size={20} className="text-indigo-400 group-hover:text-white transition-transform group-hover:scale-110" />
+                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">
+                        {paid ? "Скачать PDF отчет (52 стр)" : "Открыть PDF отчет (Premium)"}
+                    </span>
                 </button>
 
                 {!paid && (
@@ -109,7 +120,6 @@ function ResultContent() {
             </div>
           </div>
 
-          {/* Report Sections */}
           <div className="xl:col-span-6 space-y-8">
             <div className="hidden xl:block">
                 <ReportNavigation />
@@ -149,18 +159,6 @@ function ResultContent() {
                     </SectionBlock>
                 </div>
             ))}
-
-            {!paid && (
-                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="mt-24 md:mt-32 p-10 md:p-16 bg-gradient-to-br from-[#0a0f1d] to-[#121826] border border-white/5 rounded-[64px] text-center relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600/10 blur-[100px] -mr-48 -mt-48" />
-                    <Star className="w-12 h-12 text-indigo-500 mx-auto mb-10 animate-pulse" />
-                    <h3 className="text-4xl md:text-5xl font-black text-white italic mb-8 uppercase leading-tight tracking-tighter">Книга судьбы готова</h3>
-                    <p className="text-slate-400 text-lg mb-12 max-w-md mx-auto font-serif italic">52 страницы персонального анализа, которые изменят ваше представление о себе.</p>
-                    <button onClick={handleUnlock} className="px-12 py-6 bg-white text-indigo-950 rounded-3xl font-black uppercase text-xs tracking-widest shadow-2xl hover:scale-105 transition-all">
-                        Получить доступ
-                    </button>
-                </motion.div>
-            )}
           </div>
         </div>
 
@@ -177,7 +175,7 @@ export default function ResultPage() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-600/20 blur-[150px] rounded-full" />
       </div>
       <Header />
-      <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-[#070b14]"><div className="flex flex-col items-center gap-6"><Loader2 className="w-16 h-16 text-indigo-500 animate-spin" /><p className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-700">Calculating your destiny...</p></div></div>}>
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-[#070b14]"><Loader2 className="w-16 h-16 text-indigo-500 animate-spin" /></div>}>
         <ResultContent />
       </Suspense>
     </div>
