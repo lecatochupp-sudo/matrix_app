@@ -17,13 +17,18 @@ export function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
-          {['КАК ЭТО РАБОТАЕТ', 'ЧТО ВЫ УЗНАЕТЕ', 'ОТЗЫВЫ', 'ЛИЧНЫЙ КАБИНЕТ'].map((item) => (
+          {[
+            { name: 'КАК ЭТО РАБОТАЕТ', href: '/#how-it-works' },
+            { name: 'ЧТО ВЫ УЗНАЕТЕ', href: '/#what-you-learn' },
+            { name: 'ОТЗЫВЫ', href: '/#reviews' },
+            { name: 'ЛИЧНЫЙ КАБИНЕТ', href: '/account' }
+          ].map((item) => (
             <Link 
-              key={item} 
-              href={item === 'ЛИЧНЫЙ КАБИНЕТ' ? '/account' : '#'} 
+              key={item.name} 
+              href={item.href} 
               className="text-[10px] font-black tracking-[0.2em] text-slate-400 hover:text-white transition-colors"
             >
-              {item}
+              {item.name}
             </Link>
           ))}
         </nav>

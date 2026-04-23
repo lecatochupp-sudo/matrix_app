@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Sparkles, ArrowRight, User, ShieldCheck, Cpu, Star, Lock } from "lucide-react";
 import { MatrixCircle } from "@/components/ui/MatrixCircle";
 import { StatsBar } from "./StatsBar";

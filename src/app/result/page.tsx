@@ -101,7 +101,7 @@ function ResultContent() {
                 >
                     <Download size={20} className="text-indigo-400 group-hover:text-white transition-transform group-hover:scale-110" />
                     <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">
-                        {paid ? "Скачать PDF отчет (52 стр)" : "Открыть PDF отчет (Premium)"}
+                        {paid ? "Скачать полный PDF отчет" : "Открыть PDF отчет (Premium)"}
                     </span>
                 </button>
 

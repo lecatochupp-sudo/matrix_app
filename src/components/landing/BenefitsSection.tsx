@@ -14,11 +14,11 @@ const benefits = [
 
 export function BenefitsSection() {
   return (
-    <section className="py-40 px-6">
+    <section id="what-you-learn" className="py-40 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-32">
             <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter uppercase mb-6">Ваш отчет содержит</h2>
-            <p className="text-slate-500 text-lg font-serif italic">Более 50 страниц детального разбора каждой сферы вашей жизни</p>
+            <p className="text-slate-500 text-lg font-serif italic">Детальный разбор каждой сферы вашей жизни на основе 22 энергий</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">

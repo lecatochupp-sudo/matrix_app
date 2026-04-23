@@ -7,10 +7,10 @@ import { RadarChart } from "@/components/ui/RadarChart";
 export function ExampleSection() {
   return (
     <section className="py-40 px-6 bg-indigo-600/[0.01] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-12 gap-16 items-center">
+      <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         
         {/* Left: Professional Card UI */}
-        <div className="lg:col-span-7 w-full order-2 lg:order-1">
+        <div className="lg:col-span-6 w-full order-2 lg:order-1">
             <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -86,9 +86,12 @@ export function ExampleSection() {
         <motion.div 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="lg:col-span-5 space-y-10 order-1 lg:order-2"
+            className="lg:col-span-6 space-y-10 order-1 lg:order-2"
         >
-            <h2 className="text-5xl md:text-6xl font-black text-white italic tracking-tighter uppercase leading-none glow-text">Профессиональная<br/>Интерпретация</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white italic tracking-tighter uppercase leading-[0.85] glow-text pr-10 overflow-visible">
+                ЭКСПЕРТНЫЙ <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">РАЗБОР</span>
+            </h2>
             
             <p className="text-xl text-slate-400 font-serif italic leading-relaxed">
                 Наши отчеты — это не сухой набор цифр. Это полноценный психологический разбор, созданный экспертами и реализованный через умные алгоритмы.

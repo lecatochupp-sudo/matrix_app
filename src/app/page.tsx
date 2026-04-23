@@ -3,6 +3,7 @@ import { IntroSection } from "@/components/landing/IntroSection";
 import { BenefitsSection } from "@/components/landing/BenefitsSection";
 import { ExampleSection } from "@/components/landing/ExampleSection";
 import { WhyUsSection } from "@/components/landing/WhyUsSection";
+import { ReviewsSection } from "@/components/landing/ReviewsSection";
 import { CTASection } from "@/components/landing/CTASection";
 import { CalculatorSection } from "@/components/landing/CalculatorSection";
 import { Header } from "@/components/Header";
@@ -18,6 +19,7 @@ export default function Home() {
         <BenefitsSection />
         <ExampleSection />
         <WhyUsSection />
+        <ReviewsSection />
         <CTASection />
         <CalculatorSection />
       </main>
