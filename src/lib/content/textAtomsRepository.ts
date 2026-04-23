@@ -1,5 +1,4 @@
-import fs from 'fs';
-import path from 'path';
+import atomsData from "../../../text_atoms_full_22_energies.json";
 
 export interface ContextContent {
   intro: string[];
@@ -20,15 +19,11 @@ export interface TextAtomsLibrary {
   energies: Record<string, EnergyContent>;
 }
 
-let libraryCache: TextAtomsLibrary | null = null;
+// Прямой импорт JSON работает и на клиенте, и на сервере в Next.js
+const libraryCache: TextAtomsLibrary = atomsData as any;
 
 export function loadTextAtoms(): TextAtomsLibrary {
-  if (libraryCache) return libraryCache;
-
-  const filePath = path.join(process.cwd(), 'text_atoms_full_22_energies.json');
-  const fileContent = fs.readFileSync(filePath, 'utf8');
-  libraryCache = JSON.parse(fileContent);
-  return libraryCache!;
+  return libraryCache;
 }
 
 export function getAtomsForEnergy(energy: number, context: string): ContextContent | null {
