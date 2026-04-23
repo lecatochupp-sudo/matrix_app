@@ -1,12 +1,12 @@
 "use client";
 
 import { useSearchParams, useRouter } from 'next/navigation';
+import { Suspense } from 'react';
 import { Header } from "@/components/Header";
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Lock, CreditCard, ShieldCheck, ArrowRight, Loader2 } from 'lucide-react';
 
-export default function CheckoutPage() {
+function CheckoutContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const plan = searchParams.get('plan') || "Premium";
@@ -14,7 +14,6 @@ export default function CheckoutPage() {
 
   const handlePay = () => {
     setLoading(true);
-    // Simulate payment delay
     setTimeout(() => {
       const params = new URLSearchParams(searchParams.toString());
       params.set('paid', 'true');
@@ -23,10 +22,7 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070b14] text-slate-300 pb-20">
-      <Header />
-      
-      <main className="max-w-4xl mx-auto px-8 pt-32">
+    <main className="max-w-4xl mx-auto px-8 pt-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
                 <h1 className="text-4xl font-black italic text-white mb-8 uppercase tracking-tighter">Оформление заказа</h1>
@@ -84,7 +80,21 @@ export default function CheckoutPage() {
                 </div>
             </div>
         </div>
-      </main>
+    </main>
+  );
+}
+
+export default function CheckoutPage() {
+  return (
+    <div className="min-h-screen bg-[#070b14] text-slate-300 pb-20">
+      <Header />
+      <Suspense fallback={
+        <div className="min-h-screen flex items-center justify-center">
+            <Loader2 className="w-12 h-12 text-indigo-500 animate-spin" />
+        </div>
+      }>
+        <CheckoutContent />
+      </Suspense>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useSearchParams, useRouter, redirect } from "next/navigation";
+import { Suspense } from "react";
 import { calculateFullMatrix } from "@/domain/calculations/fullMatrixProvider";
 import { parseBirthDate } from "@/domain/calculations/parseBirthDate";
 import { Header } from "@/components/Header";
@@ -10,9 +11,8 @@ import { KeyMetrics } from "@/components/KeyMetrics";
 import { TechnicalSection } from "@/components/TechnicalSection";
 import { SectionBlock } from "@/features/matrix/SectionBlock";
 import { getArcanaContent } from "@/lib/contentProvider";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, AlertCircle, Zap, DollarSign, Heart, Star, Download, Bookmark, User } from "lucide-react";
+import { ArrowRight, Sparkles, AlertCircle, Zap, DollarSign, Heart, Star, Download, Bookmark, User, Loader2 } from "lucide-react";
 
 const getEmptyData = () => ({
   diagonal: { left: 0, top: 0, right: 0, bottom: 0, center: 0 },
@@ -23,7 +23,7 @@ const getEmptyData = () => ({
   health: { chakra1:0, chakra2:0, chakra3:0, chakra4:0, chakra5:0, chakra6:0, chakra7:0 }
 });
 
-export default function ResultPage() {
+function ResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -70,17 +70,7 @@ export default function ResultPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070b14] text-slate-300 pb-40 font-sans selection:bg-indigo-500/30 overflow-x-hidden">
-      {/* Background patterns */}
-      <div className="fixed inset-0 pointer-events-none opacity-20 overflow-hidden -z-10">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/20 blur-[150px] rounded-full" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-600/20 blur-[150px] rounded-full" />
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] opacity-10" />
-      </div>
-
-      <Header />
-      
-      <main className="max-w-7xl mx-auto px-8 pt-16">
+    <main className="max-w-7xl mx-auto px-8 pt-16">
         {calculationError && (
           <div className="mb-12 p-8 bg-rose-500/10 border border-rose-500/20 rounded-[40px] flex items-center gap-6 text-rose-400">
             <AlertCircle className="w-8 h-8 flex-shrink-0" />
@@ -94,7 +84,6 @@ export default function ResultPage() {
         <ResultHero name={name} date={date} age={age} gender={gender} />
 
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-32 mb-40">
-          {/* Left: Diagram */}
           <div className="xl:col-span-7">
             <motion.div 
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -108,7 +97,6 @@ export default function ResultPage() {
             <KeyMetrics metrics={metrics} />
           </div>
 
-          {/* Right: Personal Intro */}
           <div className="xl:col-span-5 space-y-12">
             <SectionBlock title="Личные Качества" isLocked={false}>
               <p>{personalityContent?.personality}</p>
@@ -156,7 +144,6 @@ export default function ResultPage() {
           </div>
         </div>
 
-        {/* Premium Sections Area */}
         <div className="max-w-5xl mx-auto mb-40">
           <div className="text-center mb-24">
             <div className="inline-block px-4 py-1.5 mb-6 bg-amber-500/10 border border-amber-500/20 rounded-full">
@@ -226,14 +213,12 @@ export default function ResultPage() {
           </div>
         </div>
 
-        {/* Improved Bottom CTA */}
         {!paid && (
           <div className="mt-40 max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-indigo-700 via-indigo-600 to-violet-800 p-20 rounded-[64px] shadow-2xl shadow-indigo-500/20 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-indigo-700 via-indigo-600 to-violet-800 p-20 rounded-[64px] shadow-2xl shadow-indigo-500/20 relative overflow-hidden text-center flex flex-col items-center">
               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full -mr-250 -mt-250 blur-[120px]" />
               <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-black/20 rounded-full -ml-150 -mb-150 blur-[80px]" />
               
-              <div className="relative z-10 flex flex-col items-center text-center">
                 <motion.div 
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -261,13 +246,33 @@ export default function ResultPage() {
                         <p className="text-indigo-200 text-[9px] font-black uppercase tracking-widest opacity-60">Единоразовый доступ</p>
                     </div>
                 </div>
-              </div>
             </div>
           </div>
         )}
 
         <TechnicalSection data={{ params: { name, date, gender, paid }, data }} />
-      </main>
+    </main>
+  );
+}
+
+export default function ResultPage() {
+  return (
+    <div className="min-h-screen bg-[#070b14] text-slate-300 pb-40 font-sans selection:bg-indigo-500/30 overflow-x-hidden">
+      <div className="fixed inset-0 pointer-events-none opacity-20 overflow-hidden -z-10">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/20 blur-[150px] rounded-full" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-600/20 blur-[150px] rounded-full" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] opacity-10" />
+      </div>
+
+      <Header />
+      
+      <Suspense fallback={
+        <div className="min-h-screen flex items-center justify-center">
+            <Loader2 className="w-12 h-12 text-indigo-500 animate-spin" />
+        </div>
+      }>
+        <ResultContent />
+      </Suspense>
     </div>
   );
 }

@@ -1,9 +1,10 @@
 "use client";
 
 import { useSearchParams, useRouter } from 'next/navigation';
+import { Suspense } from 'react';
 import { Header } from "@/components/Header";
 import { motion } from 'framer-motion';
-import { Check, ShieldCheck, Zap, Star, ArrowRight } from 'lucide-react';
+import { Check, ShieldCheck, Zap, Star, ArrowRight, Loader2 } from 'lucide-react';
 
 const plans = [
   {
@@ -36,7 +37,7 @@ const plans = [
   }
 ];
 
-export default function PaywallPage() {
+function PaywallContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const baseParams = searchParams.toString();
@@ -48,10 +49,7 @@ export default function PaywallPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070b14] text-slate-300 pb-20">
-      <Header />
-      
-      <main className="max-w-6xl mx-auto px-8 pt-24">
+    <main className="max-w-6xl mx-auto px-8 pt-24">
         <div className="text-center mb-20">
             <h1 className="text-5xl md:text-7xl font-black italic text-white mb-6 tracking-tighter uppercase">Выберите ваш путь</h1>
             <p className="text-slate-500 text-lg max-w-2xl mx-auto font-serif italic">Откройте полную расшифровку вашей матрицы и получите ключи к управлению своей судьбой.</p>
@@ -108,7 +106,21 @@ export default function PaywallPage() {
                 Вернуться к бесплатному анализу
             </button>
         </div>
-      </main>
+    </main>
+  );
+}
+
+export default function PaywallPage() {
+  return (
+    <div className="min-h-screen bg-[#070b14] text-slate-300 pb-20">
+      <Header />
+      <Suspense fallback={
+        <div className="min-h-screen flex items-center justify-center">
+            <Loader2 className="w-12 h-12 text-indigo-500 animate-spin" />
+        </div>
+      }>
+        <PaywallContent />
+      </Suspense>
     </div>
   );
 }

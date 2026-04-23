@@ -1,11 +1,12 @@
 "use client";
 
 import { useSearchParams, useRouter } from 'next/navigation';
+import { Suspense } from 'react';
 import { Header } from "@/components/Header";
 import { motion } from 'framer-motion';
-import { Sparkles, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Sparkles, CheckCircle2, ArrowRight, Loader2 } from 'lucide-react';
 
-export default function SuccessPage() {
+function SuccessContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   
@@ -16,10 +17,7 @@ export default function SuccessPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070b14] text-slate-300">
-      <Header />
-      
-      <main className="max-w-4xl mx-auto px-8 pt-48 text-center">
+    <main className="max-w-4xl mx-auto px-8 pt-48 text-center">
         <motion.div 
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -42,7 +40,21 @@ export default function SuccessPage() {
                 <Sparkles size={24} /> Вернуться к результатам <ArrowRight size={24} />
             </button>
         </div>
-      </main>
+    </main>
+  );
+}
+
+export default function SuccessPage() {
+  return (
+    <div className="min-h-screen bg-[#070b14] text-slate-300">
+      <Header />
+      <Suspense fallback={
+        <div className="min-h-screen flex items-center justify-center">
+            <Loader2 className="w-12 h-12 text-indigo-500 animate-spin" />
+        </div>
+      }>
+        <SuccessContent />
+      </Suspense>
     </div>
   );
 }
