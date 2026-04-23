@@ -1,5 +1,5 @@
 import { getAtomsForEnergy, getEnergyMeta } from "./textAtomsRepository";
-import { composeFullText, generatePreview, getTeaser } from "./textComposer";
+import { composePsychologicalAnalysis, generatePaywallPreview, generateFullTeaser } from "./textComposer";
 
 export interface FinalSection {
   id: string;
@@ -14,20 +14,19 @@ export interface FinalSection {
 }
 
 const SECTION_CONFIG = [
-  { id: 'personality', title: 'Личность', context: 'personality', free: true },
-  { id: 'talents', title: 'Таланты', context: 'talents', free: true },
-  { id: 'money', title: 'Деньги и Финансы', context: 'money', free: false },
-  { id: 'love', title: 'Любовь и Отношения', context: 'love', free: false },
-  { id: 'mission', title: 'Предназначение', context: 'mission', free: false },
-  { id: 'karma', title: 'Карма и задачи', context: 'karma', free: false },
-  { id: 'health', title: 'Здоровье и чакры', context: 'health', free: false },
-  { id: 'forecast', title: 'Прогноз на год', context: 'forecast', free: false },
+  { id: 'personality', title: 'Фундамент личности', context: 'personality', free: true },
+  { id: 'talents', title: 'Дар и Таланты', context: 'talents', free: true },
+  { id: 'money', title: 'Финансовый потенциал', context: 'money', free: false },
+  { id: 'love', title: 'Любовь и Партнерство', context: 'love', free: false },
+  { id: 'mission', title: 'Предназначение Души', context: 'mission', free: false },
+  { id: 'karma', title: 'Кармический узел', context: 'karma', free: false },
+  { id: 'health', title: 'Энергетика и Здоровье', context: 'health', free: false },
+  { id: 'forecast', title: 'Прогноз и тренды года', context: 'forecast', free: false },
 ];
 
 export function buildAllSections(data: any, isPaid: boolean): FinalSection[] {
   return SECTION_CONFIG.map(config => {
-    // Mapping Matrix Data -> Energy for each section
-    let energy = data.diagonal.left; // Default
+    let energy = data.diagonal.left;
     if (config.id === 'talents') energy = data.diagonal.top;
     if (config.id === 'money') energy = data.money.main;
     if (config.id === 'love') energy = data.love.main;
@@ -39,32 +38,32 @@ export function buildAllSections(data: any, isPaid: boolean): FinalSection[] {
     const content = getAtomsForEnergy(energy, config.context);
     const meta = getEnergyMeta(energy);
     
+    const energyName = meta?.name || `Энергия ${energy}`;
+    const energyTheme = meta?.theme || "внутренняя эволюция";
+
     if (!content) {
       return {
-        id: config.id,
-        title: config.title,
-        fullText: "Анализ данных для этого сектора в процессе...",
-        previewText: "Анализ данных в процессе...",
-        teaser: "Узнайте больше в полном отчете",
-        isLocked: !isPaid && !config.free,
-        energy,
-        energyName: "Энергия " + energy,
-        energyTheme: ""
+        id: config.id, title: config.title, energy, energyName, energyTheme,
+        fullText: "Анализ этого сектора требует дополнительных данных. Пожалуйста, обратитесь к полной версии.",
+        previewText: "Идет глубокая обработка вашего кода...",
+        teaser: "Разблокируйте полный доступ для активации этого раздела",
+        isLocked: !isPaid && !config.free
       };
     }
 
-    const fullText = composeFullText(content);
+    const options = { energy, energyName, theme: energyTheme };
+    const fullText = composePsychologicalAnalysis(content, options);
 
     return {
       id: config.id,
       title: config.title,
       fullText: fullText,
-      previewText: generatePreview(fullText),
-      teaser: getTeaser(content),
+      previewText: generatePaywallPreview(fullText),
+      teaser: generateFullTeaser(content),
       isLocked: !isPaid && !config.free,
       energy,
-      energyName: meta?.name || "Энергия " + energy,
-      energyTheme: meta?.theme || ""
+      energyName,
+      energyTheme
     };
   });
 }
