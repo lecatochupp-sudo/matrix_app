@@ -8,8 +8,10 @@ import { Check, ShieldCheck, Zap, Star, ArrowRight, Loader2 } from 'lucide-react
 
 const plans = [
   {
+    id: "basic",
     name: "Basic",
-    price: "990 ₽",
+    price: 690,
+    priceLabel: "690 ₽",
     description: "Базовый разбор ключевых энергий",
     features: ["Личные качества", "Предназначение", "Теневые стороны"],
     icon: Zap,
@@ -17,8 +19,10 @@ const plans = [
     bg: "bg-slate-500/5"
   },
   {
+    id: "premium",
     name: "Premium",
-    price: "2 490 ₽",
+    price: 2900,
+    priceLabel: "2 900 ₽",
     description: "Полная карта вашей судьбы",
     features: ["Всё из Basic", "Денежный канал", "Любовный сценарий", "Карта здоровья"],
     icon: Star,
@@ -27,8 +31,10 @@ const plans = [
     recommended: true
   },
   {
+    id: "vip",
     name: "VIP",
-    price: "4 990 ₽",
+    price: 4900,
+    priceLabel: "4 900 ₽",
     description: "Максимальный анализ + прогноз",
     features: ["Всё из Premium", "Прогноз на 10 лет", "Родовые программы", "PDF-отчет (50 стр)"],
     icon: ShieldCheck,
@@ -42,9 +48,11 @@ function PaywallContent() {
   const router = useRouter();
   const baseParams = searchParams.toString();
 
-  const handleSelect = (plan: string) => {
+  const handleSelect = (planId: string, price: number) => {
     const params = new URLSearchParams(baseParams);
-    params.set('plan', plan);
+    params.set('plan', planId);
+    params.set('price', price.toString());
+    console.log(`Plan selected: ${planId}, Price: ${price}`);
     router.push(`/checkout?${params.toString()}`);
   };
 
@@ -77,7 +85,7 @@ function PaywallContent() {
                     <h3 className="text-3xl font-black text-white italic mb-2 uppercase">{plan.name}</h3>
                     <p className="text-slate-500 text-sm mb-8 font-serif italic">{plan.description}</p>
                     
-                    <div className="text-5xl font-black text-white mb-10 tracking-tighter">{plan.price}</div>
+                    <div className="text-5xl font-black text-white mb-10 tracking-tighter">{plan.priceLabel}</div>
 
                     <div className="space-y-4 mb-12 flex-grow">
                         {plan.features.map((f, j) => (
@@ -89,7 +97,7 @@ function PaywallContent() {
                     </div>
 
                     <button 
-                        onClick={() => handleSelect(plan.name)}
+                        onClick={() => handleSelect(plan.id, plan.price)}
                         className={`w-full py-5 rounded-2xl font-black uppercase text-[11px] tracking-[0.2em] transition-all flex items-center justify-center gap-3 ${plan.recommended ? 'bg-indigo-600 text-white hover:bg-indigo-500 shadow-xl shadow-indigo-600/20' : 'bg-white/5 text-white hover:bg-white/10'}`}
                     >
                         Выбрать <ArrowRight size={16} />

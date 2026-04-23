@@ -1,24 +1,39 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { MatrixCircle } from "@/components/ui/MatrixCircle";
+import { User, Zap, Heart, History } from "lucide-react";
+
+const sectors = [
+    { title: "Личность", icon: User, desc: "Ваш врожденный потенциал" },
+    { title: "Реализация", icon: Zap, desc: "Точки роста и успеха" },
+    { title: "Отношения", icon: Heart, desc: "Сценарии взаимодействия" },
+    { title: "Карма", icon: History, desc: "Уроки и задачи души" }
+];
 
 export function IntroSection() {
   return (
-    <section className="py-40 px-6 bg-white/[0.01]">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-32 items-center">
+    <section className="py-40 px-6 bg-white/[0.01] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
         <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="space-y-10"
+            className="space-y-12"
         >
-            <h2 className="text-5xl font-black text-white italic tracking-tighter uppercase leading-none">Что такое<br/>Матрица Судьбы?</h2>
-            <div className="h-1 w-20 bg-indigo-500" />
-            <p className="text-xl text-slate-400 font-serif italic leading-relaxed">
-                Это система самопознания на стыке психологии и нумерологии. В её основе лежит 22 энергии, которые зашифрованы в вашей дате рождения.
+            <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter uppercase leading-none glow-text">Что такое<br/>Матрица?</h2>
+            <p className="text-xl text-slate-400 font-serif italic leading-relaxed max-w-xl">
+                Это глубокая система самопознания, которая объединяет древнюю мудрость чисел и современный психоанализ.
             </p>
-            <p className="text-lg text-slate-500 leading-relaxed">
-                Матрица — это не гадание. Это карта вашего потенциала. Она объясняет, почему в вашей жизни происходят те или иные события, и дает четкие инструкции, как изменить свою реальность через работу над собой.
-            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+                {sectors.map((s, i) => (
+                    <div key={i} className="p-6 bg-white/[0.03] border border-white/5 rounded-3xl hover:bg-white/[0.05] transition-all">
+                        <s.icon size={20} className="text-indigo-400 mb-4" />
+                        <h4 className="text-sm font-black uppercase text-white tracking-widest mb-1">{s.title}</h4>
+                        <p className="text-xs text-slate-500 italic">{s.desc}</p>
+                    </div>
+                ))}
+            </div>
         </motion.div>
 
         <motion.div 
@@ -26,13 +41,11 @@ export function IntroSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             className="relative"
         >
-            <div className="absolute -inset-10 bg-indigo-500/10 blur-[100px] rounded-full" />
-            <div className="aspect-square bg-slate-900 border border-white/5 rounded-[64px] flex items-center justify-center p-12 relative overflow-hidden group">
-                <div className="text-[120px] font-black text-indigo-500/20 group-hover:scale-110 transition-transform duration-1000">22</div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-                    <p className="text-white font-black uppercase text-xs tracking-[0.4em] mb-4">Core Energies</p>
-                    <p className="text-slate-400 text-sm italic">Каждая вершина матрицы — это ключ к вашей реализации</p>
-                </div>
+            <MatrixCircle />
+            
+            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-full max-w-[300px] p-6 glow-card rounded-[32px] text-center">
+                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-400 mb-2">Verified Protocol</p>
+                <p className="text-xs text-slate-400 italic">Анализ 22 ключевых энергий вашего воплощения</p>
             </div>
         </motion.div>
       </div>

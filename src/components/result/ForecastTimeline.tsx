@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, ChevronRight, Zap } from "lucide-react";
+import { ChevronRight, Zap, Lock } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface ForecastYear {
     year: number;
@@ -11,6 +12,18 @@ interface ForecastYear {
 }
 
 export function ForecastTimeline({ items }: { items: ForecastYear[] }) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const isPaid = searchParams.get('paid') === 'true';
+
+  const handleAction = () => {
+    if (!isPaid) {
+        router.push(`/paywall?${searchParams.toString()}`);
+    } else {
+        alert("Полный прогноз доступен в вашем PDF-отчете.");
+    }
+  };
+
   return (
     <div className="relative pl-8 space-y-12 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-px before:bg-gradient-to-b before:from-indigo-500/50 before:via-white/10 before:to-transparent">
       {items.map((item, i) => (
@@ -21,7 +34,6 @@ export function ForecastTimeline({ items }: { items: ForecastYear[] }) {
           transition={{ delay: i * 0.1 }}
           className="relative group"
         >
-          {/* Dot */}
           <div className="absolute -left-[37px] top-1.5 w-[11px] h-[11px] rounded-full bg-[#070b14] border-2 border-indigo-500 shadow-[0_0_10px_rgba(99,102,241,0.5)] z-10 group-hover:scale-125 transition-transform" />
           
           <div className="flex flex-col md:flex-row md:items-center gap-6 mb-4">
@@ -36,12 +48,22 @@ export function ForecastTimeline({ items }: { items: ForecastYear[] }) {
             </div>
           </div>
 
-          <div className="p-8 bg-white/[0.02] border border-white/5 rounded-[32px] group-hover:bg-white/[0.04] group-hover:border-white/10 transition-all">
-            <p className="text-slate-400 leading-relaxed font-serif italic text-lg">
+          <div className="p-8 bg-white/[0.02] border border-white/5 rounded-[32px] group-hover:bg-white/[0.04] group-hover:border-white/10 transition-all relative overflow-hidden">
+            {!isPaid && i > 0 && (
+                <div className="absolute inset-0 bg-[#070b14]/60 backdrop-blur-[2px] z-10 flex items-center justify-center">
+                    <div className="flex items-center gap-2 text-indigo-400 font-black uppercase text-[9px] tracking-widest bg-black/40 px-4 py-2 rounded-full border border-indigo-500/20">
+                        <Lock size={10} /> Скрыто в бесплатной версии
+                    </div>
+                </div>
+            )}
+            <p className={`text-slate-400 leading-relaxed font-serif italic text-lg ${!isPaid && i > 0 ? 'blur-sm' : ''}`}>
                 {item.description}
             </p>
-            <button className="mt-6 flex items-center gap-2 text-[9px] font-black uppercase text-indigo-500/60 hover:text-indigo-400 transition-colors tracking-widest">
-                Читать полный прогноз <ChevronRight size={12} />
+            <button 
+                onClick={handleAction}
+                className="mt-6 flex items-center gap-2 text-[9px] font-black uppercase text-indigo-500 hover:text-indigo-400 transition-colors tracking-widest cursor-pointer"
+            >
+                {isPaid ? "Читать подробнее" : "Разблокировать полный прогноз"} <ChevronRight size={12} />
             </button>
           </div>
         </motion.div>

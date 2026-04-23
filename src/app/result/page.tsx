@@ -14,7 +14,7 @@ import { buildAllSections } from "@/lib/content/contentSectionBuilder";
 import { ReportNavigation } from "@/components/result/ReportNavigation";
 import { ForecastTimeline } from "@/components/result/ForecastTimeline";
 import { motion } from "framer-motion";
-import { ArrowRight, Star, Loader2, CheckCircle2, Lock } from "lucide-react";
+import { ArrowRight, Star, Loader2, CheckCircle2, Download, Lock } from "lucide-react";
 
 const getEmptyData = () => ({
   diagonal: { left: 0, top: 0, right: 0, bottom: 0, center: 0 },
@@ -58,7 +58,14 @@ function ResultContent() {
 
   const handleUnlock = () => router.push(`/paywall?${baseParams}`);
 
-  // Mock forecast data for timeline
+  const handlePdfAction = () => {
+    if (!paid) {
+        handleUnlock();
+    } else {
+        alert("Генерация PDF будет доступна в ближайшее время. Мы сообщим вам на email.");
+    }
+  };
+
   const forecastItems = [
     { year: 2026, age: 36, energy: data.diagonal.right, description: "Год материальной реализации и расширения влияния. Время, когда внутренние наработки превращаются в конкретные результаты." },
     { year: 2027, age: 37, energy: 7, description: "Период активного движения и достижения целей. Рекомендуется фокус на командной работе и дальних поездках." },
@@ -66,32 +73,36 @@ function ResultContent() {
   ];
 
   return (
-    <main className="max-w-7xl mx-auto px-6 pt-16 pb-40 relative">
+    <main className="max-w-7xl mx-auto px-4 md:px-6 pt-16 pb-40 relative">
         <ResultHero name={name} date={date} age={0} gender={gender} data={data} />
 
-        <div className="grid grid-cols-1 xl:grid-cols-12 gap-20 mb-32">
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-12 xl:gap-20 mb-32">
           {/* Sidebar / Diagram */}
           <div className="xl:col-span-6">
-            <div className="sticky top-32">
-                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="mb-16">
+            <div className="xl:sticky xl:top-32 space-y-12">
+                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}>
                     <DiagramCard data={data} />
                 </motion.div>
                 <KeyMetrics metrics={metrics} />
                 
+                {/* PDF Button */}
+                <button 
+                    onClick={handlePdfAction}
+                    className="w-full py-6 bg-white/[0.03] border border-white/10 rounded-[32px] flex items-center justify-center gap-4 hover:bg-white/[0.05] transition-all group"
+                >
+                    <Download size={20} className="text-indigo-400 group-hover:scale-110 transition-transform" />
+                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Скачать PDF отчет (52 стр)</span>
+                </button>
+
                 {!paid && (
-                    <div className="mt-12 p-10 bg-gradient-to-br from-indigo-500/10 to-violet-500/5 border border-indigo-500/20 rounded-[48px] text-center relative overflow-hidden group">
+                    <div className="p-10 bg-gradient-to-br from-indigo-500/10 to-violet-500/5 border border-indigo-500/20 rounded-[48px] text-center relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-3xl -mr-16 -mt-16" />
                         <p className="text-[10px] font-black uppercase tracking-[0.4em] text-indigo-400 mb-6">Анализ завершен на 15%</p>
                         <div className="w-full h-1.5 bg-black/40 rounded-full overflow-hidden mb-8">
-                            <motion.div 
-                                initial={{ width: 0 }}
-                                animate={{ width: "15%" }}
-                                transition={{ duration: 2 }}
-                                className="h-full bg-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.5)]" 
-                            />
+                            <motion.div initial={{ width: 0 }} animate={{ width: "15%" }} transition={{ duration: 2 }} className="h-full bg-indigo-500" />
                         </div>
                         <button onClick={handleUnlock} className="w-full py-6 bg-white text-indigo-950 rounded-2xl font-black uppercase text-[11px] tracking-[0.2em] flex items-center justify-center gap-3 shadow-xl hover:scale-105 transition-all">
-                            Разблокировать остальные 85% <ArrowRight size={14} />
+                            Разблокировать доступ <ArrowRight size={14} />
                         </button>
                     </div>
                 )}
@@ -100,7 +111,9 @@ function ResultContent() {
 
           {/* Report Sections */}
           <div className="xl:col-span-6 space-y-8">
-            <ReportNavigation />
+            <div className="hidden xl:block">
+                <ReportNavigation />
+            </div>
 
             {sections.map((section) => (
                 <div key={section.id} id={`section-${section.id}`}>
@@ -115,21 +128,21 @@ function ResultContent() {
                             <ForecastTimeline items={forecastItems} />
                         ) : (
                             <div className="space-y-8">
-                                <div className="p-8 bg-indigo-500/5 border border-indigo-500/10 rounded-[32px] mb-8">
+                                <div className="p-6 md:p-8 bg-indigo-500/5 border border-indigo-500/10 rounded-[32px] mb-8">
                                    <div className="flex items-center gap-4 mb-3">
-                                       <span className="text-4xl font-black italic text-indigo-400 tracking-tighter">{section.energy}</span>
+                                       <span className="text-3xl md:text-4xl font-black italic text-indigo-400 tracking-tighter">{section.energy}</span>
                                        <div className="h-px flex-grow bg-indigo-500/10" />
-                                       <span className="text-[10px] font-black uppercase text-indigo-500/60 tracking-widest">Код Энергии</span>
+                                       <span className="text-[9px] font-black uppercase text-indigo-500/60 tracking-widest">Energy Code</span>
                                    </div>
-                                   <p className="text-xl font-bold text-white italic mb-1">{section.energyName}</p>
-                                   <p className="text-slate-500 text-[10px] font-black uppercase tracking-widest">{section.energyTheme}</p>
+                                   <p className="text-lg md:text-xl font-bold text-white italic mb-1">{section.energyName}</p>
+                                   <p className="text-slate-500 text-[9px] font-black uppercase tracking-widest">{section.energyTheme}</p>
                                 </div>
-                                <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed font-serif text-xl italic whitespace-pre-line">
+                                <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed font-serif text-lg md:text-xl italic whitespace-pre-line">
                                     {section.fullText}
                                 </div>
                                 <div className="flex items-center gap-3 mt-12 p-6 bg-white/[0.02] border border-white/5 rounded-2xl">
                                     <CheckCircle2 size={16} className="text-indigo-500" />
-                                    <span className="text-[10px] font-black uppercase text-slate-600 tracking-widest">Сектор полностью проанализирован</span>
+                                    <span className="text-[9px] font-black uppercase text-slate-600 tracking-widest">Verified interpretation</span>
                                 </div>
                             </div>
                         )}
@@ -138,13 +151,13 @@ function ResultContent() {
             ))}
 
             {!paid && (
-                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="mt-32 p-16 bg-gradient-to-br from-[#0a0f1d] to-[#121826] border border-white/5 rounded-[64px] text-center relative overflow-hidden">
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="mt-24 md:mt-32 p-10 md:p-16 bg-gradient-to-br from-[#0a0f1d] to-[#121826] border border-white/5 rounded-[64px] text-center relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600/10 blur-[100px] -mr-48 -mt-48" />
                     <Star className="w-12 h-12 text-indigo-500 mx-auto mb-10 animate-pulse" />
-                    <h3 className="text-5xl font-black text-white italic mb-8 uppercase leading-tight tracking-tighter">Ваша книга судьбы<br/>готова</h3>
+                    <h3 className="text-4xl md:text-5xl font-black text-white italic mb-8 uppercase leading-tight tracking-tighter">Книга судьбы готова</h3>
                     <p className="text-slate-400 text-lg mb-12 max-w-md mx-auto font-serif italic">52 страницы персонального анализа, которые изменят ваше представление о себе.</p>
-                    <button onClick={handleUnlock} className="px-16 py-8 bg-white text-indigo-950 rounded-3xl font-black uppercase text-xs tracking-widest shadow-2xl hover:scale-105 transition-all">
-                        Получить полный доступ
+                    <button onClick={handleUnlock} className="px-12 py-6 bg-white text-indigo-950 rounded-3xl font-black uppercase text-xs tracking-widest shadow-2xl hover:scale-105 transition-all">
+                        Получить доступ
                     </button>
                 </motion.div>
             )}

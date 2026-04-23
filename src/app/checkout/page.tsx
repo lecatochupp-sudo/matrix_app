@@ -9,11 +9,19 @@ import { Lock, CreditCard, ShieldCheck, ArrowRight, Loader2 } from 'lucide-react
 function CheckoutContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const plan = searchParams.get('plan') || "Premium";
+  const planId = searchParams.get('plan') || "premium";
+  const price = searchParams.get('price') || "2900";
   const [loading, setLoading] = useState(false);
+
+  const planNames: Record<string, string> = {
+    basic: "Basic",
+    premium: "Premium",
+    vip: "VIP"
+  };
 
   const handlePay = () => {
     setLoading(true);
+    console.log(`Processing payment for plan: ${planId}, Amount: ${price}`);
     setTimeout(() => {
       const params = new URLSearchParams(searchParams.toString());
       params.set('paid', 'true');
@@ -29,8 +37,8 @@ function CheckoutContent() {
                 <div className="bg-[#121826]/60 border border-white/5 p-8 rounded-[40px] mb-8">
                     <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">Выбранный тариф</p>
                     <div className="flex justify-between items-center mb-6">
-                        <h3 className="text-2xl font-black text-white italic uppercase">{plan}</h3>
-                        <span className="text-indigo-400 font-black">2 490 ₽</span>
+                        <h3 className="text-2xl font-black text-white italic uppercase">{planNames[planId] || "Premium"}</h3>
+                        <span className="text-indigo-400 font-black">{parseInt(price).toLocaleString()} ₽</span>
                     </div>
                     <div className="h-px bg-white/5 mb-6" />
                     <ul className="space-y-3 text-sm text-slate-400 font-serif italic">
@@ -71,7 +79,7 @@ function CheckoutContent() {
                     disabled={loading}
                     className="w-full py-6 bg-indigo-600 text-white font-black uppercase text-[11px] tracking-[0.3em] rounded-[24px] hover:bg-indigo-500 transition-all flex items-center justify-center gap-3 shadow-2xl shadow-indigo-600/20 disabled:opacity-50"
                 >
-                    {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <>Оплатить заказ <ArrowRight size={16} /></>}
+                    {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <>Оплатить {parseInt(price).toLocaleString()} ₽ <ArrowRight size={16} /></>}
                 </button>
 
                 <div className="mt-8 flex items-center justify-center gap-2 opacity-30">
