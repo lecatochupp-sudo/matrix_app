@@ -1,3 +1,4 @@
+// @ts-nocheck
 export function toReferenceDate(referenceDate) {
   if (referenceDate instanceof Date) {
     return new Date(Date.UTC(

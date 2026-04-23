@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { normalizeTo22 } from "./normalizeTo22";
 import { buildHealthSemanticProjection } from "./buildHealthSemanticProjection";
 

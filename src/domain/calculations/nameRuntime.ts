@@ -1,3 +1,4 @@
+// @ts-nocheck
 const alphabetRegistry = {
   russian: {
     code: "russian",

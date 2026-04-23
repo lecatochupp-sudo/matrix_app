@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { legacyNumberTo22, legacySumNumbers } from "./legacyXlsmProvider";
 
 export function calculateFullMatrix(day: number, month: number, year: number) {

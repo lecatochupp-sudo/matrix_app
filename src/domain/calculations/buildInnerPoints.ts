@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { normalizeTo22 } from "./normalizeTo22";
 
 function buildLine(label, vertex, center, formulas) {

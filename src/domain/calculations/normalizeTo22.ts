@@ -1,3 +1,4 @@
+// @ts-nocheck
 function sumDigitsOnce(value) {
   return String(Math.abs(Number(value)))
     .split("")

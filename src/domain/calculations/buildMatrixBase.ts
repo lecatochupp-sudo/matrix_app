@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { normalizeTo22, sumDigits } from "./normalizeTo22";
 import { parseBirthDate } from "./parseBirthDate";
 

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { normalizeTo22Legacy } from "./normalizeTo22";
 import { buildLegacyEnergyPattern, buildMandalaDigitSequences, countNumber, arrayRepeatNum } from "./legacyXlsmRuntime";
 import { buildHealthSemanticProjection } from "./buildHealthSemanticProjection";

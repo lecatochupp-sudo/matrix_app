@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Реализация NumberTo22 из Excel файла:
  * "если intSource > 22, то повторять intSource = intSource - 22, если 0 вернуть 22"

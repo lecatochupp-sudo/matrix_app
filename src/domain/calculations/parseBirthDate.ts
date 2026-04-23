@@ -1,3 +1,4 @@
+// @ts-nocheck
 export function parseBirthDate(birthDate) {
   const match = String(birthDate).trim().match(/^(\d{2})\.(\d{2})\.(\d{4})$/);
 

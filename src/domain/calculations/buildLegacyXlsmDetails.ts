@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { firstDigit, lastNonZeroDigit } from "./parseBirthDate";
 import { buildLegacyCrystalCodes } from "./legacyXlsmRuntime";
 

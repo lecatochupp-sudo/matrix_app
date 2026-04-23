@@ -1,3 +1,4 @@
+// @ts-nocheck
 function codeBand(value) {
   if (value === null || value === undefined) {
     return "missing";

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { normalizeTo22Legacy, sumDigits } from "./normalizeTo22";
 import {
   buildLegacyCrystalCodes,

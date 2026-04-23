@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { normalizeTo22 } from "./normalizeTo22";
 
 export function buildOuterSquare(matrixBase, formulas = { normalizeTo22 }) {

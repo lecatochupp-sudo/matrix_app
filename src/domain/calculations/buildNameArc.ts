@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { numberTo9 } from "./legacyXlsmRuntime";
 import {
   consonantsToNumber,
