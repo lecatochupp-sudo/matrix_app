@@ -1,0 +1,236 @@
+{
+  "title": "Планеты",
+  "state": "visible",
+  "size": {
+    "rows": 32,
+    "cols": 7
+  },
+  "formulas": [
+    {
+      "cell": "E24",
+      "formula": "=SumNumbers(A24)"
+    },
+    {
+      "cell": "E25",
+      "formula": "=SumNumbers(A25)"
+    },
+    {
+      "cell": "E26",
+      "formula": "=SumNumbers(A26)"
+    },
+    {
+      "cell": "E27",
+      "formula": "=SumNumbers(A27)"
+    },
+    {
+      "cell": "E28",
+      "formula": "=SumNumbers(A28)"
+    },
+    {
+      "cell": "E29",
+      "formula": "=SumNumbers(A29)"
+    },
+    {
+      "cell": "E30",
+      "formula": "=SumNumbers(A30)"
+    },
+    {
+      "cell": "E31",
+      "formula": "=SumNumbers(A31)"
+    },
+    {
+      "cell": "E32",
+      "formula": "=SumNumbers(A32)"
+    }
+  ],
+  "strings": [
+    {
+      "cell": "A1",
+      "value": "Дата"
+    },
+    {
+      "cell": "B1",
+      "value": "Процент"
+    },
+    {
+      "cell": "C1",
+      "value": "Планета"
+    },
+    {
+      "cell": "D1",
+      "value": "Доп планета"
+    },
+    {
+      "cell": "E1",
+      "value": "Доп задача"
+    },
+    {
+      "cell": "F1",
+      "value": "Процент Действия"
+    },
+    {
+      "cell": "G1",
+      "value": "Процент Действия Доп"
+    },
+    {
+      "cell": "C2",
+      "value": "Солнце"
+    },
+    {
+      "cell": "C3",
+      "value": "Луна"
+    },
+    {
+      "cell": "C4",
+      "value": "Юпитер"
+    },
+    {
+      "cell": "C5",
+      "value": "Уран"
+    },
+    {
+      "cell": "C6",
+      "value": "Меркурий"
+    },
+    {
+      "cell": "C7",
+      "value": "Венера"
+    },
+    {
+      "cell": "C8",
+      "value": "Нептун"
+    },
+    {
+      "cell": "C9",
+      "value": "Сатурн"
+    },
+    {
+      "cell": "C10",
+      "value": "Марс"
+    },
+    {
+      "cell": "C11",
+      "value": "Солнце"
+    },
+    {
+      "cell": "C12",
+      "value": "Луна"
+    },
+    {
+      "cell": "C13",
+      "value": "Юпитер"
+    },
+    {
+      "cell": "C14",
+      "value": "Уран"
+    },
+    {
+      "cell": "C15",
+      "value": "Меркурий"
+    },
+    {
+      "cell": "C16",
+      "value": "Венера"
+    },
+    {
+      "cell": "C17",
+      "value": "Нептун"
+    },
+    {
+      "cell": "C18",
+      "value": "Сатурн"
+    },
+    {
+      "cell": "C19",
+      "value": "Марс"
+    },
+    {
+      "cell": "C20",
+      "value": "Солнце"
+    },
+    {
+      "cell": "C21",
+      "value": "Луна"
+    },
+    {
+      "cell": "C22",
+      "value": "Юпитер"
+    },
+    {
+      "cell": "C23",
+      "value": "Уран"
+    },
+    {
+      "cell": "C24",
+      "value": "Солнце"
+    },
+    {
+      "cell": "D24",
+      "value": "Меркурий"
+    },
+    {
+      "cell": "C25",
+      "value": "Луна"
+    },
+    {
+      "cell": "D25",
+      "value": "Венера"
+    },
+    {
+      "cell": "C26",
+      "value": "Юпитер"
+    },
+    {
+      "cell": "D26",
+      "value": "Нептун"
+    },
+    {
+      "cell": "C27",
+      "value": "Уран"
+    },
+    {
+      "cell": "D27",
+      "value": "Сатурн"
+    },
+    {
+      "cell": "C28",
+      "value": "Меркурий"
+    },
+    {
+      "cell": "D28",
+      "value": "Марс"
+    },
+    {
+      "cell": "C29",
+      "value": "Венера"
+    },
+    {
+      "cell": "D29",
+      "value": "Солнце"
+    },
+    {
+      "cell": "C30",
+      "value": "Нептун"
+    },
+    {
+      "cell": "D30",
+      "value": "Луна"
+    },
+    {
+      "cell": "C31",
+      "value": "Сатурн"
+    },
+    {
+      "cell": "D31",
+      "value": "Юпитер"
+    },
+    {
+      "cell": "C32",
+      "value": "Марс"
+    },
+    {
+      "cell": "D32",
+      "value": "Уран"
+    }
+  ]
+}

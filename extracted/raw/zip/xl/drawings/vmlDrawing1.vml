@@ -1,0 +1,46 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel">
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout><v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202"
+  path="m,l,21600r21600,l21600,xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t202" style='position:absolute;
+  margin-left:1771.2pt;margin-top:75.6pt;width:111pt;height:54.6pt;z-index:1;
+  visibility:hidden' fillcolor="#ffffe1" o:insetmode="auto">
+  <v:fill color2="#ffffe1"/>
+  <v:shadow color="black" obscured="t"/>
+  <v:path o:connecttype="none"/>
+  <v:textbox style='mso-direction-alt:auto'>
+   <div style='text-align:left'></div>
+  </v:textbox>
+  <x:ClientData ObjectType="Note">
+   <x:MoveWithCells/>
+   <x:SizeWithCells/>
+   <x:Anchor>
+    32, 8, 3, 12, 34, 28, 7, 4</x:Anchor>
+   <x:AutoFill>False</x:AutoFill>
+   <x:Row>4</x:Row>
+   <x:Column>31</x:Column>
+  </x:ClientData>
+ </v:shape><v:shape id="_x0000_s1026" type="#_x0000_t202" style='position:absolute;
+  margin-left:2155.2pt;margin-top:390pt;width:101.4pt;height:56.4pt;z-index:2;
+  visibility:hidden' fillcolor="#ffffe1" o:insetmode="auto">
+  <v:fill color2="#ffffe1"/>
+  <v:shadow color="black" obscured="t"/>
+  <v:path o:connecttype="none"/>
+  <v:textbox style='mso-direction-alt:auto'>
+   <div style='text-align:left'></div>
+  </v:textbox>
+  <x:ClientData ObjectType="Note">
+   <x:MoveWithCells/>
+   <x:SizeWithCells/>
+   <x:Anchor>
+    39, 8, 22, 8, 41, 0, 25, 12</x:Anchor>
+   <x:AutoFill>False</x:AutoFill>
+   <x:Row>23</x:Row>
+   <x:Column>37</x:Column>
+  </x:ClientData>
+ </v:shape></xml>

@@ -1,0 +1,239 @@
+{
+  "title": "Алфавит",
+  "state": "visible",
+  "size": {
+    "rows": 46,
+    "cols": 3
+  },
+  "formulas": [],
+  "strings": [
+    {
+      "cell": "B3",
+      "value": "Введите буквы Алфавита"
+    },
+    {
+      "cell": "C3",
+      "value": "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+    },
+    {
+      "cell": "B4",
+      "value": "Введите все Гласные"
+    },
+    {
+      "cell": "C4",
+      "value": "АУОЫИЭЯЮЁЕ"
+    },
+    {
+      "cell": "B7",
+      "value": "Русский"
+    },
+    {
+      "cell": "C7",
+      "value": "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+    },
+    {
+      "cell": "B8",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C8",
+      "value": "АУОЫИЭЯЮЁЕ"
+    },
+    {
+      "cell": "B10",
+      "value": "Английский"
+    },
+    {
+      "cell": "C10",
+      "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+      "cell": "B11",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C11",
+      "value": "AEIOUY"
+    },
+    {
+      "cell": "B13",
+      "value": "Немецкий"
+    },
+    {
+      "cell": "C13",
+      "value": "AÄBCDEFGHIJKLMNOÖPQRSẞTUÜVWXYZ"
+    },
+    {
+      "cell": "B14",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C14",
+      "value": "AÄEIOÖUÜY"
+    },
+    {
+      "cell": "B16",
+      "value": "Украинский"
+    },
+    {
+      "cell": "C16",
+      "value": "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ"
+    },
+    {
+      "cell": "B17",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C17",
+      "value": "АЕЄИІЇОУЮЯ "
+    },
+    {
+      "cell": "B19",
+      "value": "Литовский"
+    },
+    {
+      "cell": "C19",
+      "value": "AĄBCČDEĘĖFGHIĮYJKLMNOPRSŠTUŲŪVZŽ"
+    },
+    {
+      "cell": "B20",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C20",
+      "value": "AĄEĘĖIĮYOUŲŪ"
+    },
+    {
+      "cell": "B22",
+      "value": "Латышский"
+    },
+    {
+      "cell": "C22",
+      "value": "AĀBCČDEĒFGĢHIĪJKĶLĻMNŅOPRSŠTUŪVZŽ"
+    },
+    {
+      "cell": "B23",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C23",
+      "value": "AĀEĒIĪOUŪ"
+    },
+    {
+      "cell": "B25",
+      "value": "Белорусский"
+    },
+    {
+      "cell": "C25",
+      "value": "АБВГДЕЁЖЗІЙКЛМНОПРСТУЎФХЦЧШЫЬЭЮЯ"
+    },
+    {
+      "cell": "B26",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C26",
+      "value": "АОУІЭЫЯЕЁЮ"
+    },
+    {
+      "cell": "B28",
+      "value": "Казахский алфавит"
+    },
+    {
+      "cell": "C28",
+      "value": "АӘБВГҒДЕЁЖЗИЙКҚЛМНҢОӨПРСТУҰҮФХҺЦЧШЩЪЫІЬЭЮЯ"
+    },
+    {
+      "cell": "B29",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C29",
+      "value": "АӘЕЁИОӨУҰҮЫІЭЮЯ"
+    },
+    {
+      "cell": "B31",
+      "value": "Румынский алфавит"
+    },
+    {
+      "cell": "C31",
+      "value": "AĂÂBCDEFGHIÎJKLMNOPQRSȘTȚUVWXYZ"
+    },
+    {
+      "cell": "B32",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C32",
+      "value": "AĂÂEIÎOU"
+    },
+    {
+      "cell": "B34",
+      "value": "Польский алфавит"
+    },
+    {
+      "cell": "C34",
+      "value": "AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ"
+    },
+    {
+      "cell": "B35",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C35",
+      "value": "AĄEĘIOÓUY"
+    },
+    {
+      "cell": "B37",
+      "value": "Шведский алфавит"
+    },
+    {
+      "cell": "C37",
+      "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ"
+    },
+    {
+      "cell": "B38",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C38",
+      "value": "AEIOUYÅÄÖ"
+    },
+    {
+      "cell": "B40",
+      "value": "Корейский алфавит"
+    },
+    {
+      "cell": "C40",
+      "value": "ㄱ ㄲ ㄴ ㄷ ㄸ ㄹ ㅁ ㅂ ㅃ ㅅ ㅆ ㅇ ㅈ ㅉ ㅊ ㅋ ㅌ ㅍ ㅎㅏ ㅐ ㅑ ㅒ ㅓ ㅔ ㅕ ㅖ ㅗ ㅘ ㅙ ㅚ ㅛ ㅜ ㅝ ㅞ ㅟ ㅠ ㅡ ㅢ ㅣ"
+    },
+    {
+      "cell": "B41",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C41",
+      "value": "ㅏ ㅐ ㅑ ㅒ ㅓ ㅔ ㅕ ㅖ ㅗ ㅘ ㅙ ㅚ ㅛ ㅜ ㅝ ㅞ ㅟ ㅠ ㅡ ㅢ ㅣ"
+    },
+    {
+      "cell": "B43",
+      "value": "Испанский алфавит"
+    },
+    {
+      "cell": "C43",
+      "value": "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+    },
+    {
+      "cell": "B44",
+      "value": "Гласные"
+    },
+    {
+      "cell": "C44",
+      "value": "AEIOU"
+    },
+    {
+      "cell": "C46",
+      "value": "A a Á á B b D d E e F f G g Ǵ ǵ H h\nI i I ı J j K k L l M m N n Ń ń O o\nÓ ó P p Q q R r S s T t U u Ú ú V v\nY y Ý ý Z z Sh sh Ch ch    "
+    }
+  ]
+}

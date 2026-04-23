@@ -1,0 +1,3422 @@
+{
+  "Кристалл Судьбы": [
+    {
+      "cell": "W3",
+      "formula": "=numberto22(ConvertLettersToNumber(LastName,Alphabet))"
+    },
+    {
+      "cell": "W4",
+      "formula": "=numberto22(ConvertLettersToNumber(FirstName,Alphabet))"
+    },
+    {
+      "cell": "X4",
+      "formula": "=numberto22(ConvertLettersToNumber(FirstName,Alphabet))"
+    },
+    {
+      "cell": "Y4",
+      "formula": "=numberto22(TaroDay+TaroMonth+TaroYear)"
+    },
+    {
+      "cell": "W5",
+      "formula": "=numberto22(ConvertLettersToNumber(MiddleName,Alphabet))"
+    },
+    {
+      "cell": "Y5",
+      "formula": "=numberto22(ConsonantsToNumber(FirstName,Alphabet,Volwels))"
+    },
+    {
+      "cell": "AC5",
+      "formula": "=CalculateRod(V15,V16,0,Alphabet)"
+    },
+    {
+      "cell": "AH5",
+      "formula": "=RetrogradeCalc(AE5,AF5,AG5)"
+    },
+    {
+      "cell": "AM5",
+      "formula": "=numberto22(Z4+V24)"
+    },
+    {
+      "cell": "Y6",
+      "formula": "=numberto22(VowelsToNumber(FirstName,Alphabet,Volwels))"
+    },
+    {
+      "cell": "Z6",
+      "formula": "=NumberTo9(SumNumbers(W6))"
+    },
+    {
+      "cell": "AC6",
+      "formula": "=CalculateRod(V15,V16,1,Alphabet)"
+    },
+    {
+      "cell": "Y7",
+      "formula": "=ABS(numberto22(TaroDay+TaroMonth-TaroYear+TaroName))"
+    },
+    {
+      "cell": "L8",
+      "formula": "=numberto22(ABS(TaroDay - TaroYear))"
+    },
+    {
+      "cell": "Y8",
+      "formula": "=ABS(numberto22(TaroDay+TaroMonth-TaroYear))"
+    },
+    {
+      "cell": "AM10",
+      "formula": "=SumNumbers(CONCATENATE(DOB_Day,DOB_Month,DOB_Year))"
+    },
+    {
+      "cell": "X11",
+      "formula": "=CONCATENATE(\"0 - \", SumNumbers(CONCATENATE(DOB_Day,DOB_Month,DOB_Year)))"
+    },
+    {
+      "cell": "Z11",
+      "formula": "=CONCATENATE(SumNumbers(CONCATENATE(DOB_Day,DOB_Month,DOB_Year))+1,\" - \", SumNumbers(CONCATENATE(DOB_Day,DOB_Month,DOB_Year))+9)"
+    },
+    {
+      "cell": "AA11",
+      "formula": "=CONCATENATE(SumNumbers(CONCATENATE(DOB_Day,DOB_Month,DOB_Year))+10,\" - ∞\")"
+    },
+    {
+      "cell": "M16",
+      "formula": "=numberto22(VALUE(TaroMonth)+VALUE(TaroYear))"
+    },
+    {
+      "cell": "X16",
+      "formula": "=numberto22(ABS(IF(numberto22(DOB_Day)+numberto22(DOB_Month)=0,22,(numberto22(DOB_Day)+numberto22(DOB_Month)))))"
+    },
+    {
+      "cell": "Y16",
+      "formula": "=CalcTP(DOB_Day)"
+    },
+    {
+      "cell": "Z16",
+      "formula": "=ABS(IF(numberto22(DOB_Day)-numberto22(DOB_Month)=0,22,(numberto22(DOB_Day)-numberto22(DOB_Month))))"
+    },
+    {
+      "cell": "AA16",
+      "formula": "=CalcOPV(DOB_Day)"
+    },
+    {
+      "cell": "V18",
+      "formula": "=numberto22(DOB_Day)"
+    },
+    {
+      "cell": "J19",
+      "formula": "=numberto22(OPV+TaroDay)"
+    },
+    {
+      "cell": "L19",
+      "formula": "=numberto22(K16+M16)"
+    },
+    {
+      "cell": "O19",
+      "formula": "=numberto22(CoZ+TaroYear)"
+    },
+    {
+      "cell": "V19",
+      "formula": "=numberto22(DOB_Month)"
+    },
+    {
+      "cell": "X19",
+      "formula": "=SumNumbers(W6)"
+    },
+    {
+      "cell": "Y19",
+      "formula": "=SumNumbers(X19)"
+    },
+    {
+      "cell": "AA19",
+      "formula": "=SumNumbers(WorkNum_3)"
+    },
+    {
+      "cell": "AB19",
+      "formula": "=WorkNum_1+2*LastNotZero(DOB_Year)"
+    },
+    {
+      "cell": "AC19",
+      "formula": "=SumNumbers(WorkNum_5)"
+    },
+    {
+      "cell": "AN19",
+      "formula": "=numberto22(ConvertLettersToNumber(AK19,Alphabet))"
+    },
+    {
+      "cell": "V20",
+      "formula": "=numberto22(SumNumbers(DOB_Year))"
+    },
+    {
+      "cell": "AN20",
+      "formula": "=numberto22(numberto22(ConvertLettersToNumber(AK19,Alphabet))+X4)"
+    },
+    {
+      "cell": "V22",
+      "formula": "=numberto22(ConvertLettersToNumber(U22,AlphabetEng))"
+    },
+    {
+      "cell": "AN23",
+      "formula": "=numberto22(SumNumbersStr(ConvertAlphaNumbersToNumber(AL23,Alphabet)))"
+    },
+    {
+      "cell": "Y24",
+      "formula": "=CalcTP(DOB_Day)"
+    },
+    {
+      "cell": "Z24",
+      "formula": "=numberto22(ABS(TaroDay+TaroMonth))"
+    },
+    {
+      "cell": "AA24",
+      "formula": "=numberto22(ABS(TaroDay+TaroYear))"
+    },
+    {
+      "cell": "AC24",
+      "formula": "=numberto22(ABS(Z24+AA24))"
+    },
+    {
+      "cell": "AE24",
+      "formula": "=numberto22(ABS(TaroMonth+TaroYear))"
+    },
+    {
+      "cell": "AG24",
+      "formula": "=numberto22(Z24+AA24+AC24+AE24)"
+    },
+    {
+      "cell": "AI24",
+      "formula": "=numberto22(AG24+AG25)"
+    },
+    {
+      "cell": "AN24",
+      "formula": "=numberto22(SumNumbersStr(ConvertAlphaNumbersToNumber(AL24,Alphabet)))"
+    },
+    {
+      "cell": "Y25",
+      "formula": "=CalcOPV(DOB_Day)"
+    },
+    {
+      "cell": "Z25",
+      "formula": "=numberto22(ABS(TaroDay-TaroMonth))"
+    },
+    {
+      "cell": "AA25",
+      "formula": "=numberto22(ABS(TaroDay-TaroYear))"
+    },
+    {
+      "cell": "AC25",
+      "formula": "=numberto22(ABS(Z25-AA25))"
+    },
+    {
+      "cell": "AE25",
+      "formula": "=numberto22(ABS(TaroMonth-TaroYear))"
+    },
+    {
+      "cell": "AG25",
+      "formula": "=numberto22(Z25+AA25+AC25+AE25)"
+    },
+    {
+      "cell": "AI25",
+      "formula": "=numberto22(ABS(AG25-AG24))"
+    },
+    {
+      "cell": "AN25",
+      "formula": "=numberto22(AN23+AN24)"
+    },
+    {
+      "cell": "L26",
+      "formula": "=numberto22(ABS(OPV-CoZ))"
+    },
+    {
+      "cell": "V26",
+      "formula": "=NumberTo9(ConvertLettersToNumber(CONCATENATE(LastName,FirstName,MiddleName),Alphabet))"
+    },
+    {
+      "cell": "Y26",
+      "formula": "=CONCATENATE(\"0-\",36-SumNumbers(WorkNum_2))"
+    },
+    {
+      "cell": "AA26",
+      "formula": "=CONCATENATE(36-SumNumbers(WorkNum_2)+1,\"-\",36-SumNumbers(WorkNum_2)+9)"
+    },
+    {
+      "cell": "AC26",
+      "formula": "=CONCATENATE(36-SumNumbers(WorkNum_2)+10,\"-\",36-SumNumbers(WorkNum_2)+18)"
+    },
+    {
+      "cell": "AE26",
+      "formula": "=CONCATENATE(36-SumNumbers(WorkNum_2)+19,\"-и далее\")"
+    },
+    {
+      "cell": "AN27",
+      "formula": "=numberto22(SumNumbersStr(AK27))"
+    },
+    {
+      "cell": "V28",
+      "formula": "=NumberTo9(SumNumbers(DOB_Day))"
+    },
+    {
+      "cell": "V29",
+      "formula": "=NumberTo9(SumNumbers(DOB_Month))"
+    },
+    {
+      "cell": "V30",
+      "formula": "=NumberTo9(SumNumbers(DOB_Year))"
+    },
+    {
+      "cell": "V32",
+      "formula": "=numberto22(2*TaroDay+4*TaroMonth+2*TaroYear)"
+    },
+    {
+      "cell": "V35",
+      "formula": "=numberto22(4*TaroDay+2*TaroMonth+4*TaroYear)"
+    },
+    {
+      "cell": "I36",
+      "formula": "=36-SumNumbers(WorkNum_2)"
+    },
+    {
+      "cell": "O36",
+      "formula": "=36-SumNumbers(WorkNum_2)+9"
+    },
+    {
+      "cell": "V37",
+      "formula": "=SumNumbers(T38)"
+    },
+    {
+      "cell": "V41",
+      "formula": "=SumNumbers(T42)"
+    },
+    {
+      "cell": "O44",
+      "formula": "=36-SumNumbers(WorkNum_2)+18"
+    },
+    {
+      "cell": "V44",
+      "formula": "=SumNumbers(T45)"
+    },
+    {
+      "cell": "C53",
+      "formula": "=numberto22(B55+D51)"
+    },
+    {
+      "cell": "E53",
+      "formula": "=numberto22(D51+F55)"
+    },
+    {
+      "cell": "H53",
+      "formula": "=numberto22(G55+I51)"
+    },
+    {
+      "cell": "J53",
+      "formula": "=numberto22(I51+K55)"
+    },
+    {
+      "cell": "M53",
+      "formula": "=numberto22(L55+N51)"
+    },
+    {
+      "cell": "O53",
+      "formula": "=numberto22(N51+P55)"
+    },
+    {
+      "cell": "R53",
+      "formula": "=numberto22(Q55+S51)"
+    },
+    {
+      "cell": "T53",
+      "formula": "=numberto22(S51+U55)"
+    },
+    {
+      "cell": "D55",
+      "formula": "=numberto22(B55+F55)"
+    },
+    {
+      "cell": "I55",
+      "formula": "=numberto22(G55+K55)"
+    },
+    {
+      "cell": "N55",
+      "formula": "=numberto22(L55+P55)"
+    },
+    {
+      "cell": "S55",
+      "formula": "=numberto22(Q55+U55)"
+    },
+    {
+      "cell": "D56",
+      "formula": "=ABS(numberto22(B55-F55))"
+    },
+    {
+      "cell": "I56",
+      "formula": "=ABS(numberto22(G55-K55))"
+    },
+    {
+      "cell": "N56",
+      "formula": "=ABS(numberto22(L55-P55))"
+    },
+    {
+      "cell": "S56",
+      "formula": "=ABS(numberto22(Q55-U55))"
+    },
+    {
+      "cell": "E57",
+      "formula": "=ABS(numberto22(D59-F55))"
+    },
+    {
+      "cell": "H57",
+      "formula": "=ABS(numberto22(G55-I59))"
+    },
+    {
+      "cell": "J57",
+      "formula": "=ABS(numberto22(I59-K55))"
+    },
+    {
+      "cell": "M57",
+      "formula": "=ABS(numberto22(L55-N59))"
+    },
+    {
+      "cell": "O57",
+      "formula": "=ABS(numberto22(N59-P55))"
+    },
+    {
+      "cell": "R57",
+      "formula": "=ABS(numberto22(S59-Q55))"
+    },
+    {
+      "cell": "T57",
+      "formula": "=ABS(numberto22(S59-U55))"
+    },
+    {
+      "cell": "C66",
+      "formula": "=numberto22(B68+D64)"
+    },
+    {
+      "cell": "E66",
+      "formula": "=numberto22(D64+F68)"
+    },
+    {
+      "cell": "H66",
+      "formula": "=numberto22(G68+I64)"
+    },
+    {
+      "cell": "J66",
+      "formula": "=numberto22(I64+K68)"
+    },
+    {
+      "cell": "M66",
+      "formula": "=numberto22(L68+N64)"
+    },
+    {
+      "cell": "O66",
+      "formula": "=numberto22(N64+P68)"
+    },
+    {
+      "cell": "R66",
+      "formula": "=numberto22(Q68+S64)"
+    },
+    {
+      "cell": "T66",
+      "formula": "=numberto22(S64+U68)"
+    },
+    {
+      "cell": "D68",
+      "formula": "=numberto22(B68+F68)"
+    },
+    {
+      "cell": "I68",
+      "formula": "=numberto22(G68+K68)"
+    },
+    {
+      "cell": "N68",
+      "formula": "=numberto22(L68+P68)"
+    },
+    {
+      "cell": "S68",
+      "formula": "=numberto22(Q68+U68)"
+    },
+    {
+      "cell": "D69",
+      "formula": "=ABS(numberto22(B68-F68))"
+    },
+    {
+      "cell": "I69",
+      "formula": "=ABS(numberto22(G68-K68))"
+    },
+    {
+      "cell": "N69",
+      "formula": "=ABS(numberto22(L68-P68))"
+    },
+    {
+      "cell": "S69",
+      "formula": "=ABS(numberto22(Q68-U68))"
+    },
+    {
+      "cell": "E70",
+      "formula": "=ABS(numberto22(D72-F68))"
+    },
+    {
+      "cell": "H70",
+      "formula": "=ABS(numberto22(G68-I72))"
+    },
+    {
+      "cell": "J70",
+      "formula": "=ABS(numberto22(I72-K68))"
+    },
+    {
+      "cell": "M70",
+      "formula": "=ABS(numberto22(L68-N72))"
+    },
+    {
+      "cell": "O70",
+      "formula": "=ABS(numberto22(N72-P68))"
+    },
+    {
+      "cell": "R70",
+      "formula": "=ABS(numberto22(S72-Q68))"
+    },
+    {
+      "cell": "T70",
+      "formula": "=ABS(numberto22(S72-U68))"
+    },
+    {
+      "cell": "C83",
+      "formula": "=YEAR(SolarDate(DOB,TODAY()))"
+    },
+    {
+      "cell": "D83",
+      "formula": "=NumberTo9(SumNumbers(CONCATENATE(DOB_Day,DOB_Month,C83)))"
+    },
+    {
+      "cell": "V91",
+      "formula": "=VLOOKUP(NumberTo52(78-AE5),'МК Дата'!A2:B54,2,FALSE)"
+    },
+    {
+      "cell": "AI102",
+      "formula": "=KarmicShadow(DOB,DATE(AI98, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ102",
+      "formula": "=KarmicShadow(DOB,DATE(AJ98, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK102",
+      "formula": "=KarmicShadow(DOB,DATE(AK98, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL102",
+      "formula": "=KarmicShadow(DOB,DATE(AL98, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM102",
+      "formula": "=KarmicShadow(DOB,DATE(AM98, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI108",
+      "formula": "=KarmicShadow(DOB,DATE(AI104, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ108",
+      "formula": "=KarmicShadow(DOB,DATE(AJ104, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK108",
+      "formula": "=KarmicShadow(DOB,DATE(AK104, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL108",
+      "formula": "=KarmicShadow(DOB,DATE(AL104, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM108",
+      "formula": "=KarmicShadow(DOB,DATE(AM104, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "B114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+B113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "C114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+C113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "D114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+D113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "E114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+E113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "F114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+F113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "G114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+G113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "H114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+H113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "I114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+I113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "J114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+J113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "K114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+K113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "L114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+L113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "M114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+M113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "N114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+N113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "O114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+O113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "P114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+P113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "Q114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+Q113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "R114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+R113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "S114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+S113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "T114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+T113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "U114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+U113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "V114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+V113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "W114",
+      "formula": "=KarmicShadow(DOB,DATE(YEAR($F$109)+W113, MONTH($F$109), DAY($F$109)),VALUE(OPV))"
+    },
+    {
+      "cell": "AI114",
+      "formula": "=KarmicShadow(DOB,DATE(AI110, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ114",
+      "formula": "=KarmicShadow(DOB,DATE(AJ110, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK114",
+      "formula": "=KarmicShadow(DOB,DATE(AK110, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL114",
+      "formula": "=KarmicShadow(DOB,DATE(AL110, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM114",
+      "formula": "=KarmicShadow(DOB,DATE(AM110, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI120",
+      "formula": "=KarmicShadow(DOB,DATE(AI116, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ120",
+      "formula": "=KarmicShadow(DOB,DATE(AJ116, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK120",
+      "formula": "=KarmicShadow(DOB,DATE(AK116, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL120",
+      "formula": "=KarmicShadow(DOB,DATE(AL116, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM120",
+      "formula": "=KarmicShadow(DOB,DATE(AM116, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI126",
+      "formula": "=KarmicShadow(DOB,DATE(AI122, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ126",
+      "formula": "=KarmicShadow(DOB,DATE(AJ122, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK126",
+      "formula": "=KarmicShadow(DOB,DATE(AK122, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL126",
+      "formula": "=KarmicShadow(DOB,DATE(AL122, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM126",
+      "formula": "=KarmicShadow(DOB,DATE(AM122, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI132",
+      "formula": "=KarmicShadow(DOB,DATE(AI128, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ132",
+      "formula": "=KarmicShadow(DOB,DATE(AJ128, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK132",
+      "formula": "=KarmicShadow(DOB,DATE(AK128, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL132",
+      "formula": "=KarmicShadow(DOB,DATE(AL128, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM132",
+      "formula": "=KarmicShadow(DOB,DATE(AM128, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI138",
+      "formula": "=KarmicShadow(DOB,DATE(AI134, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ138",
+      "formula": "=KarmicShadow(DOB,DATE(AJ134, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK138",
+      "formula": "=KarmicShadow(DOB,DATE(AK134, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL138",
+      "formula": "=KarmicShadow(DOB,DATE(AL134, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM138",
+      "formula": "=KarmicShadow(DOB,DATE(AM134, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI144",
+      "formula": "=KarmicShadow(DOB,DATE(AI140, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ144",
+      "formula": "=KarmicShadow(DOB,DATE(AJ140, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK144",
+      "formula": "=KarmicShadow(DOB,DATE(AK140, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL144",
+      "formula": "=KarmicShadow(DOB,DATE(AL140, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM144",
+      "formula": "=KarmicShadow(DOB,DATE(AM140, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI150",
+      "formula": "=KarmicShadow(DOB,DATE(AI146, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ150",
+      "formula": "=KarmicShadow(DOB,DATE(AJ146, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK150",
+      "formula": "=KarmicShadow(DOB,DATE(AK146, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL150",
+      "formula": "=KarmicShadow(DOB,DATE(AL146, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM150",
+      "formula": "=KarmicShadow(DOB,DATE(AM146, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI156",
+      "formula": "=KarmicShadow(DOB,DATE(AI152, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ156",
+      "formula": "=KarmicShadow(DOB,DATE(AJ152, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK156",
+      "formula": "=KarmicShadow(DOB,DATE(AK152, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL156",
+      "formula": "=KarmicShadow(DOB,DATE(AL152, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM156",
+      "formula": "=KarmicShadow(DOB,DATE(AM152, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI162",
+      "formula": "=KarmicShadow(DOB,DATE(AI158, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ162",
+      "formula": "=KarmicShadow(DOB,DATE(AJ158, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK162",
+      "formula": "=KarmicShadow(DOB,DATE(AK158, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL162",
+      "formula": "=KarmicShadow(DOB,DATE(AL158, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM162",
+      "formula": "=KarmicShadow(DOB,DATE(AM158, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI168",
+      "formula": "=KarmicShadow(DOB,DATE(AI164, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ168",
+      "formula": "=KarmicShadow(DOB,DATE(AJ164, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK168",
+      "formula": "=KarmicShadow(DOB,DATE(AK164, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL168",
+      "formula": "=KarmicShadow(DOB,DATE(AL164, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM168",
+      "formula": "=KarmicShadow(DOB,DATE(AM164, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI174",
+      "formula": "=KarmicShadow(DOB,DATE(AI170, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ174",
+      "formula": "=KarmicShadow(DOB,DATE(AJ170, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK174",
+      "formula": "=KarmicShadow(DOB,DATE(AK170, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL174",
+      "formula": "=KarmicShadow(DOB,DATE(AL170, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM174",
+      "formula": "=KarmicShadow(DOB,DATE(AM170, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI180",
+      "formula": "=KarmicShadow(DOB,DATE(AI176, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ180",
+      "formula": "=KarmicShadow(DOB,DATE(AJ176, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK180",
+      "formula": "=KarmicShadow(DOB,DATE(AK176, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL180",
+      "formula": "=KarmicShadow(DOB,DATE(AL176, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM180",
+      "formula": "=KarmicShadow(DOB,DATE(AM176, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI186",
+      "formula": "=KarmicShadow(DOB,DATE(AI182, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ186",
+      "formula": "=KarmicShadow(DOB,DATE(AJ182, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK186",
+      "formula": "=KarmicShadow(DOB,DATE(AK182, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL186",
+      "formula": "=KarmicShadow(DOB,DATE(AL182, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM186",
+      "formula": "=KarmicShadow(DOB,DATE(AM182, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI192",
+      "formula": "=KarmicShadow(DOB,DATE(AI188, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ192",
+      "formula": "=KarmicShadow(DOB,DATE(AJ188, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK192",
+      "formula": "=KarmicShadow(DOB,DATE(AK188, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL192",
+      "formula": "=KarmicShadow(DOB,DATE(AL188, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM192",
+      "formula": "=KarmicShadow(DOB,DATE(AM188, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI198",
+      "formula": "=KarmicShadow(DOB,DATE(AI194, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ198",
+      "formula": "=KarmicShadow(DOB,DATE(AJ194, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK198",
+      "formula": "=KarmicShadow(DOB,DATE(AK194, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL198",
+      "formula": "=KarmicShadow(DOB,DATE(AL194, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM198",
+      "formula": "=KarmicShadow(DOB,DATE(AM194, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AI204",
+      "formula": "=KarmicShadow(DOB,DATE(AI200, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AJ204",
+      "formula": "=KarmicShadow(DOB,DATE(AJ200, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AK204",
+      "formula": "=KarmicShadow(DOB,DATE(AK200, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AL204",
+      "formula": "=KarmicShadow(DOB,DATE(AL200, DOB_Month, DOB_Day),VALUE(OPV))"
+    },
+    {
+      "cell": "AM204",
+      "formula": "=KarmicShadow(DOB,DATE(AM200, DOB_Month, DOB_Day),VALUE(OPV))"
+    }
+  ],
+  "Мандала": [
+    {
+      "cell": "D3",
+      "formula": "=numberto22(C3)"
+    },
+    {
+      "cell": "D4",
+      "formula": "=numberto22(C4)"
+    },
+    {
+      "cell": "H4",
+      "formula": "=CalcTP(C3)"
+    },
+    {
+      "cell": "I4",
+      "formula": "=numberto22(ABS(D3+D4))"
+    },
+    {
+      "cell": "J4",
+      "formula": "=numberto22(ABS(D3+D5))"
+    },
+    {
+      "cell": "K4",
+      "formula": "=numberto22(ABS(I4+J4))"
+    },
+    {
+      "cell": "L4",
+      "formula": "=numberto22(ABS(D4+D5))"
+    },
+    {
+      "cell": "M4",
+      "formula": "=numberto22(I4+J4+K4+L4)"
+    },
+    {
+      "cell": "N4",
+      "formula": "=numberto22(M4+M5)"
+    },
+    {
+      "cell": "D5",
+      "formula": "=numberto22(SumNumbers(C5))"
+    },
+    {
+      "cell": "H5",
+      "formula": "=CalcOPV(C3)"
+    },
+    {
+      "cell": "I5",
+      "formula": "=numberto22(ABS(D3-D4))"
+    },
+    {
+      "cell": "J5",
+      "formula": "=numberto22(ABS(D3-D5))"
+    },
+    {
+      "cell": "K5",
+      "formula": "=numberto22(ABS(I5-J5))"
+    },
+    {
+      "cell": "L5",
+      "formula": "=numberto22(ABS(D4-D5))"
+    },
+    {
+      "cell": "M5",
+      "formula": "=numberto22(I5+J5+K5+L5)"
+    },
+    {
+      "cell": "N5",
+      "formula": "=numberto22(ABS(M5-M4))"
+    },
+    {
+      "cell": "H6",
+      "formula": "= CONCATENATE(\"0-\",36-SumNumbers(C9))"
+    },
+    {
+      "cell": "J6",
+      "formula": "=CONCATENATE(36-SumNumbers(C9)+1,\"-\",36-SumNumbers(C9)+9)"
+    },
+    {
+      "cell": "K6",
+      "formula": "=CONCATENATE(36-SumNumbers(C9)+10,\"-\",36-SumNumbers(C9)+18)"
+    },
+    {
+      "cell": "L6",
+      "formula": "=CONCATENATE(36-SumNumbers(C9)+19,\"-и далее\")"
+    },
+    {
+      "cell": "B9",
+      "formula": "=SumNumbers(CONCATENATE(C3,C4,C5))"
+    },
+    {
+      "cell": "C9",
+      "formula": "=SumNumbers(B9)"
+    },
+    {
+      "cell": "E9",
+      "formula": "=SumNumbers(D9)"
+    },
+    {
+      "cell": "B25",
+      "formula": "=numberto22(J25+B33)"
+    },
+    {
+      "cell": "R25",
+      "formula": "=numberto22(R33+J25)"
+    },
+    {
+      "cell": "C26",
+      "formula": "=numberto22(J26+C33)"
+    },
+    {
+      "cell": "Q26",
+      "formula": "=numberto22(Q33+J26)"
+    },
+    {
+      "cell": "D27",
+      "formula": "=numberto22(J27+D33)"
+    },
+    {
+      "cell": "P27",
+      "formula": "=numberto22(P33+J27)"
+    },
+    {
+      "cell": "E28",
+      "formula": "=numberto22(J28+E33)"
+    },
+    {
+      "cell": "O28",
+      "formula": "=numberto22(J28+O33)"
+    },
+    {
+      "cell": "F29",
+      "formula": "=numberto22(J29+F33)"
+    },
+    {
+      "cell": "N29",
+      "formula": "=numberto22(N33+J29)"
+    },
+    {
+      "cell": "G30",
+      "formula": "=numberto22(J30+G33)"
+    },
+    {
+      "cell": "M30",
+      "formula": "=numberto22(J30+M33)"
+    },
+    {
+      "cell": "H31",
+      "formula": "=numberto22(H33+J31)"
+    },
+    {
+      "cell": "L31",
+      "formula": "=numberto22(J31+L33)"
+    },
+    {
+      "cell": "H35",
+      "formula": "=numberto22(H33+J35)"
+    },
+    {
+      "cell": "J35",
+      "formula": "=ABS(numberto22(numberto22(H33)-numberto22(L33)))"
+    },
+    {
+      "cell": "L35",
+      "formula": "=numberto22(J35+L33)"
+    },
+    {
+      "cell": "G36",
+      "formula": "=numberto22(G33+J36)"
+    },
+    {
+      "cell": "J36",
+      "formula": "=ABS(numberto22(numberto22(G33)-numberto22(M33)))"
+    },
+    {
+      "cell": "M36",
+      "formula": "=numberto22(J36+M33)"
+    },
+    {
+      "cell": "F37",
+      "formula": "=numberto22(F33+J37)"
+    },
+    {
+      "cell": "J37",
+      "formula": "=ABS(numberto22(numberto22(F33)-numberto22(N33)))"
+    },
+    {
+      "cell": "N37",
+      "formula": "=numberto22(N33+J37)"
+    },
+    {
+      "cell": "E38",
+      "formula": "=numberto22(E33+J38)"
+    },
+    {
+      "cell": "J38",
+      "formula": "=ABS(numberto22(numberto22(E33)-numberto22(O33)))"
+    },
+    {
+      "cell": "O38",
+      "formula": "=numberto22(O33+J38)"
+    },
+    {
+      "cell": "D39",
+      "formula": "=numberto22(D33+J39)"
+    },
+    {
+      "cell": "J39",
+      "formula": "=ABS(numberto22(numberto22(D33)-numberto22(P33)))"
+    },
+    {
+      "cell": "P39",
+      "formula": "=numberto22(P33+J39)"
+    },
+    {
+      "cell": "C40",
+      "formula": "=numberto22(C33+J40)"
+    },
+    {
+      "cell": "J40",
+      "formula": "=ABS(numberto22(numberto22(C33)-numberto22(Q33)))"
+    },
+    {
+      "cell": "Q40",
+      "formula": "=numberto22(Q33+J40)"
+    },
+    {
+      "cell": "B41",
+      "formula": "=numberto22(B33+J41)"
+    },
+    {
+      "cell": "J41",
+      "formula": "=ABS(numberto22(numberto22(B33)-numberto22(R33)))"
+    },
+    {
+      "cell": "R41",
+      "formula": "=numberto22(R33+J41)"
+    }
+  ],
+  "Совместимость": [
+    {
+      "cell": "D4",
+      "formula": "=CalculateRod(C4,C5,0,Alphabet)"
+    },
+    {
+      "cell": "L4",
+      "formula": "=CalculateRod(K4,K5,0,Alphabet)"
+    },
+    {
+      "cell": "D5",
+      "formula": "=CalculateRod(C4,C5,1,Alphabet)"
+    },
+    {
+      "cell": "L5",
+      "formula": "=CalculateRod(K4,K5,1,Alphabet)"
+    },
+    {
+      "cell": "D6",
+      "formula": "=numberto22(ConvertLettersToNumber(C6,Alphabet))"
+    },
+    {
+      "cell": "L6",
+      "formula": "=numberto22(ConvertLettersToNumber(K6,Alphabet))"
+    },
+    {
+      "cell": "S6",
+      "formula": "=CalcTP(C7)"
+    },
+    {
+      "cell": "T6",
+      "formula": "=numberto22(ABS(DayTaro1+MonthTaro1))"
+    },
+    {
+      "cell": "U6",
+      "formula": "=numberto22(ABS(DayTaro1+YearTaro1))"
+    },
+    {
+      "cell": "V6",
+      "formula": "=numberto22(ABS(T6+U6))"
+    },
+    {
+      "cell": "W6",
+      "formula": "=numberto22(ABS(MonthTaro1+YearTaro1))"
+    },
+    {
+      "cell": "X6",
+      "formula": "=numberto22(T6+U6+V6+W6)"
+    },
+    {
+      "cell": "Y6",
+      "formula": "=numberto22(X6+X7)"
+    },
+    {
+      "cell": "D7",
+      "formula": "=numberto22(C7)"
+    },
+    {
+      "cell": "E7",
+      "formula": "=SumNumbers(CONCATENATE(C7,C8,C9))"
+    },
+    {
+      "cell": "L7",
+      "formula": "=numberto22(K7)"
+    },
+    {
+      "cell": "M7",
+      "formula": "=SumNumbers(CONCATENATE(K7,K8,K9))"
+    },
+    {
+      "cell": "S7",
+      "formula": "=CalcOPV(C7)"
+    },
+    {
+      "cell": "T7",
+      "formula": "=numberto22(ABS(DayTaro1-MonthTaro1))"
+    },
+    {
+      "cell": "U7",
+      "formula": "=numberto22(ABS(DayTaro1-YearTaro1))"
+    },
+    {
+      "cell": "V7",
+      "formula": "=numberto22(ABS(T7-U7))"
+    },
+    {
+      "cell": "W7",
+      "formula": "=numberto22(ABS(MonthTaro1-YearTaro1))"
+    },
+    {
+      "cell": "X7",
+      "formula": "=numberto22(T7+U7+V7+W7)"
+    },
+    {
+      "cell": "Y7",
+      "formula": "=numberto22(ABS(X7-X6))"
+    },
+    {
+      "cell": "E8",
+      "formula": "=SumNumbers(E7)"
+    },
+    {
+      "cell": "M8",
+      "formula": "=SumNumbers(M7)"
+    },
+    {
+      "cell": "D9",
+      "formula": "=numberto22(SumNumbers(C9))"
+    },
+    {
+      "cell": "E9",
+      "formula": "=36-SumNumbers(E8)"
+    },
+    {
+      "cell": "G9",
+      "formula": "=numberto22(ABS(D15+J15))"
+    },
+    {
+      "cell": "L9",
+      "formula": "=numberto22(SumNumbers(K9))"
+    },
+    {
+      "cell": "M9",
+      "formula": "=36-SumNumbers(M8)"
+    },
+    {
+      "cell": "C12",
+      "formula": "=numberto22(ABS(D7-D8))"
+    },
+    {
+      "cell": "F12",
+      "formula": "=numberto22(G9+D15)"
+    },
+    {
+      "cell": "H12",
+      "formula": "=numberto22(G9+J15)"
+    },
+    {
+      "cell": "K12",
+      "formula": "=numberto22(ABS(L7-L8))"
+    },
+    {
+      "cell": "S12",
+      "formula": "=CalcTP(K7)"
+    },
+    {
+      "cell": "T12",
+      "formula": "=numberto22(ABS(DayTaro2+MonthTaro2))"
+    },
+    {
+      "cell": "U12",
+      "formula": "=numberto22(ABS(DayTaro2+YearTaro2))"
+    },
+    {
+      "cell": "V12",
+      "formula": "=numberto22(ABS(T12+U12))"
+    },
+    {
+      "cell": "W12",
+      "formula": "=numberto22(ABS(MonthTaro2+YearTaro2))"
+    },
+    {
+      "cell": "X12",
+      "formula": "=numberto22(T12+U12+V12+W12)"
+    },
+    {
+      "cell": "Y12",
+      "formula": "=numberto22(X12+X13)"
+    },
+    {
+      "cell": "C13",
+      "formula": "=CalcOPV(C7)"
+    },
+    {
+      "cell": "K13",
+      "formula": "=CalcOPV(K7)"
+    },
+    {
+      "cell": "S13",
+      "formula": "=CalcOPV(K7)"
+    },
+    {
+      "cell": "T13",
+      "formula": "=numberto22(ABS(DayTaro2-MonthTaro2))"
+    },
+    {
+      "cell": "U13",
+      "formula": "=numberto22(ABS(DayTaro2-YearTaro2))"
+    },
+    {
+      "cell": "V13",
+      "formula": "=numberto22(ABS(T13-U13))"
+    },
+    {
+      "cell": "W13",
+      "formula": "=numberto22(ABS(MonthTaro2-YearTaro2))"
+    },
+    {
+      "cell": "X13",
+      "formula": "=numberto22(T13+U13+V13+W13)"
+    },
+    {
+      "cell": "Y13",
+      "formula": "=numberto22(ABS(X13-X12))"
+    },
+    {
+      "cell": "D15",
+      "formula": "=numberto22(D7+D8+D9)"
+    },
+    {
+      "cell": "J15",
+      "formula": "=numberto22(L7+L8+L9)"
+    },
+    {
+      "cell": "B16",
+      "formula": "=SumNumbers(E8)"
+    },
+    {
+      "cell": "D16",
+      "formula": "=numberto22(D7+D8)"
+    },
+    {
+      "cell": "J16",
+      "formula": "=numberto22(L7+L8)"
+    },
+    {
+      "cell": "K16",
+      "formula": "=SumNumbers(M8)"
+    },
+    {
+      "cell": "N18",
+      "formula": "=numberto22(L19+O19)"
+    },
+    {
+      "cell": "U18",
+      "formula": "=RetrogradeCalc(R18,S18,T18)"
+    },
+    {
+      "cell": "F19",
+      "formula": "=numberto22(TP_1+G22)"
+    },
+    {
+      "cell": "H19",
+      "formula": "=numberto22(TP_2+G22)"
+    },
+    {
+      "cell": "L19",
+      "formula": "=numberto22(L18+M18)"
+    },
+    {
+      "cell": "N19",
+      "formula": "=ABS(numberto22(L19-O19))"
+    },
+    {
+      "cell": "O19",
+      "formula": "=numberto22(O18+P18)"
+    },
+    {
+      "cell": "U19",
+      "formula": "=RetrogradeCalc(R19,S19,T19)"
+    },
+    {
+      "cell": "W19",
+      "formula": "=SumNumbers(CONCATENATE(C7,C8,C9))"
+    },
+    {
+      "cell": "X19",
+      "formula": "=SumNumbers(W19)"
+    },
+    {
+      "cell": "Z19",
+      "formula": "=SumNumbers(Y19)"
+    },
+    {
+      "cell": "W20",
+      "formula": "=SumNumbers(CONCATENATE(K7,K8,K9))"
+    },
+    {
+      "cell": "X20",
+      "formula": "=SumNumbers(W20)"
+    },
+    {
+      "cell": "Z20",
+      "formula": "=SumNumbers(Y20)"
+    },
+    {
+      "cell": "G22",
+      "formula": "=numberto22(D16+J16)"
+    },
+    {
+      "cell": "G23",
+      "formula": "=ABS(numberto22(OPV_1-OPV_2))"
+    },
+    {
+      "cell": "AC24",
+      "formula": "=SolarDate(C3,AC23)"
+    },
+    {
+      "cell": "AD24",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC23)))))"
+    },
+    {
+      "cell": "AE24",
+      "formula": "=ABS(numberto22(AD24+NameArc1*KarmicShadow($C$3,$AC$23,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF24",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC23))))))"
+    },
+    {
+      "cell": "AG24",
+      "formula": "=ABS(numberto22(AF24+NameArc1*KarmicShadow($C$3,$AC$23,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH24",
+      "formula": "=numberto22(AD24+AJ24)"
+    },
+    {
+      "cell": "AI24",
+      "formula": "=numberto22(AF24+AL24)"
+    },
+    {
+      "cell": "AJ24",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AC23)))))"
+    },
+    {
+      "cell": "AK24",
+      "formula": "=ABS(numberto22(AJ24+NameArc2*KarmicShadow($C$3,$AC$23,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL24",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AC23))))))"
+    },
+    {
+      "cell": "AM24",
+      "formula": "=ABS(numberto22(AL24+NameArc2*KarmicShadow($C$3,$AC$23,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN24",
+      "formula": "=SolarDate($K$3,AC23)"
+    },
+    {
+      "cell": "AC27",
+      "formula": "=SolarDate(C3,IF(DATE(AH21,DOB_Month1,DOB_Day1)>DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD27",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC27)))))"
+    },
+    {
+      "cell": "AE27",
+      "formula": "=ABS(numberto22(AD27+NameArc1*KarmicShadow($C$3,AC26,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF27",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC27))))))"
+    },
+    {
+      "cell": "AG27",
+      "formula": "=ABS(numberto22(AF27+NameArc1*KarmicShadow($C$3,AC26,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH27",
+      "formula": "=numberto22(AD27+AJ27)"
+    },
+    {
+      "cell": "AI27",
+      "formula": "=numberto22(AF27+AL27)"
+    },
+    {
+      "cell": "AJ27",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN27)))))"
+    },
+    {
+      "cell": "AK27",
+      "formula": "=ABS(numberto22(AJ27+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL27",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN27))))))"
+    },
+    {
+      "cell": "AM27",
+      "formula": "=ABS(numberto22(AL27+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN27",
+      "formula": "=SolarDate($K$3,IF(DATE(AH21,DOB_Month1,DOB_Day1)>DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "V30",
+      "formula": "=numberto22(S30+Y30)"
+    },
+    {
+      "cell": "AD30",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC30)))))"
+    },
+    {
+      "cell": "AE30",
+      "formula": "=ABS(numberto22(AD30+NameArc1*KarmicShadow($C$3,AC29,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF30",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC30))))))"
+    },
+    {
+      "cell": "AG30",
+      "formula": "=ABS(numberto22(AF30+NameArc1*KarmicShadow($C$3,AC29,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH30",
+      "formula": "=numberto22(AD30+AJ30)"
+    },
+    {
+      "cell": "AI30",
+      "formula": "=numberto22(AF30+AL30)"
+    },
+    {
+      "cell": "AJ30",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN30)))))"
+    },
+    {
+      "cell": "AK30",
+      "formula": "=ABS(numberto22(AJ30+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL30",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN30))))))"
+    },
+    {
+      "cell": "AM30",
+      "formula": "=ABS(numberto22(AL30+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "N31",
+      "formula": "=NumberTo52(L37+P37)"
+    },
+    {
+      "cell": "V31",
+      "formula": "=ABS(numberto22(S31-Y31))"
+    },
+    {
+      "cell": "M34",
+      "formula": "=NumberTo52(L37+N31)"
+    },
+    {
+      "cell": "O34",
+      "formula": "=NumberTo52(N31+P37)"
+    },
+    {
+      "cell": "AC34",
+      "formula": "=SolarDate(C3,IF(DATE(AB33,DOB_Month1,DOB_Day1)>DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD34",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC34)))))"
+    },
+    {
+      "cell": "AE34",
+      "formula": "=ABS(numberto22(AD34+NameArc1*KarmicShadow($C$3,AC33,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF34",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC34))))))"
+    },
+    {
+      "cell": "AG34",
+      "formula": "=ABS(numberto22(AF34+NameArc1*KarmicShadow($C$3,AC33,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH34",
+      "formula": "=numberto22(AD34+AJ34)"
+    },
+    {
+      "cell": "AI34",
+      "formula": "=numberto22(AF34+AL34)"
+    },
+    {
+      "cell": "AJ34",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN34)))))"
+    },
+    {
+      "cell": "AK34",
+      "formula": "=ABS(numberto22(AJ34+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL34",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN34))))))"
+    },
+    {
+      "cell": "AM34",
+      "formula": "=ABS(numberto22(AL34+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN34",
+      "formula": "=SolarDate($K$3,IF(DATE(Y155,DOB_Month1,DOB_Day1)>DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "T35",
+      "formula": "=numberto22(S34+U37)"
+    },
+    {
+      "cell": "U35",
+      "formula": "=ABS(numberto22(M_13-M_23))"
+    },
+    {
+      "cell": "V35",
+      "formula": "=numberto22(W34+U37)"
+    },
+    {
+      "cell": "N37",
+      "formula": "=ABS(NumberTo52(L37-P37))"
+    },
+    {
+      "cell": "S37",
+      "formula": "=numberto22(R36+T39)"
+    },
+    {
+      "cell": "U37",
+      "formula": "=numberto22(S34+W34)"
+    },
+    {
+      "cell": "W37",
+      "formula": "=numberto22(X36+V39)"
+    },
+    {
+      "cell": "AD37",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC37)))))"
+    },
+    {
+      "cell": "AE37",
+      "formula": "=ABS(numberto22(AD37+NameArc1*KarmicShadow($C$3,AC36,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF37",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC37))))))"
+    },
+    {
+      "cell": "AG37",
+      "formula": "=ABS(numberto22(AF37+NameArc1*KarmicShadow($C$3,AC36,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH37",
+      "formula": "=numberto22(AD37+AJ37)"
+    },
+    {
+      "cell": "AI37",
+      "formula": "=numberto22(AF37+AL37)"
+    },
+    {
+      "cell": "AJ37",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN37)))))"
+    },
+    {
+      "cell": "AK37",
+      "formula": "=ABS(numberto22(AJ37+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL37",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN37))))))"
+    },
+    {
+      "cell": "AM37",
+      "formula": "=ABS(numberto22(AL37+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "S39",
+      "formula": "=ABS(numberto22(D_13-D_23))"
+    },
+    {
+      "cell": "T39",
+      "formula": "=numberto22(R36+R42)"
+    },
+    {
+      "cell": "V39",
+      "formula": "=numberto22(X36+X41)"
+    },
+    {
+      "cell": "W39",
+      "formula": "=ABS(numberto22(Y_13-Y_23))"
+    },
+    {
+      "cell": "S40",
+      "formula": "=numberto22(R42+T39)"
+    },
+    {
+      "cell": "W40",
+      "formula": "=numberto22(X41+V39)"
+    },
+    {
+      "cell": "U41",
+      "formula": "=numberto22(S44+W44)"
+    },
+    {
+      "cell": "AC41",
+      "formula": "=SolarDate($C$3,IF(DATE(AB40,DOB_Month1,DOB_Day1)>DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD41",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC41)))))"
+    },
+    {
+      "cell": "AE41",
+      "formula": "=ABS(numberto22(AD41+NameArc1*KarmicShadow($C$3,AC40,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF41",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC41))))))"
+    },
+    {
+      "cell": "AG41",
+      "formula": "=ABS(numberto22(AF41+NameArc1*KarmicShadow($C$3,AC40,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH41",
+      "formula": "=numberto22(AD41+AJ41)"
+    },
+    {
+      "cell": "AI41",
+      "formula": "=numberto22(AF41+AL41)"
+    },
+    {
+      "cell": "AJ41",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN41)))))"
+    },
+    {
+      "cell": "AK41",
+      "formula": "=ABS(numberto22(AJ41+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL41",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN41))))))"
+    },
+    {
+      "cell": "AM41",
+      "formula": "=ABS(numberto22(AL41+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN41",
+      "formula": "=SolarDate($K$3,IF(DATE(Y165,DOB_Month1,DOB_Day1)>DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "T42",
+      "formula": "=numberto22(S44+U41)"
+    },
+    {
+      "cell": "U42",
+      "formula": "=ABS(numberto22(T42-V42))"
+    },
+    {
+      "cell": "V42",
+      "formula": "=numberto22(W44+U41)"
+    },
+    {
+      "cell": "S44",
+      "formula": "=numberto22(DayTaro1+MonthTaro1+YearTaro1)"
+    },
+    {
+      "cell": "W44",
+      "formula": "=numberto22(DayTaro2+MonthTaro2+YearTaro2)"
+    },
+    {
+      "cell": "AD44",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC44)))))"
+    },
+    {
+      "cell": "AE44",
+      "formula": "=ABS(numberto22(AD44+NameArc1*KarmicShadow($C$3,AC43,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF44",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC44))))))"
+    },
+    {
+      "cell": "AG44",
+      "formula": "=ABS(numberto22(AF44+NameArc1*KarmicShadow($C$3,AC43,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH44",
+      "formula": "=numberto22(AD44+AJ44)"
+    },
+    {
+      "cell": "AI44",
+      "formula": "=numberto22(AF44+AL44)"
+    },
+    {
+      "cell": "AJ44",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN44)))))"
+    },
+    {
+      "cell": "AK44",
+      "formula": "=ABS(numberto22(AJ44+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL44",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN44))))))"
+    },
+    {
+      "cell": "AM44",
+      "formula": "=ABS(numberto22(AL44+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AC48",
+      "formula": "=SolarDate($C$3,IF(DATE(AB47,DOB_Month1,DOB_Day1)>DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD48",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC48)))))"
+    },
+    {
+      "cell": "AE48",
+      "formula": "=ABS(numberto22(AD48+NameArc1*KarmicShadow($C$3,AC47,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF48",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC48))))))"
+    },
+    {
+      "cell": "AG48",
+      "formula": "=ABS(numberto22(AF48+NameArc1*KarmicShadow($C$3,AC47,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH48",
+      "formula": "=numberto22(AD48+AJ48)"
+    },
+    {
+      "cell": "AI48",
+      "formula": "=numberto22(AF48+AL48)"
+    },
+    {
+      "cell": "AJ48",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN48)))))"
+    },
+    {
+      "cell": "AK48",
+      "formula": "=ABS(numberto22(AJ48+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL48",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN48))))))"
+    },
+    {
+      "cell": "AM48",
+      "formula": "=ABS(numberto22(AL48+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN48",
+      "formula": "=SolarDate($K$3,IF(DATE(Y175,DOB_Month1,DOB_Day1)>DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD51",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC51)))))"
+    },
+    {
+      "cell": "AE51",
+      "formula": "=ABS(numberto22(AD51+NameArc1*KarmicShadow($C$3,AC50,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF51",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC51))))))"
+    },
+    {
+      "cell": "AG51",
+      "formula": "=ABS(numberto22(AF51+NameArc1*KarmicShadow($C$3,AC50,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH51",
+      "formula": "=numberto22(AD51+AJ51)"
+    },
+    {
+      "cell": "AI51",
+      "formula": "=numberto22(AF51+AL51)"
+    },
+    {
+      "cell": "AJ51",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN51)))))"
+    },
+    {
+      "cell": "AK51",
+      "formula": "=ABS(numberto22(AJ51+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL51",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN51))))))"
+    },
+    {
+      "cell": "AM51",
+      "formula": "=ABS(numberto22(AL51+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AC55",
+      "formula": "=SolarDate($C$3,IF(DATE(AB54,DOB_Month1,DOB_Day1)>DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD55",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC55)))))"
+    },
+    {
+      "cell": "AE55",
+      "formula": "=ABS(numberto22(AD55+NameArc1*KarmicShadow($C$3,AC54,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF55",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC55))))))"
+    },
+    {
+      "cell": "AG55",
+      "formula": "=ABS(numberto22(AF55+NameArc1*KarmicShadow($C$3,AC54,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH55",
+      "formula": "=numberto22(AD55+AJ55)"
+    },
+    {
+      "cell": "AI55",
+      "formula": "=numberto22(AF55+AL55)"
+    },
+    {
+      "cell": "AJ55",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN55)))))"
+    },
+    {
+      "cell": "AK55",
+      "formula": "=ABS(numberto22(AJ55+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL55",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN55))))))"
+    },
+    {
+      "cell": "AM55",
+      "formula": "=ABS(numberto22(AL55+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN55",
+      "formula": "=SolarDate($K$3,IF(DATE(Y185,DOB_Month1,DOB_Day1)>DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD58",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC58)))))"
+    },
+    {
+      "cell": "AE58",
+      "formula": "=ABS(numberto22(AD58+NameArc1*KarmicShadow($C$3,AC57,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF58",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC58))))))"
+    },
+    {
+      "cell": "AG58",
+      "formula": "=ABS(numberto22(AF58+NameArc1*KarmicShadow($C$3,AC57,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH58",
+      "formula": "=numberto22(AD58+AJ58)"
+    },
+    {
+      "cell": "AI58",
+      "formula": "=numberto22(AF58+AL58)"
+    },
+    {
+      "cell": "AJ58",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN58)))))"
+    },
+    {
+      "cell": "AK58",
+      "formula": "=ABS(numberto22(AJ58+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL58",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN58))))))"
+    },
+    {
+      "cell": "AM58",
+      "formula": "=ABS(numberto22(AL58+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "E72",
+      "formula": "=numberto22(ABS(DayTaro1-YearTaro1))"
+    },
+    {
+      "cell": "K72",
+      "formula": "=numberto22(ABS(DayTaro2-YearTaro2))"
+    },
+    {
+      "cell": "C76",
+      "formula": "=numberto22(D78+D74)"
+    },
+    {
+      "cell": "F76",
+      "formula": "=numberto22(MonthTaro1+YearTaro1)"
+    },
+    {
+      "cell": "G76",
+      "formula": "=numberto22(F78+F74)"
+    },
+    {
+      "cell": "I76",
+      "formula": "=numberto22(J78+J74)"
+    },
+    {
+      "cell": "L76",
+      "formula": "=numberto22(MonthTaro2+YearTaro2)"
+    },
+    {
+      "cell": "M76",
+      "formula": "=numberto22(L78+L74)"
+    },
+    {
+      "cell": "E77",
+      "formula": "=numberto22(D76+F76)"
+    },
+    {
+      "cell": "K77",
+      "formula": "=numberto22(J76+L76)"
+    },
+    {
+      "cell": "E80",
+      "formula": "=numberto22(ABS(D78-F78))"
+    },
+    {
+      "cell": "G80",
+      "formula": "=numberto22(D74+J74)"
+    },
+    {
+      "cell": "H80",
+      "formula": "=numberto22(E74+K74)"
+    },
+    {
+      "cell": "I80",
+      "formula": "=numberto22(F74+L74)"
+    },
+    {
+      "cell": "K80",
+      "formula": "=numberto22(ABS(J78-L78))"
+    },
+    {
+      "cell": "G82",
+      "formula": "=numberto22(D76+J76)"
+    },
+    {
+      "cell": "I82",
+      "formula": "=numberto22(F76+L76)"
+    },
+    {
+      "cell": "H83",
+      "formula": "=numberto22(G82+I82)"
+    },
+    {
+      "cell": "G84",
+      "formula": "=numberto22(ABS(D78-J78))"
+    },
+    {
+      "cell": "I84",
+      "formula": "=numberto22(F78+L78)"
+    }
+  ],
+  "Прогностика": [
+    {
+      "cell": "K5",
+      "formula": "=CalcTP(C6)"
+    },
+    {
+      "cell": "L5",
+      "formula": "=numberto22(ABS(DayTaroS+MonthtaroS))"
+    },
+    {
+      "cell": "M5",
+      "formula": "=numberto22(ABS(DayTaroS+YearTaroS))"
+    },
+    {
+      "cell": "N5",
+      "formula": "=numberto22(ABS(L5+M5))"
+    },
+    {
+      "cell": "O5",
+      "formula": "=numberto22(ABS(MonthtaroS+YearTaroS))"
+    },
+    {
+      "cell": "P5",
+      "formula": "=numberto22(L5+M5+N5+O5)"
+    },
+    {
+      "cell": "Q5",
+      "formula": "=numberto22(P5+P6)"
+    },
+    {
+      "cell": "D6",
+      "formula": "=numberto22(C6)"
+    },
+    {
+      "cell": "E6",
+      "formula": "=SumNumbers(CONCATENATE(C6,C7,C8))"
+    },
+    {
+      "cell": "K6",
+      "formula": "=CalcOPV(C6)"
+    },
+    {
+      "cell": "L6",
+      "formula": "=numberto22(ABS(DayTaroS-MonthtaroS))"
+    },
+    {
+      "cell": "M6",
+      "formula": "=numberto22(ABS(DayTaroS-YearTaroS))"
+    },
+    {
+      "cell": "N6",
+      "formula": "=numberto22(ABS(L6-M6))"
+    },
+    {
+      "cell": "O6",
+      "formula": "=numberto22(ABS(MonthtaroS-YearTaroS))"
+    },
+    {
+      "cell": "P6",
+      "formula": "=numberto22(L6+M6+N6+O6)"
+    },
+    {
+      "cell": "Q6",
+      "formula": "=numberto22(ABS(P6-P5))"
+    },
+    {
+      "cell": "E7",
+      "formula": "=SumNumbers(E6)"
+    },
+    {
+      "cell": "D8",
+      "formula": "=numberto22(SumNumbers(C8))"
+    },
+    {
+      "cell": "E8",
+      "formula": "=36-SumNumbers(E7)"
+    },
+    {
+      "cell": "D9",
+      "formula": "=numberto22(ConvertLettersToNumber(C9,Alphabet))"
+    },
+    {
+      "cell": "C16",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(C6,C7,YEAR(SolarDate($C$11,E14)))))"
+    },
+    {
+      "cell": "E16",
+      "formula": "=numberto22(C16+C17)"
+    },
+    {
+      "cell": "G16",
+      "formula": "=ABS(numberto22(C16+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "O16",
+      "formula": "=YEAR(SolarDate($C$11,M16))"
+    },
+    {
+      "cell": "C17",
+      "formula": "=numberto22((numberto22(C6)+numberto22(C7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E14))))))"
+    },
+    {
+      "cell": "E17",
+      "formula": "=numberto22(ABS(C16-C17))"
+    },
+    {
+      "cell": "G17",
+      "formula": "=ABS(numberto22(C17+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "W17",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T17,S17)))"
+    },
+    {
+      "cell": "K18",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,MONTH(M16),O16)))"
+    },
+    {
+      "cell": "M18",
+      "formula": "=numberto22(K18+K19)"
+    },
+    {
+      "cell": "O18",
+      "formula": "=ABS(numberto22(K18+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "K19",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(MONTH(M16))+numberto22(SumNumbers(O16))))"
+    },
+    {
+      "cell": "M19",
+      "formula": "=numberto22(ABS(K18-K19))"
+    },
+    {
+      "cell": "O19",
+      "formula": "=ABS(numberto22(K19+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "U19",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U17,T17,S17)))"
+    },
+    {
+      "cell": "C21",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E19)))))"
+    },
+    {
+      "cell": "E21",
+      "formula": "=numberto22(C21+C22)"
+    },
+    {
+      "cell": "G21",
+      "formula": "=ABS(numberto22(C21+NameArc*KarmicShadow($C$11,E19,VALUE($L$6))))"
+    },
+    {
+      "cell": "O21",
+      "formula": "=YEAR(SolarDate($C$11,M21))"
+    },
+    {
+      "cell": "C22",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E19))))))"
+    },
+    {
+      "cell": "E22",
+      "formula": "=numberto22(ABS(C21-C22))"
+    },
+    {
+      "cell": "G22",
+      "formula": "=ABS(numberto22(C22+NameArc*KarmicShadow($C$11,E19,VALUE($L$6))))"
+    },
+    {
+      "cell": "S22",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S19,T19,U19)))"
+    },
+    {
+      "cell": "U22",
+      "formula": "=numberto22(S22+S23)"
+    },
+    {
+      "cell": "W22",
+      "formula": "=ABS(numberto22(S22+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "K23",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,1,O21)))"
+    },
+    {
+      "cell": "M23",
+      "formula": "=numberto22(K23+K24)"
+    },
+    {
+      "cell": "O23",
+      "formula": "=ABS(numberto22(K23+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "S23",
+      "formula": "=numberto22((numberto22(S19)+numberto22(T19)+numberto22(SumNumbers(U19))))"
+    },
+    {
+      "cell": "U23",
+      "formula": "=numberto22(ABS(S22-S23))"
+    },
+    {
+      "cell": "W23",
+      "formula": "=ABS(numberto22(S23+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "K24",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(1)+numberto22(SumNumbers(O21))))"
+    },
+    {
+      "cell": "M24",
+      "formula": "=numberto22(ABS(K23-K24))"
+    },
+    {
+      "cell": "O24",
+      "formula": "=ABS(numberto22(K24+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "W24",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T24,S24)))"
+    },
+    {
+      "cell": "C25",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E23)))))"
+    },
+    {
+      "cell": "E25",
+      "formula": "=numberto22(C25+C26)"
+    },
+    {
+      "cell": "G25",
+      "formula": "=ABS(numberto22(C25+NameArc*KarmicShadow($C$11,E23,VALUE($L$6))))"
+    },
+    {
+      "cell": "C26",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E23))))))"
+    },
+    {
+      "cell": "E26",
+      "formula": "=numberto22(ABS(C25-C26))"
+    },
+    {
+      "cell": "G26",
+      "formula": "=ABS(numberto22(C26+NameArc*KarmicShadow($C$11,E23,VALUE($L$6))))"
+    },
+    {
+      "cell": "O26",
+      "formula": "=YEAR(SolarDate($C$11,M26))"
+    },
+    {
+      "cell": "U26",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U24,T24,S24)))"
+    },
+    {
+      "cell": "K28",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,2,O26)))"
+    },
+    {
+      "cell": "M28",
+      "formula": "=numberto22(K28+K29)"
+    },
+    {
+      "cell": "O28",
+      "formula": "=ABS(numberto22(K28+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "C29",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E27)))))"
+    },
+    {
+      "cell": "E29",
+      "formula": "=numberto22(C29+C30)"
+    },
+    {
+      "cell": "G29",
+      "formula": "=ABS(numberto22(C29+NameArc*KarmicShadow($C$11,E27,VALUE($L$6))))"
+    },
+    {
+      "cell": "K29",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(2)+numberto22(SumNumbers(O26))))"
+    },
+    {
+      "cell": "M29",
+      "formula": "=numberto22(ABS(K28-K29))"
+    },
+    {
+      "cell": "O29",
+      "formula": "=ABS(numberto22(K29+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "S29",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S26,T26,U26)))"
+    },
+    {
+      "cell": "U29",
+      "formula": "=numberto22(S29+S30)"
+    },
+    {
+      "cell": "W29",
+      "formula": "=ABS(numberto22(S29+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "C30",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E27))))))"
+    },
+    {
+      "cell": "E30",
+      "formula": "=numberto22(ABS(C29-C30))"
+    },
+    {
+      "cell": "G30",
+      "formula": "=ABS(numberto22(C30+NameArc*KarmicShadow($C$11,E27,VALUE($L$6))))"
+    },
+    {
+      "cell": "S30",
+      "formula": "=numberto22((numberto22(S26)+numberto22(T26)+numberto22(SumNumbers(U26))))"
+    },
+    {
+      "cell": "U30",
+      "formula": "=numberto22(ABS(S29-S30))"
+    },
+    {
+      "cell": "W30",
+      "formula": "=ABS(numberto22(S30+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "O31",
+      "formula": "=YEAR(SolarDate($C$11,M31))"
+    },
+    {
+      "cell": "W31",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T31,S31)))"
+    },
+    {
+      "cell": "C33",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E31)))))"
+    },
+    {
+      "cell": "E33",
+      "formula": "=numberto22(C33+C34)"
+    },
+    {
+      "cell": "G33",
+      "formula": "=ABS(numberto22(C33+NameArc*KarmicShadow($C$11,E31,VALUE($L$6))))"
+    },
+    {
+      "cell": "K33",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,3,O31)))"
+    },
+    {
+      "cell": "M33",
+      "formula": "=numberto22(K33+K34)"
+    },
+    {
+      "cell": "O33",
+      "formula": "=ABS(numberto22(K33+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "U33",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U31,T31,S31)))"
+    },
+    {
+      "cell": "C34",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E31))))))"
+    },
+    {
+      "cell": "E34",
+      "formula": "=numberto22(ABS(C33-C34))"
+    },
+    {
+      "cell": "G34",
+      "formula": "=ABS(numberto22(C34+NameArc*KarmicShadow($C$11,E31,VALUE($L$6))))"
+    },
+    {
+      "cell": "K34",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(3)+numberto22(SumNumbers(O31))))"
+    },
+    {
+      "cell": "M34",
+      "formula": "=numberto22(ABS(K33-K34))"
+    },
+    {
+      "cell": "O34",
+      "formula": "=ABS(numberto22(K34+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "O36",
+      "formula": "=YEAR(SolarDate($C$11,M36))"
+    },
+    {
+      "cell": "S36",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S33,T33,U33)))"
+    },
+    {
+      "cell": "U36",
+      "formula": "=numberto22(S36+S37)"
+    },
+    {
+      "cell": "W36",
+      "formula": "=ABS(numberto22(S36+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "C37",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E35)))))"
+    },
+    {
+      "cell": "E37",
+      "formula": "=numberto22(C37+C38)"
+    },
+    {
+      "cell": "G37",
+      "formula": "=ABS(numberto22(C37+NameArc*KarmicShadow($C$11,E35,VALUE($L$6))))"
+    },
+    {
+      "cell": "S37",
+      "formula": "=numberto22((numberto22(S33)+numberto22(T33)+numberto22(SumNumbers(U33))))"
+    },
+    {
+      "cell": "U37",
+      "formula": "=numberto22(ABS(S36-S37))"
+    },
+    {
+      "cell": "W37",
+      "formula": "=ABS(numberto22(S37+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "C38",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E35))))))"
+    },
+    {
+      "cell": "E38",
+      "formula": "=numberto22(ABS(C37-C38))"
+    },
+    {
+      "cell": "G38",
+      "formula": "=ABS(numberto22(C38+NameArc*KarmicShadow($C$11,E35,VALUE($L$6))))"
+    },
+    {
+      "cell": "K38",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,4,O36)))"
+    },
+    {
+      "cell": "M38",
+      "formula": "=numberto22(K38+K39)"
+    },
+    {
+      "cell": "O38",
+      "formula": "=ABS(numberto22(K38+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "W38",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T38,S38)))"
+    },
+    {
+      "cell": "K39",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(4)+numberto22(SumNumbers(O36))))"
+    },
+    {
+      "cell": "M39",
+      "formula": "=numberto22(ABS(K38-K39))"
+    },
+    {
+      "cell": "O39",
+      "formula": "=ABS(numberto22(K39+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "U40",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U38,T38,S38)))"
+    },
+    {
+      "cell": "C41",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E39)))))"
+    },
+    {
+      "cell": "E41",
+      "formula": "=numberto22(C41+C42)"
+    },
+    {
+      "cell": "G41",
+      "formula": "=ABS(numberto22(C41+NameArc*KarmicShadow($C$11,E39,VALUE($L$6))))"
+    },
+    {
+      "cell": "O41",
+      "formula": "=YEAR(SolarDate($C$11,M41))"
+    },
+    {
+      "cell": "C42",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E39))))))"
+    },
+    {
+      "cell": "E42",
+      "formula": "=numberto22(ABS(C41-C42))"
+    },
+    {
+      "cell": "G42",
+      "formula": "=ABS(numberto22(C42+NameArc*KarmicShadow($C$11,E39,VALUE($L$6))))"
+    },
+    {
+      "cell": "K43",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,5,O41)))"
+    },
+    {
+      "cell": "M43",
+      "formula": "=numberto22(K43+K44)"
+    },
+    {
+      "cell": "O43",
+      "formula": "=ABS(numberto22(K43+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "S43",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S40,T40,U40)))"
+    },
+    {
+      "cell": "U43",
+      "formula": "=numberto22(S43+S44)"
+    },
+    {
+      "cell": "W43",
+      "formula": "=ABS(numberto22(S43+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "K44",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(5)+numberto22(SumNumbers(O41))))"
+    },
+    {
+      "cell": "M44",
+      "formula": "=numberto22(ABS(K43-K44))"
+    },
+    {
+      "cell": "O44",
+      "formula": "=ABS(numberto22(K44+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "S44",
+      "formula": "=numberto22((numberto22(S40)+numberto22(T40)+numberto22(SumNumbers(U40))))"
+    },
+    {
+      "cell": "U44",
+      "formula": "=numberto22(ABS(S43-S44))"
+    },
+    {
+      "cell": "W44",
+      "formula": "=ABS(numberto22(S44+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "C45",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E43)))))"
+    },
+    {
+      "cell": "E45",
+      "formula": "=numberto22(C45+C46)"
+    },
+    {
+      "cell": "G45",
+      "formula": "=ABS(numberto22(C45+NameArc*KarmicShadow($C$11,E43,VALUE($L$6))))"
+    },
+    {
+      "cell": "W45",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T45,S45)))"
+    },
+    {
+      "cell": "C46",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E43))))))"
+    },
+    {
+      "cell": "E46",
+      "formula": "=numberto22(ABS(C45-C46))"
+    },
+    {
+      "cell": "G46",
+      "formula": "=ABS(numberto22(C46+NameArc*KarmicShadow($C$11,E43,VALUE($L$6))))"
+    },
+    {
+      "cell": "O46",
+      "formula": "=YEAR(SolarDate($C$11,M46))"
+    },
+    {
+      "cell": "U47",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U45,T45,S45)))"
+    },
+    {
+      "cell": "K48",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,6,O46)))"
+    },
+    {
+      "cell": "M48",
+      "formula": "=numberto22(K48+K49)"
+    },
+    {
+      "cell": "O48",
+      "formula": "=ABS(numberto22(K48+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "C49",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E47)))))"
+    },
+    {
+      "cell": "E49",
+      "formula": "=numberto22(C49+C50)"
+    },
+    {
+      "cell": "G49",
+      "formula": "=ABS(numberto22(C49+NameArc*KarmicShadow($C$11,$E$19,VALUE($L$6))))"
+    },
+    {
+      "cell": "K49",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(6)+numberto22(SumNumbers(O46))))"
+    },
+    {
+      "cell": "M49",
+      "formula": "=numberto22(ABS(K48-K49))"
+    },
+    {
+      "cell": "O49",
+      "formula": "=ABS(numberto22(K49+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "C50",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E47))))))"
+    },
+    {
+      "cell": "E50",
+      "formula": "=numberto22(ABS(C49-C50))"
+    },
+    {
+      "cell": "G50",
+      "formula": "=ABS(numberto22(C50+NameArc*KarmicShadow($C$11,$E$19,VALUE($L$6))))"
+    },
+    {
+      "cell": "S50",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S47,T47,U47)))"
+    },
+    {
+      "cell": "U50",
+      "formula": "=numberto22(S50+S51)"
+    },
+    {
+      "cell": "W50",
+      "formula": "=ABS(numberto22(S50+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "O51",
+      "formula": "=YEAR(SolarDate($C$11,M51))"
+    },
+    {
+      "cell": "S51",
+      "formula": "=numberto22((numberto22(S47)+numberto22(T47)+numberto22(SumNumbers(U47))))"
+    },
+    {
+      "cell": "U51",
+      "formula": "=numberto22(ABS(S50-S51))"
+    },
+    {
+      "cell": "W51",
+      "formula": "=ABS(numberto22(S51+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "W52",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T52,S52)))"
+    },
+    {
+      "cell": "C53",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E51)))))"
+    },
+    {
+      "cell": "E53",
+      "formula": "=numberto22(C53+C54)"
+    },
+    {
+      "cell": "G53",
+      "formula": "=ABS(numberto22(C53+NameArc*KarmicShadow($C$11,E51,VALUE($L$6))))"
+    },
+    {
+      "cell": "K53",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,7,O51)))"
+    },
+    {
+      "cell": "M53",
+      "formula": "=numberto22(K53+K54)"
+    },
+    {
+      "cell": "O53",
+      "formula": "=ABS(numberto22(K53+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "C54",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E51))))))"
+    },
+    {
+      "cell": "E54",
+      "formula": "=numberto22(ABS(C53-C54))"
+    },
+    {
+      "cell": "G54",
+      "formula": "=ABS(numberto22(C54+NameArc*KarmicShadow($C$11,E51,VALUE($L$6))))"
+    },
+    {
+      "cell": "K54",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(7)+numberto22(SumNumbers(O51))))"
+    },
+    {
+      "cell": "M54",
+      "formula": "=numberto22(ABS(K53-K54))"
+    },
+    {
+      "cell": "O54",
+      "formula": "=ABS(numberto22(K54+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "U54",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U52,T52,S52)))"
+    },
+    {
+      "cell": "O56",
+      "formula": "=YEAR(SolarDate($C$11,M56))"
+    },
+    {
+      "cell": "C57",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E55)))))"
+    },
+    {
+      "cell": "E57",
+      "formula": "=numberto22(C57+C58)"
+    },
+    {
+      "cell": "G57",
+      "formula": "=ABS(numberto22(C57+NameArc*KarmicShadow($C$11,E55,VALUE($L$6))))"
+    },
+    {
+      "cell": "S57",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S54,T54,U54)))"
+    },
+    {
+      "cell": "U57",
+      "formula": "=numberto22(S57+S58)"
+    },
+    {
+      "cell": "W57",
+      "formula": "=ABS(numberto22(S57+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "C58",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E55))))))"
+    },
+    {
+      "cell": "E58",
+      "formula": "=numberto22(ABS(C57-C58))"
+    },
+    {
+      "cell": "G58",
+      "formula": "=ABS(numberto22(C58+NameArc*KarmicShadow($C$11,E55,VALUE($L$6))))"
+    },
+    {
+      "cell": "K58",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,8,O56)))"
+    },
+    {
+      "cell": "M58",
+      "formula": "=numberto22(K58+K59)"
+    },
+    {
+      "cell": "O58",
+      "formula": "=ABS(numberto22(K58+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "S58",
+      "formula": "=numberto22((numberto22(S54)+numberto22(T54)+numberto22(SumNumbers(U54))))"
+    },
+    {
+      "cell": "U58",
+      "formula": "=numberto22(ABS(S57-S58))"
+    },
+    {
+      "cell": "W58",
+      "formula": "=ABS(numberto22(S58+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "K59",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(8)+numberto22(SumNumbers(O56))))"
+    },
+    {
+      "cell": "M59",
+      "formula": "=numberto22(ABS(K58-K59))"
+    },
+    {
+      "cell": "O59",
+      "formula": "=ABS(numberto22(K59+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "W59",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T59,S59)))"
+    },
+    {
+      "cell": "C61",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E59)))))"
+    },
+    {
+      "cell": "E61",
+      "formula": "=numberto22(C61+C62)"
+    },
+    {
+      "cell": "G61",
+      "formula": "=ABS(numberto22(C61+NameArc*KarmicShadow($C$11,E59,VALUE($L$6))))"
+    },
+    {
+      "cell": "O61",
+      "formula": "=YEAR(SolarDate($C$11,M61))"
+    },
+    {
+      "cell": "U61",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U59,T59,S59)))"
+    },
+    {
+      "cell": "C62",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E59))))))"
+    },
+    {
+      "cell": "E62",
+      "formula": "=numberto22(ABS(C61-C62))"
+    },
+    {
+      "cell": "G62",
+      "formula": "=ABS(numberto22(C62+NameArc*KarmicShadow($C$11,E59,VALUE($L$6))))"
+    },
+    {
+      "cell": "K63",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,9,O61)))"
+    },
+    {
+      "cell": "M63",
+      "formula": "=numberto22(K63+K64)"
+    },
+    {
+      "cell": "O63",
+      "formula": "=ABS(numberto22(K63+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "K64",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(9)+numberto22(SumNumbers(O61))))"
+    },
+    {
+      "cell": "M64",
+      "formula": "=numberto22(ABS(K63-K64))"
+    },
+    {
+      "cell": "O64",
+      "formula": "=ABS(numberto22(K64+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "S64",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S61,T61,U61)))"
+    },
+    {
+      "cell": "U64",
+      "formula": "=numberto22(S64+S65)"
+    },
+    {
+      "cell": "W64",
+      "formula": "=ABS(numberto22(S64+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "C65",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E63)))))"
+    },
+    {
+      "cell": "E65",
+      "formula": "=numberto22(C65+C66)"
+    },
+    {
+      "cell": "G65",
+      "formula": "=ABS(numberto22(C65+NameArc*KarmicShadow($C$11,E63,VALUE($L$6))))"
+    },
+    {
+      "cell": "S65",
+      "formula": "=numberto22((numberto22(S61)+numberto22(T61)+numberto22(SumNumbers(U61))))"
+    },
+    {
+      "cell": "U65",
+      "formula": "=numberto22(ABS(S64-S65))"
+    },
+    {
+      "cell": "W65",
+      "formula": "=ABS(numberto22(S65+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "C66",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E63))))))"
+    },
+    {
+      "cell": "E66",
+      "formula": "=numberto22(ABS(C65-C66))"
+    },
+    {
+      "cell": "G66",
+      "formula": "=ABS(numberto22(C66+NameArc*KarmicShadow($C$11,E63,VALUE($L$6))))"
+    },
+    {
+      "cell": "O66",
+      "formula": "=YEAR(SolarDate($C$11,M66))"
+    },
+    {
+      "cell": "W66",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T66,S66)))"
+    },
+    {
+      "cell": "K68",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,10,O66)))"
+    },
+    {
+      "cell": "M68",
+      "formula": "=numberto22(K68+K69)"
+    },
+    {
+      "cell": "O68",
+      "formula": "=ABS(numberto22(K68+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "U68",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U66,T66,S66)))"
+    },
+    {
+      "cell": "K69",
+      "formula": "=numberto22((numberto22($C$6)+10+numberto22(SumNumbers(O66))))"
+    },
+    {
+      "cell": "M69",
+      "formula": "=numberto22(ABS(K68-K69))"
+    },
+    {
+      "cell": "O69",
+      "formula": "=ABS(numberto22(K69+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "O71",
+      "formula": "=YEAR(SolarDate($C$11,M71))"
+    },
+    {
+      "cell": "S71",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S68,T68,U68)))"
+    },
+    {
+      "cell": "U71",
+      "formula": "=numberto22(S71+S72)"
+    },
+    {
+      "cell": "W71",
+      "formula": "=ABS(numberto22(S71+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "S72",
+      "formula": "=numberto22((numberto22(S68)+numberto22(T68)+numberto22(SumNumbers(U68))))"
+    },
+    {
+      "cell": "U72",
+      "formula": "=numberto22(ABS(S71-S72))"
+    },
+    {
+      "cell": "W72",
+      "formula": "=ABS(numberto22(S72+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "K73",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,11,O71)))"
+    },
+    {
+      "cell": "M73",
+      "formula": "=numberto22(K73+K74)"
+    },
+    {
+      "cell": "O73",
+      "formula": "=ABS(numberto22(K73+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "W73",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T73,S73)))"
+    },
+    {
+      "cell": "K74",
+      "formula": "=numberto22((numberto22($C$6)+11+numberto22(SumNumbers(O71))))"
+    },
+    {
+      "cell": "M74",
+      "formula": "=numberto22(ABS(K73-K74))"
+    },
+    {
+      "cell": "O74",
+      "formula": "=ABS(numberto22(K74+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "U75",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U73,T73,S73)))"
+    },
+    {
+      "cell": "O76",
+      "formula": "=YEAR(SolarDate($C$11,M76))"
+    },
+    {
+      "cell": "K78",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,12,O76)))"
+    },
+    {
+      "cell": "M78",
+      "formula": "=numberto22(K78+K79)"
+    },
+    {
+      "cell": "O78",
+      "formula": "=ABS(numberto22(K78+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "S78",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S75,T75,U75)))"
+    },
+    {
+      "cell": "U78",
+      "formula": "=numberto22(S78+S79)"
+    },
+    {
+      "cell": "W78",
+      "formula": "=ABS(numberto22(S78+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "K79",
+      "formula": "=numberto22((numberto22($C$6)+12+numberto22(SumNumbers(O76))))"
+    },
+    {
+      "cell": "M79",
+      "formula": "=numberto22(ABS(K78-K79))"
+    },
+    {
+      "cell": "O79",
+      "formula": "=ABS(numberto22(K79+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "S79",
+      "formula": "=numberto22((numberto22(S75)+numberto22(T75)+numberto22(SumNumbers(U75))))"
+    },
+    {
+      "cell": "U79",
+      "formula": "=numberto22(ABS(S78-S79))"
+    },
+    {
+      "cell": "W79",
+      "formula": "=ABS(numberto22(S79+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "W80",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T80,S80)))"
+    },
+    {
+      "cell": "U82",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U80,T80,S80)))"
+    },
+    {
+      "cell": "S85",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S82,T82,U82)))"
+    },
+    {
+      "cell": "U85",
+      "formula": "=numberto22(S85+S86)"
+    },
+    {
+      "cell": "W85",
+      "formula": "=ABS(numberto22(S85+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "S86",
+      "formula": "=numberto22((numberto22(S82)+numberto22(T82)+numberto22(SumNumbers(U82))))"
+    },
+    {
+      "cell": "U86",
+      "formula": "=numberto22(ABS(S85-S86))"
+    },
+    {
+      "cell": "W86",
+      "formula": "=ABS(numberto22(S86+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "W87",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T87,S87)))"
+    },
+    {
+      "cell": "U89",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U87,T87,S87)))"
+    },
+    {
+      "cell": "S92",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S89,T89,U89)))"
+    },
+    {
+      "cell": "U92",
+      "formula": "=numberto22(S92+S93)"
+    },
+    {
+      "cell": "W92",
+      "formula": "=ABS(numberto22(S92+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "S93",
+      "formula": "=numberto22((numberto22(S89)+numberto22(T89)+numberto22(SumNumbers(U89))))"
+    },
+    {
+      "cell": "U93",
+      "formula": "=numberto22(ABS(S92-S93))"
+    },
+    {
+      "cell": "W93",
+      "formula": "=ABS(numberto22(S93+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "W94",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T94,S94)))"
+    },
+    {
+      "cell": "U96",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U94,T94,S94)))"
+    },
+    {
+      "cell": "S99",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S96,T96,U96)))"
+    },
+    {
+      "cell": "U99",
+      "formula": "=numberto22(S99+S100)"
+    },
+    {
+      "cell": "W99",
+      "formula": "=ABS(numberto22(S99+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "S100",
+      "formula": "=numberto22((numberto22(S96)+numberto22(T96)+numberto22(SumNumbers(U96))))"
+    },
+    {
+      "cell": "U100",
+      "formula": "=numberto22(ABS(S99-S100))"
+    },
+    {
+      "cell": "W100",
+      "formula": "=ABS(numberto22(S100+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "W101",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T101,S101)))"
+    },
+    {
+      "cell": "U103",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U101,T101,S101)))"
+    },
+    {
+      "cell": "S106",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S103,T103,U103)))"
+    },
+    {
+      "cell": "U106",
+      "formula": "=numberto22(S106+S107)"
+    },
+    {
+      "cell": "W106",
+      "formula": "=ABS(numberto22(S106+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "S107",
+      "formula": "=numberto22((numberto22(S103)+numberto22(T103)+numberto22(SumNumbers(U103))))"
+    },
+    {
+      "cell": "U107",
+      "formula": "=numberto22(ABS(S106-S107))"
+    },
+    {
+      "cell": "W107",
+      "formula": "=ABS(numberto22(S107+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "W108",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T108,S108)))"
+    },
+    {
+      "cell": "U110",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U108,T108,S108)))"
+    },
+    {
+      "cell": "S113",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S110,T110,U110)))"
+    },
+    {
+      "cell": "U113",
+      "formula": "=numberto22(S113+S114)"
+    },
+    {
+      "cell": "W113",
+      "formula": "=ABS(numberto22(S113+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "S114",
+      "formula": "=numberto22((numberto22(S110)+numberto22(T110)+numberto22(SumNumbers(U110))))"
+    },
+    {
+      "cell": "U114",
+      "formula": "=numberto22(ABS(S113-S114))"
+    },
+    {
+      "cell": "W114",
+      "formula": "=ABS(numberto22(S114+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    }
+  ],
+  "Халдейская": [
+    {
+      "cell": "J2",
+      "formula": "=numberto22(H7+L7)"
+    },
+    {
+      "cell": "D3",
+      "formula": "=numberto22(ConvertLettersToNumber(C3,Alphabet))"
+    },
+    {
+      "cell": "I4",
+      "formula": "=numberto22(J2+H7)"
+    },
+    {
+      "cell": "K4",
+      "formula": "=numberto22(J2+L7)"
+    },
+    {
+      "cell": "D5",
+      "formula": "=numberto22(ConvertLettersToNumber(C5,Alphabet))"
+    },
+    {
+      "cell": "J6",
+      "formula": "=ABS(numberto22(I4+K4))"
+    },
+    {
+      "cell": "J8",
+      "formula": "=ABS(numberto22(I4-K4))"
+    },
+    {
+      "cell": "D10",
+      "formula": "=numberto22(ConvertLettersToNumber(C10,Alphabet))"
+    },
+    {
+      "cell": "D12",
+      "formula": "=numberto22(ConvertLettersToNumber(C12,AlphabetEng))"
+    },
+    {
+      "cell": "D14",
+      "formula": "=numberto22(D10+D12)"
+    }
+  ],
+  "Планеты": [
+    {
+      "cell": "E24",
+      "formula": "=SumNumbers(A24)"
+    },
+    {
+      "cell": "E25",
+      "formula": "=SumNumbers(A25)"
+    },
+    {
+      "cell": "E26",
+      "formula": "=SumNumbers(A26)"
+    },
+    {
+      "cell": "E27",
+      "formula": "=SumNumbers(A27)"
+    },
+    {
+      "cell": "E28",
+      "formula": "=SumNumbers(A28)"
+    },
+    {
+      "cell": "E29",
+      "formula": "=SumNumbers(A29)"
+    },
+    {
+      "cell": "E30",
+      "formula": "=SumNumbers(A30)"
+    },
+    {
+      "cell": "E31",
+      "formula": "=SumNumbers(A31)"
+    },
+    {
+      "cell": "E32",
+      "formula": "=SumNumbers(A32)"
+    }
+  ]
+}

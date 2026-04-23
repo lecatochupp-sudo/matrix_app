@@ -1,0 +1,230 @@
+[
+  {
+    "name": "CountChildren",
+    "type": "Function",
+    "start_line": 7,
+    "end_line": 103
+  },
+  {
+    "name": "CountOdd",
+    "type": "Function",
+    "start_line": 129,
+    "end_line": 163
+  },
+  {
+    "name": "CountEven",
+    "type": "Function",
+    "start_line": 167,
+    "end_line": 205
+  },
+  {
+    "name": "ConvertAlphaNumbersToNumber",
+    "type": "Function",
+    "start_line": 209,
+    "end_line": 255
+  },
+  {
+    "name": "ConvertLetterToNumber",
+    "type": "Function",
+    "start_line": 261,
+    "end_line": 311
+  },
+  {
+    "name": "ConvertLettersToNumber",
+    "type": "Function",
+    "start_line": 315,
+    "end_line": 345
+  },
+  {
+    "name": "LettersToNumberArray",
+    "type": "Function",
+    "start_line": 349,
+    "end_line": 377
+  },
+  {
+    "name": "CheckVowels",
+    "type": "Function",
+    "start_line": 381,
+    "end_line": 411
+  },
+  {
+    "name": "KarmahoroscopeRU",
+    "type": "Function",
+    "start_line": 417,
+    "end_line": 953
+  },
+  {
+    "name": "KarmaDiseaseHoroscopeRU",
+    "type": "Function",
+    "start_line": 961,
+    "end_line": 2109
+  },
+  {
+    "name": "ArrayRepeatNum",
+    "type": "Function",
+    "start_line": 2119,
+    "end_line": 2165
+  },
+  {
+    "name": "CountNumber",
+    "type": "Function",
+    "start_line": 2169,
+    "end_line": 2221
+  },
+  {
+    "name": "CalculateInt",
+    "type": "Function",
+    "start_line": 2227,
+    "end_line": 2267
+  },
+  {
+    "name": "CalculateRod",
+    "type": "Function",
+    "start_line": 2269,
+    "end_line": 2339
+  },
+  {
+    "name": "RetrogradeCalc",
+    "type": "Function",
+    "start_line": 2349,
+    "end_line": 2399
+  },
+  {
+    "name": "ConvertLetterToNumberRU",
+    "type": "Function",
+    "start_line": 2403,
+    "end_line": 2571
+  },
+  {
+    "name": "SolarDate",
+    "type": "Function",
+    "start_line": 2577,
+    "end_line": 2613
+  },
+  {
+    "name": "KarmicShadow",
+    "type": "Function",
+    "start_line": 2617,
+    "end_line": 2653
+  },
+  {
+    "name": "LastNotZero",
+    "type": "Function",
+    "start_line": 2661,
+    "end_line": 2693
+  },
+  {
+    "name": "CalcTP",
+    "type": "Function",
+    "start_line": 2697,
+    "end_line": 2725
+  },
+  {
+    "name": "CalcOPV",
+    "type": "Function",
+    "start_line": 2729,
+    "end_line": 2749
+  },
+  {
+    "name": "NumberTo22",
+    "type": "Function",
+    "start_line": 2757,
+    "end_line": 2789
+  },
+  {
+    "name": "NumberTo52",
+    "type": "Function",
+    "start_line": 2793,
+    "end_line": 2825
+  },
+  {
+    "name": "NumberTo9",
+    "type": "Function",
+    "start_line": 2829,
+    "end_line": 2845
+  },
+  {
+    "name": "SumNumbers",
+    "type": "Function",
+    "start_line": 2849,
+    "end_line": 2891
+  },
+  {
+    "name": "SumNumbersStr",
+    "type": "Function",
+    "start_line": 2895,
+    "end_line": 2931
+  },
+  {
+    "name": "LetterToNumberArrayRU",
+    "type": "Function",
+    "start_line": 2937,
+    "end_line": 2965
+  },
+  {
+    "name": "VowelsToNumberRU",
+    "type": "Function",
+    "start_line": 2969,
+    "end_line": 3007
+  },
+  {
+    "name": "VowelsToNumber",
+    "type": "Function",
+    "start_line": 3011,
+    "end_line": 3049
+  },
+  {
+    "name": "ConsonantToNumberRU",
+    "type": "Function",
+    "start_line": 3057,
+    "end_line": 3095
+  },
+  {
+    "name": "ConsonantsToNumber",
+    "type": "Function",
+    "start_line": 3099,
+    "end_line": 3137
+  },
+  {
+    "name": "CheckVowel",
+    "type": "Function",
+    "start_line": 3141,
+    "end_line": 3301
+  },
+  {
+    "name": "GetInfoYear",
+    "type": "Function",
+    "start_line": 3307,
+    "end_line": 4531
+  },
+  {
+    "name": "GergIsleap",
+    "type": "Function",
+    "start_line": 4539,
+    "end_line": 4583
+  },
+  {
+    "name": "GetLunarYear",
+    "type": "Function",
+    "start_line": 4587,
+    "end_line": 4607
+  },
+  {
+    "name": "GetLunarMonth",
+    "type": "Function",
+    "start_line": 4611,
+    "end_line": 4631
+  },
+  {
+    "name": "GetLunarDay",
+    "type": "Function",
+    "start_line": 4635,
+    "end_line": 4655
+  },
+  {
+    "name": "InternalIsLeapYear",
+    "type": "Function",
+    "start_line": 5043,
+    "end_line": 5049
+  }
+]

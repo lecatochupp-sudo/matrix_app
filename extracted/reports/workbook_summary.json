@@ -1,0 +1,672 @@
+{
+  "workbook": "C:\\Users\\Dima\\Desktop\\Программа расчета нумерологии  _ Джули По и Айрен По _  1, 2, 3 ступени.xlsm",
+  "sheet_count": 11,
+  "sheets": [
+    {
+      "title": "Лист1",
+      "state": "visible",
+      "max_row": 38,
+      "max_col": 47,
+      "formula_count": 0,
+      "text_count": 303
+    },
+    {
+      "title": "Кристалл Судьбы",
+      "state": "visible",
+      "max_row": 432,
+      "max_col": 74,
+      "formula_count": 2287,
+      "text_count": 771
+    },
+    {
+      "title": "Мандала",
+      "state": "visible",
+      "max_row": 52,
+      "max_col": 22,
+      "formula_count": 90,
+      "text_count": 53
+    },
+    {
+      "title": "Совместимость",
+      "state": "visible",
+      "max_row": 320,
+      "max_col": 40,
+      "formula_count": 1430,
+      "text_count": 356
+    },
+    {
+      "title": "Прогностика",
+      "state": "visible",
+      "max_row": 114,
+      "max_col": 24,
+      "formula_count": 607,
+      "text_count": 446
+    },
+    {
+      "title": "Халдейская",
+      "state": "visible",
+      "max_row": 14,
+      "max_col": 12,
+      "formula_count": 12,
+      "text_count": 10
+    },
+    {
+      "title": "Алфавит",
+      "state": "visible",
+      "max_row": 46,
+      "max_col": 3,
+      "formula_count": 0,
+      "text_count": 57
+    },
+    {
+      "title": "Планеты",
+      "state": "visible",
+      "max_row": 32,
+      "max_col": 7,
+      "formula_count": 9,
+      "text_count": 47
+    },
+    {
+      "title": "Кармические Страны",
+      "state": "visible",
+      "max_row": 23,
+      "max_col": 2,
+      "formula_count": 0,
+      "text_count": 24
+    },
+    {
+      "title": "МК Дата",
+      "state": "visible",
+      "max_row": 54,
+      "max_col": 2,
+      "formula_count": 0,
+      "text_count": 55
+    },
+    {
+      "title": "Каст",
+      "state": "visible",
+      "max_row": 116,
+      "max_col": 7,
+      "formula_count": 0,
+      "text_count": 13
+    }
+  ],
+  "defined_names": [
+    {
+      "name": "Age",
+      "attr_text": "'Кристалл Судьбы'!$V$9",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "Alphabet",
+      "attr_text": "Алфавит!$C$3",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "AlphabetEng",
+      "attr_text": "Алфавит!$C$10",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "AlphabetRus",
+      "attr_text": "Алфавит!$C$7",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "CoZ",
+      "attr_text": "'Кристалл Судьбы'!$Y$4",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "CZ_1",
+      "attr_text": "Совместимость!$D$15",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "CZ_12",
+      "attr_text": "Совместимость!$F$12",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "CZ_2",
+      "attr_text": "Совместимость!$J$15",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "CZ_21",
+      "attr_text": "Совместимость!$H$12",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "CZ_3",
+      "attr_text": "Совместимость!$G$9",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "D_13",
+      "attr_text": "Совместимость!$S$37",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "D_23",
+      "attr_text": "Совместимость!$S$40",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "D_3",
+      "attr_text": "Совместимость!$T$39",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DayTaro1",
+      "attr_text": "Совместимость!$D$7",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DayTaro2",
+      "attr_text": "Совместимость!$L$7",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DayTaroS",
+      "attr_text": "Прогностика!$D$6",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB",
+      "attr_text": "'Кристалл Судьбы'!$V$2",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_D1",
+      "attr_text": "'Кристалл Судьбы'!$X$1",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_D2",
+      "attr_text": "'Кристалл Судьбы'!$Y$1",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Day",
+      "attr_text": "'Кристалл Судьбы'!$V$6",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Day1",
+      "attr_text": "Совместимость!$C$7",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Day2",
+      "attr_text": "Совместимость!$K$7",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_M1",
+      "attr_text": "'Кристалл Судьбы'!$Z$1",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_M2",
+      "attr_text": "'Кристалл Судьбы'!$AA$1",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Month",
+      "attr_text": "'Кристалл Судьбы'!$V$7",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Month1",
+      "attr_text": "Совместимость!$C$8",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Month2",
+      "attr_text": "Совместимость!$K$8",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Y1",
+      "attr_text": "'Кристалл Судьбы'!$AB$1",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Y2",
+      "attr_text": "'Кристалл Судьбы'!$AC$1",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Y3",
+      "attr_text": "'Кристалл Судьбы'!$AD$4",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Y4",
+      "attr_text": "'Кристалл Судьбы'!$AE$1",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Year",
+      "attr_text": "'Кристалл Судьбы'!$V$8",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Year1",
+      "attr_text": "Совместимость!$C$9",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOB_Year2",
+      "attr_text": "Совместимость!$K$9",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "DOP_OPV",
+      "attr_text": "[1]Главная!$H$6",
+      "is_external": true,
+      "is_reserved": null
+    },
+    {
+      "name": "Dop_TP",
+      "attr_text": "[1]Главная!$H$5",
+      "is_external": true,
+      "is_reserved": null
+    },
+    {
+      "name": "FirstName",
+      "attr_text": "'Кристалл Судьбы'!$V$4",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "KN_2",
+      "attr_text": "'Кристалл Судьбы'!$AA$25",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "KN_3",
+      "attr_text": "'Кристалл Судьбы'!$AC$25",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "KN_4",
+      "attr_text": "'Кристалл Судьбы'!$AE$25",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "KN_Main",
+      "attr_text": "'Кристалл Судьбы'!$AG$25",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "LastName",
+      "attr_text": "'Кристалл Судьбы'!$V$3",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "M_13",
+      "attr_text": "Совместимость!$T$35",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "M_23",
+      "attr_text": "Совместимость!$V$35",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "M_3",
+      "attr_text": "Совместимость!$U$37",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MiddleName",
+      "attr_text": "'Кристалл Судьбы'!$V$5",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MK",
+      "attr_text": "'Кристалл Судьбы'!$AE$5",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MKist",
+      "attr_text": "'Кристалл Судьбы'!$AH$5",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MKist1",
+      "attr_text": "Совместимость!$U$18",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MKist2",
+      "attr_text": "Совместимость!$U$19",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MonthTaro1",
+      "attr_text": "Совместимость!$D$8",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MonthTaro2",
+      "attr_text": "Совместимость!$L$8",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MonthtaroS",
+      "attr_text": "Прогностика!$D$7",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MOPV_1",
+      "attr_text": "Мандала!$I$5",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MOPV_2",
+      "attr_text": "Мандала!$J$5",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MOPV_3",
+      "attr_text": "Мандала!$K$5",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MOPV_4",
+      "attr_text": "Мандала!$L$5",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MOPV_Dop",
+      "attr_text": "Мандала!$H$5",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "MOPV_G",
+      "attr_text": "Мандала!$M$5",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "Name1",
+      "attr_text": "Совместимость!$C$6",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "Name2",
+      "attr_text": "Совместимость!$K$6",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "NameArc",
+      "attr_text": "Прогностика!$D$9",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "NameArc1",
+      "attr_text": "Совместимость!$D$6",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "NameArc2",
+      "attr_text": "Совместимость!$L$6",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "OPV",
+      "attr_text": "'Кристалл Судьбы'!$Z$16",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "OPV_1",
+      "attr_text": "Совместимость!$C$12",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "OPV_2",
+      "attr_text": "Совместимость!$K$12",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "OPV_DOP",
+      "attr_text": "'Кристалл Судьбы'!$AA$16",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "OPV1_Dop",
+      "attr_text": "Совместимость!$C$13",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "OPV2_Dop",
+      "attr_text": "Совместимость!$K$13",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "StagnationFactor",
+      "attr_text": "'Кристалл Судьбы'!$V$32",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TaroDay",
+      "attr_text": "'Кристалл Судьбы'!$V$18",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TaroMonth",
+      "attr_text": "'Кристалл Судьбы'!$V$19",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TaroName",
+      "attr_text": "'Кристалл Судьбы'!$W$4",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TaroYear",
+      "attr_text": "'Кристалл Судьбы'!$V$20",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TP",
+      "attr_text": "'Кристалл Судьбы'!$X$16",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TP_1",
+      "attr_text": "Совместимость!$D$16",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TP_2",
+      "attr_text": "Совместимость!$J$16",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TP_22",
+      "attr_text": "'Кристалл Судьбы'!$AA$24",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TP_3",
+      "attr_text": "'Кристалл Судьбы'!$AC$24",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TP_4",
+      "attr_text": "'Кристалл Судьбы'!$AE$24",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TP_DOP",
+      "attr_text": "'Кристалл Судьбы'!$Y$16",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "TP_Main",
+      "attr_text": "'Кристалл Судьбы'!$AG$24",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "Volwels",
+      "attr_text": "Алфавит!$C$4",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "WorkNum_1",
+      "attr_text": "'Кристалл Судьбы'!$X$19",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "WorkNum_2",
+      "attr_text": "'Кристалл Судьбы'!$Y$19",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "WorkNum_3",
+      "attr_text": "'Кристалл Судьбы'!$Z$19",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "WorkNum_4",
+      "attr_text": "'Кристалл Судьбы'!$AA$19",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "WorkNum_5",
+      "attr_text": "'Кристалл Судьбы'!$AB$19",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "WorkNum_6",
+      "attr_text": "'Кристалл Судьбы'!$AC$19",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "Y_13",
+      "attr_text": "Совместимость!$W$37",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "Y_23",
+      "attr_text": "Совместимость!$W$40",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "Y_3",
+      "attr_text": "Совместимость!$V$39",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "YearTaro1",
+      "attr_text": "Совместимость!$D$9",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "YearTaro2",
+      "attr_text": "Совместимость!$L$9",
+      "is_external": false,
+      "is_reserved": null
+    },
+    {
+      "name": "YearTaroS",
+      "attr_text": "Прогностика!$D$8",
+      "is_external": false,
+      "is_reserved": null
+    }
+  ]
+}

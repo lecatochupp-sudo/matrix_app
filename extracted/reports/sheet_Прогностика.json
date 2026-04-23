@@ -1,0 +1,4224 @@
+{
+  "title": "Прогностика",
+  "state": "visible",
+  "size": {
+    "rows": 114,
+    "cols": 24
+  },
+  "formulas": [
+    {
+      "cell": "K5",
+      "formula": "=CalcTP(C6)"
+    },
+    {
+      "cell": "L5",
+      "formula": "=numberto22(ABS(DayTaroS+MonthtaroS))"
+    },
+    {
+      "cell": "M5",
+      "formula": "=numberto22(ABS(DayTaroS+YearTaroS))"
+    },
+    {
+      "cell": "N5",
+      "formula": "=numberto22(ABS(L5+M5))"
+    },
+    {
+      "cell": "O5",
+      "formula": "=numberto22(ABS(MonthtaroS+YearTaroS))"
+    },
+    {
+      "cell": "P5",
+      "formula": "=numberto22(L5+M5+N5+O5)"
+    },
+    {
+      "cell": "Q5",
+      "formula": "=numberto22(P5+P6)"
+    },
+    {
+      "cell": "D6",
+      "formula": "=numberto22(C6)"
+    },
+    {
+      "cell": "E6",
+      "formula": "=SumNumbers(CONCATENATE(C6,C7,C8))"
+    },
+    {
+      "cell": "K6",
+      "formula": "=CalcOPV(C6)"
+    },
+    {
+      "cell": "L6",
+      "formula": "=numberto22(ABS(DayTaroS-MonthtaroS))"
+    },
+    {
+      "cell": "M6",
+      "formula": "=numberto22(ABS(DayTaroS-YearTaroS))"
+    },
+    {
+      "cell": "N6",
+      "formula": "=numberto22(ABS(L6-M6))"
+    },
+    {
+      "cell": "O6",
+      "formula": "=numberto22(ABS(MonthtaroS-YearTaroS))"
+    },
+    {
+      "cell": "P6",
+      "formula": "=numberto22(L6+M6+N6+O6)"
+    },
+    {
+      "cell": "Q6",
+      "formula": "=numberto22(ABS(P6-P5))"
+    },
+    {
+      "cell": "D7",
+      "formula": "=C7"
+    },
+    {
+      "cell": "E7",
+      "formula": "=SumNumbers(E6)"
+    },
+    {
+      "cell": "K7",
+      "formula": "=CONCATENATE(\"0-\", E8)"
+    },
+    {
+      "cell": "M7",
+      "formula": "=CONCATENATE(E8+1,\"-\",E8+9)"
+    },
+    {
+      "cell": "N7",
+      "formula": "=CONCATENATE(E8+10,\"-\",E8+18)"
+    },
+    {
+      "cell": "O7",
+      "formula": "=CONCATENATE(E8+19,\"-и далее\")"
+    },
+    {
+      "cell": "D8",
+      "formula": "=numberto22(SumNumbers(C8))"
+    },
+    {
+      "cell": "E8",
+      "formula": "=36-SumNumbers(E7)"
+    },
+    {
+      "cell": "D9",
+      "formula": "=numberto22(ConvertLettersToNumber(C9,Alphabet))"
+    },
+    {
+      "cell": "C10",
+      "formula": "=DATEDIF(DATE(C8,C7,C6),TODAY(),\"y\")"
+    },
+    {
+      "cell": "C11",
+      "formula": "=DATE(C8,C7,C6)"
+    },
+    {
+      "cell": "C13",
+      "formula": "=C5"
+    },
+    {
+      "cell": "K13",
+      "formula": "=C5"
+    },
+    {
+      "cell": "E14",
+      "formula": "=DATE(C5,C7,C6)-1"
+    },
+    {
+      "cell": "C16",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(C6,C7,YEAR(SolarDate($C$11,E14)))))"
+    },
+    {
+      "cell": "E16",
+      "formula": "=numberto22(C16+C17)"
+    },
+    {
+      "cell": "F16",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C16)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G16",
+      "formula": "=ABS(numberto22(C16+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "H16",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G16)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "J16",
+      "formula": "=M16"
+    },
+    {
+      "cell": "M16",
+      "formula": "=DATE(C5,C7,C6)-1"
+    },
+    {
+      "cell": "O16",
+      "formula": "=YEAR(SolarDate($C$11,M16))"
+    },
+    {
+      "cell": "S16",
+      "formula": "=C6"
+    },
+    {
+      "cell": "T16",
+      "formula": "=C7"
+    },
+    {
+      "cell": "U16",
+      "formula": "=C8"
+    },
+    {
+      "cell": "C17",
+      "formula": "=numberto22((numberto22(C6)+numberto22(C7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E14))))))"
+    },
+    {
+      "cell": "E17",
+      "formula": "=numberto22(ABS(C16-C17))"
+    },
+    {
+      "cell": "F17",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C17)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G17",
+      "formula": "=ABS(numberto22(C17+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "H17",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G17)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W17",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T17,S17)))"
+    },
+    {
+      "cell": "K18",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,MONTH(M16),O16)))"
+    },
+    {
+      "cell": "M18",
+      "formula": "=numberto22(K18+K19)"
+    },
+    {
+      "cell": "N18",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K18)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O18",
+      "formula": "=ABS(numberto22(K18+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P18",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O18)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T18",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T17,1),0))"
+    },
+    {
+      "cell": "C19",
+      "formula": "=YEAR(E19)"
+    },
+    {
+      "cell": "E19",
+      "formula": "=DATE(C5,C7,C6)"
+    },
+    {
+      "cell": "K19",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(MONTH(M16))+numberto22(SumNumbers(O16))))"
+    },
+    {
+      "cell": "M19",
+      "formula": "=numberto22(ABS(K18-K19))"
+    },
+    {
+      "cell": "N19",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K19)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O19",
+      "formula": "=ABS(numberto22(K19+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P19",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O19)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S19",
+      "formula": "=IF($S$16+S17<=T18,$S$16+S17,($S$16+S17)-T18)"
+    },
+    {
+      "cell": "T19",
+      "formula": "=T17"
+    },
+    {
+      "cell": "U19",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U17,T17,S17)))"
+    },
+    {
+      "cell": "T20",
+      "formula": "=DATE(U17,T17,S17)"
+    },
+    {
+      "cell": "C21",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E19)))))"
+    },
+    {
+      "cell": "E21",
+      "formula": "=numberto22(C21+C22)"
+    },
+    {
+      "cell": "F21",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C21)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G21",
+      "formula": "=ABS(numberto22(C21+NameArc*KarmicShadow($C$11,E19,VALUE($L$6))))"
+    },
+    {
+      "cell": "H21",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G21)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "M21",
+      "formula": "=DATE($K$13,1,DAY(EOMONTH(DATE(YEAR($K$13),1,1),0)))"
+    },
+    {
+      "cell": "O21",
+      "formula": "=YEAR(SolarDate($C$11,M21))"
+    },
+    {
+      "cell": "C22",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E19))))))"
+    },
+    {
+      "cell": "E22",
+      "formula": "=numberto22(ABS(C21-C22))"
+    },
+    {
+      "cell": "F22",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C22)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G22",
+      "formula": "=ABS(numberto22(C22+NameArc*KarmicShadow($C$11,E19,VALUE($L$6))))"
+    },
+    {
+      "cell": "H22",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G22)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S22",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S19,T19,U19)))"
+    },
+    {
+      "cell": "U22",
+      "formula": "=numberto22(S22+S23)"
+    },
+    {
+      "cell": "V22",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S22)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W22",
+      "formula": "=ABS(numberto22(S22+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X22",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W22)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C23",
+      "formula": "=YEAR(E23)"
+    },
+    {
+      "cell": "E23",
+      "formula": "=DATE(YEAR(E19)+1,MONTH(E19),DAY(E19))"
+    },
+    {
+      "cell": "K23",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,1,O21)))"
+    },
+    {
+      "cell": "M23",
+      "formula": "=numberto22(K23+K24)"
+    },
+    {
+      "cell": "N23",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K23)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O23",
+      "formula": "=ABS(numberto22(K23+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P23",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O23)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S23",
+      "formula": "=numberto22((numberto22(S19)+numberto22(T19)+numberto22(SumNumbers(U19))))"
+    },
+    {
+      "cell": "U23",
+      "formula": "=numberto22(ABS(S22-S23))"
+    },
+    {
+      "cell": "V23",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S23)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W23",
+      "formula": "=ABS(numberto22(S23+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X23",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W23)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K24",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(1)+numberto22(SumNumbers(O21))))"
+    },
+    {
+      "cell": "M24",
+      "formula": "=numberto22(ABS(K23-K24))"
+    },
+    {
+      "cell": "N24",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K24)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O24",
+      "formula": "=ABS(numberto22(K24+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P24",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O24)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S24",
+      "formula": "=DAY(T20+1)"
+    },
+    {
+      "cell": "T24",
+      "formula": "=MONTH(T20)"
+    },
+    {
+      "cell": "U24",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W24",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T24,S24)))"
+    },
+    {
+      "cell": "C25",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E23)))))"
+    },
+    {
+      "cell": "E25",
+      "formula": "=numberto22(C25+C26)"
+    },
+    {
+      "cell": "F25",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C25)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G25",
+      "formula": "=ABS(numberto22(C25+NameArc*KarmicShadow($C$11,E23,VALUE($L$6))))"
+    },
+    {
+      "cell": "H25",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G25)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T25",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T24,1),0))"
+    },
+    {
+      "cell": "C26",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E23))))))"
+    },
+    {
+      "cell": "E26",
+      "formula": "=numberto22(ABS(C25-C26))"
+    },
+    {
+      "cell": "F26",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C26)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G26",
+      "formula": "=ABS(numberto22(C26+NameArc*KarmicShadow($C$11,E23,VALUE($L$6))))"
+    },
+    {
+      "cell": "H26",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G26)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "M26",
+      "formula": "=DATE($K$13,2,DAY(EOMONTH(DATE(YEAR($K$13),2,1),0)))"
+    },
+    {
+      "cell": "O26",
+      "formula": "=YEAR(SolarDate($C$11,M26))"
+    },
+    {
+      "cell": "S26",
+      "formula": "=IF($S$16+S24<=T25,$S$16+S24,($S$16+S24)-T25)"
+    },
+    {
+      "cell": "T26",
+      "formula": "=MONTH(T20)"
+    },
+    {
+      "cell": "U26",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U24,T24,S24)))"
+    },
+    {
+      "cell": "C27",
+      "formula": "=YEAR(E27)"
+    },
+    {
+      "cell": "E27",
+      "formula": "=DATE(YEAR(E23)+1,MONTH(E23),DAY(E23))"
+    },
+    {
+      "cell": "T27",
+      "formula": "=DATE(U24,T24,S24)"
+    },
+    {
+      "cell": "K28",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,2,O26)))"
+    },
+    {
+      "cell": "M28",
+      "formula": "=numberto22(K28+K29)"
+    },
+    {
+      "cell": "N28",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K28)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O28",
+      "formula": "=ABS(numberto22(K28+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P28",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O28)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C29",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E27)))))"
+    },
+    {
+      "cell": "E29",
+      "formula": "=numberto22(C29+C30)"
+    },
+    {
+      "cell": "F29",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C29)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G29",
+      "formula": "=ABS(numberto22(C29+NameArc*KarmicShadow($C$11,E27,VALUE($L$6))))"
+    },
+    {
+      "cell": "H29",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G29)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K29",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(2)+numberto22(SumNumbers(O26))))"
+    },
+    {
+      "cell": "M29",
+      "formula": "=numberto22(ABS(K28-K29))"
+    },
+    {
+      "cell": "N29",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K29)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O29",
+      "formula": "=ABS(numberto22(K29+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P29",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O29)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S29",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S26,T26,U26)))"
+    },
+    {
+      "cell": "U29",
+      "formula": "=numberto22(S29+S30)"
+    },
+    {
+      "cell": "V29",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S29)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W29",
+      "formula": "=ABS(numberto22(S29+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X29",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W29)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C30",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E27))))))"
+    },
+    {
+      "cell": "E30",
+      "formula": "=numberto22(ABS(C29-C30))"
+    },
+    {
+      "cell": "F30",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G30",
+      "formula": "=ABS(numberto22(C30+NameArc*KarmicShadow($C$11,E27,VALUE($L$6))))"
+    },
+    {
+      "cell": "H30",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S30",
+      "formula": "=numberto22((numberto22(S26)+numberto22(T26)+numberto22(SumNumbers(U26))))"
+    },
+    {
+      "cell": "U30",
+      "formula": "=numberto22(ABS(S29-S30))"
+    },
+    {
+      "cell": "V30",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W30",
+      "formula": "=ABS(numberto22(S30+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X30",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C31",
+      "formula": "=YEAR(E31)"
+    },
+    {
+      "cell": "E31",
+      "formula": "=DATE(YEAR(E27)+1,MONTH(E27),DAY(E27))"
+    },
+    {
+      "cell": "M31",
+      "formula": "=DATE($K$13,3,DAY(EOMONTH(DATE(YEAR($K$13),3,1),0)))"
+    },
+    {
+      "cell": "O31",
+      "formula": "=YEAR(SolarDate($C$11,M31))"
+    },
+    {
+      "cell": "S31",
+      "formula": "=DAY(DATE(YEAR(T27), MONTH(T27), DAY(T27) + 1))"
+    },
+    {
+      "cell": "T31",
+      "formula": "=MONTH(DATE(YEAR(T27), MONTH(T27), DAY(T27) + 1))"
+    },
+    {
+      "cell": "U31",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W31",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T31,S31)))"
+    },
+    {
+      "cell": "T32",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T31,1),0))"
+    },
+    {
+      "cell": "C33",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E31)))))"
+    },
+    {
+      "cell": "E33",
+      "formula": "=numberto22(C33+C34)"
+    },
+    {
+      "cell": "F33",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C33)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G33",
+      "formula": "=ABS(numberto22(C33+NameArc*KarmicShadow($C$11,E31,VALUE($L$6))))"
+    },
+    {
+      "cell": "H33",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G33)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K33",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,3,O31)))"
+    },
+    {
+      "cell": "M33",
+      "formula": "=numberto22(K33+K34)"
+    },
+    {
+      "cell": "N33",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K33)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O33",
+      "formula": "=ABS(numberto22(K33+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P33",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O33)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S33",
+      "formula": "=IF($S$16+S31<=T32,$S$16+S31,($S$16+S31)-T32)"
+    },
+    {
+      "cell": "T33",
+      "formula": "=MONTH(T27)"
+    },
+    {
+      "cell": "U33",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U31,T31,S31)))"
+    },
+    {
+      "cell": "C34",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E31))))))"
+    },
+    {
+      "cell": "E34",
+      "formula": "=numberto22(ABS(C33-C34))"
+    },
+    {
+      "cell": "F34",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G34",
+      "formula": "=ABS(numberto22(C34+NameArc*KarmicShadow($C$11,E31,VALUE($L$6))))"
+    },
+    {
+      "cell": "H34",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K34",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(3)+numberto22(SumNumbers(O31))))"
+    },
+    {
+      "cell": "M34",
+      "formula": "=numberto22(ABS(K33-K34))"
+    },
+    {
+      "cell": "N34",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O34",
+      "formula": "=ABS(numberto22(K34+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P34",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T34",
+      "formula": "=DATE(U31,T31,S31)"
+    },
+    {
+      "cell": "C35",
+      "formula": "=YEAR(E35)"
+    },
+    {
+      "cell": "E35",
+      "formula": "=DATE(YEAR(E31)+1,MONTH(E31),DAY(E31))"
+    },
+    {
+      "cell": "M36",
+      "formula": "=DATE($K$13,4,DAY(EOMONTH(DATE(YEAR($K$13),4,1),0)))"
+    },
+    {
+      "cell": "O36",
+      "formula": "=YEAR(SolarDate($C$11,M36))"
+    },
+    {
+      "cell": "S36",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S33,T33,U33)))"
+    },
+    {
+      "cell": "U36",
+      "formula": "=numberto22(S36+S37)"
+    },
+    {
+      "cell": "V36",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S36)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W36",
+      "formula": "=ABS(numberto22(S36+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X36",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W36)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C37",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E35)))))"
+    },
+    {
+      "cell": "E37",
+      "formula": "=numberto22(C37+C38)"
+    },
+    {
+      "cell": "F37",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G37",
+      "formula": "=ABS(numberto22(C37+NameArc*KarmicShadow($C$11,E35,VALUE($L$6))))"
+    },
+    {
+      "cell": "H37",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S37",
+      "formula": "=numberto22((numberto22(S33)+numberto22(T33)+numberto22(SumNumbers(U33))))"
+    },
+    {
+      "cell": "U37",
+      "formula": "=numberto22(ABS(S36-S37))"
+    },
+    {
+      "cell": "V37",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W37",
+      "formula": "=ABS(numberto22(S37+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X37",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C38",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E35))))))"
+    },
+    {
+      "cell": "E38",
+      "formula": "=numberto22(ABS(C37-C38))"
+    },
+    {
+      "cell": "F38",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C38)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G38",
+      "formula": "=ABS(numberto22(C38+NameArc*KarmicShadow($C$11,E35,VALUE($L$6))))"
+    },
+    {
+      "cell": "H38",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G38)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K38",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,4,O36)))"
+    },
+    {
+      "cell": "M38",
+      "formula": "=numberto22(K38+K39)"
+    },
+    {
+      "cell": "N38",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K38)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O38",
+      "formula": "=ABS(numberto22(K38+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P38",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O38)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S38",
+      "formula": "=DAY(DATE(YEAR(T34), MONTH(T34), DAY(T34) + 1))"
+    },
+    {
+      "cell": "T38",
+      "formula": "=MONTH(DATE(YEAR(T34), MONTH(T34), DAY(T34) + 1))"
+    },
+    {
+      "cell": "U38",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W38",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T38,S38)))"
+    },
+    {
+      "cell": "C39",
+      "formula": "=YEAR(E39)"
+    },
+    {
+      "cell": "E39",
+      "formula": "=DATE(YEAR(E35)+1,MONTH(E35),DAY(E35))"
+    },
+    {
+      "cell": "K39",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(4)+numberto22(SumNumbers(O36))))"
+    },
+    {
+      "cell": "M39",
+      "formula": "=numberto22(ABS(K38-K39))"
+    },
+    {
+      "cell": "N39",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K39)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O39",
+      "formula": "=ABS(numberto22(K39+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P39",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O39)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T39",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T38,1),0))"
+    },
+    {
+      "cell": "S40",
+      "formula": "=IF($S$16+S38<=T39,$S$16+S38,($S$16+S38)-T39)"
+    },
+    {
+      "cell": "T40",
+      "formula": "=MONTH(T34)"
+    },
+    {
+      "cell": "U40",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U38,T38,S38)))"
+    },
+    {
+      "cell": "C41",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E39)))))"
+    },
+    {
+      "cell": "E41",
+      "formula": "=numberto22(C41+C42)"
+    },
+    {
+      "cell": "F41",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C41)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G41",
+      "formula": "=ABS(numberto22(C41+NameArc*KarmicShadow($C$11,E39,VALUE($L$6))))"
+    },
+    {
+      "cell": "H41",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G41)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "M41",
+      "formula": "=DATE($K$13,5,DAY(EOMONTH(DATE(YEAR($K$13),5,1),0)))"
+    },
+    {
+      "cell": "O41",
+      "formula": "=YEAR(SolarDate($C$11,M41))"
+    },
+    {
+      "cell": "T41",
+      "formula": "=DATE(U38,T38,S38)"
+    },
+    {
+      "cell": "C42",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E39))))))"
+    },
+    {
+      "cell": "E42",
+      "formula": "=numberto22(ABS(C41-C42))"
+    },
+    {
+      "cell": "F42",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C42)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G42",
+      "formula": "=ABS(numberto22(C42+NameArc*KarmicShadow($C$11,E39,VALUE($L$6))))"
+    },
+    {
+      "cell": "H42",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G42)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C43",
+      "formula": "=YEAR(E43)"
+    },
+    {
+      "cell": "E43",
+      "formula": "=DATE(YEAR(E39)+1,MONTH(E39),DAY(E39))"
+    },
+    {
+      "cell": "K43",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,5,O41)))"
+    },
+    {
+      "cell": "M43",
+      "formula": "=numberto22(K43+K44)"
+    },
+    {
+      "cell": "N43",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K43)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O43",
+      "formula": "=ABS(numberto22(K43+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P43",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O43)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S43",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S40,T40,U40)))"
+    },
+    {
+      "cell": "U43",
+      "formula": "=numberto22(S43+S44)"
+    },
+    {
+      "cell": "V43",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S43)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W43",
+      "formula": "=ABS(numberto22(S43+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X43",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W43)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K44",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(5)+numberto22(SumNumbers(O41))))"
+    },
+    {
+      "cell": "M44",
+      "formula": "=numberto22(ABS(K43-K44))"
+    },
+    {
+      "cell": "N44",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O44",
+      "formula": "=ABS(numberto22(K44+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P44",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S44",
+      "formula": "=numberto22((numberto22(S40)+numberto22(T40)+numberto22(SumNumbers(U40))))"
+    },
+    {
+      "cell": "U44",
+      "formula": "=numberto22(ABS(S43-S44))"
+    },
+    {
+      "cell": "V44",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W44",
+      "formula": "=ABS(numberto22(S44+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X44",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C45",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E43)))))"
+    },
+    {
+      "cell": "E45",
+      "formula": "=numberto22(C45+C46)"
+    },
+    {
+      "cell": "F45",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C45)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G45",
+      "formula": "=ABS(numberto22(C45+NameArc*KarmicShadow($C$11,E43,VALUE($L$6))))"
+    },
+    {
+      "cell": "H45",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G45)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S45",
+      "formula": "=DAY(DATE(YEAR(T41), MONTH(T41), DAY(T41) + 1))"
+    },
+    {
+      "cell": "T45",
+      "formula": "=MONTH(DATE(YEAR(T41), MONTH(T41), DAY(T41) + 1))"
+    },
+    {
+      "cell": "U45",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W45",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T45,S45)))"
+    },
+    {
+      "cell": "C46",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E43))))))"
+    },
+    {
+      "cell": "E46",
+      "formula": "=numberto22(ABS(C45-C46))"
+    },
+    {
+      "cell": "F46",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C46)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G46",
+      "formula": "=ABS(numberto22(C46+NameArc*KarmicShadow($C$11,E43,VALUE($L$6))))"
+    },
+    {
+      "cell": "H46",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G46)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "M46",
+      "formula": "=DATE($K$13,6,DAY(EOMONTH(DATE(YEAR($K$13),6,1),0)))"
+    },
+    {
+      "cell": "O46",
+      "formula": "=YEAR(SolarDate($C$11,M46))"
+    },
+    {
+      "cell": "T46",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T45,1),0))"
+    },
+    {
+      "cell": "C47",
+      "formula": "=YEAR(E47)"
+    },
+    {
+      "cell": "E47",
+      "formula": "=DATE(YEAR(E43)+1,MONTH(E43),DAY(E43))"
+    },
+    {
+      "cell": "S47",
+      "formula": "=IF($S$16+S45<=T46,$S$16+S45,($S$16+S45)-T46)"
+    },
+    {
+      "cell": "T47",
+      "formula": "=MONTH(T41)"
+    },
+    {
+      "cell": "U47",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U45,T45,S45)))"
+    },
+    {
+      "cell": "K48",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,6,O46)))"
+    },
+    {
+      "cell": "M48",
+      "formula": "=numberto22(K48+K49)"
+    },
+    {
+      "cell": "N48",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O48",
+      "formula": "=ABS(numberto22(K48+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P48",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T48",
+      "formula": "=DATE(U45,T45,S45)"
+    },
+    {
+      "cell": "C49",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E47)))))"
+    },
+    {
+      "cell": "E49",
+      "formula": "=numberto22(C49+C50)"
+    },
+    {
+      "cell": "F49",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C49)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G49",
+      "formula": "=ABS(numberto22(C49+NameArc*KarmicShadow($C$11,$E$19,VALUE($L$6))))"
+    },
+    {
+      "cell": "H49",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G49)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K49",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(6)+numberto22(SumNumbers(O46))))"
+    },
+    {
+      "cell": "M49",
+      "formula": "=numberto22(ABS(K48-K49))"
+    },
+    {
+      "cell": "N49",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K49)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O49",
+      "formula": "=ABS(numberto22(K49+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P49",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O49)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C50",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E47))))))"
+    },
+    {
+      "cell": "E50",
+      "formula": "=numberto22(ABS(C49-C50))"
+    },
+    {
+      "cell": "F50",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C50)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G50",
+      "formula": "=ABS(numberto22(C50+NameArc*KarmicShadow($C$11,$E$19,VALUE($L$6))))"
+    },
+    {
+      "cell": "H50",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G50)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S50",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S47,T47,U47)))"
+    },
+    {
+      "cell": "U50",
+      "formula": "=numberto22(S50+S51)"
+    },
+    {
+      "cell": "V50",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S50)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W50",
+      "formula": "=ABS(numberto22(S50+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X50",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W50)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C51",
+      "formula": "=YEAR(E51)"
+    },
+    {
+      "cell": "E51",
+      "formula": "=DATE(YEAR(E47)+1,MONTH(E47),DAY(E47))"
+    },
+    {
+      "cell": "M51",
+      "formula": "=DATE($K$13,7,DAY(EOMONTH(DATE(YEAR($K$13),7,1),0)))"
+    },
+    {
+      "cell": "O51",
+      "formula": "=YEAR(SolarDate($C$11,M51))"
+    },
+    {
+      "cell": "S51",
+      "formula": "=numberto22((numberto22(S47)+numberto22(T47)+numberto22(SumNumbers(U47))))"
+    },
+    {
+      "cell": "U51",
+      "formula": "=numberto22(ABS(S50-S51))"
+    },
+    {
+      "cell": "V51",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W51",
+      "formula": "=ABS(numberto22(S51+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X51",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S52",
+      "formula": "=DAY(DATE(YEAR(T48), MONTH(T48), DAY(T48) + 1))"
+    },
+    {
+      "cell": "T52",
+      "formula": "=MONTH(DATE(YEAR(T48), MONTH(T48), DAY(T48) + 1))"
+    },
+    {
+      "cell": "U52",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W52",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T52,S52)))"
+    },
+    {
+      "cell": "C53",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E51)))))"
+    },
+    {
+      "cell": "E53",
+      "formula": "=numberto22(C53+C54)"
+    },
+    {
+      "cell": "F53",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C53)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G53",
+      "formula": "=ABS(numberto22(C53+NameArc*KarmicShadow($C$11,E51,VALUE($L$6))))"
+    },
+    {
+      "cell": "H53",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G53)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K53",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,7,O51)))"
+    },
+    {
+      "cell": "M53",
+      "formula": "=numberto22(K53+K54)"
+    },
+    {
+      "cell": "N53",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K53)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O53",
+      "formula": "=ABS(numberto22(K53+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P53",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O53)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T53",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T52,1),0))"
+    },
+    {
+      "cell": "C54",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E51))))))"
+    },
+    {
+      "cell": "E54",
+      "formula": "=numberto22(ABS(C53-C54))"
+    },
+    {
+      "cell": "F54",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C54)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G54",
+      "formula": "=ABS(numberto22(C54+NameArc*KarmicShadow($C$11,E51,VALUE($L$6))))"
+    },
+    {
+      "cell": "H54",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G54)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K54",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(7)+numberto22(SumNumbers(O51))))"
+    },
+    {
+      "cell": "M54",
+      "formula": "=numberto22(ABS(K53-K54))"
+    },
+    {
+      "cell": "N54",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K54)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O54",
+      "formula": "=ABS(numberto22(K54+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P54",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O54)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S54",
+      "formula": "=IF($S$16+S52<=T53,$S$16+S52,($S$16+S52)-T53)"
+    },
+    {
+      "cell": "T54",
+      "formula": "=MONTH(T48)"
+    },
+    {
+      "cell": "U54",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U52,T52,S52)))"
+    },
+    {
+      "cell": "C55",
+      "formula": "=YEAR(E55)"
+    },
+    {
+      "cell": "E55",
+      "formula": "=DATE(YEAR(E51)+1,MONTH(E51),DAY(E51))"
+    },
+    {
+      "cell": "T55",
+      "formula": "=DATE(U52,T52,S52)"
+    },
+    {
+      "cell": "M56",
+      "formula": "=DATE($K$13,8,DAY(EOMONTH(DATE(YEAR($K$13),8,1),0)))"
+    },
+    {
+      "cell": "O56",
+      "formula": "=YEAR(SolarDate($C$11,M56))"
+    },
+    {
+      "cell": "C57",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E55)))))"
+    },
+    {
+      "cell": "E57",
+      "formula": "=numberto22(C57+C58)"
+    },
+    {
+      "cell": "F57",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C57)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G57",
+      "formula": "=ABS(numberto22(C57+NameArc*KarmicShadow($C$11,E55,VALUE($L$6))))"
+    },
+    {
+      "cell": "H57",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G57)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S57",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S54,T54,U54)))"
+    },
+    {
+      "cell": "U57",
+      "formula": "=numberto22(S57+S58)"
+    },
+    {
+      "cell": "V57",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S57)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W57",
+      "formula": "=ABS(numberto22(S57+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X57",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W57)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C58",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E55))))))"
+    },
+    {
+      "cell": "E58",
+      "formula": "=numberto22(ABS(C57-C58))"
+    },
+    {
+      "cell": "F58",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G58",
+      "formula": "=ABS(numberto22(C58+NameArc*KarmicShadow($C$11,E55,VALUE($L$6))))"
+    },
+    {
+      "cell": "H58",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K58",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,8,O56)))"
+    },
+    {
+      "cell": "M58",
+      "formula": "=numberto22(K58+K59)"
+    },
+    {
+      "cell": "N58",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O58",
+      "formula": "=ABS(numberto22(K58+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P58",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S58",
+      "formula": "=numberto22((numberto22(S54)+numberto22(T54)+numberto22(SumNumbers(U54))))"
+    },
+    {
+      "cell": "U58",
+      "formula": "=numberto22(ABS(S57-S58))"
+    },
+    {
+      "cell": "V58",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W58",
+      "formula": "=ABS(numberto22(S58+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X58",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C59",
+      "formula": "=YEAR(E59)"
+    },
+    {
+      "cell": "E59",
+      "formula": "=DATE(YEAR(E55)+1,MONTH(E55),DAY(E55))"
+    },
+    {
+      "cell": "K59",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(8)+numberto22(SumNumbers(O56))))"
+    },
+    {
+      "cell": "M59",
+      "formula": "=numberto22(ABS(K58-K59))"
+    },
+    {
+      "cell": "N59",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K59)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O59",
+      "formula": "=ABS(numberto22(K59+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P59",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O59)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S59",
+      "formula": "=DAY(DATE(YEAR(T55), MONTH(T55), DAY(T55) + 1))"
+    },
+    {
+      "cell": "T59",
+      "formula": "=MONTH(DATE(YEAR(T55), MONTH(T55), DAY(T55) + 1))"
+    },
+    {
+      "cell": "U59",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W59",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T59,S59)))"
+    },
+    {
+      "cell": "T60",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T59,1),0))"
+    },
+    {
+      "cell": "C61",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E59)))))"
+    },
+    {
+      "cell": "E61",
+      "formula": "=numberto22(C61+C62)"
+    },
+    {
+      "cell": "F61",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C61)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G61",
+      "formula": "=ABS(numberto22(C61+NameArc*KarmicShadow($C$11,E59,VALUE($L$6))))"
+    },
+    {
+      "cell": "H61",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G61)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "M61",
+      "formula": "=DATE($K$13,9,DAY(EOMONTH(DATE(YEAR($K$13),9,1),0)))"
+    },
+    {
+      "cell": "O61",
+      "formula": "=YEAR(SolarDate($C$11,M61))"
+    },
+    {
+      "cell": "S61",
+      "formula": "=IF($S$16+S59<=T60,$S$16+S59,($S$16+S59)-T60)"
+    },
+    {
+      "cell": "T61",
+      "formula": "=MONTH(T55)"
+    },
+    {
+      "cell": "U61",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U59,T59,S59)))"
+    },
+    {
+      "cell": "C62",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E59))))))"
+    },
+    {
+      "cell": "E62",
+      "formula": "=numberto22(ABS(C61-C62))"
+    },
+    {
+      "cell": "F62",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C62)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G62",
+      "formula": "=ABS(numberto22(C62+NameArc*KarmicShadow($C$11,E59,VALUE($L$6))))"
+    },
+    {
+      "cell": "H62",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G62)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T62",
+      "formula": "=DATE(U59,T59,S59)"
+    },
+    {
+      "cell": "C63",
+      "formula": "=YEAR(E63)"
+    },
+    {
+      "cell": "E63",
+      "formula": "=DATE(YEAR(E59)+1,MONTH(E59),DAY(E59))"
+    },
+    {
+      "cell": "K63",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,9,O61)))"
+    },
+    {
+      "cell": "M63",
+      "formula": "=numberto22(K63+K64)"
+    },
+    {
+      "cell": "N63",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K63)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O63",
+      "formula": "=ABS(numberto22(K63+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P63",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O63)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K64",
+      "formula": "=numberto22((numberto22($C$6)+numberto22(9)+numberto22(SumNumbers(O61))))"
+    },
+    {
+      "cell": "M64",
+      "formula": "=numberto22(ABS(K63-K64))"
+    },
+    {
+      "cell": "N64",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K64)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O64",
+      "formula": "=ABS(numberto22(K64+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P64",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O64)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S64",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S61,T61,U61)))"
+    },
+    {
+      "cell": "U64",
+      "formula": "=numberto22(S64+S65)"
+    },
+    {
+      "cell": "V64",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S64)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W64",
+      "formula": "=ABS(numberto22(S64+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X64",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W64)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C65",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,$C$7,YEAR(SolarDate($C$11,E63)))))"
+    },
+    {
+      "cell": "E65",
+      "formula": "=numberto22(C65+C66)"
+    },
+    {
+      "cell": "F65",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C65)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G65",
+      "formula": "=ABS(numberto22(C65+NameArc*KarmicShadow($C$11,E63,VALUE($L$6))))"
+    },
+    {
+      "cell": "H65",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G65)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S65",
+      "formula": "=numberto22((numberto22(S61)+numberto22(T61)+numberto22(SumNumbers(U61))))"
+    },
+    {
+      "cell": "U65",
+      "formula": "=numberto22(ABS(S64-S65))"
+    },
+    {
+      "cell": "V65",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S65)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W65",
+      "formula": "=ABS(numberto22(S65+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X65",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W65)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C66",
+      "formula": "=numberto22((numberto22($C$6)+numberto22($C$7)+numberto22(SumNumbers(YEAR(SolarDate($C$11,E63))))))"
+    },
+    {
+      "cell": "E66",
+      "formula": "=numberto22(ABS(C65-C66))"
+    },
+    {
+      "cell": "F66",
+      "formula": "=IF(COUNTIF($K$6:$P$6,C66)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "G66",
+      "formula": "=ABS(numberto22(C66+NameArc*KarmicShadow($C$11,E63,VALUE($L$6))))"
+    },
+    {
+      "cell": "H66",
+      "formula": "=IF(COUNTIF($K$6:$P$6,G66)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "M66",
+      "formula": "=DATE($K$13,10,DAY(EOMONTH(DATE(YEAR($K$13),10,1),0)))"
+    },
+    {
+      "cell": "O66",
+      "formula": "=YEAR(SolarDate($C$11,M66))"
+    },
+    {
+      "cell": "S66",
+      "formula": "=DAY(DATE(YEAR(T62), MONTH(T62), DAY(T62) + 1))"
+    },
+    {
+      "cell": "T66",
+      "formula": "=MONTH(DATE(YEAR(T62), MONTH(T62), DAY(T62) + 1))"
+    },
+    {
+      "cell": "U66",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W66",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T66,S66)))"
+    },
+    {
+      "cell": "T67",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T66,1),0))"
+    },
+    {
+      "cell": "K68",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,10,O66)))"
+    },
+    {
+      "cell": "M68",
+      "formula": "=numberto22(K68+K69)"
+    },
+    {
+      "cell": "N68",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K68)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O68",
+      "formula": "=ABS(numberto22(K68+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P68",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O68)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S68",
+      "formula": "=IF($S$16+S66<=T67,$S$16+S66,($S$16+S66)-T67)"
+    },
+    {
+      "cell": "T68",
+      "formula": "=MONTH(T62)"
+    },
+    {
+      "cell": "U68",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U66,T66,S66)))"
+    },
+    {
+      "cell": "K69",
+      "formula": "=numberto22((numberto22($C$6)+10+numberto22(SumNumbers(O66))))"
+    },
+    {
+      "cell": "M69",
+      "formula": "=numberto22(ABS(K68-K69))"
+    },
+    {
+      "cell": "N69",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K69)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O69",
+      "formula": "=ABS(numberto22(K69+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P69",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O69)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T69",
+      "formula": "=DATE(U66,T66,S66)"
+    },
+    {
+      "cell": "M71",
+      "formula": "=DATE($K$13,11,DAY(EOMONTH(DATE(YEAR($K$13),11,1),0)))"
+    },
+    {
+      "cell": "O71",
+      "formula": "=YEAR(SolarDate($C$11,M71))"
+    },
+    {
+      "cell": "S71",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S68,T68,U68)))"
+    },
+    {
+      "cell": "U71",
+      "formula": "=numberto22(S71+S72)"
+    },
+    {
+      "cell": "V71",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S71)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W71",
+      "formula": "=ABS(numberto22(S71+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X71",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W71)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S72",
+      "formula": "=numberto22((numberto22(S68)+numberto22(T68)+numberto22(SumNumbers(U68))))"
+    },
+    {
+      "cell": "U72",
+      "formula": "=numberto22(ABS(S71-S72))"
+    },
+    {
+      "cell": "V72",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S72)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W72",
+      "formula": "=ABS(numberto22(S72+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X72",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W72)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K73",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,11,O71)))"
+    },
+    {
+      "cell": "M73",
+      "formula": "=numberto22(K73+K74)"
+    },
+    {
+      "cell": "N73",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K73)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O73",
+      "formula": "=ABS(numberto22(K73+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P73",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O73)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S73",
+      "formula": "=DAY(DATE(YEAR(T69), MONTH(T69), DAY(T69) + 1))"
+    },
+    {
+      "cell": "T73",
+      "formula": "=MONTH(DATE(YEAR(T69), MONTH(T69), DAY(T69) + 1))"
+    },
+    {
+      "cell": "U73",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W73",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T73,S73)))"
+    },
+    {
+      "cell": "K74",
+      "formula": "=numberto22((numberto22($C$6)+11+numberto22(SumNumbers(O71))))"
+    },
+    {
+      "cell": "M74",
+      "formula": "=numberto22(ABS(K73-K74))"
+    },
+    {
+      "cell": "N74",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K74)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O74",
+      "formula": "=ABS(numberto22(K74+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P74",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O74)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T74",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T73,1),0))"
+    },
+    {
+      "cell": "S75",
+      "formula": "=IF($S$16+S73<=T74,$S$16+S73,($S$16+S73)-T74)"
+    },
+    {
+      "cell": "T75",
+      "formula": "=MONTH(T69)"
+    },
+    {
+      "cell": "U75",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U73,T73,S73)))"
+    },
+    {
+      "cell": "M76",
+      "formula": "=DATE($K$13,12,DAY(EOMONTH(DATE(YEAR($K$13),12,1),0)))"
+    },
+    {
+      "cell": "O76",
+      "formula": "=YEAR(SolarDate($C$11,M76))"
+    },
+    {
+      "cell": "T76",
+      "formula": "=DATE(U73,T73,S73)"
+    },
+    {
+      "cell": "K78",
+      "formula": "=numberto22(SumNumbers(CONCATENATE($C$6,12,O76)))"
+    },
+    {
+      "cell": "M78",
+      "formula": "=numberto22(K78+K79)"
+    },
+    {
+      "cell": "N78",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K78)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O78",
+      "formula": "=ABS(numberto22(K78+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P78",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O78)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S78",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S75,T75,U75)))"
+    },
+    {
+      "cell": "U78",
+      "formula": "=numberto22(S78+S79)"
+    },
+    {
+      "cell": "V78",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S78)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W78",
+      "formula": "=ABS(numberto22(S78+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X78",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W78)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "K79",
+      "formula": "=numberto22((numberto22($C$6)+12+numberto22(SumNumbers(O76))))"
+    },
+    {
+      "cell": "M79",
+      "formula": "=numberto22(ABS(K78-K79))"
+    },
+    {
+      "cell": "N79",
+      "formula": "=IF(COUNTIF($K$6:$P$6,K79)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "O79",
+      "formula": "=ABS(numberto22(K79+NameArc*KarmicShadow($C$11,$E$14,VALUE($L$6))))"
+    },
+    {
+      "cell": "P79",
+      "formula": "=IF(COUNTIF($K$6:$P$6,O79)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S79",
+      "formula": "=numberto22((numberto22(S75)+numberto22(T75)+numberto22(SumNumbers(U75))))"
+    },
+    {
+      "cell": "U79",
+      "formula": "=numberto22(ABS(S78-S79))"
+    },
+    {
+      "cell": "V79",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S79)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W79",
+      "formula": "=ABS(numberto22(S79+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X79",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W79)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S80",
+      "formula": "=DAY(DATE(YEAR(T76), MONTH(T76), DAY(T76) + 1))"
+    },
+    {
+      "cell": "T80",
+      "formula": "=MONTH(DATE(YEAR(T76), MONTH(T76), DAY(T76) + 1))"
+    },
+    {
+      "cell": "U80",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W80",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T80,S80)))"
+    },
+    {
+      "cell": "T81",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T80,1),0))"
+    },
+    {
+      "cell": "S82",
+      "formula": "=IF($S$16+S80<=T81,$S$16+S80,($S$16+S80)-T81)"
+    },
+    {
+      "cell": "T82",
+      "formula": "=MONTH(T76)"
+    },
+    {
+      "cell": "U82",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U80,T80,S80)))"
+    },
+    {
+      "cell": "T83",
+      "formula": "=DATE(U80,T80,S80)"
+    },
+    {
+      "cell": "S85",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S82,T82,U82)))"
+    },
+    {
+      "cell": "U85",
+      "formula": "=numberto22(S85+S86)"
+    },
+    {
+      "cell": "V85",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S85)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W85",
+      "formula": "=ABS(numberto22(S85+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X85",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W85)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S86",
+      "formula": "=numberto22((numberto22(S82)+numberto22(T82)+numberto22(SumNumbers(U82))))"
+    },
+    {
+      "cell": "U86",
+      "formula": "=numberto22(ABS(S85-S86))"
+    },
+    {
+      "cell": "V86",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S86)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W86",
+      "formula": "=ABS(numberto22(S86+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X86",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W86)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S87",
+      "formula": "=DAY(DATE(YEAR(T83), MONTH(T83), DAY(T83) + 1))"
+    },
+    {
+      "cell": "T87",
+      "formula": "=MONTH(DATE(YEAR(T83), MONTH(T83), DAY(T83) + 1))"
+    },
+    {
+      "cell": "U87",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W87",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T87,S87)))"
+    },
+    {
+      "cell": "T88",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T87,1),0))"
+    },
+    {
+      "cell": "S89",
+      "formula": "=IF($S$16+S87<=T88,$S$16+S87,($S$16+S87)-T88)"
+    },
+    {
+      "cell": "T89",
+      "formula": "=MONTH(T83)"
+    },
+    {
+      "cell": "U89",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U87,T87,S87)))"
+    },
+    {
+      "cell": "T90",
+      "formula": "=DATE(U87,T87,S87)"
+    },
+    {
+      "cell": "S92",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S89,T89,U89)))"
+    },
+    {
+      "cell": "U92",
+      "formula": "=numberto22(S92+S93)"
+    },
+    {
+      "cell": "V92",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S92)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W92",
+      "formula": "=ABS(numberto22(S92+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X92",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W92)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S93",
+      "formula": "=numberto22((numberto22(S89)+numberto22(T89)+numberto22(SumNumbers(U89))))"
+    },
+    {
+      "cell": "U93",
+      "formula": "=numberto22(ABS(S92-S93))"
+    },
+    {
+      "cell": "V93",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S93)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W93",
+      "formula": "=ABS(numberto22(S93+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X93",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W93)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S94",
+      "formula": "=DAY(DATE(YEAR(T90), MONTH(T90), DAY(T90) + 1))"
+    },
+    {
+      "cell": "T94",
+      "formula": "=MONTH(DATE(YEAR(T90), MONTH(T90), DAY(T90) + 1))"
+    },
+    {
+      "cell": "U94",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W94",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T94,S94)))"
+    },
+    {
+      "cell": "T95",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T94,1),0))"
+    },
+    {
+      "cell": "S96",
+      "formula": "=IF($S$16+S94<=T95,$S$16+S94,($S$16+S94)-T95)"
+    },
+    {
+      "cell": "T96",
+      "formula": "=MONTH(T90)"
+    },
+    {
+      "cell": "U96",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U94,T94,S94)))"
+    },
+    {
+      "cell": "T97",
+      "formula": "=DATE(U94,T94,S94)"
+    },
+    {
+      "cell": "S99",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S96,T96,U96)))"
+    },
+    {
+      "cell": "U99",
+      "formula": "=numberto22(S99+S100)"
+    },
+    {
+      "cell": "V99",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S99)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W99",
+      "formula": "=ABS(numberto22(S99+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X99",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W99)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S100",
+      "formula": "=numberto22((numberto22(S96)+numberto22(T96)+numberto22(SumNumbers(U96))))"
+    },
+    {
+      "cell": "U100",
+      "formula": "=numberto22(ABS(S99-S100))"
+    },
+    {
+      "cell": "V100",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S100)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W100",
+      "formula": "=ABS(numberto22(S100+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X100",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W100)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S101",
+      "formula": "=DAY(DATE(YEAR(T97), MONTH(T97), DAY(T97) + 1))"
+    },
+    {
+      "cell": "T101",
+      "formula": "=MONTH(DATE(YEAR(T97), MONTH(T97), DAY(T97) + 1))"
+    },
+    {
+      "cell": "U101",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W101",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T101,S101)))"
+    },
+    {
+      "cell": "T102",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T101,1),0))"
+    },
+    {
+      "cell": "S103",
+      "formula": "=IF($S$16+S101<=T102,$S$16+S101,($S$16+S101)-T102)"
+    },
+    {
+      "cell": "T103",
+      "formula": "=MONTH(T97)"
+    },
+    {
+      "cell": "U103",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U101,T101,S101)))"
+    },
+    {
+      "cell": "T104",
+      "formula": "=DATE(U101,T101,S101)"
+    },
+    {
+      "cell": "S106",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S103,T103,U103)))"
+    },
+    {
+      "cell": "U106",
+      "formula": "=numberto22(S106+S107)"
+    },
+    {
+      "cell": "V106",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S106)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W106",
+      "formula": "=ABS(numberto22(S106+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X106",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W106)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S107",
+      "formula": "=numberto22((numberto22(S103)+numberto22(T103)+numberto22(SumNumbers(U103))))"
+    },
+    {
+      "cell": "U107",
+      "formula": "=numberto22(ABS(S106-S107))"
+    },
+    {
+      "cell": "V107",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S107)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W107",
+      "formula": "=ABS(numberto22(S107+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X107",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W107)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S108",
+      "formula": "=DAY(DATE(YEAR(T104), MONTH(T104), DAY(T104) + 1))"
+    },
+    {
+      "cell": "T108",
+      "formula": "=MONTH(DATE(YEAR(T104), MONTH(T104), DAY(T104) + 1))"
+    },
+    {
+      "cell": "U108",
+      "formula": "=$U$17"
+    },
+    {
+      "cell": "W108",
+      "formula": "=YEAR(SolarDate($C$11,DATE($C$5,T108,S108)))"
+    },
+    {
+      "cell": "T109",
+      "formula": "=DAY(EOMONTH(DATE(YEAR(TODAY()),T108,1),0))"
+    },
+    {
+      "cell": "S110",
+      "formula": "=IF($S$16+S108<=T109,$S$16+S108,($S$16+S108)-T109)"
+    },
+    {
+      "cell": "T110",
+      "formula": "=MONTH(T104)"
+    },
+    {
+      "cell": "U110",
+      "formula": "=YEAR(SolarDate($C$11,DATE(U108,T108,S108)))"
+    },
+    {
+      "cell": "T111",
+      "formula": "=DATE(U108,T108,S108)"
+    },
+    {
+      "cell": "S113",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(S110,T110,U110)))"
+    },
+    {
+      "cell": "U113",
+      "formula": "=numberto22(S113+S114)"
+    },
+    {
+      "cell": "V113",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S113)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W113",
+      "formula": "=ABS(numberto22(S113+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X113",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W113)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S114",
+      "formula": "=numberto22((numberto22(S110)+numberto22(T110)+numberto22(SumNumbers(U110))))"
+    },
+    {
+      "cell": "U114",
+      "formula": "=numberto22(ABS(S113-S114))"
+    },
+    {
+      "cell": "V114",
+      "formula": "=IF(COUNTIF($K$6:$P$6,S114)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W114",
+      "formula": "=ABS(numberto22(S114+NameArc*KarmicShadow($C$11,DATE($U$17,$T$17,$S$17),VALUE($L$6))))"
+    },
+    {
+      "cell": "X114",
+      "formula": "=IF(COUNTIF($K$6:$P$6,W114)>0, \"Да\", \"Нет\")"
+    }
+  ],
+  "strings": [
+    {
+      "cell": "C2",
+      "value": "Материал скачан с сайта - https://supersliv.biz/"
+    },
+    {
+      "cell": "B3",
+      "value": "Рассчет прогностики Года"
+    },
+    {
+      "cell": "J3",
+      "value": "Карма по периодам жизни"
+    },
+    {
+      "cell": "K4",
+      "value": "Доп. Знаки"
+    },
+    {
+      "cell": "L4",
+      "value": "1 период"
+    },
+    {
+      "cell": "M4",
+      "value": "2 период"
+    },
+    {
+      "cell": "N4",
+      "value": "3 период"
+    },
+    {
+      "cell": "O4",
+      "value": "4 период"
+    },
+    {
+      "cell": "P4",
+      "value": "Главное"
+    },
+    {
+      "cell": "Q4",
+      "value": "Хвосты"
+    },
+    {
+      "cell": "B5",
+      "value": "Год для расчета"
+    },
+    {
+      "cell": "E5",
+      "value": "- год на который делать прогностику"
+    },
+    {
+      "cell": "J5",
+      "value": "В плюсе"
+    },
+    {
+      "cell": "B6",
+      "value": "Дата Рождения"
+    },
+    {
+      "cell": "J6",
+      "value": "В минусе"
+    },
+    {
+      "cell": "B7",
+      "value": "Месяц Рождения"
+    },
+    {
+      "cell": "J7",
+      "value": "Годы"
+    },
+    {
+      "cell": "P7",
+      "value": "Всегда"
+    },
+    {
+      "cell": "Q7",
+      "value": "Всегда"
+    },
+    {
+      "cell": "B8",
+      "value": "Год Рождения"
+    },
+    {
+      "cell": "B9",
+      "value": "Имя Человека"
+    },
+    {
+      "cell": "C9",
+      "value": "гульмира"
+    },
+    {
+      "cell": "B10",
+      "value": "Возраст"
+    },
+    {
+      "cell": "F10",
+      "value": "Если одно из значений расчетов совпало с одной из ОПВ или ГЧК-, второе число переворачивается"
+    },
+    {
+      "cell": "B11",
+      "value": "Дата Рождения"
+    },
+    {
+      "cell": "F11",
+      "value": "Если одно из значений Тени Кармы совпало с одной из ОПВ или ГЧК-, второе число НЕ переворачивается"
+    },
+    {
+      "cell": "B13",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "J13",
+      "value": "Прогностика Месяцев "
+    },
+    {
+      "cell": "L13",
+      "value": "года"
+    },
+    {
+      "cell": "R13",
+      "value": "Расчет Дня"
+    },
+    {
+      "cell": "D14",
+      "value": "до"
+    },
+    {
+      "cell": "D15",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F15",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G15",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H15",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "J15",
+      "value": "Прогностика Месяца Рождения ДО Дня Рождения"
+    },
+    {
+      "cell": "S15",
+      "value": "День"
+    },
+    {
+      "cell": "T15",
+      "value": "Месяц"
+    },
+    {
+      "cell": "U15",
+      "value": "Год"
+    },
+    {
+      "cell": "B16",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D16",
+      "value": "ХК +"
+    },
+    {
+      "cell": "L16",
+      "value": "до"
+    },
+    {
+      "cell": "B17",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D17",
+      "value": "ХК-"
+    },
+    {
+      "cell": "L17",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N17",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O17",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P17",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "V17",
+      "value": "Солярно"
+    },
+    {
+      "cell": "J18",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L18",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R18",
+      "value": "Число дней"
+    },
+    {
+      "cell": "B19",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D19",
+      "value": "после"
+    },
+    {
+      "cell": "J19",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L19",
+      "value": "ХК-"
+    },
+    {
+      "cell": "D20",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F20",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G20",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H20",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R20",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "B21",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D21",
+      "value": "ХК +"
+    },
+    {
+      "cell": "J21",
+      "value": "Январь"
+    },
+    {
+      "cell": "L21",
+      "value": "до"
+    },
+    {
+      "cell": "T21",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V21",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W21",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X21",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "B22",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D22",
+      "value": "ХК-"
+    },
+    {
+      "cell": "L22",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N22",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O22",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P22",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R22",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T22",
+      "value": "ХК +"
+    },
+    {
+      "cell": "B23",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D23",
+      "value": "после"
+    },
+    {
+      "cell": "J23",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L23",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R23",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T23",
+      "value": "ХК-"
+    },
+    {
+      "cell": "D24",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F24",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G24",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H24",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "J24",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L24",
+      "value": "ХК-"
+    },
+    {
+      "cell": "V24",
+      "value": "Солярно"
+    },
+    {
+      "cell": "B25",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D25",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R25",
+      "value": "Число дней"
+    },
+    {
+      "cell": "B26",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D26",
+      "value": "ХК-"
+    },
+    {
+      "cell": "J26",
+      "value": "Февраль"
+    },
+    {
+      "cell": "L26",
+      "value": "до"
+    },
+    {
+      "cell": "B27",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D27",
+      "value": "после"
+    },
+    {
+      "cell": "L27",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N27",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O27",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P27",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R27",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "D28",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F28",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G28",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H28",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "J28",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L28",
+      "value": "ХК +"
+    },
+    {
+      "cell": "T28",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V28",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W28",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X28",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "B29",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D29",
+      "value": "ХК +"
+    },
+    {
+      "cell": "J29",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L29",
+      "value": "ХК-"
+    },
+    {
+      "cell": "R29",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T29",
+      "value": "ХК +"
+    },
+    {
+      "cell": "B30",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D30",
+      "value": "ХК-"
+    },
+    {
+      "cell": "R30",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T30",
+      "value": "ХК-"
+    },
+    {
+      "cell": "B31",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D31",
+      "value": "после"
+    },
+    {
+      "cell": "J31",
+      "value": "Март"
+    },
+    {
+      "cell": "L31",
+      "value": "до"
+    },
+    {
+      "cell": "V31",
+      "value": "Солярно"
+    },
+    {
+      "cell": "D32",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F32",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G32",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H32",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "L32",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N32",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O32",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P32",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R32",
+      "value": "Число дней"
+    },
+    {
+      "cell": "B33",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D33",
+      "value": "ХК +"
+    },
+    {
+      "cell": "J33",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L33",
+      "value": "ХК +"
+    },
+    {
+      "cell": "B34",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D34",
+      "value": "ХК-"
+    },
+    {
+      "cell": "J34",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L34",
+      "value": "ХК-"
+    },
+    {
+      "cell": "R34",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "B35",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D35",
+      "value": "после"
+    },
+    {
+      "cell": "T35",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V35",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W35",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X35",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "D36",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F36",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G36",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H36",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "J36",
+      "value": "Апрель"
+    },
+    {
+      "cell": "L36",
+      "value": "до"
+    },
+    {
+      "cell": "R36",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T36",
+      "value": "ХК +"
+    },
+    {
+      "cell": "B37",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D37",
+      "value": "ХК +"
+    },
+    {
+      "cell": "L37",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N37",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O37",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P37",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R37",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T37",
+      "value": "ХК-"
+    },
+    {
+      "cell": "B38",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D38",
+      "value": "ХК-"
+    },
+    {
+      "cell": "J38",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L38",
+      "value": "ХК +"
+    },
+    {
+      "cell": "V38",
+      "value": "Солярно"
+    },
+    {
+      "cell": "B39",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D39",
+      "value": "после"
+    },
+    {
+      "cell": "J39",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L39",
+      "value": "ХК-"
+    },
+    {
+      "cell": "R39",
+      "value": "Число дней"
+    },
+    {
+      "cell": "D40",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F40",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G40",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H40",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "B41",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D41",
+      "value": "ХК +"
+    },
+    {
+      "cell": "J41",
+      "value": "Май"
+    },
+    {
+      "cell": "L41",
+      "value": "до"
+    },
+    {
+      "cell": "R41",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "B42",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D42",
+      "value": "ХК-"
+    },
+    {
+      "cell": "L42",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N42",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O42",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P42",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "T42",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V42",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W42",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X42",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "B43",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D43",
+      "value": "после"
+    },
+    {
+      "cell": "J43",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L43",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R43",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T43",
+      "value": "ХК +"
+    },
+    {
+      "cell": "D44",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F44",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G44",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H44",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "J44",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L44",
+      "value": "ХК-"
+    },
+    {
+      "cell": "R44",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T44",
+      "value": "ХК-"
+    },
+    {
+      "cell": "B45",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D45",
+      "value": "ХК +"
+    },
+    {
+      "cell": "V45",
+      "value": "Солярно"
+    },
+    {
+      "cell": "B46",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D46",
+      "value": "ХК-"
+    },
+    {
+      "cell": "J46",
+      "value": "Июнь"
+    },
+    {
+      "cell": "L46",
+      "value": "до"
+    },
+    {
+      "cell": "R46",
+      "value": "Число дней"
+    },
+    {
+      "cell": "B47",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D47",
+      "value": "после"
+    },
+    {
+      "cell": "L47",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N47",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O47",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P47",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "D48",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F48",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G48",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H48",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "J48",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L48",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R48",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "B49",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D49",
+      "value": "ХК +"
+    },
+    {
+      "cell": "J49",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L49",
+      "value": "ХК-"
+    },
+    {
+      "cell": "T49",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V49",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W49",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X49",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "B50",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D50",
+      "value": "ХК-"
+    },
+    {
+      "cell": "R50",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T50",
+      "value": "ХК +"
+    },
+    {
+      "cell": "B51",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D51",
+      "value": "после"
+    },
+    {
+      "cell": "J51",
+      "value": "Июль"
+    },
+    {
+      "cell": "L51",
+      "value": "до"
+    },
+    {
+      "cell": "R51",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T51",
+      "value": "ХК-"
+    },
+    {
+      "cell": "D52",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F52",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G52",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H52",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "L52",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N52",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O52",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P52",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "V52",
+      "value": "Солярно"
+    },
+    {
+      "cell": "B53",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D53",
+      "value": "ХК +"
+    },
+    {
+      "cell": "J53",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L53",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R53",
+      "value": "Число дней"
+    },
+    {
+      "cell": "B54",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D54",
+      "value": "ХК-"
+    },
+    {
+      "cell": "J54",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L54",
+      "value": "ХК-"
+    },
+    {
+      "cell": "B55",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D55",
+      "value": "после"
+    },
+    {
+      "cell": "R55",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "D56",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F56",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G56",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H56",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "J56",
+      "value": "Август"
+    },
+    {
+      "cell": "L56",
+      "value": "до"
+    },
+    {
+      "cell": "T56",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V56",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W56",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X56",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "B57",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D57",
+      "value": "ХК +"
+    },
+    {
+      "cell": "L57",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N57",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O57",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P57",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R57",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T57",
+      "value": "ХК +"
+    },
+    {
+      "cell": "B58",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D58",
+      "value": "ХК-"
+    },
+    {
+      "cell": "J58",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L58",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R58",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T58",
+      "value": "ХК-"
+    },
+    {
+      "cell": "B59",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D59",
+      "value": "после"
+    },
+    {
+      "cell": "J59",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L59",
+      "value": "ХК-"
+    },
+    {
+      "cell": "V59",
+      "value": "Солярно"
+    },
+    {
+      "cell": "D60",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F60",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G60",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H60",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R60",
+      "value": "Число дней"
+    },
+    {
+      "cell": "B61",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D61",
+      "value": "ХК +"
+    },
+    {
+      "cell": "J61",
+      "value": "Сентябрь"
+    },
+    {
+      "cell": "L61",
+      "value": "до"
+    },
+    {
+      "cell": "B62",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D62",
+      "value": "ХК-"
+    },
+    {
+      "cell": "L62",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N62",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O62",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P62",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R62",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "B63",
+      "value": "Прогностика Года"
+    },
+    {
+      "cell": "D63",
+      "value": "после"
+    },
+    {
+      "cell": "J63",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L63",
+      "value": "ХК +"
+    },
+    {
+      "cell": "T63",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V63",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W63",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X63",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "D64",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "F64",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "G64",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "H64",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "J64",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L64",
+      "value": "ХК-"
+    },
+    {
+      "cell": "R64",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T64",
+      "value": "ХК +"
+    },
+    {
+      "cell": "B65",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "D65",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R65",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T65",
+      "value": "ХК-"
+    },
+    {
+      "cell": "B66",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "D66",
+      "value": "ХК-"
+    },
+    {
+      "cell": "J66",
+      "value": "Октябрь"
+    },
+    {
+      "cell": "L66",
+      "value": "до"
+    },
+    {
+      "cell": "V66",
+      "value": "Солярно"
+    },
+    {
+      "cell": "L67",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N67",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O67",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P67",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R67",
+      "value": "Число дней"
+    },
+    {
+      "cell": "J68",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L68",
+      "value": "ХК +"
+    },
+    {
+      "cell": "J69",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L69",
+      "value": "ХК-"
+    },
+    {
+      "cell": "R69",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "T70",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V70",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W70",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X70",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "J71",
+      "value": "Ноябрь"
+    },
+    {
+      "cell": "L71",
+      "value": "до"
+    },
+    {
+      "cell": "R71",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T71",
+      "value": "ХК +"
+    },
+    {
+      "cell": "L72",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N72",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O72",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P72",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R72",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T72",
+      "value": "ХК-"
+    },
+    {
+      "cell": "J73",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L73",
+      "value": "ХК +"
+    },
+    {
+      "cell": "V73",
+      "value": "Солярно"
+    },
+    {
+      "cell": "J74",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L74",
+      "value": "ХК-"
+    },
+    {
+      "cell": "R74",
+      "value": "Число дней"
+    },
+    {
+      "cell": "J76",
+      "value": "Декабрь"
+    },
+    {
+      "cell": "L76",
+      "value": "до"
+    },
+    {
+      "cell": "R76",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "L77",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "N77",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "O77",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "P77",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "T77",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V77",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W77",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X77",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "J78",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "L78",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R78",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T78",
+      "value": "ХК +"
+    },
+    {
+      "cell": "J79",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "L79",
+      "value": "ХК-"
+    },
+    {
+      "cell": "R79",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T79",
+      "value": "ХК-"
+    },
+    {
+      "cell": "V80",
+      "value": "Солярно"
+    },
+    {
+      "cell": "R81",
+      "value": "Число дней"
+    },
+    {
+      "cell": "R83",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "T84",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V84",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W84",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X84",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R85",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T85",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R86",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T86",
+      "value": "ХК-"
+    },
+    {
+      "cell": "V87",
+      "value": "Солярно"
+    },
+    {
+      "cell": "R88",
+      "value": "Число дней"
+    },
+    {
+      "cell": "R90",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "T91",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V91",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W91",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X91",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R92",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T92",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R93",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T93",
+      "value": "ХК-"
+    },
+    {
+      "cell": "V94",
+      "value": "Солярно"
+    },
+    {
+      "cell": "R95",
+      "value": "Число дней"
+    },
+    {
+      "cell": "R97",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "T98",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V98",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W98",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X98",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R99",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T99",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R100",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T100",
+      "value": "ХК-"
+    },
+    {
+      "cell": "V101",
+      "value": "Солярно"
+    },
+    {
+      "cell": "R102",
+      "value": "Число дней"
+    },
+    {
+      "cell": "R104",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "T105",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V105",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W105",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X105",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R106",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T106",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R107",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T107",
+      "value": "ХК-"
+    },
+    {
+      "cell": "V108",
+      "value": "Солярно"
+    },
+    {
+      "cell": "R109",
+      "value": "Число дней"
+    },
+    {
+      "cell": "R111",
+      "value": "Прогностика Дня"
+    },
+    {
+      "cell": "T112",
+      "value": "Хвост Кармы"
+    },
+    {
+      "cell": "V112",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "W112",
+      "value": "Тень Кармы"
+    },
+    {
+      "cell": "X112",
+      "value": "Кармичность"
+    },
+    {
+      "cell": "R113",
+      "value": "1. Западная школа"
+    },
+    {
+      "cell": "T113",
+      "value": "ХК +"
+    },
+    {
+      "cell": "R114",
+      "value": "2. Таронумерология"
+    },
+    {
+      "cell": "T114",
+      "value": "ХК-"
+    }
+  ]
+}

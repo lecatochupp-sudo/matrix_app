@@ -1,0 +1,7156 @@
+{
+  "title": "Совместимость",
+  "state": "visible",
+  "size": {
+    "rows": 320,
+    "cols": 40
+  },
+  "formulas": [
+    {
+      "cell": "C3",
+      "formula": "=DATE(DOB_Year1,DOB_Month1,DOB_Day1)"
+    },
+    {
+      "cell": "K3",
+      "formula": "=DATE(DOB_Year2,DOB_Month2,DOB_Day2)"
+    },
+    {
+      "cell": "D4",
+      "formula": "=CalculateRod(C4,C5,0,Alphabet)"
+    },
+    {
+      "cell": "L4",
+      "formula": "=CalculateRod(K4,K5,0,Alphabet)"
+    },
+    {
+      "cell": "D5",
+      "formula": "=CalculateRod(C4,C5,1,Alphabet)"
+    },
+    {
+      "cell": "L5",
+      "formula": "=CalculateRod(K4,K5,1,Alphabet)"
+    },
+    {
+      "cell": "D6",
+      "formula": "=numberto22(ConvertLettersToNumber(C6,Alphabet))"
+    },
+    {
+      "cell": "L6",
+      "formula": "=numberto22(ConvertLettersToNumber(K6,Alphabet))"
+    },
+    {
+      "cell": "S6",
+      "formula": "=CalcTP(C7)"
+    },
+    {
+      "cell": "T6",
+      "formula": "=numberto22(ABS(DayTaro1+MonthTaro1))"
+    },
+    {
+      "cell": "U6",
+      "formula": "=numberto22(ABS(DayTaro1+YearTaro1))"
+    },
+    {
+      "cell": "V6",
+      "formula": "=numberto22(ABS(T6+U6))"
+    },
+    {
+      "cell": "W6",
+      "formula": "=numberto22(ABS(MonthTaro1+YearTaro1))"
+    },
+    {
+      "cell": "X6",
+      "formula": "=numberto22(T6+U6+V6+W6)"
+    },
+    {
+      "cell": "Y6",
+      "formula": "=numberto22(X6+X7)"
+    },
+    {
+      "cell": "D7",
+      "formula": "=numberto22(C7)"
+    },
+    {
+      "cell": "E7",
+      "formula": "=SumNumbers(CONCATENATE(C7,C8,C9))"
+    },
+    {
+      "cell": "L7",
+      "formula": "=numberto22(K7)"
+    },
+    {
+      "cell": "M7",
+      "formula": "=SumNumbers(CONCATENATE(K7,K8,K9))"
+    },
+    {
+      "cell": "S7",
+      "formula": "=CalcOPV(C7)"
+    },
+    {
+      "cell": "T7",
+      "formula": "=numberto22(ABS(DayTaro1-MonthTaro1))"
+    },
+    {
+      "cell": "U7",
+      "formula": "=numberto22(ABS(DayTaro1-YearTaro1))"
+    },
+    {
+      "cell": "V7",
+      "formula": "=numberto22(ABS(T7-U7))"
+    },
+    {
+      "cell": "W7",
+      "formula": "=numberto22(ABS(MonthTaro1-YearTaro1))"
+    },
+    {
+      "cell": "X7",
+      "formula": "=numberto22(T7+U7+V7+W7)"
+    },
+    {
+      "cell": "Y7",
+      "formula": "=numberto22(ABS(X7-X6))"
+    },
+    {
+      "cell": "AC7",
+      "formula": "=R36"
+    },
+    {
+      "cell": "AG7",
+      "formula": "=S34"
+    },
+    {
+      "cell": "AK7",
+      "formula": "=X36"
+    },
+    {
+      "cell": "D8",
+      "formula": "=C8"
+    },
+    {
+      "cell": "E8",
+      "formula": "=SumNumbers(E7)"
+    },
+    {
+      "cell": "L8",
+      "formula": "=K8"
+    },
+    {
+      "cell": "M8",
+      "formula": "=SumNumbers(M7)"
+    },
+    {
+      "cell": "S8",
+      "formula": "=CONCATENATE(\"0-\", E9)"
+    },
+    {
+      "cell": "U8",
+      "formula": "=CONCATENATE(E9+1,\"-\",E9+9)"
+    },
+    {
+      "cell": "V8",
+      "formula": "=CONCATENATE(E9+10,\"-\",E9+18)"
+    },
+    {
+      "cell": "W8",
+      "formula": "=CONCATENATE(E9+19,\"-и далее\")"
+    },
+    {
+      "cell": "AB8",
+      "formula": "=D_13"
+    },
+    {
+      "cell": "AD8",
+      "formula": "=D_23"
+    },
+    {
+      "cell": "AF8",
+      "formula": "=M_13"
+    },
+    {
+      "cell": "AH8",
+      "formula": "=M_23"
+    },
+    {
+      "cell": "AJ8",
+      "formula": "=Y_13"
+    },
+    {
+      "cell": "AL8",
+      "formula": "=Y_23"
+    },
+    {
+      "cell": "D9",
+      "formula": "=numberto22(SumNumbers(C9))"
+    },
+    {
+      "cell": "E9",
+      "formula": "=36-SumNumbers(E8)"
+    },
+    {
+      "cell": "G9",
+      "formula": "=numberto22(ABS(D15+J15))"
+    },
+    {
+      "cell": "L9",
+      "formula": "=numberto22(SumNumbers(K9))"
+    },
+    {
+      "cell": "M9",
+      "formula": "=36-SumNumbers(M8)"
+    },
+    {
+      "cell": "T9",
+      "formula": "=COUNTIF($T$7:$X$7,T7)"
+    },
+    {
+      "cell": "U9",
+      "formula": "=COUNTIF($T$7:$X$7,U7)"
+    },
+    {
+      "cell": "V9",
+      "formula": "=COUNTIF($T$7:$X$7,V7)"
+    },
+    {
+      "cell": "W9",
+      "formula": "=COUNTIF($T$7:$X$7,W7)"
+    },
+    {
+      "cell": "X9",
+      "formula": "=COUNTIF($T$7:$X$7,X7)"
+    },
+    {
+      "cell": "AC9",
+      "formula": "=R42"
+    },
+    {
+      "cell": "AG9",
+      "formula": "=W34"
+    },
+    {
+      "cell": "AK9",
+      "formula": "=X41"
+    },
+    {
+      "cell": "C10",
+      "formula": "=DATEDIF(C3,TODAY(),\"y\")"
+    },
+    {
+      "cell": "K10",
+      "formula": "=DATEDIF(K3,TODAY(),\"y\")"
+    },
+    {
+      "cell": "AC11",
+      "formula": "=T39"
+    },
+    {
+      "cell": "AG11",
+      "formula": "=M_3"
+    },
+    {
+      "cell": "AK11",
+      "formula": "=Y_3"
+    },
+    {
+      "cell": "C12",
+      "formula": "=numberto22(ABS(D7-D8))"
+    },
+    {
+      "cell": "F12",
+      "formula": "=numberto22(G9+D15)"
+    },
+    {
+      "cell": "H12",
+      "formula": "=numberto22(G9+J15)"
+    },
+    {
+      "cell": "K12",
+      "formula": "=numberto22(ABS(L7-L8))"
+    },
+    {
+      "cell": "S12",
+      "formula": "=CalcTP(K7)"
+    },
+    {
+      "cell": "T12",
+      "formula": "=numberto22(ABS(DayTaro2+MonthTaro2))"
+    },
+    {
+      "cell": "U12",
+      "formula": "=numberto22(ABS(DayTaro2+YearTaro2))"
+    },
+    {
+      "cell": "V12",
+      "formula": "=numberto22(ABS(T12+U12))"
+    },
+    {
+      "cell": "W12",
+      "formula": "=numberto22(ABS(MonthTaro2+YearTaro2))"
+    },
+    {
+      "cell": "X12",
+      "formula": "=numberto22(T12+U12+V12+W12)"
+    },
+    {
+      "cell": "Y12",
+      "formula": "=numberto22(X12+X13)"
+    },
+    {
+      "cell": "C13",
+      "formula": "=CalcOPV(C7)"
+    },
+    {
+      "cell": "K13",
+      "formula": "=CalcOPV(K7)"
+    },
+    {
+      "cell": "S13",
+      "formula": "=CalcOPV(K7)"
+    },
+    {
+      "cell": "T13",
+      "formula": "=numberto22(ABS(DayTaro2-MonthTaro2))"
+    },
+    {
+      "cell": "U13",
+      "formula": "=numberto22(ABS(DayTaro2-YearTaro2))"
+    },
+    {
+      "cell": "V13",
+      "formula": "=numberto22(ABS(T13-U13))"
+    },
+    {
+      "cell": "W13",
+      "formula": "=numberto22(ABS(MonthTaro2-YearTaro2))"
+    },
+    {
+      "cell": "X13",
+      "formula": "=numberto22(T13+U13+V13+W13)"
+    },
+    {
+      "cell": "Y13",
+      "formula": "=numberto22(ABS(X13-X12))"
+    },
+    {
+      "cell": "M14",
+      "formula": "=C4"
+    },
+    {
+      "cell": "O14",
+      "formula": "=K4"
+    },
+    {
+      "cell": "S14",
+      "formula": "=CONCATENATE(\"0-\",M9)"
+    },
+    {
+      "cell": "U14",
+      "formula": "=CONCATENATE(M9+1,\"-\",M9+9)"
+    },
+    {
+      "cell": "V14",
+      "formula": "=CONCATENATE(M9+10,\"-\",M9+18)"
+    },
+    {
+      "cell": "W14",
+      "formula": "=CONCATENATE(M9+19,\"-и далее\")"
+    },
+    {
+      "cell": "AG14",
+      "formula": "=S44"
+    },
+    {
+      "cell": "D15",
+      "formula": "=numberto22(D7+D8+D9)"
+    },
+    {
+      "cell": "J15",
+      "formula": "=numberto22(L7+L8+L9)"
+    },
+    {
+      "cell": "M15",
+      "formula": "=D4"
+    },
+    {
+      "cell": "O15",
+      "formula": "=L4"
+    },
+    {
+      "cell": "T15",
+      "formula": "=COUNTIF($T$13:$X$13,T13)"
+    },
+    {
+      "cell": "U15",
+      "formula": "=COUNTIF($T$13:$X$13,U13)"
+    },
+    {
+      "cell": "V15",
+      "formula": "=COUNTIF($T$13:$X$13,V13)"
+    },
+    {
+      "cell": "W15",
+      "formula": "=COUNTIF($T$13:$X$13,W13)"
+    },
+    {
+      "cell": "X15",
+      "formula": "=COUNTIF($T$13:$X$13,X13)"
+    },
+    {
+      "cell": "AF15",
+      "formula": "=T42"
+    },
+    {
+      "cell": "AH15",
+      "formula": "=V42"
+    },
+    {
+      "cell": "B16",
+      "formula": "=SumNumbers(E8)"
+    },
+    {
+      "cell": "D16",
+      "formula": "=numberto22(D7+D8)"
+    },
+    {
+      "cell": "J16",
+      "formula": "=numberto22(L7+L8)"
+    },
+    {
+      "cell": "K16",
+      "formula": "=SumNumbers(M8)"
+    },
+    {
+      "cell": "AG16",
+      "formula": "=W44"
+    },
+    {
+      "cell": "L18",
+      "formula": "=D4"
+    },
+    {
+      "cell": "M18",
+      "formula": "=L4"
+    },
+    {
+      "cell": "N18",
+      "formula": "=numberto22(L19+O19)"
+    },
+    {
+      "cell": "O18",
+      "formula": "=D5"
+    },
+    {
+      "cell": "P18",
+      "formula": "=L5"
+    },
+    {
+      "cell": "R18",
+      "formula": "=IF(55-(2*DOB_Month1 +DOB_Day1)=0,53,55-(2*DOB_Month1 +DOB_Day1))"
+    },
+    {
+      "cell": "T18",
+      "formula": "=MAX(T9:X9)"
+    },
+    {
+      "cell": "U18",
+      "formula": "=RetrogradeCalc(R18,S18,T18)"
+    },
+    {
+      "cell": "AG18",
+      "formula": "=U41"
+    },
+    {
+      "cell": "F19",
+      "formula": "=numberto22(TP_1+G22)"
+    },
+    {
+      "cell": "H19",
+      "formula": "=numberto22(TP_2+G22)"
+    },
+    {
+      "cell": "L19",
+      "formula": "=numberto22(L18+M18)"
+    },
+    {
+      "cell": "N19",
+      "formula": "=ABS(numberto22(L19-O19))"
+    },
+    {
+      "cell": "O19",
+      "formula": "=numberto22(O18+P18)"
+    },
+    {
+      "cell": "R19",
+      "formula": "=IF(55-(2*DOB_Month2 +DOB_Day2)=0, 53,55-(2*DOB_Month2 +DOB_Day2))"
+    },
+    {
+      "cell": "T19",
+      "formula": "=MAX(T15:X15)"
+    },
+    {
+      "cell": "U19",
+      "formula": "=RetrogradeCalc(R19,S19,T19)"
+    },
+    {
+      "cell": "W19",
+      "formula": "=SumNumbers(CONCATENATE(C7,C8,C9))"
+    },
+    {
+      "cell": "X19",
+      "formula": "=SumNumbers(W19)"
+    },
+    {
+      "cell": "Y19",
+      "formula": "=ABS(W19-(2*MID(DOB_Day1, 1,1)))"
+    },
+    {
+      "cell": "Z19",
+      "formula": "=SumNumbers(Y19)"
+    },
+    {
+      "cell": "W20",
+      "formula": "=SumNumbers(CONCATENATE(K7,K8,K9))"
+    },
+    {
+      "cell": "X20",
+      "formula": "=SumNumbers(W20)"
+    },
+    {
+      "cell": "Y20",
+      "formula": "=ABS(W20-(2*MID(DOB_Day2, 1,1)))"
+    },
+    {
+      "cell": "Z20",
+      "formula": "=SumNumbers(Y20)"
+    },
+    {
+      "cell": "G22",
+      "formula": "=numberto22(D16+J16)"
+    },
+    {
+      "cell": "R22",
+      "formula": "=CONCATENATE(CONCATENATE(DOB_Day1,DOB_Month1,DOB_Year1),W19,X19,Y19,Z19)"
+    },
+    {
+      "cell": "V22",
+      "formula": "=CONCATENATE(CONCATENATE(DOB_Day2,DOB_Month2,DOB_Year2),W20,X20,Y20,Z20)"
+    },
+    {
+      "cell": "G23",
+      "formula": "=ABS(numberto22(OPV_1-OPV_2))"
+    },
+    {
+      "cell": "R23",
+      "formula": "=CONCATENATE(\"Квадрат Пифогора - \", Name1)"
+    },
+    {
+      "cell": "V23",
+      "formula": "=CONCATENATE(\"Квадрат Пифогора - \", Name2)"
+    },
+    {
+      "cell": "AB23",
+      "formula": "=AH21"
+    },
+    {
+      "cell": "AC23",
+      "formula": "=DATE(AH21,1,1)"
+    },
+    {
+      "cell": "R24",
+      "formula": "=ArrayRepeatNum(\"1\", CountNumber(R22,1))"
+    },
+    {
+      "cell": "S24",
+      "formula": "=ArrayRepeatNum(\"4\", CountNumber(R22,4))"
+    },
+    {
+      "cell": "T24",
+      "formula": "=ArrayRepeatNum(\"7\", CountNumber(R22,7))"
+    },
+    {
+      "cell": "V24",
+      "formula": "=ArrayRepeatNum(\"1\", CountNumber(V22,1))"
+    },
+    {
+      "cell": "W24",
+      "formula": "=ArrayRepeatNum(\"4\", CountNumber(V22,4))"
+    },
+    {
+      "cell": "X24",
+      "formula": "=ArrayRepeatNum(\"7\", CountNumber(V22,7))"
+    },
+    {
+      "cell": "AC24",
+      "formula": "=SolarDate(C3,AC23)"
+    },
+    {
+      "cell": "AD24",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC23)))))"
+    },
+    {
+      "cell": "AE24",
+      "formula": "=ABS(numberto22(AD24+NameArc1*KarmicShadow($C$3,$AC$23,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF24",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC23))))))"
+    },
+    {
+      "cell": "AG24",
+      "formula": "=ABS(numberto22(AF24+NameArc1*KarmicShadow($C$3,$AC$23,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH24",
+      "formula": "=numberto22(AD24+AJ24)"
+    },
+    {
+      "cell": "AI24",
+      "formula": "=numberto22(AF24+AL24)"
+    },
+    {
+      "cell": "AJ24",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AC23)))))"
+    },
+    {
+      "cell": "AK24",
+      "formula": "=ABS(numberto22(AJ24+NameArc2*KarmicShadow($C$3,$AC$23,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL24",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AC23))))))"
+    },
+    {
+      "cell": "AM24",
+      "formula": "=ABS(numberto22(AL24+NameArc2*KarmicShadow($C$3,$AC$23,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN24",
+      "formula": "=SolarDate($K$3,AC23)"
+    },
+    {
+      "cell": "R25",
+      "formula": "=ArrayRepeatNum(\"2\", CountNumber(R22,2))"
+    },
+    {
+      "cell": "S25",
+      "formula": "=ArrayRepeatNum(\"5\", CountNumber(R22,5))"
+    },
+    {
+      "cell": "T25",
+      "formula": "=ArrayRepeatNum(\"8\", CountNumber(R22,8))"
+    },
+    {
+      "cell": "V25",
+      "formula": "=ArrayRepeatNum(\"2\", CountNumber(V22,2))"
+    },
+    {
+      "cell": "W25",
+      "formula": "=ArrayRepeatNum(\"5\", CountNumber(V22,5))"
+    },
+    {
+      "cell": "X25",
+      "formula": "=ArrayRepeatNum(\"8\", CountNumber(V22,8))"
+    },
+    {
+      "cell": "AD25",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AD24)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AE25",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AE24)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AF25",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AF24)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AG25",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AG24)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AH25",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AH24)>0, \"Да 1\",\"Нет 1\")"
+    },
+    {
+      "cell": "AI25",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AI24)>0, \"Да 1\",\"Нет 1\")"
+    },
+    {
+      "cell": "AJ25",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AJ24)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AK25",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AK24)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AL25",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AL24)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AM25",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AM24)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "R26",
+      "formula": "=ArrayRepeatNum(\"3\", CountNumber(R22,3))"
+    },
+    {
+      "cell": "S26",
+      "formula": "=ArrayRepeatNum(\"6\", CountNumber(R22,6))"
+    },
+    {
+      "cell": "T26",
+      "formula": "=ArrayRepeatNum(\"9\", CountNumber(R22,9))"
+    },
+    {
+      "cell": "V26",
+      "formula": "=ArrayRepeatNum(\"3\", CountNumber(V22,3))"
+    },
+    {
+      "cell": "W26",
+      "formula": "=ArrayRepeatNum(\"6\", CountNumber(V22,6))"
+    },
+    {
+      "cell": "X26",
+      "formula": "=ArrayRepeatNum(\"9\", CountNumber(V22,9))"
+    },
+    {
+      "cell": "AC26",
+      "formula": "=IF(DATE(AH21,DOB_Month1,DOB_Day1)>DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "AH26",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AH24)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "AI26",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AI24)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "B27",
+      "formula": "=OPV_1"
+    },
+    {
+      "cell": "C27",
+      "formula": "=IF(B27=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "E27",
+      "formula": "=CZ_3"
+    },
+    {
+      "cell": "H27",
+      "formula": "=OPV_2"
+    },
+    {
+      "cell": "I27",
+      "formula": "=IF(H27=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC27",
+      "formula": "=SolarDate(C3,IF(DATE(AH21,DOB_Month1,DOB_Day1)>DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD27",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC27)))))"
+    },
+    {
+      "cell": "AE27",
+      "formula": "=ABS(numberto22(AD27+NameArc1*KarmicShadow($C$3,AC26,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF27",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC27))))))"
+    },
+    {
+      "cell": "AG27",
+      "formula": "=ABS(numberto22(AF27+NameArc1*KarmicShadow($C$3,AC26,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH27",
+      "formula": "=numberto22(AD27+AJ27)"
+    },
+    {
+      "cell": "AI27",
+      "formula": "=numberto22(AF27+AL27)"
+    },
+    {
+      "cell": "AJ27",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN27)))))"
+    },
+    {
+      "cell": "AK27",
+      "formula": "=ABS(numberto22(AJ27+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL27",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN27))))))"
+    },
+    {
+      "cell": "AM27",
+      "formula": "=ABS(numberto22(AL27+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN27",
+      "formula": "=SolarDate($K$3,IF(DATE(AH21,DOB_Month1,DOB_Day1)>DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "B28",
+      "formula": "=OPV1_Dop"
+    },
+    {
+      "cell": "C28",
+      "formula": "=IF(B28=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H28",
+      "formula": "=OPV2_Dop"
+    },
+    {
+      "cell": "I28",
+      "formula": "=IF(H28=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AD28",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AD27)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AE28",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AE27)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AF28",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AF27)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AG28",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AG27)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AH28",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AH27)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AI28",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AI27)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AJ28",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AJ27)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AK28",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AK27)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AL28",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AL27)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AM28",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AM27)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "B29",
+      "formula": "=$U$7"
+    },
+    {
+      "cell": "C29",
+      "formula": "=IF(B29=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H29",
+      "formula": "=$U$13"
+    },
+    {
+      "cell": "I29",
+      "formula": "=IF(H29=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC29",
+      "formula": "=IF(DATE(AH21,DOB_Month1,DOB_Day1)<DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month2,DOB_Day2),DATE(AH21,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "AH29",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AH27)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "AI29",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AI27)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "B30",
+      "formula": "=$V$7"
+    },
+    {
+      "cell": "C30",
+      "formula": "=IF(B30=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H30",
+      "formula": "=$V$13"
+    },
+    {
+      "cell": "I30",
+      "formula": "=IF(H30=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S30",
+      "formula": "=TP_1"
+    },
+    {
+      "cell": "V30",
+      "formula": "=numberto22(S30+Y30)"
+    },
+    {
+      "cell": "Y30",
+      "formula": "=TP_2"
+    },
+    {
+      "cell": "AC30",
+      "formula": "=DATE(AH21,12,31)"
+    },
+    {
+      "cell": "AD30",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC30)))))"
+    },
+    {
+      "cell": "AE30",
+      "formula": "=ABS(numberto22(AD30+NameArc1*KarmicShadow($C$3,AC29,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF30",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC30))))))"
+    },
+    {
+      "cell": "AG30",
+      "formula": "=ABS(numberto22(AF30+NameArc1*KarmicShadow($C$3,AC29,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH30",
+      "formula": "=numberto22(AD30+AJ30)"
+    },
+    {
+      "cell": "AI30",
+      "formula": "=numberto22(AF30+AL30)"
+    },
+    {
+      "cell": "AJ30",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN30)))))"
+    },
+    {
+      "cell": "AK30",
+      "formula": "=ABS(numberto22(AJ30+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL30",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN30))))))"
+    },
+    {
+      "cell": "AM30",
+      "formula": "=ABS(numberto22(AL30+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN30",
+      "formula": "=DATE(AH21,12,31)"
+    },
+    {
+      "cell": "B31",
+      "formula": "=$W$7"
+    },
+    {
+      "cell": "C31",
+      "formula": "=IF(B31=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H31",
+      "formula": "=$W$13"
+    },
+    {
+      "cell": "I31",
+      "formula": "=IF(H31=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "N31",
+      "formula": "=NumberTo52(L37+P37)"
+    },
+    {
+      "cell": "S31",
+      "formula": "=OPV_1"
+    },
+    {
+      "cell": "V31",
+      "formula": "=ABS(numberto22(S31-Y31))"
+    },
+    {
+      "cell": "Y31",
+      "formula": "=OPV_2"
+    },
+    {
+      "cell": "AD31",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AD30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AE31",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AE30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AF31",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AF30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AG31",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AG30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AH31",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AH30)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AI31",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AI30)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AJ31",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AJ30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AK31",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AK30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AL31",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AL30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AM31",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AM30)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "B32",
+      "formula": "=$X$7"
+    },
+    {
+      "cell": "C32",
+      "formula": "=IF(B32=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H32",
+      "formula": "=$X$13"
+    },
+    {
+      "cell": "I32",
+      "formula": "=IF(H32=CZ_3, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC32",
+      "formula": "=AC30"
+    },
+    {
+      "cell": "AH32",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AH30)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "AI32",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AI30)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "S33",
+      "formula": "=Name1"
+    },
+    {
+      "cell": "W33",
+      "formula": "=Name2"
+    },
+    {
+      "cell": "AB33",
+      "formula": "=AB23+1"
+    },
+    {
+      "cell": "AC33",
+      "formula": "=IF(DATE(AB33,DOB_Month1,DOB_Day1)>DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "M34",
+      "formula": "=NumberTo52(L37+N31)"
+    },
+    {
+      "cell": "O34",
+      "formula": "=NumberTo52(N31+P37)"
+    },
+    {
+      "cell": "S34",
+      "formula": "=MonthTaro1"
+    },
+    {
+      "cell": "W34",
+      "formula": "=MonthTaro2"
+    },
+    {
+      "cell": "AC34",
+      "formula": "=SolarDate(C3,IF(DATE(AB33,DOB_Month1,DOB_Day1)>DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD34",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC34)))))"
+    },
+    {
+      "cell": "AE34",
+      "formula": "=ABS(numberto22(AD34+NameArc1*KarmicShadow($C$3,AC33,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF34",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC34))))))"
+    },
+    {
+      "cell": "AG34",
+      "formula": "=ABS(numberto22(AF34+NameArc1*KarmicShadow($C$3,AC33,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH34",
+      "formula": "=numberto22(AD34+AJ34)"
+    },
+    {
+      "cell": "AI34",
+      "formula": "=numberto22(AF34+AL34)"
+    },
+    {
+      "cell": "AJ34",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN34)))))"
+    },
+    {
+      "cell": "AK34",
+      "formula": "=ABS(numberto22(AJ34+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL34",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN34))))))"
+    },
+    {
+      "cell": "AM34",
+      "formula": "=ABS(numberto22(AL34+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN34",
+      "formula": "=SolarDate($K$3,IF(DATE(Y155,DOB_Month1,DOB_Day1)>DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "B35",
+      "formula": "=OPV_1"
+    },
+    {
+      "cell": "C35",
+      "formula": "=IF(B35=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "E35",
+      "formula": "=CZ_12"
+    },
+    {
+      "cell": "H35",
+      "formula": "=OPV_2"
+    },
+    {
+      "cell": "I35",
+      "formula": "=IF(H35=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "R35",
+      "formula": "=Name1"
+    },
+    {
+      "cell": "T35",
+      "formula": "=numberto22(S34+U37)"
+    },
+    {
+      "cell": "U35",
+      "formula": "=ABS(numberto22(M_13-M_23))"
+    },
+    {
+      "cell": "V35",
+      "formula": "=numberto22(W34+U37)"
+    },
+    {
+      "cell": "X35",
+      "formula": "=Name1"
+    },
+    {
+      "cell": "AD35",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AD34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AE35",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AE34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AF35",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AF34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AG35",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AG34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AH35",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AH34)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AI35",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AI34)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AJ35",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AJ34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AK35",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AK34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AL35",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AL34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AM35",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AM34)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "B36",
+      "formula": "=OPV1_Dop"
+    },
+    {
+      "cell": "C36",
+      "formula": "=IF(B36=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "E36",
+      "formula": "=CZ_21"
+    },
+    {
+      "cell": "H36",
+      "formula": "=OPV2_Dop"
+    },
+    {
+      "cell": "I36",
+      "formula": "=IF(H36=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "R36",
+      "formula": "=DayTaro1"
+    },
+    {
+      "cell": "X36",
+      "formula": "=YearTaro1"
+    },
+    {
+      "cell": "AC36",
+      "formula": "=IF(DATE(AB33,DOB_Month1,DOB_Day1)<DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month2,DOB_Day2),DATE(AB33,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "AH36",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AH34)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "AI36",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AI34)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "B37",
+      "formula": "=$U$7"
+    },
+    {
+      "cell": "C37",
+      "formula": "=IF(B37=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H37",
+      "formula": "=$U$13"
+    },
+    {
+      "cell": "I37",
+      "formula": "=IF(H37=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "L37",
+      "formula": "=MKist1"
+    },
+    {
+      "cell": "N37",
+      "formula": "=ABS(NumberTo52(L37-P37))"
+    },
+    {
+      "cell": "P37",
+      "formula": "=MKist2"
+    },
+    {
+      "cell": "S37",
+      "formula": "=numberto22(R36+T39)"
+    },
+    {
+      "cell": "U37",
+      "formula": "=numberto22(S34+W34)"
+    },
+    {
+      "cell": "W37",
+      "formula": "=numberto22(X36+V39)"
+    },
+    {
+      "cell": "AC37",
+      "formula": "=DATE(AB33,12,31)"
+    },
+    {
+      "cell": "AD37",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC37)))))"
+    },
+    {
+      "cell": "AE37",
+      "formula": "=ABS(numberto22(AD37+NameArc1*KarmicShadow($C$3,AC36,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF37",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC37))))))"
+    },
+    {
+      "cell": "AG37",
+      "formula": "=ABS(numberto22(AF37+NameArc1*KarmicShadow($C$3,AC36,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH37",
+      "formula": "=numberto22(AD37+AJ37)"
+    },
+    {
+      "cell": "AI37",
+      "formula": "=numberto22(AF37+AL37)"
+    },
+    {
+      "cell": "AJ37",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN37)))))"
+    },
+    {
+      "cell": "AK37",
+      "formula": "=ABS(numberto22(AJ37+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL37",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN37))))))"
+    },
+    {
+      "cell": "AM37",
+      "formula": "=ABS(numberto22(AL37+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN37",
+      "formula": "=DATE(AB33,12,31)"
+    },
+    {
+      "cell": "B38",
+      "formula": "=$V$7"
+    },
+    {
+      "cell": "C38",
+      "formula": "=IF(B38=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H38",
+      "formula": "=$V$13"
+    },
+    {
+      "cell": "I38",
+      "formula": "=IF(H38=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AD38",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AD37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AE38",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AE37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AF38",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AF37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AG38",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AG37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AH38",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AH37)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AI38",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AI37)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AJ38",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AJ37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AK38",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AK37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AL38",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AL37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AM38",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AM37)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "B39",
+      "formula": "=$W$7"
+    },
+    {
+      "cell": "C39",
+      "formula": "=IF(B39=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H39",
+      "formula": "=$W$13"
+    },
+    {
+      "cell": "I39",
+      "formula": "=IF(H39=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S39",
+      "formula": "=ABS(numberto22(D_13-D_23))"
+    },
+    {
+      "cell": "T39",
+      "formula": "=numberto22(R36+R42)"
+    },
+    {
+      "cell": "V39",
+      "formula": "=numberto22(X36+X41)"
+    },
+    {
+      "cell": "W39",
+      "formula": "=ABS(numberto22(Y_13-Y_23))"
+    },
+    {
+      "cell": "AC39",
+      "formula": "=AC37"
+    },
+    {
+      "cell": "AH39",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AH37)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "AI39",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AI37)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "B40",
+      "formula": "=$X$7"
+    },
+    {
+      "cell": "C40",
+      "formula": "=IF(B40=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H40",
+      "formula": "=$X$13"
+    },
+    {
+      "cell": "I40",
+      "formula": "=IF(H40=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S40",
+      "formula": "=numberto22(R42+T39)"
+    },
+    {
+      "cell": "W40",
+      "formula": "=numberto22(X41+V39)"
+    },
+    {
+      "cell": "AB40",
+      "formula": "=AB33+1"
+    },
+    {
+      "cell": "AC40",
+      "formula": "=IF(DATE(AB40,DOB_Month1,DOB_Day1)>DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "R41",
+      "formula": "=Name2"
+    },
+    {
+      "cell": "U41",
+      "formula": "=numberto22(S44+W44)"
+    },
+    {
+      "cell": "X41",
+      "formula": "=YearTaro2"
+    },
+    {
+      "cell": "AC41",
+      "formula": "=SolarDate($C$3,IF(DATE(AB40,DOB_Month1,DOB_Day1)>DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD41",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC41)))))"
+    },
+    {
+      "cell": "AE41",
+      "formula": "=ABS(numberto22(AD41+NameArc1*KarmicShadow($C$3,AC40,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF41",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC41))))))"
+    },
+    {
+      "cell": "AG41",
+      "formula": "=ABS(numberto22(AF41+NameArc1*KarmicShadow($C$3,AC40,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH41",
+      "formula": "=numberto22(AD41+AJ41)"
+    },
+    {
+      "cell": "AI41",
+      "formula": "=numberto22(AF41+AL41)"
+    },
+    {
+      "cell": "AJ41",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN41)))))"
+    },
+    {
+      "cell": "AK41",
+      "formula": "=ABS(numberto22(AJ41+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL41",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN41))))))"
+    },
+    {
+      "cell": "AM41",
+      "formula": "=ABS(numberto22(AL41+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN41",
+      "formula": "=SolarDate($K$3,IF(DATE(Y165,DOB_Month1,DOB_Day1)>DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "R42",
+      "formula": "=DayTaro2"
+    },
+    {
+      "cell": "T42",
+      "formula": "=numberto22(S44+U41)"
+    },
+    {
+      "cell": "U42",
+      "formula": "=ABS(numberto22(T42-V42))"
+    },
+    {
+      "cell": "V42",
+      "formula": "=numberto22(W44+U41)"
+    },
+    {
+      "cell": "X42",
+      "formula": "=Name2"
+    },
+    {
+      "cell": "AD42",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AD41)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AE42",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AE41)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AF42",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AF41)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AG42",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AG41)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AH42",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AH41)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AI42",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AI41)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AJ42",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AJ41)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AK42",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AK41)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AL42",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AL41)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AM42",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AM41)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "B43",
+      "formula": "=$C$12"
+    },
+    {
+      "cell": "C43",
+      "formula": "=IF(B43=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "E43",
+      "formula": "=CZ_12"
+    },
+    {
+      "cell": "H43",
+      "formula": "=$K$12"
+    },
+    {
+      "cell": "I43",
+      "formula": "=IF(H43=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S43",
+      "formula": "=Name1"
+    },
+    {
+      "cell": "W43",
+      "formula": "=Name2"
+    },
+    {
+      "cell": "AC43",
+      "formula": "=IF(DATE(AB40,DOB_Month1,DOB_Day1)<DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month2,DOB_Day2),DATE(AB40,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "AH43",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AH41)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "AI43",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AI41)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "B44",
+      "formula": "=$C$13"
+    },
+    {
+      "cell": "C44",
+      "formula": "=IF(B44=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "E44",
+      "formula": "=CZ_21"
+    },
+    {
+      "cell": "H44",
+      "formula": "=$K$13"
+    },
+    {
+      "cell": "I44",
+      "formula": "=IF(H44=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "S44",
+      "formula": "=numberto22(DayTaro1+MonthTaro1+YearTaro1)"
+    },
+    {
+      "cell": "W44",
+      "formula": "=numberto22(DayTaro2+MonthTaro2+YearTaro2)"
+    },
+    {
+      "cell": "AC44",
+      "formula": "=DATE(AB40,12,31)"
+    },
+    {
+      "cell": "AD44",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC44)))))"
+    },
+    {
+      "cell": "AE44",
+      "formula": "=ABS(numberto22(AD44+NameArc1*KarmicShadow($C$3,AC43,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF44",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC44))))))"
+    },
+    {
+      "cell": "AG44",
+      "formula": "=ABS(numberto22(AF44+NameArc1*KarmicShadow($C$3,AC43,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH44",
+      "formula": "=numberto22(AD44+AJ44)"
+    },
+    {
+      "cell": "AI44",
+      "formula": "=numberto22(AF44+AL44)"
+    },
+    {
+      "cell": "AJ44",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN44)))))"
+    },
+    {
+      "cell": "AK44",
+      "formula": "=ABS(numberto22(AJ44+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL44",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN44))))))"
+    },
+    {
+      "cell": "AM44",
+      "formula": "=ABS(numberto22(AL44+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN44",
+      "formula": "=DATE(AB40,12,31)"
+    },
+    {
+      "cell": "B45",
+      "formula": "=$U$7"
+    },
+    {
+      "cell": "C45",
+      "formula": "=IF(B45=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H45",
+      "formula": "=$U$13"
+    },
+    {
+      "cell": "I45",
+      "formula": "=IF(H45=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "U45",
+      "formula": "=CountChildren(T48,T49,T50,T56,T57,T58,T64,T65,T66,T72,T73,T74)"
+    },
+    {
+      "cell": "AD45",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AD44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AE45",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AE44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AF45",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AF44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AG45",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AG44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AH45",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AH44)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AI45",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AI44)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AJ45",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AJ44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AK45",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AK44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AL45",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AL44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AM45",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AM44)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "B46",
+      "formula": "=$V$7"
+    },
+    {
+      "cell": "C46",
+      "formula": "=IF(B46=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H46",
+      "formula": "=$V$13"
+    },
+    {
+      "cell": "I46",
+      "formula": "=IF(H46=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC46",
+      "formula": "=AC44"
+    },
+    {
+      "cell": "AH46",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AH44)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "AI46",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AI44)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "B47",
+      "formula": "=$W$7"
+    },
+    {
+      "cell": "C47",
+      "formula": "=IF(B47=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H47",
+      "formula": "=$W$13"
+    },
+    {
+      "cell": "I47",
+      "formula": "=IF(H47=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AB47",
+      "formula": "=AB40+1"
+    },
+    {
+      "cell": "AC47",
+      "formula": "=IF(DATE(AB47,DOB_Month1,DOB_Day1)>DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "B48",
+      "formula": "=$X$7"
+    },
+    {
+      "cell": "C48",
+      "formula": "=IF(B48=CZ_21, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H48",
+      "formula": "=$X$13"
+    },
+    {
+      "cell": "I48",
+      "formula": "=IF(H48=CZ_12, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q48",
+      "formula": "=OPV_1"
+    },
+    {
+      "cell": "R48",
+      "formula": "=IF(COUNTIF($T$48:$T$50,Q48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T48",
+      "formula": "=D_3"
+    },
+    {
+      "cell": "W48",
+      "formula": "=OPV_2"
+    },
+    {
+      "cell": "X48",
+      "formula": "=IF(COUNTIF($T$48:$T$50,W48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC48",
+      "formula": "=SolarDate($C$3,IF(DATE(AB47,DOB_Month1,DOB_Day1)>DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD48",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC48)))))"
+    },
+    {
+      "cell": "AE48",
+      "formula": "=ABS(numberto22(AD48+NameArc1*KarmicShadow($C$3,AC47,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF48",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC48))))))"
+    },
+    {
+      "cell": "AG48",
+      "formula": "=ABS(numberto22(AF48+NameArc1*KarmicShadow($C$3,AC47,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH48",
+      "formula": "=numberto22(AD48+AJ48)"
+    },
+    {
+      "cell": "AI48",
+      "formula": "=numberto22(AF48+AL48)"
+    },
+    {
+      "cell": "AJ48",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN48)))))"
+    },
+    {
+      "cell": "AK48",
+      "formula": "=ABS(numberto22(AJ48+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL48",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN48))))))"
+    },
+    {
+      "cell": "AM48",
+      "formula": "=ABS(numberto22(AL48+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN48",
+      "formula": "=SolarDate($K$3,IF(DATE(Y175,DOB_Month1,DOB_Day1)>DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "Q49",
+      "formula": "=OPV1_Dop"
+    },
+    {
+      "cell": "R49",
+      "formula": "=IF(COUNTIF($T$48:$T$50,Q49)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T49",
+      "formula": "=D_13"
+    },
+    {
+      "cell": "W49",
+      "formula": "=OPV2_Dop"
+    },
+    {
+      "cell": "X49",
+      "formula": "=IF(COUNTIF($T$48:$T$50,W49)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AD49",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AD48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AE49",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AE48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AF49",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AF48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AG49",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AG48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AH49",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AH48)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AI49",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AI48)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AJ49",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AJ48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AK49",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AK48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AL49",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AL48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AM49",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AM48)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q50",
+      "formula": "=$U$7"
+    },
+    {
+      "cell": "R50",
+      "formula": "=IF(COUNTIF($T$48:$T$50,Q50)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T50",
+      "formula": "=D_23"
+    },
+    {
+      "cell": "W50",
+      "formula": "=$U$13"
+    },
+    {
+      "cell": "X50",
+      "formula": "=IF(COUNTIF($T$48:$T$50,W50)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC50",
+      "formula": "=IF(DATE(AB47,DOB_Month1,DOB_Day1)<DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month2,DOB_Day2),DATE(AB47,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "AH50",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AH48)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "AI50",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AI48)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "Q51",
+      "formula": "=$V$7"
+    },
+    {
+      "cell": "R51",
+      "formula": "=IF(COUNTIF($T$48:$T$50,Q51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W51",
+      "formula": "=$V$13"
+    },
+    {
+      "cell": "X51",
+      "formula": "=IF(COUNTIF($T$48:$T$50,W51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC51",
+      "formula": "=DATE(AB47,12,31)"
+    },
+    {
+      "cell": "AD51",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC51)))))"
+    },
+    {
+      "cell": "AE51",
+      "formula": "=ABS(numberto22(AD51+NameArc1*KarmicShadow($C$3,AC50,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF51",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC51))))))"
+    },
+    {
+      "cell": "AG51",
+      "formula": "=ABS(numberto22(AF51+NameArc1*KarmicShadow($C$3,AC50,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH51",
+      "formula": "=numberto22(AD51+AJ51)"
+    },
+    {
+      "cell": "AI51",
+      "formula": "=numberto22(AF51+AL51)"
+    },
+    {
+      "cell": "AJ51",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN51)))))"
+    },
+    {
+      "cell": "AK51",
+      "formula": "=ABS(numberto22(AJ51+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL51",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN51))))))"
+    },
+    {
+      "cell": "AM51",
+      "formula": "=ABS(numberto22(AL51+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN51",
+      "formula": "=DATE(AB47,12,31)"
+    },
+    {
+      "cell": "B52",
+      "formula": "=$C$12"
+    },
+    {
+      "cell": "C52",
+      "formula": "=IF(AND(COUNTIF($E$52:$E$54,B52)>0,COUNTIF($K$52:$K$57,B52) >0), \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "E52",
+      "formula": "=CZ_3"
+    },
+    {
+      "cell": "H52",
+      "formula": "=$K$12"
+    },
+    {
+      "cell": "I52",
+      "formula": "=IF(AND(COUNTIF($E$52:$E$54,H52)>0,COUNTIF($K$52:$K$57,H52) >0), \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q52",
+      "formula": "=$W$7"
+    },
+    {
+      "cell": "R52",
+      "formula": "=IF(COUNTIF($T$48:$T$50,Q52)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W52",
+      "formula": "=$W$13"
+    },
+    {
+      "cell": "X52",
+      "formula": "=IF(COUNTIF($T$48:$T$50,W52)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AD52",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AD51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AE52",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AE51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AF52",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AF51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AG52",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AG51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AH52",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AH51)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AI52",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AI51)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AJ52",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AJ51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AK52",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AK51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AL52",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AL51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AM52",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AM51)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "B53",
+      "formula": "=$C$13"
+    },
+    {
+      "cell": "C53",
+      "formula": "=IF(AND(COUNTIF($E$52:$E$54,B53)>0,COUNTIF($K$52:$K$57,B53) >0), \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "E53",
+      "formula": "=CZ_12"
+    },
+    {
+      "cell": "H53",
+      "formula": "=$K$13"
+    },
+    {
+      "cell": "I53",
+      "formula": "=IF(AND(COUNTIF($E$52:$E$54,H53)>0,COUNTIF($K$52:$K$57,H53) >0), \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q53",
+      "formula": "=$X$7"
+    },
+    {
+      "cell": "R53",
+      "formula": "=IF(COUNTIF($T$48:$T$50,Q53)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W53",
+      "formula": "=$X$13"
+    },
+    {
+      "cell": "X53",
+      "formula": "=IF(COUNTIF($T$48:$T$50,W53)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC53",
+      "formula": "=AC51"
+    },
+    {
+      "cell": "AH53",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AH51)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "AI53",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AI51)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "B54",
+      "formula": "=$U$7"
+    },
+    {
+      "cell": "C54",
+      "formula": "=IF(AND(COUNTIF($E$52:$E$54,B54)>0,COUNTIF($K$52:$K$57,B54) >0), \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "E54",
+      "formula": "=CZ_21"
+    },
+    {
+      "cell": "H54",
+      "formula": "=$U$13"
+    },
+    {
+      "cell": "I54",
+      "formula": "=IF(AND(COUNTIF($E$52:$E$54,H54)>0,COUNTIF($K$52:$K$57,H54) >0), \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AB54",
+      "formula": "=AB47+1"
+    },
+    {
+      "cell": "AC54",
+      "formula": "=IF(DATE(AB54,DOB_Month1,DOB_Day1)>DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "B55",
+      "formula": "=$V$7"
+    },
+    {
+      "cell": "C55",
+      "formula": "=IF(AND(COUNTIF($E$52:$E$54,B55)>0,COUNTIF($K$52:$K$57,B55) >0), \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H55",
+      "formula": "=$V$13"
+    },
+    {
+      "cell": "I55",
+      "formula": "=IF(AND(COUNTIF($E$52:$E$54,H55)>0,COUNTIF($K$52:$K$57,H55) >0), \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC55",
+      "formula": "=SolarDate($C$3,IF(DATE(AB54,DOB_Month1,DOB_Day1)>DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "AD55",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC55)))))"
+    },
+    {
+      "cell": "AE55",
+      "formula": "=ABS(numberto22(AD55+NameArc1*KarmicShadow($C$3,AC54,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF55",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC55))))))"
+    },
+    {
+      "cell": "AG55",
+      "formula": "=ABS(numberto22(AF55+NameArc1*KarmicShadow($C$3,AC54,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH55",
+      "formula": "=numberto22(AD55+AJ55)"
+    },
+    {
+      "cell": "AI55",
+      "formula": "=numberto22(AF55+AL55)"
+    },
+    {
+      "cell": "AJ55",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN55)))))"
+    },
+    {
+      "cell": "AK55",
+      "formula": "=ABS(numberto22(AJ55+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL55",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN55))))))"
+    },
+    {
+      "cell": "AM55",
+      "formula": "=ABS(numberto22(AL55+NameArc2*KarmicShadow($C$3,$AC$26,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN55",
+      "formula": "=SolarDate($K$3,IF(DATE(Y185,DOB_Month1,DOB_Day1)>DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month1,DOB_Day1)))"
+    },
+    {
+      "cell": "B56",
+      "formula": "=$W$7"
+    },
+    {
+      "cell": "C56",
+      "formula": "=IF(AND(COUNTIF($E$52:$E$54,B56)>0,COUNTIF($K$52:$K$57,B56) >0), \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "H56",
+      "formula": "=$W$13"
+    },
+    {
+      "cell": "I56",
+      "formula": "=IF(AND(COUNTIF($E$52:$E$54,H56)>0,COUNTIF($K$52:$K$57,H56) >0), \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q56",
+      "formula": "=OPV_1"
+    },
+    {
+      "cell": "R56",
+      "formula": "=IF(COUNTIF($T$56:$T$58,Q56)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T56",
+      "formula": "=M_3"
+    },
+    {
+      "cell": "W56",
+      "formula": "=OPV_2"
+    },
+    {
+      "cell": "X56",
+      "formula": "=IF(COUNTIF($T$56:$T$58,W56)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AD56",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AD55)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AE56",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AE55)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AF56",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AF55)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AG56",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AG55)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AH56",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AH55)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AI56",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AI55)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AJ56",
+      "formula": "=IF(COUNTIF($T$13:$X$13,AJ55)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AK56",
+      "formula": "=IF(COUNTIF($T$13:$X$13,AK55)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AL56",
+      "formula": "=IF(COUNTIF($T$13:$X$13,AL55)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AM56",
+      "formula": "=IF(COUNTIF($T$13:$X$13,AM55)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "B57",
+      "formula": "=$X$7"
+    },
+    {
+      "cell": "H57",
+      "formula": "=$X$13"
+    },
+    {
+      "cell": "I57",
+      "formula": "=IF(AND(COUNTIF($E$52:$E$54,H57)>0,COUNTIF($K$52:$K$57,H57) >0), \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q57",
+      "formula": "=OPV1_Dop"
+    },
+    {
+      "cell": "R57",
+      "formula": "=IF(COUNTIF($T$56:$T$58,Q57)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T57",
+      "formula": "=M_13"
+    },
+    {
+      "cell": "W57",
+      "formula": "=OPV2_Dop"
+    },
+    {
+      "cell": "X57",
+      "formula": "=IF(COUNTIF($T$56:$T$58,W57)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC57",
+      "formula": "=IF(DATE(AB54,DOB_Month1,DOB_Day1)<DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month2,DOB_Day2),DATE(AB54,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "AH57",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AH55)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "AI57",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AI55)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "Q58",
+      "formula": "=$U$7"
+    },
+    {
+      "cell": "R58",
+      "formula": "=IF(COUNTIF($T$56:$T$58,Q58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T58",
+      "formula": "=M_23"
+    },
+    {
+      "cell": "W58",
+      "formula": "=$U$13"
+    },
+    {
+      "cell": "X58",
+      "formula": "=IF(COUNTIF($T$56:$T$58,W58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC58",
+      "formula": "=DATE(AB54,12,31)"
+    },
+    {
+      "cell": "AD58",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day1,DOB_Month1,YEAR(SolarDate($C$3,AC58)))))"
+    },
+    {
+      "cell": "AE58",
+      "formula": "=ABS(numberto22(AD58+NameArc1*KarmicShadow($C$3,AC57,VALUE($T$7))))"
+    },
+    {
+      "cell": "AF58",
+      "formula": "=numberto22((numberto22(DOB_Day1)+numberto22(DOB_Month1)+numberto22(SumNumbers(YEAR(SolarDate($C$3,AC58))))))"
+    },
+    {
+      "cell": "AG58",
+      "formula": "=ABS(numberto22(AF58+NameArc1*KarmicShadow($C$3,AC57,VALUE($T$7))))"
+    },
+    {
+      "cell": "AH58",
+      "formula": "=numberto22(AD58+AJ58)"
+    },
+    {
+      "cell": "AI58",
+      "formula": "=numberto22(AF58+AL58)"
+    },
+    {
+      "cell": "AJ58",
+      "formula": "=numberto22(SumNumbers(CONCATENATE(DOB_Day2,DOB_Month2,YEAR(SolarDate($K$3,AN58)))))"
+    },
+    {
+      "cell": "AK58",
+      "formula": "=ABS(numberto22(AJ58+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AL58",
+      "formula": "=numberto22((numberto22(DOB_Day2)+numberto22(DOB_Month2)+numberto22(SumNumbers(YEAR(SolarDate($K$3,AN58))))))"
+    },
+    {
+      "cell": "AM58",
+      "formula": "=ABS(numberto22(AL58+NameArc2*KarmicShadow($C$3,$AC$29,VALUE($T$13))))"
+    },
+    {
+      "cell": "AN58",
+      "formula": "=DATE(AB54,12,31)"
+    },
+    {
+      "cell": "B59",
+      "formula": "=CZ_3"
+    },
+    {
+      "cell": "C59",
+      "formula": "=IF(B59=16, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q59",
+      "formula": "=$V$7"
+    },
+    {
+      "cell": "R59",
+      "formula": "=IF(COUNTIF($T$56:$T$58,Q59)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W59",
+      "formula": "=$V$13"
+    },
+    {
+      "cell": "X59",
+      "formula": "=IF(COUNTIF($T$56:$T$58,W59)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AD59",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AD58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AE59",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AE58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AF59",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AF58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AG59",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AG58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AH59",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AH58)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AI59",
+      "formula": "=IF(COUNTIF($S$7:$X$7,AI58)>0, \"Да 1\", \"Нет 1\")"
+    },
+    {
+      "cell": "AJ59",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AJ58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AK59",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AK58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AL59",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AL58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AM59",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AM58)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "B60",
+      "formula": "=CZ_12"
+    },
+    {
+      "cell": "C60",
+      "formula": "=IF(B60=16, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q60",
+      "formula": "=$W$7"
+    },
+    {
+      "cell": "R60",
+      "formula": "=IF(COUNTIF($T$56:$T$58,Q60)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W60",
+      "formula": "=$W$13"
+    },
+    {
+      "cell": "X60",
+      "formula": "=IF(COUNTIF($T$56:$T$58,W60)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "AC60",
+      "formula": "=AC58"
+    },
+    {
+      "cell": "AH60",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AH58)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "AI60",
+      "formula": "=IF(COUNTIF($S$13:$X$13,AI58)>0, \"Да 2\", \"Нет 2\")"
+    },
+    {
+      "cell": "B61",
+      "formula": "=CZ_21"
+    },
+    {
+      "cell": "C61",
+      "formula": "=IF(B61=16, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q61",
+      "formula": "=$X$7"
+    },
+    {
+      "cell": "R61",
+      "formula": "=IF(COUNTIF($T$56:$T$58,Q61)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W61",
+      "formula": "=$X$13"
+    },
+    {
+      "cell": "X61",
+      "formula": "=IF(COUNTIF($T$56:$T$58,W61)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q64",
+      "formula": "=OPV_1"
+    },
+    {
+      "cell": "R64",
+      "formula": "=IF(COUNTIF($T$64:$T$66,Q64)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T64",
+      "formula": "=Y_3"
+    },
+    {
+      "cell": "W64",
+      "formula": "=OPV_2"
+    },
+    {
+      "cell": "X64",
+      "formula": "=IF(COUNTIF($T$64:$T$66,W64)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q65",
+      "formula": "=OPV1_Dop"
+    },
+    {
+      "cell": "R65",
+      "formula": "=IF(COUNTIF($T$64:$T$66,Q65)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T65",
+      "formula": "=Y_13"
+    },
+    {
+      "cell": "W65",
+      "formula": "=OPV2_Dop"
+    },
+    {
+      "cell": "X65",
+      "formula": "=IF(COUNTIF($T$64:$T$66,W65)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q66",
+      "formula": "=$U$7"
+    },
+    {
+      "cell": "R66",
+      "formula": "=IF(COUNTIF($T$64:$T$66,Q66)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T66",
+      "formula": "=Y_23"
+    },
+    {
+      "cell": "W66",
+      "formula": "=$U$13"
+    },
+    {
+      "cell": "X66",
+      "formula": "=IF(COUNTIF($T$64:$T$66,W66)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q67",
+      "formula": "=$V$7"
+    },
+    {
+      "cell": "R67",
+      "formula": "=IF(COUNTIF($T$64:$T$66,Q67)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W67",
+      "formula": "=$V$13"
+    },
+    {
+      "cell": "X67",
+      "formula": "=IF(COUNTIF($T$64:$T$66,W67)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q68",
+      "formula": "=$W$7"
+    },
+    {
+      "cell": "R68",
+      "formula": "=IF(COUNTIF($T$64:$T$66,Q68)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W68",
+      "formula": "=$W$13"
+    },
+    {
+      "cell": "X68",
+      "formula": "=IF(COUNTIF($T$64:$T$66,W68)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "E69",
+      "formula": "=Name1"
+    },
+    {
+      "cell": "K69",
+      "formula": "=Name2"
+    },
+    {
+      "cell": "Q69",
+      "formula": "=$X$7"
+    },
+    {
+      "cell": "R69",
+      "formula": "=IF(COUNTIF($T$64:$T$66,Q69)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W69",
+      "formula": "=$X$13"
+    },
+    {
+      "cell": "X69",
+      "formula": "=IF(COUNTIF($T$64:$T$66,W69)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "E72",
+      "formula": "=numberto22(ABS(DayTaro1-YearTaro1))"
+    },
+    {
+      "cell": "K72",
+      "formula": "=numberto22(ABS(DayTaro2-YearTaro2))"
+    },
+    {
+      "cell": "Q72",
+      "formula": "=OPV_1"
+    },
+    {
+      "cell": "R72",
+      "formula": "=IF(COUNTIF($T$72:$T$74,Q72)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T72",
+      "formula": "=U41"
+    },
+    {
+      "cell": "W72",
+      "formula": "=OPV_2"
+    },
+    {
+      "cell": "X72",
+      "formula": "=IF(COUNTIF($T$72:$T$74,W72)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q73",
+      "formula": "=OPV1_Dop"
+    },
+    {
+      "cell": "R73",
+      "formula": "=IF(COUNTIF($T$72:$T$74,Q73)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T73",
+      "formula": "=T42"
+    },
+    {
+      "cell": "W73",
+      "formula": "=OPV2_Dop"
+    },
+    {
+      "cell": "X73",
+      "formula": "=IF(COUNTIF($T$72:$T$74,W73)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "D74",
+      "formula": "=DayTaro1"
+    },
+    {
+      "cell": "E74",
+      "formula": "=MonthTaro1"
+    },
+    {
+      "cell": "F74",
+      "formula": "=YearTaro1"
+    },
+    {
+      "cell": "J74",
+      "formula": "=DayTaro2"
+    },
+    {
+      "cell": "K74",
+      "formula": "=MonthTaro2"
+    },
+    {
+      "cell": "L74",
+      "formula": "=YearTaro2"
+    },
+    {
+      "cell": "Q74",
+      "formula": "=$U$7"
+    },
+    {
+      "cell": "R74",
+      "formula": "=IF(COUNTIF($T$72:$T$74,Q74)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "T74",
+      "formula": "=V42"
+    },
+    {
+      "cell": "W74",
+      "formula": "=$U$13"
+    },
+    {
+      "cell": "X74",
+      "formula": "=IF(COUNTIF($T$72:$T$74,W74)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "Q75",
+      "formula": "=$V$7"
+    },
+    {
+      "cell": "R75",
+      "formula": "=IF(COUNTIF($T$72:$T$74,Q75)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W75",
+      "formula": "=$V$13"
+    },
+    {
+      "cell": "X75",
+      "formula": "=IF(COUNTIF($T$72:$T$74,W75)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "C76",
+      "formula": "=numberto22(D78+D74)"
+    },
+    {
+      "cell": "D76",
+      "formula": "=TP_1"
+    },
+    {
+      "cell": "F76",
+      "formula": "=numberto22(MonthTaro1+YearTaro1)"
+    },
+    {
+      "cell": "G76",
+      "formula": "=numberto22(F78+F74)"
+    },
+    {
+      "cell": "I76",
+      "formula": "=numberto22(J78+J74)"
+    },
+    {
+      "cell": "J76",
+      "formula": "=TP_2"
+    },
+    {
+      "cell": "L76",
+      "formula": "=numberto22(MonthTaro2+YearTaro2)"
+    },
+    {
+      "cell": "M76",
+      "formula": "=numberto22(L78+L74)"
+    },
+    {
+      "cell": "Q76",
+      "formula": "=$W$7"
+    },
+    {
+      "cell": "R76",
+      "formula": "=IF(COUNTIF($T$72:$T$74,Q76)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W76",
+      "formula": "=$W$13"
+    },
+    {
+      "cell": "X76",
+      "formula": "=IF(COUNTIF($T$72:$T$74,W76)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "E77",
+      "formula": "=numberto22(D76+F76)"
+    },
+    {
+      "cell": "K77",
+      "formula": "=numberto22(J76+L76)"
+    },
+    {
+      "cell": "Q77",
+      "formula": "=$X$7"
+    },
+    {
+      "cell": "R77",
+      "formula": "=IF(COUNTIF($T$72:$T$74,Q77)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "W77",
+      "formula": "=$X$13"
+    },
+    {
+      "cell": "X77",
+      "formula": "=IF(COUNTIF($T$72:$T$74,W77)>0, \"Да\", \"Нет\")"
+    },
+    {
+      "cell": "D78",
+      "formula": "=OPV_1"
+    },
+    {
+      "cell": "F78",
+      "formula": "=CZ_1"
+    },
+    {
+      "cell": "J78",
+      "formula": "=OPV_2"
+    },
+    {
+      "cell": "L78",
+      "formula": "=CZ_2"
+    },
+    {
+      "cell": "E80",
+      "formula": "=numberto22(ABS(D78-F78))"
+    },
+    {
+      "cell": "G80",
+      "formula": "=numberto22(D74+J74)"
+    },
+    {
+      "cell": "H80",
+      "formula": "=numberto22(E74+K74)"
+    },
+    {
+      "cell": "I80",
+      "formula": "=numberto22(F74+L74)"
+    },
+    {
+      "cell": "K80",
+      "formula": "=numberto22(ABS(J78-L78))"
+    },
+    {
+      "cell": "G82",
+      "formula": "=numberto22(D76+J76)"
+    },
+    {
+      "cell": "I82",
+      "formula": "=numberto22(F76+L76)"
+    },
+    {
+      "cell": "H83",
+      "formula": "=numberto22(G82+I82)"
+    },
+    {
+      "cell": "G84",
+      "formula": "=numberto22(ABS(D78-J78))"
+    },
+    {
+      "cell": "I84",
+      "formula": "=numberto22(F78+L78)"
+    },
+    {
+      "cell": "G87",
+      "formula": "=CONCATENATE(Name1, \" и \", Name2)"
+    },
+    {
+      "cell": "D94",
+      "formula": "=YEAR(TODAY())"
+    },
+    {
+      "cell": "B97",
+      "formula": "=DOB_Day1"
+    },
+    {
+      "cell": "C97",
+      "formula": "=DOB_Month1"
+    },
+    {
+      "cell": "D97",
+      "formula": "=DOB_Year1"
+    },
+    {
+      "cell": "E97",
+      "formula": "=DOB_Day1*DOB_Month1*DOB_Year1"
+    },
+    {
+      "cell": "F97",
+      "formula": "=E97&REPT(\"0\",7-LEN(E97))"
+    },
+    {
+      "cell": "H97",
+      "formula": "=SUM(C100:I100)/7"
+    },
+    {
+      "cell": "C100",
+      "formula": "=VALUE(MID($F$97,1,1))"
+    },
+    {
+      "cell": "D100",
+      "formula": "=VALUE(MID($F$97,2,1))"
+    },
+    {
+      "cell": "E100",
+      "formula": "=VALUE(MID($F$97,3,1))"
+    },
+    {
+      "cell": "F100",
+      "formula": "=VALUE(MID($F$97,4,1))"
+    },
+    {
+      "cell": "G100",
+      "formula": "=VALUE(MID($F$97,5,1))"
+    },
+    {
+      "cell": "H100",
+      "formula": "=VALUE(MID($F$97,6,1))"
+    },
+    {
+      "cell": "I100",
+      "formula": "=VALUE(MID($F$97,7,1))"
+    },
+    {
+      "cell": "C101",
+      "formula": "=C99+C100"
+    },
+    {
+      "cell": "D101",
+      "formula": "=D99+D100"
+    },
+    {
+      "cell": "E101",
+      "formula": "=E99+E100"
+    },
+    {
+      "cell": "F101",
+      "formula": "=F99+F100"
+    },
+    {
+      "cell": "G101",
+      "formula": "=G99+G100"
+    },
+    {
+      "cell": "H101",
+      "formula": "=H99+H100"
+    },
+    {
+      "cell": "I101",
+      "formula": "=I99+I100"
+    },
+    {
+      "cell": "B102",
+      "formula": "=YEAR(DATE(DOB_Year1,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "C102",
+      "formula": "=$B$102+C101"
+    },
+    {
+      "cell": "D102",
+      "formula": "=$B$102+D101"
+    },
+    {
+      "cell": "E102",
+      "formula": "=$B$102+E101"
+    },
+    {
+      "cell": "F102",
+      "formula": "=$B$102+F101"
+    },
+    {
+      "cell": "G102",
+      "formula": "=$B$102+G101"
+    },
+    {
+      "cell": "H102",
+      "formula": "=$B$102+H101"
+    },
+    {
+      "cell": "I102",
+      "formula": "=$B$102+I101"
+    },
+    {
+      "cell": "B104",
+      "formula": "=DOB_Day2"
+    },
+    {
+      "cell": "C104",
+      "formula": "=DOB_Month2"
+    },
+    {
+      "cell": "D104",
+      "formula": "=DOB_Year2"
+    },
+    {
+      "cell": "E104",
+      "formula": "=DOB_Day2*DOB_Month2*DOB_Year2"
+    },
+    {
+      "cell": "F104",
+      "formula": "=E104&REPT(\"0\",7-LEN(E104))"
+    },
+    {
+      "cell": "C107",
+      "formula": "=VALUE(MID($F$104,1,1))"
+    },
+    {
+      "cell": "D107",
+      "formula": "=VALUE(MID($F$104,2,1))"
+    },
+    {
+      "cell": "E107",
+      "formula": "=VALUE(MID($F$104,3,1))"
+    },
+    {
+      "cell": "F107",
+      "formula": "=VALUE(MID($F$104,4,1))"
+    },
+    {
+      "cell": "G107",
+      "formula": "=VALUE(MID($F$104,5,1))"
+    },
+    {
+      "cell": "H107",
+      "formula": "=VALUE(MID($F$104,6,1))"
+    },
+    {
+      "cell": "I107",
+      "formula": "=VALUE(MID($F$104,7,1))"
+    },
+    {
+      "cell": "C108",
+      "formula": "=C106+C107"
+    },
+    {
+      "cell": "D108",
+      "formula": "=D106+D107"
+    },
+    {
+      "cell": "E108",
+      "formula": "=E106+E107"
+    },
+    {
+      "cell": "F108",
+      "formula": "=F106+F107"
+    },
+    {
+      "cell": "G108",
+      "formula": "=G106+G107"
+    },
+    {
+      "cell": "H108",
+      "formula": "=H106+H107"
+    },
+    {
+      "cell": "I108",
+      "formula": "=I106+I107"
+    },
+    {
+      "cell": "B109",
+      "formula": "=YEAR(DATE(DOB_Year2, DOB_Month2, DOB_Day2))"
+    },
+    {
+      "cell": "C109",
+      "formula": "=$B$109+C108"
+    },
+    {
+      "cell": "D109",
+      "formula": "=$B$109+D108"
+    },
+    {
+      "cell": "E109",
+      "formula": "=$B$109+E108"
+    },
+    {
+      "cell": "F109",
+      "formula": "=$B$109+F108"
+    },
+    {
+      "cell": "G109",
+      "formula": "=$B$109+G108"
+    },
+    {
+      "cell": "H109",
+      "formula": "=$B$109+H108"
+    },
+    {
+      "cell": "I109",
+      "formula": "=$B$109+I108"
+    },
+    {
+      "cell": "B126",
+      "formula": "=U18*DOB_Year1*35"
+    },
+    {
+      "cell": "C126",
+      "formula": "=B126&REPT(\"0\",7-LEN(B126))"
+    },
+    {
+      "cell": "C129",
+      "formula": "=VALUE(MID($C$126,7,1))"
+    },
+    {
+      "cell": "D129",
+      "formula": "=VALUE(MID($C$126,6,1))"
+    },
+    {
+      "cell": "E129",
+      "formula": "=VALUE(MID($C$126,5,1))"
+    },
+    {
+      "cell": "F129",
+      "formula": "=VALUE(MID($C$126,4,1))"
+    },
+    {
+      "cell": "G129",
+      "formula": "=VALUE(MID($C$126,3,1))"
+    },
+    {
+      "cell": "H129",
+      "formula": "=VALUE(MID($C$126,2,1))"
+    },
+    {
+      "cell": "I129",
+      "formula": "=VALUE(MID($C$126,1,1))"
+    },
+    {
+      "cell": "B130",
+      "formula": "=B128+B129"
+    },
+    {
+      "cell": "C130",
+      "formula": "=C128+C129"
+    },
+    {
+      "cell": "D130",
+      "formula": "=D128+D129"
+    },
+    {
+      "cell": "E130",
+      "formula": "=E128+E129"
+    },
+    {
+      "cell": "F130",
+      "formula": "=F128+F129"
+    },
+    {
+      "cell": "G130",
+      "formula": "=G128+G129"
+    },
+    {
+      "cell": "H130",
+      "formula": "=H128+H129"
+    },
+    {
+      "cell": "I130",
+      "formula": "=I128+I129"
+    },
+    {
+      "cell": "B131",
+      "formula": "=YEAR(DATE(DOB_Year1,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "C131",
+      "formula": "=$B$131+C130"
+    },
+    {
+      "cell": "D131",
+      "formula": "=$B$131+D130"
+    },
+    {
+      "cell": "E131",
+      "formula": "=$B$131+E130"
+    },
+    {
+      "cell": "F131",
+      "formula": "=$B$131+F130"
+    },
+    {
+      "cell": "G131",
+      "formula": "=$B$131+G130"
+    },
+    {
+      "cell": "H131",
+      "formula": "=$B$131+H130"
+    },
+    {
+      "cell": "I131",
+      "formula": "=$B$131+I130"
+    },
+    {
+      "cell": "B135",
+      "formula": "=U19*DOB_Year2*35"
+    },
+    {
+      "cell": "C135",
+      "formula": "=B135&REPT(\"0\",7-LEN(B135))"
+    },
+    {
+      "cell": "C138",
+      "formula": "=VALUE(MID($C$135,7,1))"
+    },
+    {
+      "cell": "D138",
+      "formula": "=VALUE(MID($C$135,6,1))"
+    },
+    {
+      "cell": "E138",
+      "formula": "=VALUE(MID($C$135,5,1))"
+    },
+    {
+      "cell": "F138",
+      "formula": "=VALUE(MID($C$135,4,1))"
+    },
+    {
+      "cell": "G138",
+      "formula": "=VALUE(MID($C$135,3,1))"
+    },
+    {
+      "cell": "H138",
+      "formula": "=VALUE(MID($C$135,2,1))"
+    },
+    {
+      "cell": "I138",
+      "formula": "=VALUE(MID($C$135,1,1))"
+    },
+    {
+      "cell": "B139",
+      "formula": "=B137+B138"
+    },
+    {
+      "cell": "C139",
+      "formula": "=C137+C138"
+    },
+    {
+      "cell": "D139",
+      "formula": "=D137+D138"
+    },
+    {
+      "cell": "E139",
+      "formula": "=E137+E138"
+    },
+    {
+      "cell": "F139",
+      "formula": "=F137+F138"
+    },
+    {
+      "cell": "G139",
+      "formula": "=G137+G138"
+    },
+    {
+      "cell": "H139",
+      "formula": "=H137+H138"
+    },
+    {
+      "cell": "I139",
+      "formula": "=I137+I138"
+    },
+    {
+      "cell": "B140",
+      "formula": "=YEAR(DATE(DOB_Year2, DOB_Month2, DOB_Day2))"
+    },
+    {
+      "cell": "C140",
+      "formula": "=$B$140+C139"
+    },
+    {
+      "cell": "D140",
+      "formula": "=$B$140+D139"
+    },
+    {
+      "cell": "E140",
+      "formula": "=$B$140+E139"
+    },
+    {
+      "cell": "F140",
+      "formula": "=$B$140+F139"
+    },
+    {
+      "cell": "G140",
+      "formula": "=$B$140+G139"
+    },
+    {
+      "cell": "H140",
+      "formula": "=$B$140+H139"
+    },
+    {
+      "cell": "I140",
+      "formula": "=$B$140+I139"
+    },
+    {
+      "cell": "B157",
+      "formula": "=U18*DOB_Year1*52"
+    },
+    {
+      "cell": "C157",
+      "formula": "=B157&REPT(\"0\",7-LEN(B157))"
+    },
+    {
+      "cell": "C160",
+      "formula": "=VALUE(MID($C$157,1,1))"
+    },
+    {
+      "cell": "D160",
+      "formula": "=VALUE(MID($C$157,2,1))"
+    },
+    {
+      "cell": "E160",
+      "formula": "=VALUE(MID($C$157,3,1))"
+    },
+    {
+      "cell": "F160",
+      "formula": "=VALUE(MID($C$157,4,1))"
+    },
+    {
+      "cell": "G160",
+      "formula": "=VALUE(MID($C$157,5,1))"
+    },
+    {
+      "cell": "H160",
+      "formula": "=VALUE(MID($C$157,6,1))"
+    },
+    {
+      "cell": "I160",
+      "formula": "=VALUE(MID($C$157,7,1))"
+    },
+    {
+      "cell": "B161",
+      "formula": "=B159+B160"
+    },
+    {
+      "cell": "C161",
+      "formula": "=C159+C160"
+    },
+    {
+      "cell": "D161",
+      "formula": "=D159+D160"
+    },
+    {
+      "cell": "E161",
+      "formula": "=E159+E160"
+    },
+    {
+      "cell": "F161",
+      "formula": "=F159+F160"
+    },
+    {
+      "cell": "G161",
+      "formula": "=G159+G160"
+    },
+    {
+      "cell": "H161",
+      "formula": "=H159+H160"
+    },
+    {
+      "cell": "I161",
+      "formula": "=I159+I160"
+    },
+    {
+      "cell": "B162",
+      "formula": "=YEAR(DATE(DOB_Year1,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "C162",
+      "formula": "=$B$162+C161"
+    },
+    {
+      "cell": "D162",
+      "formula": "=$B$162+D161"
+    },
+    {
+      "cell": "E162",
+      "formula": "=$B$162+E161"
+    },
+    {
+      "cell": "F162",
+      "formula": "=$B$162+F161"
+    },
+    {
+      "cell": "G162",
+      "formula": "=$B$162+G161"
+    },
+    {
+      "cell": "H162",
+      "formula": "=$B$162+H161"
+    },
+    {
+      "cell": "I162",
+      "formula": "=$B$162+I161"
+    },
+    {
+      "cell": "B163",
+      "formula": "=U19*DOB_Year1*52"
+    },
+    {
+      "cell": "C163",
+      "formula": "=B163&REPT(\"0\",7-LEN(B163))"
+    },
+    {
+      "cell": "C166",
+      "formula": "=VALUE(MID($C$163,1,1))"
+    },
+    {
+      "cell": "D166",
+      "formula": "=VALUE(MID($C$163,2,1))"
+    },
+    {
+      "cell": "E166",
+      "formula": "=VALUE(MID($C$163,3,1))"
+    },
+    {
+      "cell": "F166",
+      "formula": "=VALUE(MID($C$163,4,1))"
+    },
+    {
+      "cell": "G166",
+      "formula": "=VALUE(MID($C$163,5,1))"
+    },
+    {
+      "cell": "H166",
+      "formula": "=VALUE(MID($C$163,6,1))"
+    },
+    {
+      "cell": "I166",
+      "formula": "=VALUE(MID($C$163,7,1))"
+    },
+    {
+      "cell": "B167",
+      "formula": "=B165+B166"
+    },
+    {
+      "cell": "C167",
+      "formula": "=C165+C166"
+    },
+    {
+      "cell": "D167",
+      "formula": "=D165+D166"
+    },
+    {
+      "cell": "E167",
+      "formula": "=E165+E166"
+    },
+    {
+      "cell": "F167",
+      "formula": "=F165+F166"
+    },
+    {
+      "cell": "G167",
+      "formula": "=G165+G166"
+    },
+    {
+      "cell": "H167",
+      "formula": "=H165+H166"
+    },
+    {
+      "cell": "I167",
+      "formula": "=I165+I166"
+    },
+    {
+      "cell": "B168",
+      "formula": "=YEAR(DATE(DOB_Year2, DOB_Month2, DOB_Day2))"
+    },
+    {
+      "cell": "C168",
+      "formula": "=$B$168+C167"
+    },
+    {
+      "cell": "D168",
+      "formula": "=$B$168+D167"
+    },
+    {
+      "cell": "E168",
+      "formula": "=$B$168+E167"
+    },
+    {
+      "cell": "F168",
+      "formula": "=$B$168+F167"
+    },
+    {
+      "cell": "G168",
+      "formula": "=$B$168+G167"
+    },
+    {
+      "cell": "H168",
+      "formula": "=$B$168+H167"
+    },
+    {
+      "cell": "I168",
+      "formula": "=$B$168+I167"
+    },
+    {
+      "cell": "B183",
+      "formula": "=DOB_Day1"
+    },
+    {
+      "cell": "D183",
+      "formula": "=DOB_Month1"
+    },
+    {
+      "cell": "F183",
+      "formula": "=DOB_Year1"
+    },
+    {
+      "cell": "G183",
+      "formula": "=(B183+D183)*F183"
+    },
+    {
+      "cell": "H183",
+      "formula": "=G183&REPT(\"0\",7-LEN(G183))"
+    },
+    {
+      "cell": "C186",
+      "formula": "=VALUE(MID($H$183,1,1))"
+    },
+    {
+      "cell": "D186",
+      "formula": "=VALUE(MID($H$183,2,1))"
+    },
+    {
+      "cell": "E186",
+      "formula": "=VALUE(MID($H$183,3,1))"
+    },
+    {
+      "cell": "F186",
+      "formula": "=VALUE(MID($H$183,4,1))"
+    },
+    {
+      "cell": "G186",
+      "formula": "=VALUE(MID($H$183,5,1))"
+    },
+    {
+      "cell": "H186",
+      "formula": "=VALUE(MID($H$183,6,1))"
+    },
+    {
+      "cell": "I186",
+      "formula": "=VALUE(MID($H$183,7,1))"
+    },
+    {
+      "cell": "C187",
+      "formula": "=C185+C186"
+    },
+    {
+      "cell": "D187",
+      "formula": "=D185+D186"
+    },
+    {
+      "cell": "E187",
+      "formula": "=E185+E186"
+    },
+    {
+      "cell": "F187",
+      "formula": "=F185+F186"
+    },
+    {
+      "cell": "G187",
+      "formula": "=G185+G186"
+    },
+    {
+      "cell": "H187",
+      "formula": "=H185+H186"
+    },
+    {
+      "cell": "I187",
+      "formula": "=I185+I186"
+    },
+    {
+      "cell": "B188",
+      "formula": "=YEAR(DATE(DOB_Year1,DOB_Month1,DOB_Day1))"
+    },
+    {
+      "cell": "C188",
+      "formula": "=$B$188+C187"
+    },
+    {
+      "cell": "D188",
+      "formula": "=$B$188+D187"
+    },
+    {
+      "cell": "E188",
+      "formula": "=$B$188+E187"
+    },
+    {
+      "cell": "F188",
+      "formula": "=$B$188+F187"
+    },
+    {
+      "cell": "G188",
+      "formula": "=$B$188+G187"
+    },
+    {
+      "cell": "H188",
+      "formula": "=$B$188+H187"
+    },
+    {
+      "cell": "I188",
+      "formula": "=$B$188+I187"
+    },
+    {
+      "cell": "B190",
+      "formula": "=DOB_Day2"
+    },
+    {
+      "cell": "D190",
+      "formula": "=DOB_Month2"
+    },
+    {
+      "cell": "F190",
+      "formula": "=DOB_Year2"
+    },
+    {
+      "cell": "G190",
+      "formula": "=(B190+D190)*F190"
+    },
+    {
+      "cell": "H190",
+      "formula": "=G190&REPT(\"0\",7-LEN(G190))"
+    },
+    {
+      "cell": "C193",
+      "formula": "=VALUE(MID($H$190,1,1))"
+    },
+    {
+      "cell": "D193",
+      "formula": "=VALUE(MID($H$190,2,1))"
+    },
+    {
+      "cell": "E193",
+      "formula": "=VALUE(MID($H$190,3,1))"
+    },
+    {
+      "cell": "F193",
+      "formula": "=VALUE(MID($H$190,4,1))"
+    },
+    {
+      "cell": "G193",
+      "formula": "=VALUE(MID($H$190,5,1))"
+    },
+    {
+      "cell": "H193",
+      "formula": "=VALUE(MID($H$190,6,1))"
+    },
+    {
+      "cell": "I193",
+      "formula": "=VALUE(MID($H$190,7,1))"
+    },
+    {
+      "cell": "C194",
+      "formula": "=C192+C193"
+    },
+    {
+      "cell": "D194",
+      "formula": "=D192+D193"
+    },
+    {
+      "cell": "E194",
+      "formula": "=E192+E193"
+    },
+    {
+      "cell": "F194",
+      "formula": "=F192+F193"
+    },
+    {
+      "cell": "G194",
+      "formula": "=G192+G193"
+    },
+    {
+      "cell": "H194",
+      "formula": "=H192+H193"
+    },
+    {
+      "cell": "I194",
+      "formula": "=I192+I193"
+    },
+    {
+      "cell": "B195",
+      "formula": "=YEAR(DATE(DOB_Year2, DOB_Month2, DOB_Day2))"
+    },
+    {
+      "cell": "C195",
+      "formula": "=$B$195+C194"
+    },
+    {
+      "cell": "D195",
+      "formula": "=$B$195+D194"
+    },
+    {
+      "cell": "E195",
+      "formula": "=$B$195+E194"
+    },
+    {
+      "cell": "F195",
+      "formula": "=$B$195+F194"
+    },
+    {
+      "cell": "G195",
+      "formula": "=$B$195+G194"
+    },
+    {
+      "cell": "H195",
+      "formula": "=$B$195+H194"
+    },
+    {
+      "cell": "I195",
+      "formula": "=$B$195+I194"
+    },
+    {
+      "cell": "B216",
+      "formula": "=MKist1"
+    },
+    {
+      "cell": "C216",
+      "formula": "=DOB_Year1"
+    },
+    {
+      "cell": "D216",
+      "formula": "=12"
+    },
+    {
+      "cell": "F216",
+      "formula": "=B216*C216*D216"
+    },
+    {
+      "cell": "G216",
+      "formula": "=F216&REPT(\"0\",7-LEN(F216))"
+    },
+    {
+      "cell": "J216",
+      "formula": "=C216"
+    },
+    {
+      "cell": "L216",
+      "formula": "=VALUE(MID($G$216,K216,1))"
+    },
+    {
+      "cell": "N216",
+      "formula": "=DOB_Year2"
+    },
+    {
+      "cell": "P216",
+      "formula": "=VALUE(MID($G$225,O216,1))"
+    },
+    {
+      "cell": "J217",
+      "formula": "=J216+1"
+    },
+    {
+      "cell": "L217",
+      "formula": "=VALUE(MID($G$216,K217,1))"
+    },
+    {
+      "cell": "N217",
+      "formula": "=N216+1"
+    },
+    {
+      "cell": "P217",
+      "formula": "=VALUE(MID($G$225,O217,1))"
+    },
+    {
+      "cell": "J218",
+      "formula": "=J217+1"
+    },
+    {
+      "cell": "L218",
+      "formula": "=VALUE(MID($G$216,K218,1))"
+    },
+    {
+      "cell": "N218",
+      "formula": "=N217+1"
+    },
+    {
+      "cell": "P218",
+      "formula": "=VALUE(MID($G$225,O218,1))"
+    },
+    {
+      "cell": "B219",
+      "formula": "=VALUE(MID($G$216,B218,1))"
+    },
+    {
+      "cell": "C219",
+      "formula": "=VALUE(MID($G$216,C218,1))"
+    },
+    {
+      "cell": "D219",
+      "formula": "=VALUE(MID($G$216,D218,1))"
+    },
+    {
+      "cell": "E219",
+      "formula": "=VALUE(MID($G$216,E218,1))"
+    },
+    {
+      "cell": "F219",
+      "formula": "=VALUE(MID($G$216,F218,1))"
+    },
+    {
+      "cell": "G219",
+      "formula": "=VALUE(MID($G$216,G218,1))"
+    },
+    {
+      "cell": "H219",
+      "formula": "=VALUE(MID($G$216,H218,1))"
+    },
+    {
+      "cell": "J219",
+      "formula": "=J218+1"
+    },
+    {
+      "cell": "L219",
+      "formula": "=VALUE(MID($G$216,K219,1))"
+    },
+    {
+      "cell": "N219",
+      "formula": "=N218+1"
+    },
+    {
+      "cell": "P219",
+      "formula": "=VALUE(MID($G$225,O219,1))"
+    },
+    {
+      "cell": "J220",
+      "formula": "=J219+1"
+    },
+    {
+      "cell": "L220",
+      "formula": "=VALUE(MID($G$216,K220,1))"
+    },
+    {
+      "cell": "N220",
+      "formula": "=N219+1"
+    },
+    {
+      "cell": "P220",
+      "formula": "=VALUE(MID($G$225,O220,1))"
+    },
+    {
+      "cell": "B221",
+      "formula": "=YEAR(TODAY())"
+    },
+    {
+      "cell": "C221",
+      "formula": "=B221+1"
+    },
+    {
+      "cell": "D221",
+      "formula": "=C221+1"
+    },
+    {
+      "cell": "E221",
+      "formula": "=D221+1"
+    },
+    {
+      "cell": "F221",
+      "formula": "=E221+1"
+    },
+    {
+      "cell": "G221",
+      "formula": "=F221+1"
+    },
+    {
+      "cell": "H221",
+      "formula": "=G221+1"
+    },
+    {
+      "cell": "J221",
+      "formula": "=J220+1"
+    },
+    {
+      "cell": "L221",
+      "formula": "=VALUE(MID($G$216,K221,1))"
+    },
+    {
+      "cell": "N221",
+      "formula": "=N220+1"
+    },
+    {
+      "cell": "P221",
+      "formula": "=VALUE(MID($G$225,O221,1))"
+    },
+    {
+      "cell": "B222",
+      "formula": "=VLOOKUP(B221,$J$216:$L$320,2,FALSE)"
+    },
+    {
+      "cell": "C222",
+      "formula": "=VLOOKUP(C221,$J$216:$L$320,2,FALSE)"
+    },
+    {
+      "cell": "D222",
+      "formula": "=VLOOKUP(D221,$J$216:$L$320,2,FALSE)"
+    },
+    {
+      "cell": "E222",
+      "formula": "=VLOOKUP(E221,$J$216:$L$320,2,FALSE)"
+    },
+    {
+      "cell": "F222",
+      "formula": "=VLOOKUP(F221,$J$216:$L$320,2,FALSE)"
+    },
+    {
+      "cell": "G222",
+      "formula": "=VLOOKUP(G221,$J$216:$L$320,2,FALSE)"
+    },
+    {
+      "cell": "H222",
+      "formula": "=VLOOKUP(H221,$J$216:$L$320,2,FALSE)"
+    },
+    {
+      "cell": "J222",
+      "formula": "=J221+1"
+    },
+    {
+      "cell": "L222",
+      "formula": "=VALUE(MID($G$216,K222,1))"
+    },
+    {
+      "cell": "N222",
+      "formula": "=N221+1"
+    },
+    {
+      "cell": "P222",
+      "formula": "=VALUE(MID($G$225,O222,1))"
+    },
+    {
+      "cell": "B223",
+      "formula": "=VLOOKUP(B221,$J$216:$L$320,3,FALSE)"
+    },
+    {
+      "cell": "C223",
+      "formula": "=VLOOKUP(C221,$J$216:$L$320,3,FALSE)"
+    },
+    {
+      "cell": "D223",
+      "formula": "=VLOOKUP(D221,$J$216:$L$320,3,FALSE)"
+    },
+    {
+      "cell": "E223",
+      "formula": "=VLOOKUP(E221,$J$216:$L$320,3,FALSE)"
+    },
+    {
+      "cell": "F223",
+      "formula": "=VLOOKUP(F221,$J$216:$L$320,3,FALSE)"
+    },
+    {
+      "cell": "G223",
+      "formula": "=VLOOKUP(G221,$J$216:$L$320,3,FALSE)"
+    },
+    {
+      "cell": "H223",
+      "formula": "=VLOOKUP(H221,$J$216:$L$320,3,FALSE)"
+    },
+    {
+      "cell": "J223",
+      "formula": "=J222+1"
+    },
+    {
+      "cell": "L223",
+      "formula": "=VALUE(MID($G$216,K223,1))"
+    },
+    {
+      "cell": "N223",
+      "formula": "=N222+1"
+    },
+    {
+      "cell": "P223",
+      "formula": "=VALUE(MID($G$225,O223,1))"
+    },
+    {
+      "cell": "J224",
+      "formula": "=J223+1"
+    },
+    {
+      "cell": "L224",
+      "formula": "=VALUE(MID($G$216,K224,1))"
+    },
+    {
+      "cell": "N224",
+      "formula": "=N223+1"
+    },
+    {
+      "cell": "P224",
+      "formula": "=VALUE(MID($G$225,O224,1))"
+    },
+    {
+      "cell": "B225",
+      "formula": "=MKist2"
+    },
+    {
+      "cell": "C225",
+      "formula": "=DOB_Year2"
+    },
+    {
+      "cell": "F225",
+      "formula": "=B225*C225*D225"
+    },
+    {
+      "cell": "G225",
+      "formula": "=F225&REPT(\"0\",7-LEN(F225))"
+    },
+    {
+      "cell": "J225",
+      "formula": "=J224+1"
+    },
+    {
+      "cell": "L225",
+      "formula": "=VALUE(MID($G$216,K225,1))"
+    },
+    {
+      "cell": "N225",
+      "formula": "=N224+1"
+    },
+    {
+      "cell": "P225",
+      "formula": "=VALUE(MID($G$225,O225,1))"
+    },
+    {
+      "cell": "J226",
+      "formula": "=J225+1"
+    },
+    {
+      "cell": "L226",
+      "formula": "=VALUE(MID($G$216,K226,1))"
+    },
+    {
+      "cell": "N226",
+      "formula": "=N225+1"
+    },
+    {
+      "cell": "P226",
+      "formula": "=VALUE(MID($G$225,O226,1))"
+    },
+    {
+      "cell": "B227",
+      "formula": "=VALUE(MID($G$225,B226,1))"
+    },
+    {
+      "cell": "C227",
+      "formula": "=VALUE(MID($G$225,C226,1))"
+    },
+    {
+      "cell": "D227",
+      "formula": "=VALUE(MID($G$225,D226,1))"
+    },
+    {
+      "cell": "E227",
+      "formula": "=VALUE(MID($G$225,E226,1))"
+    },
+    {
+      "cell": "F227",
+      "formula": "=VALUE(MID($G$225,F226,1))"
+    },
+    {
+      "cell": "G227",
+      "formula": "=VALUE(MID($G$225,G226,1))"
+    },
+    {
+      "cell": "H227",
+      "formula": "=VALUE(MID($G$225,H226,1))"
+    },
+    {
+      "cell": "J227",
+      "formula": "=J226+1"
+    },
+    {
+      "cell": "L227",
+      "formula": "=VALUE(MID($G$216,K227,1))"
+    },
+    {
+      "cell": "N227",
+      "formula": "=N226+1"
+    },
+    {
+      "cell": "P227",
+      "formula": "=VALUE(MID($G$225,O227,1))"
+    },
+    {
+      "cell": "J228",
+      "formula": "=J227+1"
+    },
+    {
+      "cell": "L228",
+      "formula": "=VALUE(MID($G$216,K228,1))"
+    },
+    {
+      "cell": "N228",
+      "formula": "=N227+1"
+    },
+    {
+      "cell": "P228",
+      "formula": "=VALUE(MID($G$225,O228,1))"
+    },
+    {
+      "cell": "B229",
+      "formula": "=YEAR(TODAY())"
+    },
+    {
+      "cell": "C229",
+      "formula": "=B229+1"
+    },
+    {
+      "cell": "D229",
+      "formula": "=C229+1"
+    },
+    {
+      "cell": "E229",
+      "formula": "=D229+1"
+    },
+    {
+      "cell": "F229",
+      "formula": "=E229+1"
+    },
+    {
+      "cell": "G229",
+      "formula": "=F229+1"
+    },
+    {
+      "cell": "H229",
+      "formula": "=G229+1"
+    },
+    {
+      "cell": "J229",
+      "formula": "=J228+1"
+    },
+    {
+      "cell": "L229",
+      "formula": "=VALUE(MID($G$216,K229,1))"
+    },
+    {
+      "cell": "N229",
+      "formula": "=N228+1"
+    },
+    {
+      "cell": "P229",
+      "formula": "=VALUE(MID($G$225,O229,1))"
+    },
+    {
+      "cell": "B230",
+      "formula": "=VLOOKUP(B229,$N$216:$P$320,2,FALSE)"
+    },
+    {
+      "cell": "C230",
+      "formula": "=VLOOKUP(C229,$N$216:$P$320,2,FALSE)"
+    },
+    {
+      "cell": "D230",
+      "formula": "=VLOOKUP(D229,$N$216:$P$320,2,FALSE)"
+    },
+    {
+      "cell": "E230",
+      "formula": "=VLOOKUP(E229,$N$216:$P$320,2,FALSE)"
+    },
+    {
+      "cell": "F230",
+      "formula": "=VLOOKUP(F229,$N$216:$P$320,2,FALSE)"
+    },
+    {
+      "cell": "G230",
+      "formula": "=VLOOKUP(G229,$N$216:$P$320,2,FALSE)"
+    },
+    {
+      "cell": "H230",
+      "formula": "=VLOOKUP(H229,$N$216:$P$320,2,FALSE)"
+    },
+    {
+      "cell": "J230",
+      "formula": "=J229+1"
+    },
+    {
+      "cell": "L230",
+      "formula": "=VALUE(MID($G$216,K230,1))"
+    },
+    {
+      "cell": "N230",
+      "formula": "=N229+1"
+    },
+    {
+      "cell": "P230",
+      "formula": "=VALUE(MID($G$225,O230,1))"
+    },
+    {
+      "cell": "B231",
+      "formula": "=VLOOKUP(B221,$N$216:$P$320,3,FALSE)"
+    },
+    {
+      "cell": "C231",
+      "formula": "=VLOOKUP(C221,$N$216:$P$320,3,FALSE)"
+    },
+    {
+      "cell": "D231",
+      "formula": "=VLOOKUP(D221,$N$216:$P$320,3,FALSE)"
+    },
+    {
+      "cell": "E231",
+      "formula": "=VLOOKUP(E221,$N$216:$P$320,3,FALSE)"
+    },
+    {
+      "cell": "F231",
+      "formula": "=VLOOKUP(F221,$N$216:$P$320,3,FALSE)"
+    },
+    {
+      "cell": "G231",
+      "formula": "=VLOOKUP(G221,$N$216:$P$320,3,FALSE)"
+    },
+    {
+      "cell": "H231",
+      "formula": "=VLOOKUP(H221,$N$216:$P$320,3,FALSE)"
+    },
+    {
+      "cell": "J231",
+      "formula": "=J230+1"
+    },
+    {
+      "cell": "L231",
+      "formula": "=VALUE(MID($G$216,K231,1))"
+    },
+    {
+      "cell": "N231",
+      "formula": "=N230+1"
+    },
+    {
+      "cell": "P231",
+      "formula": "=VALUE(MID($G$225,O231,1))"
+    },
+    {
+      "cell": "J232",
+      "formula": "=J231+1"
+    },
+    {
+      "cell": "L232",
+      "formula": "=VALUE(MID($G$216,K232,1))"
+    },
+    {
+      "cell": "N232",
+      "formula": "=N231+1"
+    },
+    {
+      "cell": "P232",
+      "formula": "=VALUE(MID($G$225,O232,1))"
+    },
+    {
+      "cell": "J233",
+      "formula": "=J232+1"
+    },
+    {
+      "cell": "L233",
+      "formula": "=VALUE(MID($G$216,K233,1))"
+    },
+    {
+      "cell": "N233",
+      "formula": "=N232+1"
+    },
+    {
+      "cell": "P233",
+      "formula": "=VALUE(MID($G$225,O233,1))"
+    },
+    {
+      "cell": "J234",
+      "formula": "=J233+1"
+    },
+    {
+      "cell": "L234",
+      "formula": "=VALUE(MID($G$216,K234,1))"
+    },
+    {
+      "cell": "N234",
+      "formula": "=N233+1"
+    },
+    {
+      "cell": "P234",
+      "formula": "=VALUE(MID($G$225,O234,1))"
+    },
+    {
+      "cell": "J235",
+      "formula": "=J234+1"
+    },
+    {
+      "cell": "L235",
+      "formula": "=VALUE(MID($G$216,K235,1))"
+    },
+    {
+      "cell": "N235",
+      "formula": "=N234+1"
+    },
+    {
+      "cell": "P235",
+      "formula": "=VALUE(MID($G$225,O235,1))"
+    },
+    {
+      "cell": "J236",
+      "formula": "=J235+1"
+    },
+    {
+      "cell": "L236",
+      "formula": "=VALUE(MID($G$216,K236,1))"
+    },
+    {
+      "cell": "N236",
+      "formula": "=N235+1"
+    },
+    {
+      "cell": "P236",
+      "formula": "=VALUE(MID($G$225,O236,1))"
+    },
+    {
+      "cell": "J237",
+      "formula": "=J236+1"
+    },
+    {
+      "cell": "L237",
+      "formula": "=VALUE(MID($G$216,K237,1))"
+    },
+    {
+      "cell": "N237",
+      "formula": "=N236+1"
+    },
+    {
+      "cell": "P237",
+      "formula": "=VALUE(MID($G$225,O237,1))"
+    },
+    {
+      "cell": "J238",
+      "formula": "=J237+1"
+    },
+    {
+      "cell": "L238",
+      "formula": "=VALUE(MID($G$216,K238,1))"
+    },
+    {
+      "cell": "N238",
+      "formula": "=N237+1"
+    },
+    {
+      "cell": "P238",
+      "formula": "=VALUE(MID($G$225,O238,1))"
+    },
+    {
+      "cell": "J239",
+      "formula": "=J238+1"
+    },
+    {
+      "cell": "L239",
+      "formula": "=VALUE(MID($G$216,K239,1))"
+    },
+    {
+      "cell": "N239",
+      "formula": "=N238+1"
+    },
+    {
+      "cell": "P239",
+      "formula": "=VALUE(MID($G$225,O239,1))"
+    },
+    {
+      "cell": "J240",
+      "formula": "=J239+1"
+    },
+    {
+      "cell": "L240",
+      "formula": "=VALUE(MID($G$216,K240,1))"
+    },
+    {
+      "cell": "N240",
+      "formula": "=N239+1"
+    },
+    {
+      "cell": "P240",
+      "formula": "=VALUE(MID($G$225,O240,1))"
+    },
+    {
+      "cell": "J241",
+      "formula": "=J240+1"
+    },
+    {
+      "cell": "L241",
+      "formula": "=VALUE(MID($G$216,K241,1))"
+    },
+    {
+      "cell": "N241",
+      "formula": "=N240+1"
+    },
+    {
+      "cell": "P241",
+      "formula": "=VALUE(MID($G$225,O241,1))"
+    },
+    {
+      "cell": "J242",
+      "formula": "=J241+1"
+    },
+    {
+      "cell": "L242",
+      "formula": "=VALUE(MID($G$216,K242,1))"
+    },
+    {
+      "cell": "N242",
+      "formula": "=N241+1"
+    },
+    {
+      "cell": "P242",
+      "formula": "=VALUE(MID($G$225,O242,1))"
+    },
+    {
+      "cell": "J243",
+      "formula": "=J242+1"
+    },
+    {
+      "cell": "L243",
+      "formula": "=VALUE(MID($G$216,K243,1))"
+    },
+    {
+      "cell": "N243",
+      "formula": "=N242+1"
+    },
+    {
+      "cell": "P243",
+      "formula": "=VALUE(MID($G$225,O243,1))"
+    },
+    {
+      "cell": "J244",
+      "formula": "=J243+1"
+    },
+    {
+      "cell": "L244",
+      "formula": "=VALUE(MID($G$216,K244,1))"
+    },
+    {
+      "cell": "N244",
+      "formula": "=N243+1"
+    },
+    {
+      "cell": "P244",
+      "formula": "=VALUE(MID($G$225,O244,1))"
+    },
+    {
+      "cell": "J245",
+      "formula": "=J244+1"
+    },
+    {
+      "cell": "L245",
+      "formula": "=VALUE(MID($G$216,K245,1))"
+    },
+    {
+      "cell": "N245",
+      "formula": "=N244+1"
+    },
+    {
+      "cell": "P245",
+      "formula": "=VALUE(MID($G$225,O245,1))"
+    },
+    {
+      "cell": "J246",
+      "formula": "=J245+1"
+    },
+    {
+      "cell": "L246",
+      "formula": "=VALUE(MID($G$216,K246,1))"
+    },
+    {
+      "cell": "N246",
+      "formula": "=N245+1"
+    },
+    {
+      "cell": "P246",
+      "formula": "=VALUE(MID($G$225,O246,1))"
+    },
+    {
+      "cell": "J247",
+      "formula": "=J246+1"
+    },
+    {
+      "cell": "L247",
+      "formula": "=VALUE(MID($G$216,K247,1))"
+    },
+    {
+      "cell": "N247",
+      "formula": "=N246+1"
+    },
+    {
+      "cell": "P247",
+      "formula": "=VALUE(MID($G$225,O247,1))"
+    },
+    {
+      "cell": "J248",
+      "formula": "=J247+1"
+    },
+    {
+      "cell": "L248",
+      "formula": "=VALUE(MID($G$216,K248,1))"
+    },
+    {
+      "cell": "N248",
+      "formula": "=N247+1"
+    },
+    {
+      "cell": "P248",
+      "formula": "=VALUE(MID($G$225,O248,1))"
+    },
+    {
+      "cell": "J249",
+      "formula": "=J248+1"
+    },
+    {
+      "cell": "L249",
+      "formula": "=VALUE(MID($G$216,K249,1))"
+    },
+    {
+      "cell": "N249",
+      "formula": "=N248+1"
+    },
+    {
+      "cell": "P249",
+      "formula": "=VALUE(MID($G$225,O249,1))"
+    },
+    {
+      "cell": "J250",
+      "formula": "=J249+1"
+    },
+    {
+      "cell": "L250",
+      "formula": "=VALUE(MID($G$216,K250,1))"
+    },
+    {
+      "cell": "N250",
+      "formula": "=N249+1"
+    },
+    {
+      "cell": "P250",
+      "formula": "=VALUE(MID($G$225,O250,1))"
+    },
+    {
+      "cell": "J251",
+      "formula": "=J250+1"
+    },
+    {
+      "cell": "L251",
+      "formula": "=VALUE(MID($G$216,K251,1))"
+    },
+    {
+      "cell": "N251",
+      "formula": "=N250+1"
+    },
+    {
+      "cell": "P251",
+      "formula": "=VALUE(MID($G$225,O251,1))"
+    },
+    {
+      "cell": "J252",
+      "formula": "=J251+1"
+    },
+    {
+      "cell": "L252",
+      "formula": "=VALUE(MID($G$216,K252,1))"
+    },
+    {
+      "cell": "N252",
+      "formula": "=N251+1"
+    },
+    {
+      "cell": "P252",
+      "formula": "=VALUE(MID($G$225,O252,1))"
+    },
+    {
+      "cell": "J253",
+      "formula": "=J252+1"
+    },
+    {
+      "cell": "L253",
+      "formula": "=VALUE(MID($G$216,K253,1))"
+    },
+    {
+      "cell": "N253",
+      "formula": "=N252+1"
+    },
+    {
+      "cell": "P253",
+      "formula": "=VALUE(MID($G$225,O253,1))"
+    },
+    {
+      "cell": "J254",
+      "formula": "=J253+1"
+    },
+    {
+      "cell": "L254",
+      "formula": "=VALUE(MID($G$216,K254,1))"
+    },
+    {
+      "cell": "N254",
+      "formula": "=N253+1"
+    },
+    {
+      "cell": "P254",
+      "formula": "=VALUE(MID($G$225,O254,1))"
+    },
+    {
+      "cell": "J255",
+      "formula": "=J254+1"
+    },
+    {
+      "cell": "L255",
+      "formula": "=VALUE(MID($G$216,K255,1))"
+    },
+    {
+      "cell": "N255",
+      "formula": "=N254+1"
+    },
+    {
+      "cell": "P255",
+      "formula": "=VALUE(MID($G$225,O255,1))"
+    },
+    {
+      "cell": "J256",
+      "formula": "=J255+1"
+    },
+    {
+      "cell": "L256",
+      "formula": "=VALUE(MID($G$216,K256,1))"
+    },
+    {
+      "cell": "N256",
+      "formula": "=N255+1"
+    },
+    {
+      "cell": "P256",
+      "formula": "=VALUE(MID($G$225,O256,1))"
+    },
+    {
+      "cell": "J257",
+      "formula": "=J256+1"
+    },
+    {
+      "cell": "L257",
+      "formula": "=VALUE(MID($G$216,K257,1))"
+    },
+    {
+      "cell": "N257",
+      "formula": "=N256+1"
+    },
+    {
+      "cell": "P257",
+      "formula": "=VALUE(MID($G$225,O257,1))"
+    },
+    {
+      "cell": "J258",
+      "formula": "=J257+1"
+    },
+    {
+      "cell": "L258",
+      "formula": "=VALUE(MID($G$216,K258,1))"
+    },
+    {
+      "cell": "N258",
+      "formula": "=N257+1"
+    },
+    {
+      "cell": "P258",
+      "formula": "=VALUE(MID($G$225,O258,1))"
+    },
+    {
+      "cell": "J259",
+      "formula": "=J258+1"
+    },
+    {
+      "cell": "L259",
+      "formula": "=VALUE(MID($G$216,K259,1))"
+    },
+    {
+      "cell": "N259",
+      "formula": "=N258+1"
+    },
+    {
+      "cell": "P259",
+      "formula": "=VALUE(MID($G$225,O259,1))"
+    },
+    {
+      "cell": "J260",
+      "formula": "=J259+1"
+    },
+    {
+      "cell": "L260",
+      "formula": "=VALUE(MID($G$216,K260,1))"
+    },
+    {
+      "cell": "N260",
+      "formula": "=N259+1"
+    },
+    {
+      "cell": "P260",
+      "formula": "=VALUE(MID($G$225,O260,1))"
+    },
+    {
+      "cell": "J261",
+      "formula": "=J260+1"
+    },
+    {
+      "cell": "L261",
+      "formula": "=VALUE(MID($G$216,K261,1))"
+    },
+    {
+      "cell": "N261",
+      "formula": "=N260+1"
+    },
+    {
+      "cell": "P261",
+      "formula": "=VALUE(MID($G$225,O261,1))"
+    },
+    {
+      "cell": "J262",
+      "formula": "=J261+1"
+    },
+    {
+      "cell": "L262",
+      "formula": "=VALUE(MID($G$216,K262,1))"
+    },
+    {
+      "cell": "N262",
+      "formula": "=N261+1"
+    },
+    {
+      "cell": "P262",
+      "formula": "=VALUE(MID($G$225,O262,1))"
+    },
+    {
+      "cell": "J263",
+      "formula": "=J262+1"
+    },
+    {
+      "cell": "L263",
+      "formula": "=VALUE(MID($G$216,K263,1))"
+    },
+    {
+      "cell": "N263",
+      "formula": "=N262+1"
+    },
+    {
+      "cell": "P263",
+      "formula": "=VALUE(MID($G$225,O263,1))"
+    },
+    {
+      "cell": "J264",
+      "formula": "=J263+1"
+    },
+    {
+      "cell": "L264",
+      "formula": "=VALUE(MID($G$216,K264,1))"
+    },
+    {
+      "cell": "N264",
+      "formula": "=N263+1"
+    },
+    {
+      "cell": "P264",
+      "formula": "=VALUE(MID($G$225,O264,1))"
+    },
+    {
+      "cell": "J265",
+      "formula": "=J264+1"
+    },
+    {
+      "cell": "L265",
+      "formula": "=VALUE(MID($G$216,K265,1))"
+    },
+    {
+      "cell": "N265",
+      "formula": "=N264+1"
+    },
+    {
+      "cell": "P265",
+      "formula": "=VALUE(MID($G$225,O265,1))"
+    },
+    {
+      "cell": "J266",
+      "formula": "=J265+1"
+    },
+    {
+      "cell": "L266",
+      "formula": "=VALUE(MID($G$216,K266,1))"
+    },
+    {
+      "cell": "N266",
+      "formula": "=N265+1"
+    },
+    {
+      "cell": "P266",
+      "formula": "=VALUE(MID($G$225,O266,1))"
+    },
+    {
+      "cell": "J267",
+      "formula": "=J266+1"
+    },
+    {
+      "cell": "L267",
+      "formula": "=VALUE(MID($G$216,K267,1))"
+    },
+    {
+      "cell": "N267",
+      "formula": "=N266+1"
+    },
+    {
+      "cell": "P267",
+      "formula": "=VALUE(MID($G$225,O267,1))"
+    },
+    {
+      "cell": "J268",
+      "formula": "=J267+1"
+    },
+    {
+      "cell": "L268",
+      "formula": "=VALUE(MID($G$216,K268,1))"
+    },
+    {
+      "cell": "N268",
+      "formula": "=N267+1"
+    },
+    {
+      "cell": "P268",
+      "formula": "=VALUE(MID($G$225,O268,1))"
+    },
+    {
+      "cell": "J269",
+      "formula": "=J268+1"
+    },
+    {
+      "cell": "L269",
+      "formula": "=VALUE(MID($G$216,K269,1))"
+    },
+    {
+      "cell": "N269",
+      "formula": "=N268+1"
+    },
+    {
+      "cell": "P269",
+      "formula": "=VALUE(MID($G$225,O269,1))"
+    },
+    {
+      "cell": "J270",
+      "formula": "=J269+1"
+    },
+    {
+      "cell": "L270",
+      "formula": "=VALUE(MID($G$216,K270,1))"
+    },
+    {
+      "cell": "N270",
+      "formula": "=N269+1"
+    },
+    {
+      "cell": "P270",
+      "formula": "=VALUE(MID($G$225,O270,1))"
+    },
+    {
+      "cell": "J271",
+      "formula": "=J270+1"
+    },
+    {
+      "cell": "L271",
+      "formula": "=VALUE(MID($G$216,K271,1))"
+    },
+    {
+      "cell": "N271",
+      "formula": "=N270+1"
+    },
+    {
+      "cell": "P271",
+      "formula": "=VALUE(MID($G$225,O271,1))"
+    },
+    {
+      "cell": "J272",
+      "formula": "=J271+1"
+    },
+    {
+      "cell": "L272",
+      "formula": "=VALUE(MID($G$216,K272,1))"
+    },
+    {
+      "cell": "N272",
+      "formula": "=N271+1"
+    },
+    {
+      "cell": "P272",
+      "formula": "=VALUE(MID($G$225,O272,1))"
+    },
+    {
+      "cell": "J273",
+      "formula": "=J272+1"
+    },
+    {
+      "cell": "L273",
+      "formula": "=VALUE(MID($G$216,K273,1))"
+    },
+    {
+      "cell": "N273",
+      "formula": "=N272+1"
+    },
+    {
+      "cell": "P273",
+      "formula": "=VALUE(MID($G$225,O273,1))"
+    },
+    {
+      "cell": "J274",
+      "formula": "=J273+1"
+    },
+    {
+      "cell": "L274",
+      "formula": "=VALUE(MID($G$216,K274,1))"
+    },
+    {
+      "cell": "N274",
+      "formula": "=N273+1"
+    },
+    {
+      "cell": "P274",
+      "formula": "=VALUE(MID($G$225,O274,1))"
+    },
+    {
+      "cell": "J275",
+      "formula": "=J274+1"
+    },
+    {
+      "cell": "L275",
+      "formula": "=VALUE(MID($G$216,K275,1))"
+    },
+    {
+      "cell": "N275",
+      "formula": "=N274+1"
+    },
+    {
+      "cell": "P275",
+      "formula": "=VALUE(MID($G$225,O275,1))"
+    },
+    {
+      "cell": "J276",
+      "formula": "=J275+1"
+    },
+    {
+      "cell": "L276",
+      "formula": "=VALUE(MID($G$216,K276,1))"
+    },
+    {
+      "cell": "N276",
+      "formula": "=N275+1"
+    },
+    {
+      "cell": "P276",
+      "formula": "=VALUE(MID($G$225,O276,1))"
+    },
+    {
+      "cell": "J277",
+      "formula": "=J276+1"
+    },
+    {
+      "cell": "L277",
+      "formula": "=VALUE(MID($G$216,K277,1))"
+    },
+    {
+      "cell": "N277",
+      "formula": "=N276+1"
+    },
+    {
+      "cell": "P277",
+      "formula": "=VALUE(MID($G$225,O277,1))"
+    },
+    {
+      "cell": "J278",
+      "formula": "=J277+1"
+    },
+    {
+      "cell": "L278",
+      "formula": "=VALUE(MID($G$216,K278,1))"
+    },
+    {
+      "cell": "N278",
+      "formula": "=N277+1"
+    },
+    {
+      "cell": "P278",
+      "formula": "=VALUE(MID($G$225,O278,1))"
+    },
+    {
+      "cell": "J279",
+      "formula": "=J278+1"
+    },
+    {
+      "cell": "L279",
+      "formula": "=VALUE(MID($G$216,K279,1))"
+    },
+    {
+      "cell": "N279",
+      "formula": "=N278+1"
+    },
+    {
+      "cell": "P279",
+      "formula": "=VALUE(MID($G$225,O279,1))"
+    },
+    {
+      "cell": "J280",
+      "formula": "=J279+1"
+    },
+    {
+      "cell": "L280",
+      "formula": "=VALUE(MID($G$216,K280,1))"
+    },
+    {
+      "cell": "N280",
+      "formula": "=N279+1"
+    },
+    {
+      "cell": "P280",
+      "formula": "=VALUE(MID($G$225,O280,1))"
+    },
+    {
+      "cell": "J281",
+      "formula": "=J280+1"
+    },
+    {
+      "cell": "L281",
+      "formula": "=VALUE(MID($G$216,K281,1))"
+    },
+    {
+      "cell": "N281",
+      "formula": "=N280+1"
+    },
+    {
+      "cell": "P281",
+      "formula": "=VALUE(MID($G$225,O281,1))"
+    },
+    {
+      "cell": "J282",
+      "formula": "=J281+1"
+    },
+    {
+      "cell": "L282",
+      "formula": "=VALUE(MID($G$216,K282,1))"
+    },
+    {
+      "cell": "N282",
+      "formula": "=N281+1"
+    },
+    {
+      "cell": "P282",
+      "formula": "=VALUE(MID($G$225,O282,1))"
+    },
+    {
+      "cell": "J283",
+      "formula": "=J282+1"
+    },
+    {
+      "cell": "L283",
+      "formula": "=VALUE(MID($G$216,K283,1))"
+    },
+    {
+      "cell": "N283",
+      "formula": "=N282+1"
+    },
+    {
+      "cell": "P283",
+      "formula": "=VALUE(MID($G$225,O283,1))"
+    },
+    {
+      "cell": "J284",
+      "formula": "=J283+1"
+    },
+    {
+      "cell": "L284",
+      "formula": "=VALUE(MID($G$216,K284,1))"
+    },
+    {
+      "cell": "N284",
+      "formula": "=N283+1"
+    },
+    {
+      "cell": "P284",
+      "formula": "=VALUE(MID($G$225,O284,1))"
+    },
+    {
+      "cell": "J285",
+      "formula": "=J284+1"
+    },
+    {
+      "cell": "L285",
+      "formula": "=VALUE(MID($G$216,K285,1))"
+    },
+    {
+      "cell": "N285",
+      "formula": "=N284+1"
+    },
+    {
+      "cell": "P285",
+      "formula": "=VALUE(MID($G$225,O285,1))"
+    },
+    {
+      "cell": "J286",
+      "formula": "=J285+1"
+    },
+    {
+      "cell": "L286",
+      "formula": "=VALUE(MID($G$216,K286,1))"
+    },
+    {
+      "cell": "N286",
+      "formula": "=N285+1"
+    },
+    {
+      "cell": "P286",
+      "formula": "=VALUE(MID($G$225,O286,1))"
+    },
+    {
+      "cell": "J287",
+      "formula": "=J286+1"
+    },
+    {
+      "cell": "L287",
+      "formula": "=VALUE(MID($G$216,K287,1))"
+    },
+    {
+      "cell": "N287",
+      "formula": "=N286+1"
+    },
+    {
+      "cell": "P287",
+      "formula": "=VALUE(MID($G$225,O287,1))"
+    },
+    {
+      "cell": "J288",
+      "formula": "=J287+1"
+    },
+    {
+      "cell": "L288",
+      "formula": "=VALUE(MID($G$216,K288,1))"
+    },
+    {
+      "cell": "N288",
+      "formula": "=N287+1"
+    },
+    {
+      "cell": "P288",
+      "formula": "=VALUE(MID($G$225,O288,1))"
+    },
+    {
+      "cell": "J289",
+      "formula": "=J288+1"
+    },
+    {
+      "cell": "L289",
+      "formula": "=VALUE(MID($G$216,K289,1))"
+    },
+    {
+      "cell": "N289",
+      "formula": "=N288+1"
+    },
+    {
+      "cell": "P289",
+      "formula": "=VALUE(MID($G$225,O289,1))"
+    },
+    {
+      "cell": "J290",
+      "formula": "=J289+1"
+    },
+    {
+      "cell": "L290",
+      "formula": "=VALUE(MID($G$216,K290,1))"
+    },
+    {
+      "cell": "N290",
+      "formula": "=N289+1"
+    },
+    {
+      "cell": "P290",
+      "formula": "=VALUE(MID($G$225,O290,1))"
+    },
+    {
+      "cell": "J291",
+      "formula": "=J290+1"
+    },
+    {
+      "cell": "L291",
+      "formula": "=VALUE(MID($G$216,K291,1))"
+    },
+    {
+      "cell": "N291",
+      "formula": "=N290+1"
+    },
+    {
+      "cell": "P291",
+      "formula": "=VALUE(MID($G$225,O291,1))"
+    },
+    {
+      "cell": "J292",
+      "formula": "=J291+1"
+    },
+    {
+      "cell": "L292",
+      "formula": "=VALUE(MID($G$216,K292,1))"
+    },
+    {
+      "cell": "N292",
+      "formula": "=N291+1"
+    },
+    {
+      "cell": "P292",
+      "formula": "=VALUE(MID($G$225,O292,1))"
+    },
+    {
+      "cell": "J293",
+      "formula": "=J292+1"
+    },
+    {
+      "cell": "L293",
+      "formula": "=VALUE(MID($G$216,K293,1))"
+    },
+    {
+      "cell": "N293",
+      "formula": "=N292+1"
+    },
+    {
+      "cell": "P293",
+      "formula": "=VALUE(MID($G$225,O293,1))"
+    },
+    {
+      "cell": "J294",
+      "formula": "=J293+1"
+    },
+    {
+      "cell": "L294",
+      "formula": "=VALUE(MID($G$216,K294,1))"
+    },
+    {
+      "cell": "N294",
+      "formula": "=N293+1"
+    },
+    {
+      "cell": "P294",
+      "formula": "=VALUE(MID($G$225,O294,1))"
+    },
+    {
+      "cell": "J295",
+      "formula": "=J294+1"
+    },
+    {
+      "cell": "L295",
+      "formula": "=VALUE(MID($G$216,K295,1))"
+    },
+    {
+      "cell": "N295",
+      "formula": "=N294+1"
+    },
+    {
+      "cell": "P295",
+      "formula": "=VALUE(MID($G$225,O295,1))"
+    },
+    {
+      "cell": "J296",
+      "formula": "=J295+1"
+    },
+    {
+      "cell": "L296",
+      "formula": "=VALUE(MID($G$216,K296,1))"
+    },
+    {
+      "cell": "N296",
+      "formula": "=N295+1"
+    },
+    {
+      "cell": "P296",
+      "formula": "=VALUE(MID($G$225,O296,1))"
+    },
+    {
+      "cell": "J297",
+      "formula": "=J296+1"
+    },
+    {
+      "cell": "L297",
+      "formula": "=VALUE(MID($G$216,K297,1))"
+    },
+    {
+      "cell": "N297",
+      "formula": "=N296+1"
+    },
+    {
+      "cell": "P297",
+      "formula": "=VALUE(MID($G$225,O297,1))"
+    },
+    {
+      "cell": "J298",
+      "formula": "=J297+1"
+    },
+    {
+      "cell": "L298",
+      "formula": "=VALUE(MID($G$216,K298,1))"
+    },
+    {
+      "cell": "N298",
+      "formula": "=N297+1"
+    },
+    {
+      "cell": "P298",
+      "formula": "=VALUE(MID($G$225,O298,1))"
+    },
+    {
+      "cell": "J299",
+      "formula": "=J298+1"
+    },
+    {
+      "cell": "L299",
+      "formula": "=VALUE(MID($G$216,K299,1))"
+    },
+    {
+      "cell": "N299",
+      "formula": "=N298+1"
+    },
+    {
+      "cell": "P299",
+      "formula": "=VALUE(MID($G$225,O299,1))"
+    },
+    {
+      "cell": "J300",
+      "formula": "=J299+1"
+    },
+    {
+      "cell": "L300",
+      "formula": "=VALUE(MID($G$216,K300,1))"
+    },
+    {
+      "cell": "N300",
+      "formula": "=N299+1"
+    },
+    {
+      "cell": "P300",
+      "formula": "=VALUE(MID($G$225,O300,1))"
+    },
+    {
+      "cell": "J301",
+      "formula": "=J300+1"
+    },
+    {
+      "cell": "L301",
+      "formula": "=VALUE(MID($G$216,K301,1))"
+    },
+    {
+      "cell": "N301",
+      "formula": "=N300+1"
+    },
+    {
+      "cell": "P301",
+      "formula": "=VALUE(MID($G$225,O301,1))"
+    },
+    {
+      "cell": "J302",
+      "formula": "=J301+1"
+    },
+    {
+      "cell": "L302",
+      "formula": "=VALUE(MID($G$216,K302,1))"
+    },
+    {
+      "cell": "N302",
+      "formula": "=N301+1"
+    },
+    {
+      "cell": "P302",
+      "formula": "=VALUE(MID($G$225,O302,1))"
+    },
+    {
+      "cell": "J303",
+      "formula": "=J302+1"
+    },
+    {
+      "cell": "L303",
+      "formula": "=VALUE(MID($G$216,K303,1))"
+    },
+    {
+      "cell": "N303",
+      "formula": "=N302+1"
+    },
+    {
+      "cell": "P303",
+      "formula": "=VALUE(MID($G$225,O303,1))"
+    },
+    {
+      "cell": "J304",
+      "formula": "=J303+1"
+    },
+    {
+      "cell": "L304",
+      "formula": "=VALUE(MID($G$216,K304,1))"
+    },
+    {
+      "cell": "N304",
+      "formula": "=N303+1"
+    },
+    {
+      "cell": "P304",
+      "formula": "=VALUE(MID($G$225,O304,1))"
+    },
+    {
+      "cell": "J305",
+      "formula": "=J304+1"
+    },
+    {
+      "cell": "L305",
+      "formula": "=VALUE(MID($G$216,K305,1))"
+    },
+    {
+      "cell": "N305",
+      "formula": "=N304+1"
+    },
+    {
+      "cell": "P305",
+      "formula": "=VALUE(MID($G$225,O305,1))"
+    },
+    {
+      "cell": "J306",
+      "formula": "=J305+1"
+    },
+    {
+      "cell": "L306",
+      "formula": "=VALUE(MID($G$216,K306,1))"
+    },
+    {
+      "cell": "N306",
+      "formula": "=N305+1"
+    },
+    {
+      "cell": "P306",
+      "formula": "=VALUE(MID($G$225,O306,1))"
+    },
+    {
+      "cell": "J307",
+      "formula": "=J306+1"
+    },
+    {
+      "cell": "L307",
+      "formula": "=VALUE(MID($G$216,K307,1))"
+    },
+    {
+      "cell": "N307",
+      "formula": "=N306+1"
+    },
+    {
+      "cell": "P307",
+      "formula": "=VALUE(MID($G$225,O307,1))"
+    },
+    {
+      "cell": "J308",
+      "formula": "=J307+1"
+    },
+    {
+      "cell": "L308",
+      "formula": "=VALUE(MID($G$216,K308,1))"
+    },
+    {
+      "cell": "N308",
+      "formula": "=N307+1"
+    },
+    {
+      "cell": "P308",
+      "formula": "=VALUE(MID($G$225,O308,1))"
+    },
+    {
+      "cell": "J309",
+      "formula": "=J308+1"
+    },
+    {
+      "cell": "L309",
+      "formula": "=VALUE(MID($G$216,K309,1))"
+    },
+    {
+      "cell": "N309",
+      "formula": "=N308+1"
+    },
+    {
+      "cell": "P309",
+      "formula": "=VALUE(MID($G$225,O309,1))"
+    },
+    {
+      "cell": "J310",
+      "formula": "=J309+1"
+    },
+    {
+      "cell": "L310",
+      "formula": "=VALUE(MID($G$216,K310,1))"
+    },
+    {
+      "cell": "N310",
+      "formula": "=N309+1"
+    },
+    {
+      "cell": "P310",
+      "formula": "=VALUE(MID($G$225,O310,1))"
+    },
+    {
+      "cell": "J311",
+      "formula": "=J310+1"
+    },
+    {
+      "cell": "L311",
+      "formula": "=VALUE(MID($G$216,K311,1))"
+    },
+    {
+      "cell": "N311",
+      "formula": "=N310+1"
+    },
+    {
+      "cell": "P311",
+      "formula": "=VALUE(MID($G$225,O311,1))"
+    },
+    {
+      "cell": "J312",
+      "formula": "=J311+1"
+    },
+    {
+      "cell": "L312",
+      "formula": "=VALUE(MID($G$216,K312,1))"
+    },
+    {
+      "cell": "N312",
+      "formula": "=N311+1"
+    },
+    {
+      "cell": "P312",
+      "formula": "=VALUE(MID($G$225,O312,1))"
+    },
+    {
+      "cell": "J313",
+      "formula": "=J312+1"
+    },
+    {
+      "cell": "L313",
+      "formula": "=VALUE(MID($G$216,K313,1))"
+    },
+    {
+      "cell": "N313",
+      "formula": "=N312+1"
+    },
+    {
+      "cell": "P313",
+      "formula": "=VALUE(MID($G$225,O313,1))"
+    },
+    {
+      "cell": "J314",
+      "formula": "=J313+1"
+    },
+    {
+      "cell": "L314",
+      "formula": "=VALUE(MID($G$216,K314,1))"
+    },
+    {
+      "cell": "N314",
+      "formula": "=N313+1"
+    },
+    {
+      "cell": "P314",
+      "formula": "=VALUE(MID($G$225,O314,1))"
+    },
+    {
+      "cell": "J315",
+      "formula": "=J314+1"
+    },
+    {
+      "cell": "L315",
+      "formula": "=VALUE(MID($G$216,K315,1))"
+    },
+    {
+      "cell": "N315",
+      "formula": "=N314+1"
+    },
+    {
+      "cell": "P315",
+      "formula": "=VALUE(MID($G$225,O315,1))"
+    },
+    {
+      "cell": "J316",
+      "formula": "=J315+1"
+    },
+    {
+      "cell": "L316",
+      "formula": "=VALUE(MID($G$216,K316,1))"
+    },
+    {
+      "cell": "N316",
+      "formula": "=N315+1"
+    },
+    {
+      "cell": "P316",
+      "formula": "=VALUE(MID($G$225,O316,1))"
+    },
+    {
+      "cell": "J317",
+      "formula": "=J316+1"
+    },
+    {
+      "cell": "L317",
+      "formula": "=VALUE(MID($G$216,K317,1))"
+    },
+    {
+      "cell": "N317",
+      "formula": "=N316+1"
+    },
+    {
+      "cell": "P317",
+      "formula": "=VALUE(MID($G$225,O317,1))"
+    },
+    {
+      "cell": "J318",
+      "formula": "=J317+1"
+    },
+    {
+      "cell": "L318",
+      "formula": "=VALUE(MID($G$216,K318,1))"
+    },
+    {
+      "cell": "N318",
+      "formula": "=N317+1"
+    },
+    {
+      "cell": "P318",
+      "formula": "=VALUE(MID($G$225,O318,1))"
+    },
+    {
+      "cell": "J319",
+      "formula": "=J318+1"
+    },
+    {
+      "cell": "L319",
+      "formula": "=VALUE(MID($G$216,K319,1))"
+    },
+    {
+      "cell": "N319",
+      "formula": "=N318+1"
+    },
+    {
+      "cell": "P319",
+      "formula": "=VALUE(MID($G$225,O319,1))"
+    },
+    {
+      "cell": "J320",
+      "formula": "=J319+1"
+    },
+    {
+      "cell": "L320",
+      "formula": "=VALUE(MID($G$216,K320,1))"
+    },
+    {
+      "cell": "N320",
+      "formula": "=N319+1"
+    },
+    {
+      "cell": "P320",
+      "formula": "=VALUE(MID($G$225,O320,1))"
+    }
+  ],
+  "strings": [
+    {
+      "cell": "B1",
+      "value": "Материал скачан с сайта - https://supersliv.biz/"
+    },
+    {
+      "cell": "B3",
+      "value": "Партнер 1"
+    },
+    {
+      "cell": "D3",
+      "value": "Арканы"
+    },
+    {
+      "cell": "J3",
+      "value": "Партнер 2"
+    },
+    {
+      "cell": "L3",
+      "value": "Арканы"
+    },
+    {
+      "cell": "B4",
+      "value": "Фам. Муж"
+    },
+    {
+      "cell": "C4",
+      "value": "Агутин"
+    },
+    {
+      "cell": "J4",
+      "value": "Фам. муж"
+    },
+    {
+      "cell": "K4",
+      "value": "Агутин"
+    },
+    {
+      "cell": "R4",
+      "value": "Карма по периодам жизни Партнер 1"
+    },
+    {
+      "cell": "AB4",
+      "value": "Совместимость по 3й ступени"
+    },
+    {
+      "cell": "B5",
+      "value": "Фам. Жен"
+    },
+    {
+      "cell": "J5",
+      "value": "Фам. Жен"
+    },
+    {
+      "cell": "K5",
+      "value": "Варум"
+    },
+    {
+      "cell": "S5",
+      "value": "Доп. Знаки"
+    },
+    {
+      "cell": "T5",
+      "value": "1 период"
+    },
+    {
+      "cell": "U5",
+      "value": "2 период"
+    },
+    {
+      "cell": "V5",
+      "value": "3 период"
+    },
+    {
+      "cell": "W5",
+      "value": "4 период"
+    },
+    {
+      "cell": "X5",
+      "value": "Главное"
+    },
+    {
+      "cell": "Y5",
+      "value": "Хвосты"
+    },
+    {
+      "cell": "B6",
+      "value": "Имя"
+    },
+    {
+      "cell": "C6",
+      "value": "Вадим"
+    },
+    {
+      "cell": "J6",
+      "value": "Имя"
+    },
+    {
+      "cell": "K6",
+      "value": "Анжелика"
+    },
+    {
+      "cell": "R6",
+      "value": "В плюсе"
+    },
+    {
+      "cell": "AC6",
+      "value": "Д1"
+    },
+    {
+      "cell": "AG6",
+      "value": "М1"
+    },
+    {
+      "cell": "AK6",
+      "value": "Г1"
+    },
+    {
+      "cell": "B7",
+      "value": "День"
+    },
+    {
+      "cell": "J7",
+      "value": "День"
+    },
+    {
+      "cell": "R7",
+      "value": "В минусе"
+    },
+    {
+      "cell": "AB7",
+      "value": "Д1+Д3"
+    },
+    {
+      "cell": "AD7",
+      "value": "Д2+Д3"
+    },
+    {
+      "cell": "AF7",
+      "value": "М1+М3"
+    },
+    {
+      "cell": "AH7",
+      "value": "М2+М3"
+    },
+    {
+      "cell": "AJ7",
+      "value": "Г1+Г3"
+    },
+    {
+      "cell": "AL7",
+      "value": "Г2+Г3"
+    },
+    {
+      "cell": "B8",
+      "value": "Месяц"
+    },
+    {
+      "cell": "J8",
+      "value": "Месяц"
+    },
+    {
+      "cell": "R8",
+      "value": "Годы"
+    },
+    {
+      "cell": "X8",
+      "value": "Всегда"
+    },
+    {
+      "cell": "Y8",
+      "value": "Всегда"
+    },
+    {
+      "cell": "AC8",
+      "value": "Д2"
+    },
+    {
+      "cell": "AG8",
+      "value": "М2"
+    },
+    {
+      "cell": "AK8",
+      "value": "Г2"
+    },
+    {
+      "cell": "B9",
+      "value": "Год"
+    },
+    {
+      "cell": "F9",
+      "value": "СЗ3"
+    },
+    {
+      "cell": "J9",
+      "value": "Год"
+    },
+    {
+      "cell": "B10",
+      "value": "Возраст"
+    },
+    {
+      "cell": "J10",
+      "value": "Возраст"
+    },
+    {
+      "cell": "R10",
+      "value": "Карма по периодам жизни Партнер 2"
+    },
+    {
+      "cell": "AC10",
+      "value": "Д3"
+    },
+    {
+      "cell": "AG10",
+      "value": "М3"
+    },
+    {
+      "cell": "AK10",
+      "value": "Г3"
+    },
+    {
+      "cell": "S11",
+      "value": "Доп. Знаки"
+    },
+    {
+      "cell": "T11",
+      "value": "1 период"
+    },
+    {
+      "cell": "U11",
+      "value": "2 период"
+    },
+    {
+      "cell": "V11",
+      "value": "3 период"
+    },
+    {
+      "cell": "W11",
+      "value": "4 период"
+    },
+    {
+      "cell": "X11",
+      "value": "Главное"
+    },
+    {
+      "cell": "Y11",
+      "value": "Хвосты"
+    },
+    {
+      "cell": "B12",
+      "value": "ОПВ1"
+    },
+    {
+      "cell": "E12",
+      "value": "СЗ1-2"
+    },
+    {
+      "cell": "G12",
+      "value": "СЗ2-1"
+    },
+    {
+      "cell": "J12",
+      "value": "ОПВ2"
+    },
+    {
+      "cell": "M12",
+      "value": "Совместимость по РЭ"
+    },
+    {
+      "cell": "R12",
+      "value": "В плюсе"
+    },
+    {
+      "cell": "B13",
+      "value": "ОПВ1 Доп"
+    },
+    {
+      "cell": "J13",
+      "value": "ОПВ2 Доп"
+    },
+    {
+      "cell": "R13",
+      "value": "В минусе"
+    },
+    {
+      "cell": "AG13",
+      "value": "СЗ1"
+    },
+    {
+      "cell": "F14",
+      "value": "Создание"
+    },
+    {
+      "cell": "R14",
+      "value": "Годы"
+    },
+    {
+      "cell": "X14",
+      "value": "Всегда"
+    },
+    {
+      "cell": "Y14",
+      "value": "Всегда"
+    },
+    {
+      "cell": "AF14",
+      "value": "СЗ1+СЗ3"
+    },
+    {
+      "cell": "AH14",
+      "value": "СЗ2+СЗ3"
+    },
+    {
+      "cell": "B15",
+      "value": "ПЗ"
+    },
+    {
+      "cell": "C15",
+      "value": "СЗ1"
+    },
+    {
+      "cell": "I15",
+      "value": "СЗ2"
+    },
+    {
+      "cell": "K15",
+      "value": "ПЗ"
+    },
+    {
+      "cell": "AG15",
+      "value": "СЗ2"
+    },
+    {
+      "cell": "C16",
+      "value": "ТП1"
+    },
+    {
+      "cell": "I16",
+      "value": "ТП2"
+    },
+    {
+      "cell": "F17",
+      "value": "Разрушение"
+    },
+    {
+      "cell": "R17",
+      "value": "MK"
+    },
+    {
+      "cell": "S17",
+      "value": "Ретроградность"
+    },
+    {
+      "cell": "T17",
+      "value": "Кол-во"
+    },
+    {
+      "cell": "U17",
+      "value": "MKист"
+    },
+    {
+      "cell": "AG17",
+      "value": "СЗ3"
+    },
+    {
+      "cell": "W18",
+      "value": "1 Раб. Число"
+    },
+    {
+      "cell": "X18",
+      "value": "2 Раб. Число"
+    },
+    {
+      "cell": "Y18",
+      "value": "3 Раб. Число"
+    },
+    {
+      "cell": "Z18",
+      "value": "4 Раб. Число"
+    },
+    {
+      "cell": "E19",
+      "value": "ТП1-2"
+    },
+    {
+      "cell": "G19",
+      "value": "ТП1-2"
+    },
+    {
+      "cell": "L20",
+      "value": "Мужская"
+    },
+    {
+      "cell": "N20",
+      "value": "Пара"
+    },
+    {
+      "cell": "O20",
+      "value": "Женская"
+    },
+    {
+      "cell": "S20",
+      "value": "1 - Да, 0 - Нет"
+    },
+    {
+      "cell": "AC21",
+      "value": "Прогностика Партнеров на"
+    },
+    {
+      "cell": "AI21",
+      "value": "год"
+    },
+    {
+      "cell": "F22",
+      "value": "ТП3"
+    },
+    {
+      "cell": "F23",
+      "value": "ОПВ3"
+    },
+    {
+      "cell": "AD23",
+      "value": "Запад"
+    },
+    {
+      "cell": "AE23",
+      "value": "Тень"
+    },
+    {
+      "cell": "AF23",
+      "value": "Таро"
+    },
+    {
+      "cell": "AG23",
+      "value": "Тень"
+    },
+    {
+      "cell": "AH23",
+      "value": "Запад"
+    },
+    {
+      "cell": "AI23",
+      "value": "Таро"
+    },
+    {
+      "cell": "AJ23",
+      "value": "Запад"
+    },
+    {
+      "cell": "AK23",
+      "value": "Тень"
+    },
+    {
+      "cell": "AL23",
+      "value": "Таро"
+    },
+    {
+      "cell": "AM23",
+      "value": "Тень"
+    },
+    {
+      "cell": "A25",
+      "value": "1. Если ОПВ одного из Партнеров равно совместной цели СЗ3, то отношения Кармические "
+    },
+    {
+      "cell": "AC25",
+      "value": "Кармично?"
+    },
+    {
+      "cell": "A26",
+      "value": "и КАЖДЫЙ партнер отрабатывает свою ОПВ"
+    },
+    {
+      "cell": "A27",
+      "value": "ОПВ1"
+    },
+    {
+      "cell": "D27",
+      "value": "СЗ3"
+    },
+    {
+      "cell": "G27",
+      "value": "ОПВ2"
+    },
+    {
+      "cell": "A28",
+      "value": "ОПВ1 Доп"
+    },
+    {
+      "cell": "G28",
+      "value": "ОПВ2 Доп"
+    },
+    {
+      "cell": "L28",
+      "value": "Совместимость по Матрице"
+    },
+    {
+      "cell": "R28",
+      "value": "Мантический Крест ©"
+    },
+    {
+      "cell": "AC28",
+      "value": "Кармично?"
+    },
+    {
+      "cell": "A29",
+      "value": "ОПВ1 2 Период"
+    },
+    {
+      "cell": "G29",
+      "value": "ОПВ2 2 Период"
+    },
+    {
+      "cell": "W29",
+      "value": "Методика Айрэн и Джули По"
+    },
+    {
+      "cell": "A30",
+      "value": "ОПВ1 3 Период"
+    },
+    {
+      "cell": "G30",
+      "value": "ОПВ2 3 Период"
+    },
+    {
+      "cell": "N30",
+      "value": "МК3"
+    },
+    {
+      "cell": "R30",
+      "value": "ТП1"
+    },
+    {
+      "cell": "U30",
+      "value": "ТП3"
+    },
+    {
+      "cell": "X30",
+      "value": "ТП2"
+    },
+    {
+      "cell": "A31",
+      "value": "ОПВ1 4 Период"
+    },
+    {
+      "cell": "G31",
+      "value": "ОПВ2 4 Период"
+    },
+    {
+      "cell": "R31",
+      "value": "ОПВ1"
+    },
+    {
+      "cell": "U31",
+      "value": "ОПВ3"
+    },
+    {
+      "cell": "X31",
+      "value": "ОПВ2"
+    },
+    {
+      "cell": "AC31",
+      "value": "Кармично?"
+    },
+    {
+      "cell": "A32",
+      "value": "ГЧК1-"
+    },
+    {
+      "cell": "G32",
+      "value": "ГЧК2-"
+    },
+    {
+      "cell": "A33",
+      "value": "2. Если ОПВ одного из Партнеров совпало с ЕГО задачей в Партнерстве, то отношения кармические дл НЕГО. "
+    },
+    {
+      "cell": "M33",
+      "value": "МК1-2"
+    },
+    {
+      "cell": "O33",
+      "value": "МК2-1"
+    },
+    {
+      "cell": "T33",
+      "value": "Развитие отношений"
+    },
+    {
+      "cell": "A34",
+      "value": "Отрабатывает свою ОПВ за счет жизненной энергии другого партнера. Чяхнут оба"
+    },
+    {
+      "cell": "U34",
+      "value": "Причина"
+    },
+    {
+      "cell": "A35",
+      "value": "ОПВ1"
+    },
+    {
+      "cell": "D35",
+      "value": "СЗ1-2"
+    },
+    {
+      "cell": "G35",
+      "value": "ОПВ2"
+    },
+    {
+      "cell": "AC35",
+      "value": "Кармично?"
+    },
+    {
+      "cell": "A36",
+      "value": "ОПВ1 Доп"
+    },
+    {
+      "cell": "D36",
+      "value": "СЗ2-1"
+    },
+    {
+      "cell": "G36",
+      "value": "ОПВ2 Доп"
+    },
+    {
+      "cell": "L36",
+      "value": "МК1"
+    },
+    {
+      "cell": "N36",
+      "value": "МК4"
+    },
+    {
+      "cell": "P36",
+      "value": "МК2"
+    },
+    {
+      "cell": "U36",
+      "value": "Развитие"
+    },
+    {
+      "cell": "A37",
+      "value": "ОПВ1 2 Период"
+    },
+    {
+      "cell": "G37",
+      "value": "ОПВ2 2 Период"
+    },
+    {
+      "cell": "R37",
+      "value": "Начало отношений"
+    },
+    {
+      "cell": "X37",
+      "value": "Итог отношений"
+    },
+    {
+      "cell": "A38",
+      "value": "ОПВ1 3 Период"
+    },
+    {
+      "cell": "G38",
+      "value": "ОПВ2 3 Период"
+    },
+    {
+      "cell": "S38",
+      "value": "Причина"
+    },
+    {
+      "cell": "T38",
+      "value": "Начало"
+    },
+    {
+      "cell": "V38",
+      "value": "Итог"
+    },
+    {
+      "cell": "W38",
+      "value": "Причина"
+    },
+    {
+      "cell": "AC38",
+      "value": "Кармично?"
+    },
+    {
+      "cell": "A39",
+      "value": "ОПВ1 4 Период"
+    },
+    {
+      "cell": "G39",
+      "value": "ОПВ2 4 Период"
+    },
+    {
+      "cell": "A40",
+      "value": "ГЧК1-"
+    },
+    {
+      "cell": "G40",
+      "value": "ГЧК2-"
+    },
+    {
+      "cell": "U40",
+      "value": "Цель"
+    },
+    {
+      "cell": "A41",
+      "value": "3. Если ОПВ одного из парнтеров совпало с задачей другого партнера, то отношения кармические для другого партнера,"
+    },
+    {
+      "cell": "A42",
+      "value": "тот отрабатывает ОПВ первого (переброс кармы). Первый партнер благоухает"
+    },
+    {
+      "cell": "AC42",
+      "value": "Кармично?"
+    },
+    {
+      "cell": "A43",
+      "value": "ОПВ1"
+    },
+    {
+      "cell": "D43",
+      "value": "СЗ1-2"
+    },
+    {
+      "cell": "G43",
+      "value": "ОПВ2"
+    },
+    {
+      "cell": "U43",
+      "value": "Причина"
+    },
+    {
+      "cell": "A44",
+      "value": "ОПВ1 Доп"
+    },
+    {
+      "cell": "D44",
+      "value": "СЗ2-1"
+    },
+    {
+      "cell": "G44",
+      "value": "ОПВ2 Доп"
+    },
+    {
+      "cell": "T44",
+      "value": "Цель отношений"
+    },
+    {
+      "cell": "A45",
+      "value": "ОПВ1 2 Период"
+    },
+    {
+      "cell": "G45",
+      "value": "ОПВ2 2 Период"
+    },
+    {
+      "cell": "R45",
+      "value": "Количество возможных детей"
+    },
+    {
+      "cell": "AC45",
+      "value": "Кармично?"
+    },
+    {
+      "cell": "A46",
+      "value": "ОПВ1 3 Период"
+    },
+    {
+      "cell": "G46",
+      "value": "ОПВ2 3 Период"
+    },
+    {
+      "cell": "A47",
+      "value": "ОПВ1 4 Период"
+    },
+    {
+      "cell": "G47",
+      "value": "ОПВ2 4 Период"
+    },
+    {
+      "cell": "P47",
+      "value": "1. Проверяем на Кармичность Д3, Д13, Д23"
+    },
+    {
+      "cell": "A48",
+      "value": "ГЧК1-"
+    },
+    {
+      "cell": "G48",
+      "value": "ГЧК2-"
+    },
+    {
+      "cell": "P48",
+      "value": "ОПВ1"
+    },
+    {
+      "cell": "S48",
+      "value": "Д3"
+    },
+    {
+      "cell": "V48",
+      "value": "ОПВ2"
+    },
+    {
+      "cell": "A49",
+      "value": "4. Если у одного из Партнеров ОПВ - 2, 3, 6, 18, 20, 22"
+    },
+    {
+      "cell": "P49",
+      "value": "ОПВ1 Доп"
+    },
+    {
+      "cell": "S49",
+      "value": "Д1+Д3"
+    },
+    {
+      "cell": "V49",
+      "value": "ОПВ2 Доп"
+    },
+    {
+      "cell": "AC49",
+      "value": "Кармично?"
+    },
+    {
+      "cell": "A50",
+      "value": "Совпали с СЗ3, СЗ1-2 или СЗ2-1 - высока вероятность рождения детей с тяжелыми судьбами и/или блокировка деторождения"
+    },
+    {
+      "cell": "P50",
+      "value": "ОПВ1 2 Период"
+    },
+    {
+      "cell": "S50",
+      "value": "Д2+Д3"
+    },
+    {
+      "cell": "V50",
+      "value": "ОПВ2 2 Период"
+    },
+    {
+      "cell": "P51",
+      "value": "ОПВ1 3 Период"
+    },
+    {
+      "cell": "V51",
+      "value": "ОПВ2 3 Период"
+    },
+    {
+      "cell": "A52",
+      "value": "ОПВ1"
+    },
+    {
+      "cell": "D52",
+      "value": "СЗ3"
+    },
+    {
+      "cell": "G52",
+      "value": "ОПВ2"
+    },
+    {
+      "cell": "P52",
+      "value": "ОПВ1 4 Период"
+    },
+    {
+      "cell": "V52",
+      "value": "ОПВ2 4 Период"
+    },
+    {
+      "cell": "AC52",
+      "value": "Кармично?"
+    },
+    {
+      "cell": "A53",
+      "value": "ОПВ1 Доп"
+    },
+    {
+      "cell": "D53",
+      "value": "СЗ1-2"
+    },
+    {
+      "cell": "G53",
+      "value": "ОПВ2 Доп"
+    },
+    {
+      "cell": "P53",
+      "value": "ГЧК-"
+    },
+    {
+      "cell": "V53",
+      "value": "ГЧК2-"
+    },
+    {
+      "cell": "A54",
+      "value": "ОПВ1 2 Период"
+    },
+    {
+      "cell": "D54",
+      "value": "СЗ2-1"
+    },
+    {
+      "cell": "G54",
+      "value": "ОПВ2 2 Период"
+    },
+    {
+      "cell": "A55",
+      "value": "ОПВ1 3 Период"
+    },
+    {
+      "cell": "G55",
+      "value": "ОПВ2 3 Период"
+    },
+    {
+      "cell": "P55",
+      "value": "2. Проверяем на Кармичность М3, М13, М23"
+    },
+    {
+      "cell": "A56",
+      "value": "ОПВ1 4 Период"
+    },
+    {
+      "cell": "G56",
+      "value": "ОПВ2 4 Период"
+    },
+    {
+      "cell": "P56",
+      "value": "ОПВ1"
+    },
+    {
+      "cell": "S56",
+      "value": "М3"
+    },
+    {
+      "cell": "V56",
+      "value": "ОПВ2"
+    },
+    {
+      "cell": "AC56",
+      "value": "Кармично?"
+    },
+    {
+      "cell": "A57",
+      "value": "ГЧК1-"
+    },
+    {
+      "cell": "G57",
+      "value": "ГЧК2-"
+    },
+    {
+      "cell": "P57",
+      "value": "ОПВ1 Доп"
+    },
+    {
+      "cell": "S57",
+      "value": "М1+М3"
+    },
+    {
+      "cell": "V57",
+      "value": "ОПВ2 Доп"
+    },
+    {
+      "cell": "A58",
+      "value": "5. Если СЗ3, СЗ1-2 или СЗ2-1 равны 16, то этих отношений быть не должно, не запрограммированы. Высока вероятность расстования"
+    },
+    {
+      "cell": "P58",
+      "value": "ОПВ1 2 Период"
+    },
+    {
+      "cell": "S58",
+      "value": "М2+М3"
+    },
+    {
+      "cell": "V58",
+      "value": "ОПВ2 2 Период"
+    },
+    {
+      "cell": "A59",
+      "value": "СЗ3"
+    },
+    {
+      "cell": "D59",
+      "value": "Причиной расстования станет тот у кого стоит знак 16"
+    },
+    {
+      "cell": "P59",
+      "value": "ОПВ1 3 Период"
+    },
+    {
+      "cell": "V59",
+      "value": "ОПВ2 3 Период"
+    },
+    {
+      "cell": "AC59",
+      "value": "Кармично?"
+    },
+    {
+      "cell": "A60",
+      "value": "СЗ1-2"
+    },
+    {
+      "cell": "P60",
+      "value": "ОПВ1 4 Период"
+    },
+    {
+      "cell": "V60",
+      "value": "ОПВ2 4 Период"
+    },
+    {
+      "cell": "A61",
+      "value": "СЗ2-1"
+    },
+    {
+      "cell": "P61",
+      "value": "ГЧК1-"
+    },
+    {
+      "cell": "V61",
+      "value": "ГЧК2-"
+    },
+    {
+      "cell": "P63",
+      "value": "3. Проверяем на Кармичность Г3, Г13, Г23"
+    },
+    {
+      "cell": "P64",
+      "value": "ОПВ1"
+    },
+    {
+      "cell": "S64",
+      "value": "Г3"
+    },
+    {
+      "cell": "V64",
+      "value": "ОПВ2"
+    },
+    {
+      "cell": "D65",
+      "value": "© Кристалл Судьбы"
+    },
+    {
+      "cell": "K65",
+      "value": "Методика Айрэн и Джули По"
+    },
+    {
+      "cell": "P65",
+      "value": "ОПВ1 Доп"
+    },
+    {
+      "cell": "S65",
+      "value": "Г1+Г3"
+    },
+    {
+      "cell": "V65",
+      "value": "ОПВ2 Доп"
+    },
+    {
+      "cell": "P66",
+      "value": "ОПВ1 2 Период"
+    },
+    {
+      "cell": "S66",
+      "value": "Г2+Г3"
+    },
+    {
+      "cell": "V66",
+      "value": "ОПВ2 2 Период"
+    },
+    {
+      "cell": "P67",
+      "value": "ОПВ1 3 Период"
+    },
+    {
+      "cell": "V67",
+      "value": "ОПВ2 3 Период"
+    },
+    {
+      "cell": "P68",
+      "value": "ОПВ1 4 Период"
+    },
+    {
+      "cell": "V68",
+      "value": "ОПВ2 4 Период"
+    },
+    {
+      "cell": "P69",
+      "value": "ГЧК1-"
+    },
+    {
+      "cell": "V69",
+      "value": "ГЧК2-"
+    },
+    {
+      "cell": "E71",
+      "value": "КЧХ1"
+    },
+    {
+      "cell": "K71",
+      "value": "КЧХ"
+    },
+    {
+      "cell": "P71",
+      "value": "4. Проверяем на Кармичность СЗ3, СЗ13, СЗ23"
+    },
+    {
+      "cell": "P72",
+      "value": "ОПВ1"
+    },
+    {
+      "cell": "S72",
+      "value": "СЗ3"
+    },
+    {
+      "cell": "V72",
+      "value": "ОПВ2"
+    },
+    {
+      "cell": "D73",
+      "value": "1 МЦ1"
+    },
+    {
+      "cell": "E73",
+      "value": "2 МЦ1"
+    },
+    {
+      "cell": "F73",
+      "value": "3 МЦ1"
+    },
+    {
+      "cell": "J73",
+      "value": "1 МЦ2"
+    },
+    {
+      "cell": "K73",
+      "value": "2 МЦ2"
+    },
+    {
+      "cell": "L73",
+      "value": "3 МЦ2"
+    },
+    {
+      "cell": "P73",
+      "value": "ОПВ1 Доп"
+    },
+    {
+      "cell": "S73",
+      "value": "СЗ1+СЗ3"
+    },
+    {
+      "cell": "V73",
+      "value": "ОПВ2 Доп"
+    },
+    {
+      "cell": "P74",
+      "value": "ОПВ1 2 Период"
+    },
+    {
+      "cell": "S74",
+      "value": "СЗ2+СЗ3"
+    },
+    {
+      "cell": "V74",
+      "value": "ОПВ2 2 Период"
+    },
+    {
+      "cell": "C75",
+      "value": "УПЖ1"
+    },
+    {
+      "cell": "D75",
+      "value": "ТП1"
+    },
+    {
+      "cell": "F75",
+      "value": "ТПчел1"
+    },
+    {
+      "cell": "G75",
+      "value": "Тал Буд1"
+    },
+    {
+      "cell": "I75",
+      "value": "УПЖ2"
+    },
+    {
+      "cell": "J75",
+      "value": "ТП2"
+    },
+    {
+      "cell": "L75",
+      "value": "ТПчел2"
+    },
+    {
+      "cell": "M75",
+      "value": "Тал Буд2"
+    },
+    {
+      "cell": "P75",
+      "value": "ОПВ1 3 Период"
+    },
+    {
+      "cell": "V75",
+      "value": "ОПВ2 3 Период"
+    },
+    {
+      "cell": "E76",
+      "value": "ЗК1"
+    },
+    {
+      "cell": "K76",
+      "value": "ЗК2"
+    },
+    {
+      "cell": "P76",
+      "value": "ОПВ1 4 Период"
+    },
+    {
+      "cell": "V76",
+      "value": "ОПВ2 4 Период"
+    },
+    {
+      "cell": "D77",
+      "value": "ОПВ1"
+    },
+    {
+      "cell": "F77",
+      "value": "СЗ1"
+    },
+    {
+      "cell": "J77",
+      "value": "ОПВ2"
+    },
+    {
+      "cell": "L77",
+      "value": "СЗ2"
+    },
+    {
+      "cell": "P77",
+      "value": "ГЧК1-"
+    },
+    {
+      "cell": "V77",
+      "value": "ГЧК2-"
+    },
+    {
+      "cell": "E79",
+      "value": "КУ1"
+    },
+    {
+      "cell": "G79",
+      "value": "Д3"
+    },
+    {
+      "cell": "H79",
+      "value": "М3"
+    },
+    {
+      "cell": "I79",
+      "value": "Г3"
+    },
+    {
+      "cell": "K79",
+      "value": "КУ2"
+    },
+    {
+      "cell": "G81",
+      "value": "ТП3"
+    },
+    {
+      "cell": "I81",
+      "value": "ТПчел3"
+    },
+    {
+      "cell": "H82",
+      "value": "ЗК3"
+    },
+    {
+      "cell": "G83",
+      "value": "ОПВ3"
+    },
+    {
+      "cell": "I83",
+      "value": "СЗ3"
+    },
+    {
+      "cell": "H86",
+      "value": "Совместно"
+    },
+    {
+      "cell": "A94",
+      "value": "График Личной Жизни"
+    },
+    {
+      "cell": "A96",
+      "value": "Партнер 1"
+    },
+    {
+      "cell": "A103",
+      "value": "Партнер 2"
+    },
+    {
+      "cell": "B124",
+      "value": "Финансовый Поток Партнер 1"
+    },
+    {
+      "cell": "B133",
+      "value": "Финансовый Поток Партнер 2"
+    },
+    {
+      "cell": "A154",
+      "value": "График Самореализации"
+    },
+    {
+      "cell": "A156",
+      "value": "Мкист"
+    },
+    {
+      "cell": "B156",
+      "value": "*"
+    },
+    {
+      "cell": "C156",
+      "value": "Год * 52"
+    },
+    {
+      "cell": "A180",
+      "value": "График Кармы"
+    },
+    {
+      "cell": "A182",
+      "value": "Карма"
+    },
+    {
+      "cell": "B182",
+      "value": "День"
+    },
+    {
+      "cell": "C182",
+      "value": "+"
+    },
+    {
+      "cell": "D182",
+      "value": "Месяц"
+    },
+    {
+      "cell": "E182",
+      "value": "* "
+    },
+    {
+      "cell": "F182",
+      "value": "Год"
+    },
+    {
+      "cell": "A214",
+      "value": "График Партнерства"
+    },
+    {
+      "cell": "J215",
+      "value": "Year"
+    },
+    {
+      "cell": "K215",
+      "value": "Period"
+    },
+    {
+      "cell": "L215",
+      "value": "Level"
+    },
+    {
+      "cell": "N215",
+      "value": "Year"
+    },
+    {
+      "cell": "O215",
+      "value": "Period"
+    },
+    {
+      "cell": "P215",
+      "value": "Level"
+    },
+    {
+      "cell": "A218",
+      "value": "Период"
+    },
+    {
+      "cell": "A219",
+      "value": "Уровень"
+    },
+    {
+      "cell": "A220",
+      "value": "Норма"
+    },
+    {
+      "cell": "A221",
+      "value": "Год"
+    },
+    {
+      "cell": "A222",
+      "value": "Период"
+    },
+    {
+      "cell": "A226",
+      "value": "Период"
+    },
+    {
+      "cell": "A227",
+      "value": "Уровень"
+    },
+    {
+      "cell": "A228",
+      "value": "Норма"
+    },
+    {
+      "cell": "A229",
+      "value": "Год"
+    },
+    {
+      "cell": "A230",
+      "value": "Период"
+    },
+    {
+      "cell": "A231",
+      "value": "Уровень"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  password      String?
+  image         String?
+  activeTariffId String?
+  
+  tariff        Tariff?   @relation(fields: [activeTariffId], references: [id])
+  orders        Order[]
+  calculations  Calculation[]
+  
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Tariff {
+  id          String   @id @default(cuid())
+  code        String   @unique // e.g. 'free', 'basic', 'premium'
+  name        String
+  price       Float
+  description String?
+  features    String   // JSON string of features
+  
+  users       User[]
+  orders      Order[]
+}
+
+model Order {
+  id          String   @id @default(cuid())
+  userId      String
+  tariffId    String
+  amount      Float
+  status      String   // 'pending', 'paid', 'cancelled'
+  provider    String   // 'yookassa', 'stripe', 'mock'
+  externalId  String?  // ID in payment system
+  
+  user        User     @relation(fields: [userId], references: [id])
+  tariff      Tariff   @relation(fields: [tariffId], references: [id])
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Calculation {
+  id          String   @id @default(cuid())
+  userId      String?
+  name        String
+  birthDate   DateTime
+  gender      String   // 'male', 'female'
+  type        String   // 'matrix', 'forecast_10'
+  resultData  String   // JSON string of calculated numbers
+  
+  user        User?    @relation(fields: [userId], references: [id])
+  report      GeneratedReport?
+  
+  createdAt   DateTime @default(now())
+}
+
+model GeneratedReport {
+  id            String      @id @default(cuid())
+  calculationId String      @unique
+  pdfUrl        String?
+  
+  calculation   Calculation @relation(fields: [calculationId], references: [id])
+  
+  createdAt     DateTime    @default(now())
+}
+
+model ContentBlock {
+  id             String   @id @default(cuid())
+  code           String   @unique // e.g. 'personal_qualities_1'
+  title          String
+  calculatorType String   // 'matrix' or 'forecast'
+  isFree         Boolean  @default(false)
+  content        String   // The text description
+  templateKey    String?  // Key for matching logic
+}
+
+model PasswordResetToken {
+  id      String   @id @default(cuid())
+  email   String
+  token   String   @unique
+  expires DateTime
+
+  @@unique([email, token])
+}

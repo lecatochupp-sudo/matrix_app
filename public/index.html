@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Матрица Судьбы MVP</title>
+    <link rel="stylesheet" href="/public/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="page-noise"></div>
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Matrix Destiny MVP</p>
+          <h1>Публичная реконструкция матрицы с заменяемой формульной архитектурой</h1>
+          <p class="hero-text">
+            Этот MVP уже отделяет UI, контент, формулы и будущий API-слой. Формулы можно заменить,
+            не переписывая экран и не ломая контентный источник.
+          </p>
+        </div>
+        <div class="hero-badge">
+          <img src="/public/assets/badge-orbit.svg" alt="Декоративная орбита" />
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel panel-form">
+          <div class="panel-heading">
+            <p class="section-kicker">Входные данные</p>
+            <h2>Дата рождения</h2>
+          </div>
+
+          <form id="matrix-form" class="matrix-form">
+            <label for="birth-date">Введите дату в формате `DD.MM.YYYY`</label>
+            <div class="form-row">
+              <input id="birth-date" name="birthDate" type="text" value="11.06.1987" placeholder="11.06.1987" />
+              <select id="formula-provider" name="formulaProvider" aria-label="Режим формул"></select>
+              <button type="submit">Построить матрицу</button>
+            </div>
+            <p id="status-line" class="status-line">
+              Формульный режим: публичная реконструкция. Legacy XLSM можно подключить отдельным провайдером.
+            </p>
+          </form>
+          <div id="provider-meta" class="provider-meta"></div>
+
+          <div class="summary-grid" id="summary-grid"></div>
+        </section>
+
+        <section class="panel panel-diagram">
+          <div class="panel-heading">
+            <p class="section-kicker">Диаграмма</p>
+            <h2>Матрица</h2>
+          </div>
+          <div class="diagram-stage">
+            <img class="diagram-backdrop" src="/public/assets/diagram-frame.svg" alt="" />
+            <div id="diagram-root"></div>
+          </div>
+        </section>
+
+        <section class="panel panel-lines">
+          <div class="panel-heading">
+            <p class="section-kicker">Внутренние точки</p>
+            <h2>Линии к центру</h2>
+          </div>
+          <div id="inner-lines"></div>
+        </section>
+
+        <section id="legacy-panel" class="panel panel-legacy" hidden>
+          <div class="panel-heading">
+            <p class="section-kicker">Legacy XLSM</p>
+            <h2>Извлеченные детали</h2>
+          </div>
+          <div id="legacy-grid"></div>
+        </section>
+
+        <section class="panel panel-health">
+          <div class="panel-heading">
+            <p class="section-kicker">Health Map</p>
+            <h2>Карта здоровья</h2>
+          </div>
+          <div id="health-map"></div>
+        </section>
+
+        <section class="panel panel-forecast">
+          <div class="panel-heading">
+            <p class="section-kicker">10 Years</p>
+            <h2>Прогноз на 10 лет</h2>
+          </div>
+          <div id="forecast-grid"></div>
+        </section>
+
+        <section class="panel panel-content">
+          <div class="panel-heading">
+            <p class="section-kicker">Контентный источник</p>
+            <h2>Интерпретации</h2>
+          </div>
+          <div id="content-grid" class="content-grid"></div>
+        </section>
+
+        <section class="panel panel-tariffs">
+          <div class="panel-heading">
+            <p class="section-kicker">MVP Assets</p>
+            <h2>Тарифные карточки</h2>
+          </div>
+          <div class="tariff-grid">
+            <article class="tariff-card tariff-card-free">
+              <span>Free</span>
+              <h3>База матрицы</h3>
+              <p>Ключевые числа, квадрат, линии, демо-контент.</p>
+            </article>
+            <article class="tariff-card tariff-card-pro">
+              <span>Pro</span>
+              <h3>Глубокая интерпретация</h3>
+              <p>Расширенный контент, совместимость, здоровье, прогностика и премиум-блоки.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/app/main.ts"></script>
+  </body>
+</html>

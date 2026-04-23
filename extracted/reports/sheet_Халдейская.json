@@ -1,0 +1,100 @@
+{
+  "title": "Халдейская",
+  "state": "visible",
+  "size": {
+    "rows": 14,
+    "cols": 12
+  },
+  "formulas": [
+    {
+      "cell": "J2",
+      "formula": "=numberto22(H7+L7)"
+    },
+    {
+      "cell": "D3",
+      "formula": "=numberto22(ConvertLettersToNumber(C3,Alphabet))"
+    },
+    {
+      "cell": "I4",
+      "formula": "=numberto22(J2+H7)"
+    },
+    {
+      "cell": "K4",
+      "formula": "=numberto22(J2+L7)"
+    },
+    {
+      "cell": "D5",
+      "formula": "=numberto22(ConvertLettersToNumber(C5,Alphabet))"
+    },
+    {
+      "cell": "J6",
+      "formula": "=ABS(numberto22(I4+K4))"
+    },
+    {
+      "cell": "H7",
+      "formula": "=D5"
+    },
+    {
+      "cell": "L7",
+      "formula": "=D3"
+    },
+    {
+      "cell": "J8",
+      "formula": "=ABS(numberto22(I4-K4))"
+    },
+    {
+      "cell": "D10",
+      "formula": "=numberto22(ConvertLettersToNumber(C10,Alphabet))"
+    },
+    {
+      "cell": "D12",
+      "formula": "=numberto22(ConvertLettersToNumber(C12,AlphabetEng))"
+    },
+    {
+      "cell": "D14",
+      "formula": "=numberto22(D10+D12)"
+    }
+  ],
+  "strings": [
+    {
+      "cell": "D2",
+      "value": "Арканы"
+    },
+    {
+      "cell": "B3",
+      "value": "Слово 1"
+    },
+    {
+      "cell": "C3",
+      "value": "Российская Федерация"
+    },
+    {
+      "cell": "B5",
+      "value": "Слово 2"
+    },
+    {
+      "cell": "C5",
+      "value": "Украина"
+    },
+    {
+      "cell": "B10",
+      "value": "Фамилия 1"
+    },
+    {
+      "cell": "C10",
+      "value": "Дышлов"
+    },
+    {
+      "cell": "B12",
+      "value": "Last Name"
+    },
+    {
+      "cell": "C12",
+      "value": "Dyshlov"
+    },
+    {
+      "cell": "B14",
+      "value": "Талант"
+    }
+  ]
+}

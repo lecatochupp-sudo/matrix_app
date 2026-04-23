@@ -1,0 +1,63 @@
+{
+  "title": "Каст",
+  "state": "visible",
+  "size": {
+    "rows": 116,
+    "cols": 7
+  },
+  "formulas": [],
+  "strings": [
+    {
+      "cell": "A1",
+      "value": "Год"
+    },
+    {
+      "cell": "B1",
+      "value": "Муж"
+    },
+    {
+      "cell": "C1",
+      "value": "Жен"
+    },
+    {
+      "cell": "F1",
+      "value": "Номер"
+    },
+    {
+      "cell": "G2",
+      "value": "Метафизики"
+    },
+    {
+      "cell": "G3",
+      "value": "Знахари"
+    },
+    {
+      "cell": "G4",
+      "value": "Цари"
+    },
+    {
+      "cell": "G5",
+      "value": "Колдуны"
+    },
+    {
+      "cell": "G6",
+      "value": "Люди"
+    },
+    {
+      "cell": "G7",
+      "value": "Волхвы"
+    },
+    {
+      "cell": "G8",
+      "value": "Ведуны"
+    },
+    {
+      "cell": "G9",
+      "value": "Шаманы"
+    },
+    {
+      "cell": "G10",
+      "value": "Чародеи"
+    }
+  ]
+}
