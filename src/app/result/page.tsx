@@ -1,14 +1,19 @@
-import { prisma } from "@/lib/prisma";
-import { redirect } from "next/navigation";
-import { calculateFullMatrix } from "@/domain/calculations/fullMatrixProvider";
-import { calculateHealthDetailed } from "@/domain/calculations/healthDetailedProvider";
-import { parseBirthDate } from "@/domain/calculations/parseBirthDate";
-import { FullMatrixChart } from "@/features/matrix/FullMatrixChart";
-import { Header } from "@/components/Header";
-import Link from "next/link";
-import { Sparkles, Lock, ShieldCheck, ArrowRight, Download, History, Zap, Heart, DollarSign, Star, AlertCircle } from "lucide-react";
+"use client";
 
-// --- Safe Default Data ---
+import { useSearchParams, useRouter, redirect } from "next/navigation";
+import { calculateFullMatrix } from "@/domain/calculations/fullMatrixProvider";
+import { parseBirthDate } from "@/domain/calculations/parseBirthDate";
+import { Header } from "@/components/Header";
+import { ResultHero } from "@/components/ResultHero";
+import { DiagramCard } from "@/components/DiagramCard";
+import { KeyMetrics } from "@/components/KeyMetrics";
+import { TechnicalSection } from "@/components/TechnicalSection";
+import { SectionBlock } from "@/features/matrix/SectionBlock";
+import { getArcanaContent } from "@/lib/contentProvider";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles, AlertCircle, Zap, DollarSign, Heart, Star, Download, Bookmark, User } from "lucide-react";
+
 const getEmptyData = () => ({
   diagonal: { left: 0, top: 0, right: 0, bottom: 0, center: 0 },
   money: { entrance: 0, main: 0, result: 0 },
@@ -18,147 +23,250 @@ const getEmptyData = () => ({
   health: { chakra1:0, chakra2:0, chakra3:0, chakra4:0, chakra5:0, chakra6:0, chakra7:0 }
 });
 
-export default async function ResultPage({ searchParams }: { searchParams: any }) {
-  // 1. Safe Params Extraction
-  const name = searchParams?.name || "Аноним";
-  const date = searchParams?.date;
-  const gender = searchParams?.gender || "female";
-  const paid = searchParams?.paid === "true";
+export default function ResultPage() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
 
-  if (!date) {
-    return redirect("/");
-  }
+  const name = searchParams.get('name') || "Аноним";
+  const date = searchParams.get('date');
+  const gender = searchParams.get('gender') || "female";
+  const paid = searchParams.get('paid') === "true";
 
-  // 2. Calculation & DB Safety Layer
+  if (!date) return redirect("/");
+
   let data: any = getEmptyData();
-  let healthData: any[] = [];
-  let personalityDesc = null;
   let calculationError = false;
 
   try {
-    // Проверка формата даты перед парсингом
-    if (!/^\d{2}\.\d{2}\.\d{4}$/.test(date)) {
-        throw new Error("Invalid date format");
-    }
-
+    if (!/^\d{2}\.\d{2}\.\d{4}$/.test(date)) throw new Error("Invalid date format");
     const { day, month, year } = parseBirthDate(date);
     data = calculateFullMatrix(day, month, year);
-    healthData = calculateHealthDetailed(data);
-    
-    // Безопасный запрос к БД (не валим всё, если БД лежит)
-    try {
-        const block = await prisma.contentBlock.findFirst({
-            where: { code: `arcana_${data.diagonal.left}_description` }
-        });
-        personalityDesc = block?.content;
-    } catch (dbErr) {
-        console.error("Database connection issue:", dbErr);
-    }
-
   } catch (err) {
     console.error("Calculation Error:", err);
     calculationError = true;
   }
 
   const age = date ? (new Date().getFullYear() - parseInt(date.split('.').pop() || "2000")) : 0;
-  const baseParams = new URLSearchParams({ name, date, gender, paid: "true" }).toString();
+  const baseParams = searchParams.toString();
+
+  const personalityContent = getArcanaContent(data.diagonal.left);
+  const moneyContent = getArcanaContent(data.money.main);
+  const loveContent = getArcanaContent(data.love.main);
+  const destinyContent = getArcanaContent(data.destiny.social);
+
+  const metrics = [
+    { label: "Энергия", value: data.diagonal.center, colorClass: "text-indigo-400" },
+    { label: "Карма", value: data.diagonal.bottom, colorClass: "text-rose-400" },
+    { label: "Род", value: data.ancestral.topRight, colorClass: "text-amber-400" }
+  ];
+
+  const handleUnlock = () => {
+    router.push(`/paywall?${baseParams}`);
+  };
+
+  const handleMockAction = (action: string) => {
+    alert(`${action} будет доступно в полной версии. Сейчас вы перейдете к оплате.`);
+    handleUnlock();
+  };
 
   return (
-    <div className="min-h-screen bg-[#070b14] text-slate-300 pb-40 font-sans selection:bg-indigo-500/30">
-      <Header />
-      
-      {/* Meta Status Bar */}
-      <div className="border-b border-white/5 bg-black/40 backdrop-blur-xl sticky top-16 z-50">
-        <div className="max-w-7xl mx-auto px-8 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] font-black text-slate-500 uppercase tracking-widest">
-                {calculationError ? "Fallback Mode" : "Verified Protocol"}
-            </span>
-          </div>
-        </div>
+    <div className="min-h-screen bg-[#070b14] text-slate-300 pb-40 font-sans selection:bg-indigo-500/30 overflow-x-hidden">
+      {/* Background patterns */}
+      <div className="fixed inset-0 pointer-events-none opacity-20 overflow-hidden -z-10">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/20 blur-[150px] rounded-full" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-600/20 blur-[150px] rounded-full" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] opacity-10" />
       </div>
 
+      <Header />
+      
       <main className="max-w-7xl mx-auto px-8 pt-16">
-        
-        {/* Error Alert if something went wrong */}
         {calculationError && (
-            <div className="mb-12 p-6 bg-rose-500/10 border border-rose-500/20 rounded-[32px] flex items-center gap-4 text-rose-400">
-                <AlertCircle className="w-6 h-6 flex-shrink-0" />
-                <div>
-                    <p className="text-sm font-bold uppercase tracking-widest">Ошибка интерпретации</p>
-                    <p className="text-xs opacity-70">Некоторые данные не удалось рассчитать. Пожалуйста, проверьте дату рождения.</p>
-                </div>
+          <div className="mb-12 p-8 bg-rose-500/10 border border-rose-500/20 rounded-[40px] flex items-center gap-6 text-rose-400">
+            <AlertCircle className="w-8 h-8 flex-shrink-0" />
+            <div>
+              <p className="text-sm font-black uppercase tracking-widest">Ошибка расчета</p>
+              <p className="text-xs opacity-70">Проверьте корректность введенной даты рождения.</p>
             </div>
+          </div>
         )}
 
-        <header className="mb-24 text-center">
-            <h1 className="text-6xl md:text-[100px] font-black italic tracking-tighter text-white mb-8 bg-gradient-to-b from-white to-white/10 bg-clip-text text-transparent leading-none">
-                {name}
-            </h1>
-            <div className="flex justify-center gap-8 text-[10px] font-black uppercase tracking-[0.4em] text-slate-500">
-                <span>{date}</span>
-                <span>{age} Years</span>
-                <span>{gender}</span>
-            </div>
-        </header>
+        <ResultHero name={name} date={date} age={age} gender={gender} />
 
-        <div className="grid grid-cols-1 xl:grid-cols-12 gap-20">
-            {/* Left: Diagram */}
-            <div className="xl:col-span-7 space-y-20">
-                <div className="relative bg-[#121826] border border-white/5 rounded-[40px] p-10 shadow-2xl overflow-hidden">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-[80px]" />
-                    <FullMatrixChart data={data} />
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-32 mb-40">
+          {/* Left: Diagram */}
+          <div className="xl:col-span-7">
+            <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className="mb-20"
+            >
+                <DiagramCard data={data} />
+            </motion.div>
+            
+            <KeyMetrics metrics={metrics} />
+          </div>
+
+          {/* Right: Personal Intro */}
+          <div className="xl:col-span-5 space-y-12">
+            <SectionBlock title="Личные Качества" isLocked={false}>
+              <p>{personalityContent?.personality}</p>
+              <div className="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-600 mb-1">Код Личности</p>
+                  <p className="text-2xl font-black italic text-indigo-400">{data.diagonal.left}</p>
                 </div>
-
-                {/* Metric Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                    {[
-                        { l: "Energy", v: data.diagonal.center, c: "text-indigo-400" },
-                        { l: "Karma", v: data.diagonal.bottom, c: "text-rose-400" },
-                        { l: "Ancestor", v: data.ancestral.topRight, c: "text-amber-400" }
-                    ].map((m, i) => (
-                        <div key={i} className="bg-[#121826] border border-white/5 p-8 rounded-[32px]">
-                            <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-4">{m.l}</p>
-                            <p className={`text-4xl font-black ${m.c}`}>{m.v}</p>
-                        </div>
-                    ))}
+                <div className="flex gap-2">
+                    <button onClick={() => handleMockAction('Save')} className="p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all text-slate-500">
+                        <Bookmark size={20} />
+                    </button>
+                    <button onClick={() => handleMockAction('Account')} className="p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all text-slate-500">
+                        <User size={20} />
+                    </button>
                 </div>
-            </div>
+              </div>
+            </SectionBlock>
 
-            {/* Right: Interpretations */}
-            <div className="xl:col-span-5 space-y-6">
-                <div className="bg-[#121826] border border-white/5 p-10 rounded-[40px]">
-                    <h3 className="text-xs font-black uppercase tracking-widest text-white mb-6 flex items-center gap-3">
-                        <Zap className="w-4 h-4 text-indigo-400" /> Вибрация Личности
-                    </h3>
-                    <p className="text-slate-400 leading-relaxed italic font-serif text-lg">
-                        {personalityDesc || "Ваша энергия указывает на путь глубокого самопознания и трансформации. Полная расшифровка формируется..."}
+            <SectionBlock title="Ваша Миссия" isLocked={false}>
+              <p>{personalityContent?.mission}</p>
+              <div className="mt-8 p-8 bg-indigo-500/5 rounded-[32px] border border-indigo-500/10 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-3xl -mr-16 -mt-16" />
+                <div className="relative z-10">
+                    <p className="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-400 mb-4 flex items-center gap-2">
+                        <Zap size={12} /> Теневое проявление
                     </p>
+                    <p className="text-sm italic opacity-70 font-serif leading-relaxed">{personalityContent?.shadow}</p>
                 </div>
+              </div>
+            </SectionBlock>
 
-                {/* Locked Block Preview */}
-                {!paid && (
-                    <div className="bg-gradient-to-br from-indigo-600 to-violet-700 p-10 rounded-[40px] shadow-2xl shadow-indigo-500/20 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-[80px]" />
-                        <h3 className="text-3xl font-black text-white italic mb-6">Полный Отчет</h3>
-                        <p className="text-indigo-100 text-sm mb-10 leading-relaxed">Откройте 45 страниц детального анализа вашей судьбы, денег и отношений.</p>
-                        <Link href={`/result?${baseParams}`} className="flex items-center justify-between w-full py-5 px-8 bg-white text-indigo-700 rounded-2xl font-black uppercase text-[10px] tracking-widest transition-transform hover:scale-105">
-                            Разблокировать <ArrowRight className="w-4 h-4" />
-                        </Link>
+            <div className="p-10 bg-white/5 border border-white/5 rounded-[48px] flex items-center justify-between group cursor-pointer hover:bg-white/10 transition-all" onClick={() => handleMockAction('PDF')}>
+                <div className="flex items-center gap-6">
+                    <div className="p-4 bg-indigo-500/10 rounded-2xl text-indigo-400">
+                        <Download size={24} />
                     </div>
-                )}
+                    <div>
+                        <p className="text-sm font-black text-white uppercase italic">Скачать PDF отчет</p>
+                        <p className="text-xs text-slate-500">Полная версия (52 страницы)</p>
+                    </div>
+                </div>
+                <ArrowRight size={20} className="text-slate-700 group-hover:text-white transition-colors" />
             </div>
+          </div>
         </div>
 
-        {/* Debug Crypt - Strictly Hidden */}
-        <footer className="mt-40 pt-20 border-t border-white/5 opacity-20 hover:opacity-100 transition-opacity">
-            <details className="group">
-                <summary className="list-none cursor-pointer text-center text-[9px] font-black text-slate-500 uppercase tracking-widest">Diagnostic Panel</summary>
-                <div className="mt-10 p-8 bg-black/40 rounded-[32px] border border-white/5 font-mono text-[9px] text-slate-600 overflow-x-auto">
-                    <pre>{JSON.stringify({ status: calculationError ? "fallback" : "ok", params: { name, date, gender, paid }, data }, null, 4)}</pre>
+        {/* Premium Sections Area */}
+        <div className="max-w-5xl mx-auto mb-40">
+          <div className="text-center mb-24">
+            <div className="inline-block px-4 py-1.5 mb-6 bg-amber-500/10 border border-amber-500/20 rounded-full">
+                <span className="text-[9px] font-black uppercase tracking-[0.3em] text-amber-500">Premium Content</span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-black italic text-white uppercase tracking-tighter">Тайны Судьбы</h2>
+            <p className="text-slate-500 mt-4 font-serif italic text-lg italic">Расшифровка всех сфер вашей жизни</p>
+          </div>
+
+          <div className="space-y-12">
+            <SectionBlock 
+                title="Финансы и Реализация" 
+                isLocked={!paid} 
+                onUnlock={handleUnlock}
+                previewText="Узнайте, где скрыт ваш денежный максимум и какие действия блокируют приток изобилия..."
+                teaser={personalityContent?.teaser}
+            >
+                <div className="flex items-center gap-6 mb-10 p-6 bg-indigo-500/5 rounded-[32px] border border-indigo-500/10">
+                    <div className="p-4 bg-indigo-500/10 rounded-2xl text-indigo-400">
+                        <DollarSign size={24} />
+                    </div>
+                    <div>
+                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-600 mb-1">Денежная энергия</p>
+                        <p className="text-2xl font-black italic text-white">{data.money.main}</p>
+                    </div>
                 </div>
-            </details>
-        </footer>
+                <p>{moneyContent?.money}</p>
+            </SectionBlock>
+
+            <SectionBlock 
+                title="Любовь и Отношения" 
+                isLocked={!paid}
+                onUnlock={handleUnlock}
+                previewText="Какой партнер станет для вас идеальным и как проработать кармические узлы в паре..."
+                teaser="🔒 Ваш сценарий любви и точки входа в гармоничные отношения..."
+            >
+                <div className="flex items-center gap-6 mb-10 p-6 bg-rose-500/5 rounded-[32px] border border-rose-500/10">
+                    <div className="p-4 bg-rose-500/10 rounded-2xl text-rose-400">
+                        <Heart size={24} />
+                    </div>
+                    <div>
+                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-600 mb-1">Энергия отношений</p>
+                        <p className="text-2xl font-black italic text-white">{data.love.main}</p>
+                    </div>
+                </div>
+                <p>{loveContent?.love}</p>
+            </SectionBlock>
+
+            <SectionBlock 
+                title="Предназначение" 
+                isLocked={!paid}
+                onUnlock={handleUnlock}
+                previewText="Ваша социальная и духовная роль в этом воплощении. То, что вы должны дать миру..."
+                teaser="🔒 Глубокий смысл вашей жизни и вектор реализации на 10 лет..."
+            >
+                <div className="flex items-center gap-6 mb-10 p-6 bg-amber-500/5 rounded-[32px] border border-amber-500/10">
+                    <div className="p-4 bg-amber-500/10 rounded-2xl text-amber-400">
+                        <Star size={24} />
+                    </div>
+                    <div>
+                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-600 mb-1">Социальная роль</p>
+                        <p className="text-2xl font-black italic text-white">{data.destiny.social}</p>
+                    </div>
+                </div>
+                <p>{destinyContent?.personality}</p>
+            </SectionBlock>
+          </div>
+        </div>
+
+        {/* Improved Bottom CTA */}
+        {!paid && (
+          <div className="mt-40 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-indigo-700 via-indigo-600 to-violet-800 p-20 rounded-[64px] shadow-2xl shadow-indigo-500/20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full -mr-250 -mt-250 blur-[120px]" />
+              <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-black/20 rounded-full -ml-150 -mb-150 blur-[80px]" />
+              
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <motion.div 
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className="mb-12"
+                >
+                    <div className="p-8 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full">
+                        <Sparkles className="w-16 h-16 text-white" />
+                    </div>
+                </motion.div>
+
+                <h3 className="text-5xl md:text-7xl font-black text-white italic mb-8 tracking-tighter leading-none uppercase">РАСКРОЙТЕ СВОЮ СУДЬБУ ПОЛНОСТЬЮ</h3>
+                <p className="text-indigo-100 text-xl mb-16 max-w-3xl leading-relaxed font-serif italic">
+                    Получите доступ к 50+ страницам персонального анализа. Разберите блоки в деньгах, сценарии в отношениях и ваше истинное предназначение. Это самое полное руководство по вашей жизни.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+                    <button 
+                        onClick={handleUnlock}
+                        className="group relative px-16 py-8 bg-white text-indigo-950 font-black uppercase text-xs tracking-[0.4em] rounded-[32px] hover:scale-105 transition-all flex items-center justify-center gap-4 shadow-2xl"
+                    >
+                        Разблокировать всё <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+                    </button>
+                    <div className="flex flex-col justify-center text-left px-4">
+                        <p className="text-white font-black text-xl italic tracking-tighter">2 490 ₽</p>
+                        <p className="text-indigo-200 text-[9px] font-black uppercase tracking-widest opacity-60">Единоразовый доступ</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <TechnicalSection data={{ params: { name, date, gender, paid }, data }} />
       </main>
     </div>
   );
