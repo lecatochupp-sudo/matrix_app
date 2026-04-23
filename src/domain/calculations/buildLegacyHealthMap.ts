@@ -1,8 +1,8 @@
-import { normalizeTo22Legacy } from "./normalizeTo22.ts";
-import { buildLegacyEnergyPattern, buildMandalaDigitSequences, countNumber, arrayRepeatNum } from "./legacyXlsmRuntime.ts";
-import { buildHealthSemanticProjection } from "./buildHealthSemanticProjection.ts";
-import { parseBirthDate } from "./parseBirthDate.ts";
-import { getUtcYear, toReferenceDate } from "./referenceDate.ts";
+import { normalizeTo22Legacy } from "./normalizeTo22\";
+import { buildLegacyEnergyPattern, buildMandalaDigitSequences, countNumber, arrayRepeatNum } from "./legacyXlsmRuntime\";
+import { buildHealthSemanticProjection } from "./buildHealthSemanticProjection\";
+import { parseBirthDate } from "./parseBirthDate\";
+import { getUtcYear, toReferenceDate } from "./referenceDate\";
 
 const bodyLabels = [
   "Физическое тело",

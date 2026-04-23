@@ -1,4 +1,4 @@
-import { normalizeTo22 } from "./normalizeTo22.ts";
+import { normalizeTo22 } from "./normalizeTo22\";
 
 function buildLine(label, vertex, center, formulas) {
   const p1 = formulas.normalizeTo22(vertex + center);

@@ -1,4 +1,4 @@
-import { normalizeTo22 } from "./normalizeTo22.ts";
+import { normalizeTo22 } from "./normalizeTo22\";
 
 export function buildOuterSquare(matrixBase, formulas = { normalizeTo22 }) {
   const { left, top, right, bottom } = matrixBase.diagonal;

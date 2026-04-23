@@ -1,5 +1,5 @@
-import { normalizeTo22, sumDigits } from "./normalizeTo22.ts";
-import { getUtcYear, toReferenceDate } from "./referenceDate.ts";
+import { normalizeTo22, sumDigits } from "./normalizeTo22\";
+import { getUtcYear, toReferenceDate } from "./referenceDate\";
 
 export function buildForecast10Years(matrixBase, context = {}, nameArc = null) {
   const referenceDate = toReferenceDate(context.referenceDate);

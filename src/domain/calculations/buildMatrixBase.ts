@@ -1,5 +1,5 @@
-import { normalizeTo22, sumDigits } from "./normalizeTo22.ts";
-import { parseBirthDate } from "./parseBirthDate.ts";
+import { normalizeTo22, sumDigits } from "./normalizeTo22\";
+import { parseBirthDate } from "./parseBirthDate\";
 
 export function buildMatrixBase(birthDate, formulas = { normalizeTo22, sumDigits }) {
   const { day, month, year } = parseBirthDate(birthDate);

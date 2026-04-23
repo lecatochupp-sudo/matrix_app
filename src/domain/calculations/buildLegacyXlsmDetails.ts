@@ -1,5 +1,5 @@
-import { firstDigit, lastNonZeroDigit } from "./parseBirthDate.ts";
-import { buildLegacyCrystalCodes } from "./legacyXlsmRuntime.ts";
+import { firstDigit, lastNonZeroDigit } from "./parseBirthDate\";
+import { buildLegacyCrystalCodes } from "./legacyXlsmRuntime\";
 
 function calcTP(day, normalizeTo22Legacy) {
   if (day < 14) {

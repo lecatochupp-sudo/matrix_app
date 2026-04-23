@@ -1,4 +1,4 @@
-import { normalizeTo22Legacy, sumDigits } from "./normalizeTo22.ts";
+import { normalizeTo22Legacy, sumDigits } from "./normalizeTo22\";
 import {
   addUtcYears,
   buildUtcDate,
@@ -6,7 +6,7 @@ import {
   getUtcYear,
   subtractUtcDays,
   toReferenceDate,
-} from "./referenceDate.ts";
+} from "./referenceDate\";
 
 export function countNumber(source, number) {
   return String(source)

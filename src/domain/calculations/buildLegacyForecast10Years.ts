@@ -1,4 +1,4 @@
-import { normalizeTo22Legacy, sumDigits } from "./normalizeTo22.ts";
+import { normalizeTo22Legacy, sumDigits } from "./normalizeTo22\";
 import {
   buildLegacyCrystalCodes,
   buildLegacyForecastDate,
@@ -7,8 +7,8 @@ import {
   calcTpLegacy,
   calcOpvLegacy,
   karmicShadowLegacy,
-} from "./legacyXlsmRuntime.ts";
-import { buildUtcDate, formatUtcDate } from "./referenceDate.ts";
+} from "./legacyXlsmRuntime\";
+import { buildUtcDate, formatUtcDate } from "./referenceDate\";
 
 export function buildLegacyForecast10Years(matrixBase, context = {}) {
   const { day, month, year } = matrixBase.meta;
