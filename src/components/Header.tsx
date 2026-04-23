@@ -1,42 +1,55 @@
 "use client";
 
 import Link from "next/link";
-import { useSession, signOut } from "next-auth/react";
-import { User, LogOut, LayoutDashboard, Sparkles } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 export function Header() {
-  const { data: session } = useSession();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const scrollToCalc = () => {
+    if (isHome) {
+      document.getElementById("calc")?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <header className="bg-black/40 backdrop-blur-xl border-b border-white/5 sticky top-0 z-[100]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#070b14]/40 backdrop-blur-xl border-b border-white/5">
       <div className="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(79,70,229,0.4)] group-hover:scale-110 transition-transform">
-            <Sparkles className="w-6 h-6 text-white" />
+          <div className="w-8 h-8 bg-indigo-600 rounded-lg rotate-45 group-hover:rotate-90 transition-transform duration-500 flex items-center justify-center">
+            <div className="w-3 h-3 bg-white rounded-sm -rotate-45" />
           </div>
-          <span className="font-black text-xl tracking-tighter text-white uppercase italic">Matrix<span className="text-indigo-500">Pro</span></span>
+          <span className="text-sm font-black uppercase tracking-[0.3em] text-white italic">Matrix Destiny</span>
         </Link>
-        
-        <div className="flex items-center gap-8">
-          {session ? (
-            <div className="flex items-center gap-6">
-              <Link href="/cabinet" className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-indigo-400 transition-colors">
-                <LayoutDashboard className="w-4 h-4" /> Кабинет
-              </Link>
-              <button 
-                onClick={() => signOut()}
-                className="p-2 rounded-full hover:bg-white/5 text-slate-500 hover:text-rose-500 transition-all"
-              >
-                <LogOut className="w-4 h-4" />
-              </button>
-            </div>
-          ) : (
-            <Link href="/auth/signin" className="px-6 py-2.5 bg-white text-black text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-indigo-500 hover:text-white transition-all">
-              Войти
+
+        <nav className="hidden md:flex items-center gap-12">
+            <button 
+                onClick={scrollToCalc}
+                className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-white transition-colors"
+            >
+                Как это работает
+            </button>
+            <button 
+                onClick={scrollToCalc}
+                className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-white transition-colors"
+            >
+                Что вы узнаете
+            </button>
+            <Link 
+                href={isHome ? "#calc" : "/"}
+                onClick={(e) => {
+                    if (isHome) {
+                        e.preventDefault();
+                        scrollToCalc();
+                    }
+                }}
+                className="py-3 px-6 bg-white/5 border border-white/10 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] text-white hover:bg-white/10 transition-all"
+            >
+                Начать расчет
             </Link>
-          )}
-        </div>
+        </nav>
       </div>
     </header>
   );
