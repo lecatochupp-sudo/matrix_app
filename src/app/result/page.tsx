@@ -11,8 +11,10 @@ import { KeyMetrics } from "@/components/KeyMetrics";
 import { TechnicalSection } from "@/components/TechnicalSection";
 import { SectionBlock } from "@/features/matrix/SectionBlock";
 import { buildAllSections } from "@/lib/content/contentSectionBuilder";
+import { ReportNavigation } from "@/components/result/ReportNavigation";
+import { ForecastTimeline } from "@/components/result/ForecastTimeline";
 import { motion } from "framer-motion";
-import { ArrowRight, Star, Loader2, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Star, Loader2, CheckCircle2, Lock } from "lucide-react";
 
 const getEmptyData = () => ({
   diagonal: { left: 0, top: 0, right: 0, bottom: 0, center: 0 },
@@ -56,12 +58,19 @@ function ResultContent() {
 
   const handleUnlock = () => router.push(`/paywall?${baseParams}`);
 
+  // Mock forecast data for timeline
+  const forecastItems = [
+    { year: 2026, age: 36, energy: data.diagonal.right, description: "Год материальной реализации и расширения влияния. Время, когда внутренние наработки превращаются в конкретные результаты." },
+    { year: 2027, age: 37, energy: 7, description: "Период активного движения и достижения целей. Рекомендуется фокус на командной работе и дальних поездках." },
+    { year: 2028, age: 38, energy: 10, description: "Год удачи и потоковых состояний. Важно доверять интуиции и не сопротивляться переменам." }
+  ];
+
   return (
     <main className="max-w-7xl mx-auto px-6 pt-16 pb-40 relative">
         <ResultHero name={name} date={date} age={0} gender={gender} data={data} />
 
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-20 mb-32">
-          {/* Sidebar */}
+          {/* Sidebar / Diagram */}
           <div className="xl:col-span-6">
             <div className="sticky top-32">
                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="mb-16">
@@ -70,57 +79,72 @@ function ResultContent() {
                 <KeyMetrics metrics={metrics} />
                 
                 {!paid && (
-                    <div className="mt-12 p-8 bg-indigo-500/10 border border-indigo-500/20 rounded-[40px] text-center">
-                        <p className="text-sm font-black uppercase tracking-widest text-indigo-400 mb-4">Статус анализа: 15%</p>
-                        <div className="w-full h-2 bg-black/40 rounded-full overflow-hidden mb-6">
-                            <div className="w-[15%] h-full bg-indigo-500" />
+                    <div className="mt-12 p-10 bg-gradient-to-br from-indigo-500/10 to-violet-500/5 border border-indigo-500/20 rounded-[48px] text-center relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-3xl -mr-16 -mt-16" />
+                        <p className="text-[10px] font-black uppercase tracking-[0.4em] text-indigo-400 mb-6">Анализ завершен на 15%</p>
+                        <div className="w-full h-1.5 bg-black/40 rounded-full overflow-hidden mb-8">
+                            <motion.div 
+                                initial={{ width: 0 }}
+                                animate={{ width: "15%" }}
+                                transition={{ duration: 2 }}
+                                className="h-full bg-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.5)]" 
+                            />
                         </div>
-                        <button onClick={handleUnlock} className="w-full py-5 bg-white text-indigo-950 rounded-2xl font-black uppercase text-[10px] tracking-widest flex items-center justify-center gap-3">
-                            Открыть доступ к 85% анализа <ArrowRight size={14} />
+                        <button onClick={handleUnlock} className="w-full py-6 bg-white text-indigo-950 rounded-2xl font-black uppercase text-[11px] tracking-[0.2em] flex items-center justify-center gap-3 shadow-xl hover:scale-105 transition-all">
+                            Разблокировать остальные 85% <ArrowRight size={14} />
                         </button>
                     </div>
                 )}
             </div>
           </div>
 
-          {/* Sections */}
-          <div className="xl:col-span-6 space-y-4">
-            <div className="flex items-center gap-4 mb-8">
-                <div className="h-px flex-grow bg-white/5" />
-                <span className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-600">Sacred Analysis</span>
-                <div className="h-px flex-grow bg-white/5" />
-            </div>
+          {/* Report Sections */}
+          <div className="xl:col-span-6 space-y-8">
+            <ReportNavigation />
 
             {sections.map((section) => (
-                <SectionBlock 
-                    key={section.id}
-                    title={section.title}
-                    isLocked={section.isLocked}
-                    onUnlock={handleUnlock}
-                    teaser={section.teaser}
-                    previewText={section.previewText}
-                >
-                    <div className="space-y-6">
-                        <div className="p-6 bg-indigo-500/5 border border-indigo-500/10 rounded-3xl mb-8">
-                           <p className="text-indigo-400 font-black text-2xl italic tracking-tighter mb-2">{section.energyName}</p>
-                           <p className="text-slate-500 text-[10px] font-black uppercase tracking-widest">{section.energyTheme}</p>
-                        </div>
-                        <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed font-serif text-xl italic whitespace-pre-line">
-                            {section.fullText}
-                        </div>
-                        <div className="flex items-center gap-2 mt-8 text-[10px] font-black uppercase text-slate-700 tracking-widest">
-                            <CheckCircle2 size={12} className="text-indigo-500" /> Верифицированный разбор энергии {section.energy}
-                        </div>
-                    </div>
-                </SectionBlock>
+                <div key={section.id} id={`section-${section.id}`}>
+                    <SectionBlock 
+                        title={section.title}
+                        isLocked={section.isLocked}
+                        onUnlock={handleUnlock}
+                        teaser={section.teaser}
+                        previewText={section.previewText}
+                    >
+                        {section.id === 'forecast' ? (
+                            <ForecastTimeline items={forecastItems} />
+                        ) : (
+                            <div className="space-y-8">
+                                <div className="p-8 bg-indigo-500/5 border border-indigo-500/10 rounded-[32px] mb-8">
+                                   <div className="flex items-center gap-4 mb-3">
+                                       <span className="text-4xl font-black italic text-indigo-400 tracking-tighter">{section.energy}</span>
+                                       <div className="h-px flex-grow bg-indigo-500/10" />
+                                       <span className="text-[10px] font-black uppercase text-indigo-500/60 tracking-widest">Код Энергии</span>
+                                   </div>
+                                   <p className="text-xl font-bold text-white italic mb-1">{section.energyName}</p>
+                                   <p className="text-slate-500 text-[10px] font-black uppercase tracking-widest">{section.energyTheme}</p>
+                                </div>
+                                <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed font-serif text-xl italic whitespace-pre-line">
+                                    {section.fullText}
+                                </div>
+                                <div className="flex items-center gap-3 mt-12 p-6 bg-white/[0.02] border border-white/5 rounded-2xl">
+                                    <CheckCircle2 size={16} className="text-indigo-500" />
+                                    <span className="text-[10px] font-black uppercase text-slate-600 tracking-widest">Сектор полностью проанализирован</span>
+                                </div>
+                            </div>
+                        )}
+                    </SectionBlock>
+                </div>
             ))}
 
             {!paid && (
-                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="mt-20 p-12 bg-gradient-to-br from-indigo-600 to-violet-700 rounded-[56px] text-center relative overflow-hidden">
-                    <h3 className="text-4xl font-black text-white italic mb-6 uppercase leading-tight">Ваш отчет<br/>сформирован</h3>
-                    <p className="text-indigo-100 mb-12 opacity-80 font-serif">52 страницы персонального анализа готовы к изучению.</p>
-                    <button onClick={handleUnlock} className="px-12 py-6 bg-white text-indigo-950 rounded-3xl font-black uppercase text-xs tracking-widest">
-                        Разблокировать полный разбор
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="mt-32 p-16 bg-gradient-to-br from-[#0a0f1d] to-[#121826] border border-white/5 rounded-[64px] text-center relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600/10 blur-[100px] -mr-48 -mt-48" />
+                    <Star className="w-12 h-12 text-indigo-500 mx-auto mb-10 animate-pulse" />
+                    <h3 className="text-5xl font-black text-white italic mb-8 uppercase leading-tight tracking-tighter">Ваша книга судьбы<br/>готова</h3>
+                    <p className="text-slate-400 text-lg mb-12 max-w-md mx-auto font-serif italic">52 страницы персонального анализа, которые изменят ваше представление о себе.</p>
+                    <button onClick={handleUnlock} className="px-16 py-8 bg-white text-indigo-950 rounded-3xl font-black uppercase text-xs tracking-widest shadow-2xl hover:scale-105 transition-all">
+                        Получить полный доступ
                     </button>
                 </motion.div>
             )}
@@ -140,7 +164,7 @@ export default function ResultPage() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-600/20 blur-[150px] rounded-full" />
       </div>
       <Header />
-      <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-[#070b14]"><Loader2 className="w-16 h-16 text-indigo-500 animate-spin" /></div>}>
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-[#070b14]"><div className="flex flex-col items-center gap-6"><Loader2 className="w-16 h-16 text-indigo-500 animate-spin" /><p className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-700">Calculating your destiny...</p></div></div>}>
         <ResultContent />
       </Suspense>
     </div>
