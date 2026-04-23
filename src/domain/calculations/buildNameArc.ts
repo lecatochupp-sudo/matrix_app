@@ -1,4 +1,4 @@
-import { numberTo9 } from "./legacyXlsmRuntime\";
+import { numberTo9 } from "./legacyXlsmRuntime";
 import {
   consonantsToNumber,
   convertLettersToNumber,
@@ -6,7 +6,7 @@ import {
   lettersToNumberArray,
   sanitizeName,
   vowelsToNumber,
-} from "./nameRuntime\";
+} from "./nameRuntime";
 
 function normalizeNameInput(nameInput) {
   if (!nameInput) {

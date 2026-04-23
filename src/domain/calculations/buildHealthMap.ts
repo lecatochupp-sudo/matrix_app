@@ -1,5 +1,5 @@
-import { normalizeTo22 } from "./normalizeTo22\";
-import { buildHealthSemanticProjection } from "./buildHealthSemanticProjection\";
+import { normalizeTo22 } from "./normalizeTo22";
+import { buildHealthSemanticProjection } from "./buildHealthSemanticProjection";
 
 function bodyEntry(id, label, value, details, provenance) {
   return {
